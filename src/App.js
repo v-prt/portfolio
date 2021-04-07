@@ -1,11 +1,21 @@
 import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import GlobalStyles from "./GlobalStyles";
+import { Homepage } from "./components/Homepage";
+import { About } from "./components/About";
 
 export const App = () => {
   return (
-    <div>
-      <h1>Victoria's Dev Portfolio</h1>
-      <p>Under construction...</p>
-      <p>test 2</p>
-    </div>
+    <BrowserRouter>
+      <GlobalStyles />
+      <Switch>
+        <Route exact path="/">
+          <Homepage />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 };
