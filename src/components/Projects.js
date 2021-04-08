@@ -5,10 +5,14 @@ import { COLORS } from "../GlobalStyles";
 import { BsArrowRightShort } from "react-icons/bs";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import eagletekHome from "../assets/eagletek-home.png";
-import eagletekAbout from "../assets/eagletek-about.png";
+import eagletekPagination from "../assets/eagletek-pagination.png";
+import eagletekCategories from "../assets/eagletek-categories.png";
 import eagletekLogin from "../assets/eagletek-login.png";
-import eagletekCart from "../assets/eagletek-cart.png";
 import eagletekEmptyCart from "../assets/eagletek-emptycart.png";
+import eagletekCart from "../assets/eagletek-cart.png";
+import eagletekDesktopDropdown from "../assets/eagletek-desktop-dropdown.png";
+import eagletekMobileDropdown from "../assets/eagletek-mobile-dropdown.png";
+import eagletekAbout from "../assets/eagletek-about.png";
 
 export const Projects = () => {
   return (
@@ -22,10 +26,14 @@ export const Projects = () => {
           </Icon>
           <Images>
             <Image src={eagletekHome} alt="" />
-            <Image src={eagletekAbout} alt="" />
+            <Image src={eagletekPagination} alt="" />
+            <Image src={eagletekCategories} alt="" />
             <Image src={eagletekLogin} alt="" />
-            <Image src={eagletekCart} alt="" />
             <Image src={eagletekEmptyCart} alt="" />
+            <Image src={eagletekCart} alt="" />
+            <Image src={eagletekDesktopDropdown} alt="" />
+            <Image src={eagletekMobileDropdown} alt="" />
+            <Image src={eagletekAbout} alt="" />
           </Images>
           <Icon>
             <BiRightArrow />
