@@ -10,17 +10,19 @@ export const COLORS = {
 
 export default createGlobalStyle`
     * {
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
         line-height: 1.75;
         margin: 0;
         padding: 0;
+    }
+    h1, h2, h3 {
+        font-family: "Poppins", sans-serif;
     }
     ol, ul {
         list-style: none;
     }
     a {
         text-decoration: none;
-        font-size: 1.1rem;
         color: ${COLORS.accent1};
         &:hover {
             color: ${COLORS.accent2};
