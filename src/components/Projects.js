@@ -4,15 +4,15 @@ import styled from "styled-components";
 import { COLORS } from "../GlobalStyles";
 import { BsArrowRightShort } from "react-icons/bs";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
-import eagletekHome from "../assets/eagletek-home.png";
-import eagletekPagination from "../assets/eagletek-pagination.png";
-import eagletekCategories from "../assets/eagletek-categories.png";
-import eagletekLogin from "../assets/eagletek-login.png";
-import eagletekEmptyCart from "../assets/eagletek-emptycart.png";
-import eagletekCart from "../assets/eagletek-cart.png";
-import eagletekDesktopDropdown from "../assets/eagletek-desktop-dropdown.png";
-import eagletekMobileDropdown from "../assets/eagletek-mobile-dropdown.png";
-import eagletekAbout from "../assets/eagletek-about.png";
+import eagletekHome from "../assets/eagleTek/eagletek-home.png";
+import eagletekPagination from "../assets/eagleTek/eagletek-pagination.png";
+import eagletekCategories from "../assets/eagleTek/eagletek-categories.png";
+import eagletekLogin from "../assets/eagleTek/eagletek-login.png";
+import eagletekEmptyCart from "../assets/eagleTek/eagletek-emptycart.png";
+import eagletekCart from "../assets/eagleTek/eagletek-cart.png";
+import eagletekDesktopDropdown from "../assets/eagleTek/eagletek-desktop-dropdown.png";
+import eagletekMobileDropdown from "../assets/eagleTek/eagletek-mobile-dropdown.png";
+import eagletekAbout from "../assets/eagleTek/eagletek-about.png";
 
 export const Projects = () => {
   return (

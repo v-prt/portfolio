@@ -1,74 +1,110 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { COLORS } from "../GlobalStyles";
-import { BsArrowRightShort } from "react-icons/bs";
+import styled, { keyframes } from "styled-components";
+import background from "../assets/bg-forest.jpg";
 import VictoriaSrc from "../assets/victoria.JPG";
 
 export const About = () => {
   return (
     <Wrapper>
-      <Image src={VictoriaSrc} alt="" />
-      <Text>
-        <Greeting>Hey, I'm Victoria</Greeting>
-        <Blurb>
-          <p>Lorem ipsum dolor sit amet.</p>
+      <Title>
+        <Card>
+          <h1>Victoria Peart</h1>
+          <p>Full-Stack Web Dev</p>
+        </Card>
+      </Title>
+      <Info>
+        <Image src={VictoriaSrc} alt="" />
+        <Text>
           <p>
-            Now this is a story all about how my life got flipped, turned upside
-            down. I'd like to take a minute, just sit right there. I'll tell you
-            all about
-            <Link to="">
-              {" "}
-              how I became a web developer <BsArrowRightShort />
-            </Link>
+            Hey! I just graduated from coding bootcamp and I'm officially
+            seeking my first full-stack web dev job.
           </p>
-          <Disclaimer>Disclaimer: site still under construction!</Disclaimer>
-        </Blurb>
-      </Text>
+          <p>
+            As a deaf woman, I prioritize{" "}
+            <strong>visual appeal, accessibility, and thoughtful UX</strong>. I
+            would love to work in an environment that would allow me creative
+            freedom and the opportunity to improve my new skills.
+          </p>
+          <p>
+            My strengths lay in front-end design and I love playing around with
+            CSS. I'm not as good at the math or logic side of coding, so I aim
+            to study and practice wherever I can to round out my abilities.
+          </p>
+        </Text>
+      </Info>
     </Wrapper>
   );
 };
 
+const fadeIn = keyframes`
+0% {opacity: 0}
+100% {opacity: 1}
+`;
+
 const Wrapper = styled.section`
-  background: linear-gradient(
-    to bottom right,
-    ${COLORS.primary},
-    ${COLORS.secondary},
-    ${COLORS.tertiary}
-  );
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+`;
+
+const Title = styled.div`
+  background: url(${background}) center center / cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+`;
+
+const Card = styled.div`
+  animation: ${fadeIn} 1s ease-in;
+  background: rgba(0, 0, 0, 0.4);
+  color: #c0c9ae;
+  text-align: center;
+  width: 100%;
+  padding: 70px 0;
+  h1 {
+    font-size: 6rem;
+    border-top: 1px dotted #c0c9ae;
+  }
+  p {
+    font-size: 2rem;
+    font-weight: 200;
+    border-bottom: 1px dotted #c0c9ae;
+    margin-top: -15px;
+    padding-bottom: 10px;
+  }
+  // TABLET & MOBILE
+  @media (max-width: 1000px) {
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+`;
+
+const Info = styled.div`
+  color: #666;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
 `;
 
 const Image = styled.img`
   max-width: 300px;
   border-radius: 50%;
   filter: grayscale(100%);
-  margin: 20px;
+  margin: 30px;
 `;
 
 const Text = styled.div`
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 400px;
-  margin: 20px;
-`;
-
-const Greeting = styled.h2`
-  color: ${COLORS.accent1};
-  font-size: 3rem;
-  margin-bottom: 30px;
-`;
-
-const Blurb = styled.div`
+  width: 400px;
   p {
-    margin: 20px 0;
+    margin: 15px 0;
   }
-`;
-
-const Disclaimer = styled.p`
-  color: ${COLORS.accent2};
-  font-style: italic;
 `;

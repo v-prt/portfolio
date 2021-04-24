@@ -10,13 +10,17 @@ export const COLORS = {
 
 export default createGlobalStyle`
     * {
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Spartan', sans-serif;
         line-height: 1.75;
         margin: 0;
         padding: 0;
     }
+    html, body {
+        background: #fcf7f3;
+    }
     h1, h2, h3 {
-        font-family: "Poppins", sans-serif;
+        font-family: "Arima Madurai", cursive;
+        font-weight: 100;
     }
     ol, ul {
         list-style: none;
