@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import background from "../assets/bg-forest.jpg";
-import avatar from "../assets/victoria.jpg";
+import avatar from "../assets/victoria.JPG";
 
 export const About = () => {
   return (
