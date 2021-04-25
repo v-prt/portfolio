@@ -16,7 +16,7 @@ export default createGlobalStyle`
         border: 0;
     }
     html, body {
-        background: #fcf7f3;
+        background: linear-gradient(${COLORS.dark}, #202c31, ${COLORS.medium}, ${COLORS.light});
     }
     h1, h2, h3 {
         font-family: "Arima Madurai", cursive;
@@ -29,4 +29,7 @@ export default createGlobalStyle`
         text-decoration: none;
         transition: 0.2s ease-in-out;
     }
+    strong {
+    font-weight: bold;
+  }
 `;

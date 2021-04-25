@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { COLORS } from "../GlobalStyles";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 
@@ -33,7 +33,13 @@ export const Header = () => {
   );
 };
 
+const fadeIn = keyframes`
+0% {opacity: 0}
+100% {opacity: 1}
+`;
+
 const Wrapper = styled.header`
+  animation: ${fadeIn} 3s ease-in;
   background: rgba(250, 250, 250, 0.6);
   backdrop-filter: blur(8px);
   width: 100%;
