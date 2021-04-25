@@ -1,19 +1,19 @@
 import { createGlobalStyle } from "styled-components";
 
 export const COLORS = {
-  primary: "RGB(5, 16, 38)",
-  secondary: "RGB(9, 27, 64)",
-  tertiary: "RGB(2, 56, 89)",
-  accent1: "RGB(217, 78, 143)",
-  accent2: "RGB(242, 92, 5)",
+  dark: "#1a1a1a",
+  medium: "#4c846f",
+  light: "#fcf7f3",
 };
 
 export default createGlobalStyle`
     * {
         font-family: 'Spartan', sans-serif;
-        line-height: 1.75;
+        font-weight: 300px;
+        line-height: 1;
         margin: 0;
         padding: 0;
+        border: 0;
     }
     html, body {
         background: #fcf7f3;
@@ -27,9 +27,6 @@ export default createGlobalStyle`
     }
     a {
         text-decoration: none;
-        color: ${COLORS.accent1};
-        &:hover {
-            color: ${COLORS.accent2};
-        }
+        transition: 0.2s ease-in-out;
     }
 `;

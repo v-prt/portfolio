@@ -1,19 +1,19 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import background from "../assets/bg-forest.jpg";
-import VictoriaSrc from "../assets/victoria.JPG";
+import avatar from "../assets/victoria.jpg";
 
 export const About = () => {
   return (
     <Wrapper>
-      <Title>
-        <Card>
+      <Card>
+        <Heading>
           <h1>Victoria Peart</h1>
           <p>Full-Stack Web Dev</p>
-        </Card>
-      </Title>
+        </Heading>
+      </Card>
       <Info>
-        <Image src={VictoriaSrc} alt="" />
+        <Image src={avatar} alt="" />
         <Text>
           <p>
             Hey! I just graduated from coding bootcamp and I'm officially
@@ -48,7 +48,7 @@ const Wrapper = styled.section`
   justify-content: center;
 `;
 
-const Title = styled.div`
+const Card = styled.div`
   background: url(${background}) center center / cover;
   height: 100vh;
   width: 100vw;
@@ -57,23 +57,25 @@ const Title = styled.div`
   align-items: flex-end;
 `;
 
-const Card = styled.div`
+const Heading = styled.div`
   animation: ${fadeIn} 1s ease-in;
   background: rgba(0, 0, 0, 0.4);
   color: #c0c9ae;
-  text-align: center;
   width: 100%;
-  padding: 70px 0;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 70px 30px;
   h1 {
-    font-size: 6rem;
     border-top: 1px dotted #c0c9ae;
+    padding: 20px;
+    font-size: 6rem;
   }
   p {
+    margin-top: -15px;
+    border-bottom: 1px dotted #c0c9ae;
+    padding-bottom: 20px;
     font-size: 2rem;
     font-weight: 200;
-    border-bottom: 1px dotted #c0c9ae;
-    margin-top: -15px;
-    padding-bottom: 10px;
   }
   // TABLET & MOBILE
   @media (max-width: 1000px) {
@@ -96,15 +98,19 @@ const Info = styled.div`
 `;
 
 const Image = styled.img`
-  max-width: 300px;
-  border-radius: 50%;
   filter: grayscale(100%);
+  max-width: 300px;
   margin: 30px;
+  border-radius: 50%;
 `;
 
 const Text = styled.div`
   width: 400px;
   p {
+    line-height: 1.75;
     margin: 15px 0;
+  }
+  strong {
+    font-weight: bold;
   }
 `;

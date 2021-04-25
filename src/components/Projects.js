@@ -18,7 +18,7 @@ export const Projects = () => {
   return (
     <Wrapper>
       <Project>
-        <Heading>Featured Project - eagleTek</Heading>
+        <Heading>My Featured Project</Heading>
 
         <Gallery>
           <Icon>
@@ -58,8 +58,6 @@ const Wrapper = styled.section`
   flex-direction: column;
   text-align: center;
   width: 100%;
-  border-top: 2px solid #ff99cc;
-  border-bottom: 2px solid #ff99cc;
 `;
 
 const Heading = styled.h2`
@@ -87,9 +85,6 @@ const Icon = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10px;
-  // TODO: make this blurred background effect work (images need to scroll behind the icons)
-  /* backdrop-filter: blur(20px);
-  background-color: rgba(255, 255, 255, 0.4); */
 `;
 
 const Images = styled.div`
@@ -103,7 +98,8 @@ const Images = styled.div`
 const Image = styled.img`
   height: 400px;
   border-radius: 30px;
-  padding: 15px;
+  margin: 15px;
+  box-shadow: 0px 0px 10px #b3b3b3;
 `;
 
 const ProjectLink = styled(Link)`
