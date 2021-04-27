@@ -11,17 +11,23 @@ import eagletekDesktopDropdown from "../assets/eagleTek/eagletek-desktop-dropdow
 import eagletekMobileDropdown from "../assets/eagleTek/eagletek-mobile-dropdown.png";
 import eagletekAbout from "../assets/eagleTek/eagletek-about.png";
 
+// FIXME: page this page look good
+// TODO: add meowspace, cookie clicker
 export const Projects = () => {
   return (
     <Wrapper>
       <Description>
-        <h2>My Featured Project</h2>
+        <h2>eagleTek</h2>
         <p>
-          <strong>eagleTek</strong> was an e-commerce group project done as part
-          of my coding bootcamp curriculum. As team lead, my focus was to assign
-          tasks fairly while ensuring a cohesive design and responsive app. The
-          most difficult part of this project was working around other people's
-          code and learning how to manage our git branches to prevent conflicts.
+          <strong>eagleTek</strong> was a group project done as part of my
+          coding bootcamp curriculum where our goal was to build an e-commerce
+          site for wearable tech.
+        </p>
+        <p>
+          As team lead, I tried to assign tasks fairly while keeping the design
+          of the app cohesive and responsive. The most difficult part of this
+          project was working around other people's code but it was truly
+          rewarding to see all our pieces come together.
         </p>
         <p>
           Credit to my teammates:
@@ -47,38 +53,48 @@ export const Projects = () => {
 const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
 `;
 
 const Description = styled.div`
   background: #dbe4cd;
-  margin: 20px 50px;
+  width: 75%;
+  margin: 20px auto;
   border-radius: 20px;
-  padding: 20px;
+  padding: 20px 0;
   h2 {
-    margin: 20px;
     font-size: 2rem;
+    margin: 20px 40px;
   }
   p {
     line-height: 1.75;
-    margin: 20px;
+    margin: 20px 40px;
+  }
+  @media (max-width: 1000px) {
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 0;
   }
 `;
 
-// FIXME: add a bit of space at end of gallery
 const Gallery = styled.div`
   background: ${COLORS.light};
+  width: 75%;
   display: flex;
-  margin: 0 50px 20px 50px;
+  margin: 20px;
   border-radius: 20px;
   overflow: hidden;
   overflow-x: scroll;
+  @media (max-width: 1000px) {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+  }
 `;
 
 const Image = styled.img`
-  box-shadow: 0px 0px 10px #b3b3b3;
   height: 500px;
-  margin: 15px;
-  border-radius: 20px;
-  padding: 10px;
+  border-radius: 30px;
+  padding: 20px;
 `;

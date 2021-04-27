@@ -4,6 +4,9 @@ import styled, { keyframes } from "styled-components";
 import { COLORS } from "../GlobalStyles";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 
+// FIXME: make home link not active all the time
+// TODO: improve look of nav links
+// TODO: create a better mobile navbar
 export const Header = () => {
   return (
     <Wrapper>
@@ -51,9 +54,7 @@ const Wrapper = styled.header`
   z-index: 1;
 `;
 
-const Nav = styled.nav`
-  margin: 10px 20px;
-`;
+const Nav = styled.nav``;
 
 const Link = styled(NavLink)`
   color: #000;
@@ -69,6 +70,9 @@ const Link = styled(NavLink)`
     background: ${COLORS.medium};
     color: #fff;
   }
+  @media (max-width: 1000px) {
+    margin: 0 5px;
+  }
 `;
 
 const SocialLinks = styled.div`
@@ -83,5 +87,8 @@ const Icon = styled.div`
   transition: 0.2s ease-in-out;
   &:hover {
     color: ${COLORS.medium};
+  }
+  @media (max-width: 1000px) {
+    margin: 0 5px;
   }
 `;

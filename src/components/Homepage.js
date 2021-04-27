@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 import { About } from "./About";
-import { Projects } from "./Projects";
+import { FeaturedProject } from "./FeaturedProject";
 
 export const Homepage = () => {
   return (
     <Wrapper>
       <About />
-      <Projects />
+      <FeaturedProject />
     </Wrapper>
   );
 };

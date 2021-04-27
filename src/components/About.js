@@ -29,7 +29,7 @@ export const About = () => {
             freedom and the opportunity to improve my new skills.
           </p>
           <p>
-            My strengths lay in front-end design and I love playing around with
+            My strengths lie in front-end design and I love playing around with
             CSS. I'm not as good at the math or logic side of coding, so I aim
             to study and practice wherever I can to round out my abilities.
           </p>
@@ -78,37 +78,38 @@ const Title = styled.div`
   padding: 20px 0;
   h1 {
     margin-bottom: 20px;
-    font-size: 6rem;
+    font-size: 3rem;
   }
   p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 200;
   }
-  // TABLET & MOBILE
-  @media (max-width: 1000px) {
+  // DESKTOP
+  @media (min-width: 1000px) {
     h1 {
-      font-size: 4rem;
+      font-size: 6rem;
     }
     p {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
   }
 `;
 
 const Info = styled.div`
+  background: linear-gradient(#202c31, ${COLORS.medium});
   color: ${COLORS.light};
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  padding: 20px;
 `;
 
 const Image = styled.img`
   filter: grayscale(100%);
   max-width: 300px;
-  margin: 50px;
+  margin: 20px;
   border-radius: 50%;
 `;
 
@@ -116,6 +117,6 @@ const Text = styled.div`
   width: 400px;
   p {
     line-height: 1.75;
-    margin: 15px 0;
+    margin: 20px;
   }
 `;

@@ -16,7 +16,7 @@ export default createGlobalStyle`
         border: 0;
     }
     html, body {
-        background: linear-gradient(${COLORS.dark}, #202c31, ${COLORS.medium}, ${COLORS.light});
+        /* background: linear-gradient(${COLORS.dark}, #202c31, ${COLORS.medium}, ${COLORS.light}); */
     }
     h1, h2, h3 {
         font-family: "Arima Madurai", cursive;
