@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
 import { Header } from "./components/Header";
 import { Homepage } from "./components/Homepage";
@@ -13,6 +13,9 @@ export const App = () => {
       <Header />
       <Switch>
         <Route exact path="/">
+          <Redirect to="/home" />
+        </Route>
+        <Route exact path="/home">
           <Homepage />
         </Route>
         <Route exact path="/about">

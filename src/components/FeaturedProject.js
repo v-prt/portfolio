@@ -115,9 +115,9 @@ const Image = styled.img`
 `;
 
 const ViewProjects = styled.div`
-  background: ${COLORS.light};
-  width: 100%;
+  background: #f2f2f2;
   height: 200px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,8 +125,11 @@ const ViewProjects = styled.div`
     height: 100px;
     margin: 20px;
   }
-  p {
-    margin: 10px 0;
+  div {
+    margin: 20px;
+    p {
+      margin-bottom: 10px;
+    }
   }
 `;
 

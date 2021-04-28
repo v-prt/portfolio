@@ -4,14 +4,11 @@ import styled, { keyframes } from "styled-components";
 import { COLORS } from "../GlobalStyles";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 
-// FIXME: make home link not active all the time
-// TODO: improve look of nav links
-// TODO: create a better mobile navbar
 export const Header = () => {
   return (
     <Wrapper>
       <Nav>
-        <Link to="/">Home</Link>
+        <Link to="/home">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/projects">Projects</Link>
       </Nav>

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { COLORS } from "../GlobalStyles";
 import background from "../assets/bg-forest1.jpg";
 import avatar from "../assets/victoria.JPG";
 
 export const About = () => {
+  // makes window scroll to top between renders
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Wrapper>
       <Heading>
