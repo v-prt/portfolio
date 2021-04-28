@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { COLORS } from "../GlobalStyles";
-import background from "../assets/bg-forest.jpg";
+import background from "../assets/bg-forest1.jpg";
 import avatar from "../assets/victoria.JPG";
 
 export const About = () => {
@@ -9,18 +9,19 @@ export const About = () => {
     <Wrapper>
       <Heading>
         <Banner>
-          <Title>
-            <h1>Victoria Peart</h1>
-            <p>Full-Stack Web Dev</p>
-          </Title>
+          <Name>Victoria Peart</Name>
+          <Job>Full-Stack Web Dev</Job>
+          <Skills>
+            html / css / javascript / react / redux / express / node / mongodb
+          </Skills>
         </Banner>
       </Heading>
       <Info>
         <Image src={avatar} alt="" />
         <Text>
           <p>
-            Hey! I just graduated from coding bootcamp and I'm officially
-            seeking my first full-stack web dev job.
+            Hey! I'm Victoria. I just graduated from coding bootcamp and I'm
+            officially seeking my first full-stack web dev job.
           </p>
           <p>
             As a deaf woman, I prioritize{" "}
@@ -49,6 +50,7 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100vw;
 `;
 
 const Heading = styled.div`
@@ -61,37 +63,39 @@ const Heading = styled.div`
 
 const Banner = styled.div`
   animation: ${fadeIn} 1.5s ease-in;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   width: 100%;
-  margin-bottom: 70px;
-`;
-
-const Title = styled.div`
   color: #c0c9ae;
-  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: 1px dotted #c0c9ae;
-  border-bottom: 1px dotted #c0c9ae;
-  padding: 20px 0;
-  h1 {
-    margin-bottom: 20px;
+`;
+
+const Name = styled.h1`
+  margin: 50px 0 20px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 6rem;
+  @media (max-width: 1000px) {
     font-size: 3rem;
   }
-  p {
-    font-size: 1.5rem;
-    font-weight: 200;
+`;
+
+const Job = styled.p`
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: 200;
+  @media (max-width: 1000px) {
+    font-size: 1.3rem;
   }
-  // DESKTOP
-  @media (min-width: 1000px) {
-    h1 {
-      font-size: 6rem;
-    }
-    p {
-      font-size: 2rem;
-    }
+`;
+
+const Skills = styled.p`
+  margin: 0 0 50px 0;
+  font-size: 0.9rem;
+  @media (max-width: 1000px) {
+    font-size: 0.6rem;
   }
 `;
 
@@ -103,20 +107,19 @@ const Info = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 `;
 
 const Image = styled.img`
   filter: grayscale(100%);
   max-width: 300px;
-  margin: 20px;
+  margin: 40px;
   border-radius: 50%;
 `;
 
 const Text = styled.div`
-  width: 400px;
+  width: 500px;
   p {
     line-height: 1.75;
-    margin: 20px;
+    margin: 40px;
   }
 `;

@@ -13,6 +13,7 @@ import plantgeekUserProfile from "../assets/plantgeek/plantgeek-userprofile.png"
 import plantgeekCollection from "../assets/plantgeek/plantgeek-collection.png";
 import plantgeekFriends from "../assets/plantgeek/plantgeek-friends.png";
 import plantgeekSettings from "../assets/plantgeek/plantgeek-settings.png";
+import view from "../assets/view.svg";
 
 export const FeaturedProject = () => {
   return (
@@ -25,13 +26,16 @@ export const FeaturedProject = () => {
           Houseplants are a fairly new obsession of mine and sometimes I
           struggle to remember their various needs. My solution had been to keep
           a spreadsheet with information on each plant, such as the level of
-          light, water, temperature, and humidity they each required. For my
-          final project at bootcamp, I was inspired to create{" "}
-          <strong>plantgeek</strong> as an upgrade to my spreadsheet which could
-          also serve as a hub for houseplant lovers to connect with each other
-          and share useful information.
+          light, water, temperature, and humidity they each required.
         </p>
-        <a href="https://github.com/v-prt/plantgeek">View on GitHub</a>
+        <Image src={plantgeekPlantProfile} alt="" />
+        <p>
+          As my final project for bootcamp, I thought it would be fun to create{" "}
+          <strong>plantgeek</strong> as an upgrade to my spreadsheet, which
+          could also serve as a hub for houseplant lovers to connect with each
+          other and share useful tips. For more information, please check out my
+          repo on <a href="https://github.com/v-prt/plantgeek">GitHub</a>!
+        </p>
         {/* TODO: add video, preferrably on page */}
       </Description>
       <Gallery>
@@ -41,46 +45,49 @@ export const FeaturedProject = () => {
         <Image src={plantgeekBrowse1} alt="" />
         <Image src={plantgeekBrowse2} alt="" />
         <Image src={plantgeekBrowse3} alt="" />
-        <Image src={plantgeekPlantProfile} alt="" />
         <Image src={plantgeekUserProfile} alt="" />
         <Image src={plantgeekCollection} alt="" />
         <Image src={plantgeekFriends} alt="" />
         <Image src={plantgeekSettings} alt="" />
       </Gallery>
-      {/* TODO: improve this */}
-      <ProjectLink to="/projects">View more projects</ProjectLink>
+      <ViewProjects>
+        <img src={view} alt="" />
+        <div>
+          <p>Interested in seeing other things I've worked on?</p>
+          <ProjectsLink to="/projects">View more projects</ProjectsLink>
+        </div>
+      </ViewProjects>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
+  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 `;
 
 const Description = styled.div`
-  background: #dbe4cd;
   width: 100%;
-  padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   h2 {
     font-size: 2.5rem;
-    margin: 20px;
+    margin: 50px 20px 20px 20px;
   }
   p {
-    max-width: 1000px;
+    max-width: 800px;
     line-height: 1.75;
     margin: 20px;
   }
   a {
     color: ${COLORS.medium};
-    margin: 20px 40px;
+    font-weight: bold;
     &:hover {
-      color: ${COLORS.dark};
+      color: #333;
     }
   }
   @media (max-width: 1000px) {
@@ -91,31 +98,42 @@ const Description = styled.div`
 `;
 
 const Gallery = styled.div`
-  background: ${COLORS.light};
   width: 100%;
   display: flex;
   overflow: hidden;
   overflow-x: scroll;
-  @media (max-width: 1000px) {
-    width: 100%;
-    margin-top: 0;
-    border-radius: 0;
-  }
 `;
 
 const Image = styled.img`
-  height: 700px;
-  border-radius: 30px;
-  padding: 20px;
+  height: 500px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px #b3b3b3;
+  @media (max-width: 1000px) {
+    height: 300px;
+  }
 `;
 
-const ProjectLink = styled(Link)`
-  background: ${COLORS.dark};
-  color: ${COLORS.light};
-  text-align: center;
-  margin: 20px;
-  border-radius: 20px;
-  padding: 20px;
-  font-size: 1.2rem;
-  width: 70%;
+const ViewProjects = styled.div`
+  background: ${COLORS.light};
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    height: 100px;
+    margin: 20px;
+  }
+  p {
+    margin: 10px 0;
+  }
+`;
+
+const ProjectsLink = styled(Link)`
+  color: ${COLORS.medium};
+  font-weight: bold;
+  &:hover {
+    color: #333;
+  }
 `;

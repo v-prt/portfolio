@@ -57,7 +57,7 @@ const Wrapper = styled.header`
 const Nav = styled.nav``;
 
 const Link = styled(NavLink)`
-  color: #000;
+  color: #333;
   font-size: 0.9rem;
   margin: 0 10px;
   border-radius: 5px;
@@ -81,7 +81,7 @@ const SocialLinks = styled.div`
 `;
 
 const Icon = styled.div`
-  color: #000;
+  color: #333;
   margin: 0 10px;
   font-size: 1.5rem;
   transition: 0.2s ease-in-out;
