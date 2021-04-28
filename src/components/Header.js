@@ -39,7 +39,7 @@ const fadeIn = keyframes`
 `;
 
 const Wrapper = styled.header`
-  animation: ${fadeIn} 3s ease-in;
+  animation: ${fadeIn} 3s ease-in-out;
   background: rgba(250, 250, 250, 0.6);
   backdrop-filter: blur(8px);
   width: 100%;

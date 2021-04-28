@@ -66,7 +66,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 100%;
 `;
 
 const Description = styled.div`
@@ -89,11 +89,6 @@ const Description = styled.div`
     &:hover {
       color: #333;
     }
-  }
-  @media (max-width: 1000px) {
-    width: 100%;
-    margin-bottom: 0;
-    border-radius: 0;
   }
 `;
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { COLORS } from "../GlobalStyles";
 import background from "../assets/bg-forest1.jpg";
 import { BiChevronDown } from "react-icons/bi";
@@ -33,10 +33,9 @@ export const Projects = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [visible, setVisible] = useState(false);
-  const toggleVisible = () => {
-    setVisible(!visible);
-  };
+  const [eagleTek, setEagleTek] = useState(false);
+  const [meowspace, setMeowspace] = useState(false);
+  const [cookieHeaven, setCookieHeaven] = useState(false);
 
   return (
     <Wrapper>
@@ -49,14 +48,18 @@ export const Projects = () => {
             <h2>
               [ <b>eagleTek</b> ]
             </h2>
-            <button onClick={toggleVisible}>
-              read details{" "}
+            <button
+              onClick={() => {
+                setEagleTek(!eagleTek);
+              }}
+            >
+              read about this project{" "}
               <div>
                 <BiChevronDown />
               </div>
             </button>
           </Title>
-          <Details visible={visible}>
+          <Details visible={eagleTek}>
             <p>
               <strong>eagleTek</strong> was a group project done as part of my
               coding bootcamp curriculum where our goal was to build an
@@ -93,18 +96,22 @@ export const Projects = () => {
             <h2>
               [ <b>meowspace</b> ]
             </h2>
-            <button onClick={toggleVisible}>
-              read details{" "}
+            <button
+              onClick={() => {
+                setMeowspace(!meowspace);
+              }}
+            >
+              read about this project{" "}
               <div>
                 <BiChevronDown />
               </div>
             </button>
           </Title>
-          <Details visible={visible}>
+          <Details visible={meowspace}>
             <p>
               This was a super fun 3-day project in which I had to recreate
               "Facespace" from a provided mock-up. The original used an ugly
-              orange theme and super creepy generated images of people. I took
+              orange theme and super creepy computer-generated images. I took
               extra time after completing the MVP requirements to upgrade the
               look of the app by replacing the humans with cats and changing the
               banners as well as the color scheme, name, and layout.
@@ -126,22 +133,26 @@ export const Projects = () => {
             <h2>
               [ <b>Cookie Heaven</b> ]
             </h2>
-            <button onClick={toggleVisible}>
-              read details{" "}
+            <button
+              onClick={() => {
+                setCookieHeaven(!cookieHeaven);
+              }}
+            >
+              read about this project{" "}
               <div>
                 <BiChevronDown />
               </div>
             </button>
           </Title>
-          <Details visible={visible}>
+          <Details visible={cookieHeaven}>
             <p>
               I really enjoyed making this simple version of the classic "Cookie
               Clicker" idle game! This is another one of my workshops I took the
-              opportunity to improve upon after completing the required tasks.
-              On top of updating the style, I added further functionalities such
-              as showing a temporary points alert when you click on the cookie,
-              shortening the display number at certain thresholds, adding a
-              reset button, and visual indication for unavailable upgrades.
+              opportunity to improve upon. On top of updating the style, I added
+              further functionalities such as showing a temporary points alert
+              when you click on the cookie, shortening the display number at
+              certain thresholds, adding a reset button, and visual indication
+              for unavailable upgrades.
             </p>
           </Details>
         </Description>
@@ -167,7 +178,6 @@ const Wrapper = styled.main`
 
 const Banner = styled.div`
   background: url(${background}) center center / cover;
-  /* filter: grayscale(1); */
   height: 170px;
   width: 100%;
   text-align: center;
@@ -200,7 +210,6 @@ const Description = styled.div`
 
 const Title = styled.div`
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   h2 {
@@ -208,7 +217,7 @@ const Title = styled.div`
     margin: 10px;
   }
   button {
-    width: 125px;
+    width: 200px;
     display: flex;
     justify-content: space-between;
     margin: 10px;
@@ -217,6 +226,12 @@ const Title = styled.div`
     &:hover {
       background: #b3b3b3;
       cursor: pointer;
+    }
+  }
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    h2 {
+      font-size: 2rem;
     }
   }
 `;
@@ -244,7 +259,13 @@ const Gallery = styled.div`
   overflow-x: scroll;
 `;
 
+const fadeIn = keyframes`
+0% {opacity: 0}
+100% {opacity: 1}
+`;
+
 const Image = styled.img`
+  animation: ${fadeIn} 2s ease-in-out;
   height: 500px;
   margin: 20px;
   border-radius: 15px;

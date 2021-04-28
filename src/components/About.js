@@ -55,19 +55,19 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
 `;
 
 const Heading = styled.div`
   background: url(${background}) center center / cover;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: flex-end;
 `;
 
 const Banner = styled.div`
-  animation: ${fadeIn} 1.5s ease-in;
+  animation: ${fadeIn} 2s ease-in-out;
   background: rgba(0, 0, 0, 0.3);
   width: 100%;
   color: #c0c9ae;
@@ -117,7 +117,7 @@ const Info = styled.div`
 const Image = styled.img`
   filter: grayscale(100%);
   max-width: 300px;
-  margin: 40px;
+  margin: 40px 0 20px 0;
   border-radius: 50%;
 `;
 
