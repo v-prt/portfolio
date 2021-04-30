@@ -33,10 +33,12 @@ export const FeaturedProject = () => {
           As my final project for bootcamp, I thought it would be fun to create{" "}
           <strong>plantgeek</strong> as an upgrade to my spreadsheet, which
           could also serve as a hub for houseplant lovers to connect with each
-          other and share useful tips. For more information, please check out my
-          repo on <a href="https://github.com/v-prt/plantgeek">GitHub</a>!
+          other and share useful tips. For more information, you may
+          <a href="https://github.com/v-prt/plantgeek"> check out my repo</a> on
+          GitHub or
+          <a href="https://youtu.be/_LXWqhxIMrQ"> watch a short demo</a> on
+          YouTube!
         </p>
-        {/* TODO: add video, preferrably on page */}
       </Description>
       <Gallery>
         <Image src={plantgeekHome1} alt="" />

@@ -3,6 +3,9 @@ import styled, { keyframes } from "styled-components";
 import { COLORS } from "../GlobalStyles";
 import background from "../assets/bg-forest1.jpg";
 import avatar from "../assets/victoria.JPG";
+import responsiveness from "../assets/responsiveness.svg";
+import accessibility from "../assets/accessibility.svg";
+import style from "../assets/style.svg";
 
 export const About = () => {
   // makes window scroll to top between renders
@@ -29,8 +32,8 @@ export const About = () => {
             officially seeking my first full-stack web dev job.
           </p>
           <p>
-            As a deaf woman, I prioritize{" "}
-            <strong>visual appeal, accessibility, and thoughtful UX</strong>. I
+            As a deaf woman, I prioritize
+            <strong> visual appeal, accessibility, and thoughtful UX</strong>. I
             would love to work in an environment that would allow me creative
             freedom and the opportunity to improve my new skills.
           </p>
@@ -41,6 +44,21 @@ export const About = () => {
           </p>
         </Text>
       </Info>
+      {/* <Priorities>
+        <h2>My Focus</h2>
+        <div>
+          <p>[ Responsiveness ]</p>
+          <img src={responsiveness} alt="responsiveness" />
+        </div>
+        <div>
+          <img src={accessibility} alt="assessibility" />
+          <p>[ Accessibility ]</p>
+        </div>
+        <div>
+          <p>[ Style ]</p>
+          <img src={style} alt="style" />
+        </div>
+      </Priorities> */}
     </Wrapper>
   );
 };
@@ -50,7 +68,7 @@ const fadeIn = keyframes`
 100% {opacity: 1}
 `;
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,7 +76,7 @@ const Wrapper = styled.section`
   width: 100%;
 `;
 
-const Heading = styled.div`
+const Heading = styled.section`
   background: url(${background}) center center / cover;
   height: 100vh;
   width: 100%;
@@ -104,7 +122,7 @@ const Skills = styled.p`
   }
 `;
 
-const Info = styled.div`
+const Info = styled.section`
   background: linear-gradient(#202c31, ${COLORS.medium});
   color: ${COLORS.light};
   width: 100%;
@@ -126,5 +144,28 @@ const Text = styled.div`
   p {
     line-height: 1.75;
     margin: 40px;
+  }
+`;
+
+const Priorities = styled.section`
+  background: #f2f2f2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    font-size: 3rem;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  img {
+    width: 250px;
+    margin: 30px;
+  }
+  p {
+    font-size: 1.5rem;
   }
 `;

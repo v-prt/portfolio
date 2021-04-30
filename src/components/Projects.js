@@ -61,20 +61,31 @@ export const Projects = () => {
           </Title>
           <Details visible={eagleTek}>
             <p>
-              <strong>eagleTek</strong> was a group project done as part of my
-              coding bootcamp curriculum where our goal was to build an
-              e-commerce site for wearable tech.
+              <em>Collaborators</em> :{" "}
+              <a href="https://www.linkedin.com/in/andrew-fenrich/">
+                Andrew Fenrich
+              </a>{" "}
+              (Backend), <a href="https://mariiesmall.com/"> Marie Petit</a>{" "}
+              (Frontend), && <b>Myself</b> (Team Lead, Frontend)
             </p>
             <p>
-              As team lead, I tried to assign tasks fairly while keeping the
-              design of the app cohesive and responsive. The most difficult part
-              of this project was working around other people's code but it was
-              truly rewarding to see all our pieces come together.
+              This group project was completed over the course of one week as
+              part of our coding bootcamp, in which we developed an e-commerce
+              web app for wearable teach and designed the front as well as
+              back-end.
             </p>
             <p>
-              Teammates:
-              <a href="https://github.com/Andrew-Fenrich"> Andrew Fenrich</a> &&
-              <a href="https://github.com/MariePetit"> Marie Petit</a>
+              As team lead, my focus was on dividing our tasks fairly while
+              keeping the app design cohesive and responsive. The most difficult
+              part of this project was working around other people's code but it
+              was truly rewarding to see all our pieces come together!
+            </p>
+            <p>
+              To see the app in action, you may{" "}
+              <a href="https://www.youtube.com/watch?v=a9O7pC1S2KI">
+                watch a short demo
+              </a>{" "}
+              on YouTube!
             </p>
           </Details>
         </Description>
@@ -217,6 +228,7 @@ const Title = styled.div`
     margin: 10px;
   }
   button {
+    background: #ccc;
     width: 200px;
     display: flex;
     justify-content: space-between;

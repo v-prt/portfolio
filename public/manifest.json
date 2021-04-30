@@ -3,17 +3,17 @@
   "name": "Victoria Peart's Web Dev Portfolio",
   "icons": [
     {
-      "src": "pineapple.ico",
+      "src": "paprika.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "pineapple.png",
+      "src": "paprika.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "pineapple.png",
+      "src": "paprika.png",
       "type": "image/png",
       "sizes": "512x512"
     }
