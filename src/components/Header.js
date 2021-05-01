@@ -3,14 +3,27 @@ import { NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import { COLORS } from "../GlobalStyles";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { GrMail } from "react-icons/gr";
+import { BiMenu } from "react-icons/bi";
 
 export const Header = () => {
   return (
     <Wrapper>
       <Nav>
-        <Link to="/home">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/projects">Projects</Link>
+        <Icon>
+          <BiMenu />
+        </Icon>
+        <ul>
+          <li>
+            <Link to="/home">HOME</Link>
+          </li>
+          <li>
+            <Link to="/about">ABOUT</Link>
+          </li>
+          <li>
+            <Link to="/projects">PROJECTS</Link>
+          </li>
+        </ul>
       </Nav>
       <SocialLinks>
         <a href="https://github.com/v-prt">
@@ -26,6 +39,11 @@ export const Header = () => {
         <a href="https://www.twitter.com/vikki_peart">
           <Icon>
             <FaTwitter />
+          </Icon>
+        </a>
+        <a href="mailto:v-peart@outlook.com">
+          <Icon>
+            <GrMail />
           </Icon>
         </a>
       </SocialLinks>
@@ -51,14 +69,51 @@ const Wrapper = styled.header`
   z-index: 1;
 `;
 
-const Nav = styled.nav``;
+// FIXME: make menu disappear after click (on mobile, must tap outside of menu)
+const Nav = styled.nav`
+  div {
+    display: none;
+  }
+  ul {
+    display: flex;
+  }
+  @media (max-width: 600px) {
+    div {
+      display: block;
+    }
+    ul {
+      background: ${COLORS.light};
+      position: absolute;
+      top: 45px;
+      flex-direction: column;
+      visibility: hidden;
+      opacity: 0;
+      // FIXME: menu shows briefly when sizing down the window
+      transition: 0.2s ease-in;
+      transition-delay: 0.3s;
+      li {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+    }
+    &:hover {
+      ul {
+        visibility: visible;
+        opacity: 100%;
+        box-shadow: 0px 10px 20px -15px #333;
+      }
+    }
+  }
+`;
 
 const Link = styled(NavLink)`
   color: #333;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   margin: 0 10px;
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 10px;
+  padding: 12px 10px 10px 10px;
   &:hover {
     background: ${COLORS.medium};
     color: #fff;
@@ -67,8 +122,15 @@ const Link = styled(NavLink)`
     background: ${COLORS.medium};
     color: #fff;
   }
-  @media (max-width: 1000px) {
-    margin: 0 5px;
+  @media (max-width: 600px) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-radius: 0;
+    border-bottom: 2px solid ${COLORS.light};
+    padding: 15px;
   }
 `;
 
@@ -80,12 +142,9 @@ const SocialLinks = styled.div`
 const Icon = styled.div`
   color: #333;
   margin: 0 10px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   transition: 0.2s ease-in-out;
   &:hover {
     color: ${COLORS.medium};
-  }
-  @media (max-width: 1000px) {
-    margin: 0 5px;
   }
 `;

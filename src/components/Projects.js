@@ -71,7 +71,7 @@ export const Projects = () => {
             <p>
               This group project was completed over the course of one week as
               part of our coding bootcamp, in which we developed an e-commerce
-              web app for wearable teach and designed the front as well as
+              web app for wearable tech and designed the front as well as
               back-end.
             </p>
             <p>
