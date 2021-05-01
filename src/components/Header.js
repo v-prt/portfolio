@@ -58,7 +58,8 @@ const fadeIn = keyframes`
 
 const Wrapper = styled.header`
   animation: ${fadeIn} 3s ease-in-out;
-  background: rgba(250, 250, 250, 0.6);
+  background: rgba(252, 247, 243, 0.6);
+  box-shadow: 0px 10px 15px -15px #999;
   backdrop-filter: blur(8px);
   width: 100%;
   position: fixed;
@@ -89,7 +90,7 @@ const Nav = styled.nav`
       visibility: hidden;
       opacity: 0;
       // FIXME: menu shows briefly when sizing down the window
-      transition: 0.2s ease-in;
+      transition: 0.2s ease-in-out;
       transition-delay: 0.3s;
       li {
         width: 100vw;

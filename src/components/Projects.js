@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { COLORS } from "../GlobalStyles";
-import background from "../assets/bg-forest1.jpg";
 import { BiChevronDown } from "react-icons/bi";
 
 import eagletekHome from "../assets/eagleTek/eagletek-home.png";
@@ -39,9 +38,6 @@ export const Projects = () => {
 
   return (
     <Wrapper>
-      <Banner>
-        <h1>My Projects</h1>
-      </Banner>
       <Project>
         <Description>
           <Title>
@@ -185,18 +181,7 @@ const Wrapper = styled.main`
   flex-direction: column;
   align-items: center;
   width: 100vw;
-`;
-
-const Banner = styled.div`
-  background: url(${background}) center center / cover;
-  height: 170px;
-  width: 100%;
-  text-align: center;
-  h1 {
-    color: #fff;
-    margin-top: 90px;
-    font-size: 4rem;
-  }
+  padding-top: 50px;
 `;
 
 const Project = styled.section`
@@ -228,15 +213,16 @@ const Title = styled.div`
     margin: 10px;
   }
   button {
-    background: #ccc;
+    background: #e6e6e6;
     width: 200px;
     display: flex;
     justify-content: space-between;
     margin: 10px;
     padding: 7px 5px 3px 5px;
     border-radius: 5px;
+    transition: 0.2s ease-in-out;
     &:hover {
-      background: #b3b3b3;
+      background: #ccc;
       cursor: pointer;
     }
   }
