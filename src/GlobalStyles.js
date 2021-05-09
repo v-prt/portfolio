@@ -1,9 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 export const COLORS = {
-  dark: "#1a1a1a",
+  darkest: "#1a1a1a",
+  dark: "#333333",
   medium: "#4c846f",
-  light: "#fcf7f3",
+  light: "#c0c9ae",
+  lightest: "#fcf7f3",
 };
 
 export default createGlobalStyle`
@@ -15,12 +17,12 @@ export default createGlobalStyle`
         padding: 0;
         border: 0;
     }
-    html, body {
-        /* background: linear-gradient(${COLORS.dark}, #202c31, ${COLORS.medium}, ${COLORS.light}); */
-    }
     h1, h2, h3 {
         font-family: "Arima Madurai", cursive;
         font-weight: 100;
+    }
+    p {
+        line-height: 1.75;
     }
     ol, ul {
         list-style: none;

@@ -193,10 +193,10 @@ const Project = styled.section`
 `;
 
 const Description = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   @media (max-width: 1000px) {
     width: 100%;
     margin-bottom: 0;
@@ -209,21 +209,21 @@ const Title = styled.div`
   justify-content: center;
   align-items: center;
   h2 {
-    font-size: 2.5rem;
     margin: 10px;
+    font-size: 2.5rem;
   }
   button {
     background: #e6e6e6;
-    width: 200px;
     display: flex;
     justify-content: space-between;
+    width: 200px;
     margin: 10px;
-    padding: 7px 5px 3px 5px;
     border-radius: 5px;
+    padding: 7px 5px 3px 5px;
     transition: 0.2s ease-in-out;
     &:hover {
-      background: #ccc;
       cursor: pointer;
+      background: #ccc;
     }
   }
   @media (max-width: 1000px) {
@@ -238,7 +238,6 @@ const Details = styled.div`
   display: ${(props) => (props.visible ? "block" : "none")};
   p {
     max-width: 800px;
-    line-height: 1.75;
     margin: 20px;
   }
   a {
@@ -251,8 +250,8 @@ const Details = styled.div`
 `;
 
 const Gallery = styled.div`
-  width: 100%;
   display: flex;
+  width: 100%;
   overflow: hidden;
   overflow-x: scroll;
 `;

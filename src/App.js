@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
 import { Header } from "./components/Header";
-import { Homepage } from "./components/Homepage";
-import { About } from "./components/About";
-import { Projects } from "./components/Projects";
+import { Homepage } from "./routes/Homepage";
+import { About } from "./routes/About";
+import { Projects } from "./routes/Projects";
 
 export const App = () => {
   return (

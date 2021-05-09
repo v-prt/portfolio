@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 import { COLORS } from "../GlobalStyles";
+
 import plantgeekHome1 from "../assets/plantgeek/plantgeek-homepage1.png";
 import plantgeekHome2 from "../assets/plantgeek/plantgeek-homepage2.png";
 import plantgeekHome3 from "../assets/plantgeek/plantgeek-homepage3.png";
@@ -13,7 +15,8 @@ import plantgeekUserProfile from "../assets/plantgeek/plantgeek-userprofile.png"
 import plantgeekCollection from "../assets/plantgeek/plantgeek-collection.png";
 import plantgeekFriends from "../assets/plantgeek/plantgeek-friends.png";
 import plantgeekSettings from "../assets/plantgeek/plantgeek-settings.png";
-import view from "../assets/view.svg";
+
+import developer from "../assets/illustrations/developer.svg";
 
 export const FeaturedProject = () => {
   return (
@@ -53,7 +56,7 @@ export const FeaturedProject = () => {
         <Image src={plantgeekSettings} alt="" />
       </Gallery>
       <ViewProjects>
-        <img src={view} alt="" />
+        <img src={developer} alt="" />
         <div>
           <p>Interested in seeing other things I've worked on?</p>
           <ProjectsLink to="/projects">View more projects</ProjectsLink>
@@ -81,8 +84,8 @@ const Description = styled.div`
     margin: 50px 20px 20px 20px;
   }
   p {
+    text-align: center;
     max-width: 800px;
-    line-height: 1.75;
     margin: 20px;
   }
   a {
@@ -112,28 +115,38 @@ const Image = styled.img`
 `;
 
 const ViewProjects = styled.div`
-  background: #f2f2f2;
-  height: 200px;
+  background: linear-gradient(#ccc, #f2f2f2);
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
+  padding: 30px 0;
   img {
-    height: 100px;
+    height: 150px;
     margin: 20px;
   }
   div {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
     margin: 20px;
     p {
+      text-align: center;
       margin-bottom: 10px;
     }
   }
 `;
 
 const ProjectsLink = styled(Link)`
-  color: ${COLORS.medium};
+  background: ${COLORS.medium};
+  color: ${COLORS.lightest};
   font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
   &:hover {
-    color: #333;
+    background: ${COLORS.dark};
   }
 `;

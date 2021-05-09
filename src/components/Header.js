@@ -66,8 +66,10 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // TODO: figure out why link goes behind profile image without this
   z-index: 1;
+  @media screen and (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 `;
 
 // FIXME: make menu disappear after click (on mobile, must tap outside of menu)
@@ -83,7 +85,7 @@ const Nav = styled.nav`
       display: block;
     }
     ul {
-      background: ${COLORS.light};
+      background: ${COLORS.lightest};
       position: absolute;
       top: 45px;
       flex-direction: column;
@@ -130,7 +132,7 @@ const Link = styled(NavLink)`
     justify-content: center;
     margin: 0;
     border-radius: 0;
-    border-bottom: 2px solid ${COLORS.light};
+    border-bottom: 2px solid ${COLORS.lightest};
     padding: 15px;
   }
 `;
