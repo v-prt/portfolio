@@ -17,6 +17,10 @@ export default createGlobalStyle`
         padding: 0;
         border: 0;
     }
+    body {
+        overscroll-behavior-y: none;
+        overscroll-behavior-x: none;
+    }
     h1, h2, h3 {
         font-family: "Arima Madurai", cursive;
         font-weight: 100;
