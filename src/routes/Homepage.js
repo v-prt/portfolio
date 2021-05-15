@@ -14,6 +14,7 @@ export const Homepage = () => {
 
   return (
     <Wrapper>
+      <Background></Background>
       <Heading>
         <Banner>
           <Name>Victoria Peart</Name>
@@ -52,11 +53,19 @@ export const Homepage = () => {
 };
 
 const Wrapper = styled.main`
-  background: url(${background}) center center / cover;
-  background-attachment: fixed;
+  /* this causes problems on mobile browsers */
+  /* background-attachment: fixed; */
   display: flex;
   flex-direction: column;
   height: 100%;
+`;
+
+const Background = styled.div`
+  background: url(${background}) center center / cover;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
 `;
 
 const Heading = styled.section`

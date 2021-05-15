@@ -15,6 +15,7 @@ export const About = () => {
 
   return (
     <Wrapper>
+      <Background></Background>
       <Skills />
       <Education />
       <Priorities />
@@ -23,12 +24,18 @@ export const About = () => {
 };
 
 const Wrapper = styled.div`
-  background: linear-gradient(#000, #000),
-    url(${background}) center center / cover;
-  background-attachment: fixed;
-  background-blend-mode: saturation;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
+`;
+
+const Background = styled.div`
+  background: linear-gradient(#000, #000),
+    url(${background}) center center / cover;
+  height: 100vh;
+  background-blend-mode: saturation;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
 `;
