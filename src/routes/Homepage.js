@@ -85,8 +85,9 @@ const Banner = styled.div`
   background: rgba(0, 0, 0, 0.5);
   color: #c0c9ae;
   text-align: center;
+  height: 300px;
   width: 100%;
-  padding: 30px 0;
+  padding: 30px 0 50px 0;
   @media screen and (prefers-reduced-motion: reduce) {
     animation: none;
   }
