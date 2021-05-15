@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import { COLORS } from "../GlobalStyles";
@@ -7,6 +7,11 @@ import background from "../assets/bg-forest1.jpg";
 import { FeaturedProject } from "../components/FeaturedProject";
 
 export const Homepage = () => {
+  // makes window scroll to top between renders
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Wrapper>
       <Heading>
@@ -14,7 +19,12 @@ export const Homepage = () => {
           <Name>Victoria Peart</Name>
           <Job>Full-Stack Web Dev</Job>
           <Skills>
-            html / css / javascript / mongodb / express / react / redux / node
+            <p>html / css / javascript</p>
+            <p>mongodb / express / react / redux / node</p>
+            <p>gamer, nature enthusiast, wannabe minimalist</p>
+            <p>
+              will do <b>pro bono work</b> to help animals
+            </p>
           </Skills>
         </Banner>
       </Heading>
@@ -42,13 +52,14 @@ export const Homepage = () => {
 };
 
 const Wrapper = styled.main`
+  background: url(${background}) center center / cover;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   height: 100%;
 `;
 
 const Heading = styled.section`
-  background: url(${background}) center center / cover;
   display: flex;
   align-items: flex-end;
   height: 100vh;
@@ -62,13 +73,11 @@ const fadeIn = keyframes`
 
 const Banner = styled.div`
   animation: ${fadeIn} 2s ease-in-out;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   color: #c0c9ae;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   width: 100%;
+  padding: 30px 0;
   @media screen and (prefers-reduced-motion: reduce) {
     animation: none;
   }
@@ -85,6 +94,7 @@ const Name = styled.h1`
 `;
 
 const Job = styled.p`
+  font-style: italic;
   margin: 20px 0;
   font-size: 2rem;
   font-weight: 200;
@@ -93,10 +103,57 @@ const Job = styled.p`
   }
 `;
 
-const Skills = styled.p`
-  text-align: center;
-  margin: 0 20px 50px 20px;
-  font-size: 0.9rem;
+const rotation = keyframes`
+ 0% {
+    opacity: 0;
+    transform: translate3d(0px, -50px, 0px);
+  }
+  2.5% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+  25% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+  27.5% {
+    opacity: 0;
+    transform: translate3d(0px, 50px, 0px);
+  }
+  99.9999% {
+    opacity: 0;
+    transform: translate3d(0px, 50px, 0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0px, -50px, 0px);
+  }
+`;
+
+const Skills = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 50px 0;
+  p {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    margin: 0 20px;
+    transform: translate3d(0px, -50px, 0px);
+    animation: 12s ease-in-out infinite ${rotation};
+  }
+  p:nth-child(2) {
+    animation-delay: 3s;
+  }
+  p:nth-child(3) {
+    animation-delay: 6s;
+  }
+  p:nth-child(4) {
+    animation-delay: 9s;
+  }
 `;
 
 const Intro = styled.section`

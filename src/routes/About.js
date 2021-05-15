@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 
 import styled from "styled-components";
+import background from "../assets/bg-forest.jpg";
 
 import { Education } from "../components/Education.js";
 import { Skills } from "../components/Skills.js";
@@ -22,6 +23,10 @@ export const About = () => {
 };
 
 const Wrapper = styled.div`
+  background: linear-gradient(#000, #000),
+    url(${background}) center center / cover;
+  background-attachment: fixed;
+  background-blend-mode: saturation;
   display: flex;
   flex-direction: column;
   align-items: center;

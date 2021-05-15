@@ -11,8 +11,7 @@ export const Skills = () => {
         My strengths lie mostly in the front-end where my natural design skills
         can come into play - I could spend all day just messing around with CSS
         (and I often do)! I'm not as good at the math or logic side of coding,
-        so I aim to study and practice that whenever I can to round out my
-        abilities.
+        so I practice as much as I can to round out my abilities.
       </p>
       <Groups>
         <Group>
@@ -100,7 +99,7 @@ const Title = styled.h3`
 `;
 
 const List = styled.ul`
-  padding: 20px;
+  padding: 20px 0;
   li {
     line-height: 1.75;
   }

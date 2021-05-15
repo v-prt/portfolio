@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Certificates } from "./Certificates";
-import background from "../assets/bg-forest.jpg";
 import { COLORS } from "../GlobalStyles";
 
 export const Education = () => {
@@ -32,7 +31,6 @@ export const Education = () => {
 };
 
 const Wrapper = styled.section`
-  background: url(${background}) center center / cover;
   color: ${COLORS.dark};
   display: flex;
   flex-direction: column;
@@ -42,11 +40,11 @@ const Wrapper = styled.section`
 `;
 
 const Card = styled.div`
-  background: rgba(250, 250, 250, 0.5);
+  background: rgba(250, 250, 250, 0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 20px 0;
 `;
 
 const Heading = styled.h2`
@@ -54,7 +52,9 @@ const Heading = styled.h2`
   font-size: 2rem;
 `;
 
-const School = styled.h3``;
+const School = styled.h3`
+  font-size: 1.5rem;
+`;
 
 const Degree = styled.p`
   font-style: italic;
@@ -63,7 +63,7 @@ const Degree = styled.p`
 const Description = styled.div`
   max-width: 600px;
   p {
-    margin: 15px;
+    margin: 20px;
     line-height: 1.75;
   }
 `;

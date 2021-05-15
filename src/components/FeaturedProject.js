@@ -75,6 +75,7 @@ const Wrapper = styled.section`
 `;
 
 const Description = styled.div`
+  background: #f2f2f2;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -98,8 +99,10 @@ const Description = styled.div`
 `;
 
 const Gallery = styled.div`
+  background: #f2f2f2;
   width: 100%;
   display: flex;
+  padding-bottom: 50px;
   overflow: hidden;
   overflow-x: scroll;
 `;
@@ -115,13 +118,13 @@ const Image = styled.img`
 `;
 
 const ViewProjects = styled.div`
-  background: linear-gradient(#ccc, #f2f2f2);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+  color: ${COLORS.light};
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
   padding: 30px 0;
   img {
     height: 150px;
