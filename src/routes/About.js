@@ -25,8 +25,8 @@ export const About = () => {
 
 const Wrapper = styled.div`
   width: 100vw;
-  overscroll-behavior-y: none;
-  overscroll-behavior-x: none;
+  /* overscroll-behavior-y: none;
+  overscroll-behavior-x: none; */
 `;
 
 const Background = styled.div`

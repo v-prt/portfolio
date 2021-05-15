@@ -17,7 +17,8 @@ export default createGlobalStyle`
         padding: 0;
         border: 0;
     }
-    body {
+    html, body {
+        overflow-x: hidden;
         overscroll-behavior-y: none;
         overscroll-behavior-x: none;
     }
