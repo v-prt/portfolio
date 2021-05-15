@@ -151,7 +151,7 @@ const Skills = styled.div`
     position: absolute;
     top: 0px;
     opacity: 0;
-    margin: 0 20px;
+    max-width: 75%;
     transform: translate3d(0px, -50px, 0px);
     animation: 12s ease-in-out infinite ${rotation};
   }
