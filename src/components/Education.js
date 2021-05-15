@@ -32,11 +32,9 @@ export const Education = () => {
 
 const Wrapper = styled.section`
   color: ${COLORS.dark};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 30px 0;
+  margin: auto;
+  width: fit-content;
+  padding: 50px 0;
 `;
 
 const Card = styled.div`
@@ -44,7 +42,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
+  padding: 30px 0;
 `;
 
 const Heading = styled.h2`

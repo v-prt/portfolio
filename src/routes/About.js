@@ -24,10 +24,9 @@ export const About = () => {
 };
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100vw;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
 `;
 
 const Background = styled.div`

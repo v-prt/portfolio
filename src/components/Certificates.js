@@ -105,8 +105,8 @@ const Certs = styled.ul`
 
 const Cert = styled.li`
   img {
-    max-height: 250px;
-    max-width: 250px;
+    max-height: 200px;
+    max-width: 200px;
     margin: 20px;
     transition: 0.2s ease-in-out;
     &:hover {
