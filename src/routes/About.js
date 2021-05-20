@@ -25,15 +25,13 @@ export const About = () => {
 
 const Wrapper = styled.div`
   width: 100vw;
-  /* overscroll-behavior-y: none;
-  overscroll-behavior-x: none; */
 `;
 
 const Background = styled.div`
   background: linear-gradient(#000, #000),
     url(${background}) center center / cover;
-  height: 100vh;
   background-blend-mode: saturation;
+  height: 100vh;
   width: 100vw;
   position: fixed;
   z-index: -1;

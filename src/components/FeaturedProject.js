@@ -33,14 +33,28 @@ export const FeaturedProject = () => {
         </p>
         <Image src={plantgeekPlantProfile} alt="" />
         <p>
-          As my final project for bootcamp, I thought it would be fun to create{" "}
-          <strong>plantgeek</strong> as an upgrade to my spreadsheet, which
-          could also serve as a hub for houseplant lovers to connect with each
-          other and share useful tips. For more information, you may
-          <a href="https://github.com/v-prt/plantgeek"> check out my repo</a> on
-          GitHub or
-          <a href="https://youtu.be/_LXWqhxIMrQ"> watch a short demo</a> on
-          YouTube!
+          As my final project for bootcamp, I thought it would be fun to create
+          <strong> plantgeek </strong>
+          as an upgrade to my spreadsheet, which could also serve as a hub for
+          houseplant lovers to connect with each other and share useful tips.
+          <p>
+            <a
+              href="https://github.com/v-prt/plantgeek"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Check out my repo on GitHub
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://youtu.be/_LXWqhxIMrQ"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Watch a short demo on YouTube
+            </a>
+          </p>
         </p>
       </Description>
       <Gallery>
@@ -92,8 +106,25 @@ const Description = styled.div`
   a {
     color: ${COLORS.medium};
     font-weight: bold;
+    position: relative;
+    z-index: 1;
+    &:after {
+      background: ${COLORS.light};
+      content: "";
+      height: 5px;
+      width: 100%;
+      position: absolute;
+      bottom: 1px;
+      right: -1px;
+      z-index: -1;
+      transform: skew(-30deg) rotate(-1deg) scale(1.05);
+      transition: 0.2s ease-in-out;
+    }
     &:hover {
       color: #333;
+      &:after {
+        transform: skew(30deg) rotate(1deg) scale(1.1);
+      }
     }
   }
 `;
@@ -119,6 +150,7 @@ const Image = styled.img`
 
 const ViewProjects = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+  backdrop-filter: blur(3px);
   color: ${COLORS.light};
   width: 100%;
   display: flex;

@@ -57,12 +57,30 @@ export const Projects = () => {
           </Title>
           <Details visible={eagleTek}>
             <p>
-              <em>Collaborators</em> :{" "}
-              <a href="https://www.linkedin.com/in/andrew-fenrich/">
-                Andrew Fenrich
-              </a>{" "}
-              (Backend), <a href="https://mariiesmall.com/"> Marie Petit</a>{" "}
-              (Frontend), && <b>Myself</b> (Team Lead, Frontend)
+              <em>Collaborators : </em>
+              <p>
+                <b>Myself</b> (Team Lead, Frontend)
+              </p>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/andrew-fenrich/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Andrew Fenrich
+                </a>{" "}
+                (Backend)
+              </p>
+              <p>
+                <a
+                  href="https://mariiesmall.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Marie Petit
+                </a>{" "}
+                (Frontend)
+              </p>
             </p>
             <p>
               This group project was completed over the course of one week as
@@ -78,7 +96,11 @@ export const Projects = () => {
             </p>
             <p>
               To see the app in action, you may{" "}
-              <a href="https://www.youtube.com/watch?v=a9O7pC1S2KI">
+              <a
+                href="https://www.youtube.com/watch?v=a9O7pC1S2KI"
+                target="_blank"
+                rel="noreferrer"
+              >
                 watch a short demo
               </a>{" "}
               on YouTube!
@@ -235,7 +257,9 @@ const Title = styled.div`
 `;
 
 const Details = styled.div`
-  display: ${(props) => (props.visible ? "block" : "none")};
+  opacity: ${(props) => (props.visible ? "1" : "0")};
+  max-height: ${(props) => (props.visible ? "1000px" : "0")};
+  transition: 0.5s ease-in-out;
   p {
     max-width: 800px;
     margin: 20px;
@@ -251,8 +275,8 @@ const Details = styled.div`
 
 const Gallery = styled.div`
   display: flex;
-  width: 100%;
-  overflow: hidden;
+  width: calc(100% - 40px);
+  border-bottom: 1px dotted #ccc;
   overflow-x: scroll;
 `;
 
@@ -264,9 +288,15 @@ const fadeIn = keyframes`
 const Image = styled.img`
   animation: ${fadeIn} 2s ease-in-out;
   height: 500px;
-  margin: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 0px 8px #b3b3b3;
+  margin: 20px 10px;
+  border-radius: 10px;
+  position: relative; // removes glitch where page stops scrolling vertically when hovering on gallery
+  // TODO: slide stacking?
+  /* position: sticky;
+  left: 20px; */
+  &:first-child {
+    margin-left: 0;
+  }
   @media (max-width: 1000px) {
     height: 300px;
   }

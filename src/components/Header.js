@@ -2,9 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import { COLORS } from "../GlobalStyles";
-import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
-import { GrMail } from "react-icons/gr";
 import { BiMenu } from "react-icons/bi";
+import { SocialLinks } from "./SocialLinks";
 
 export const Header = () => {
   return (
@@ -25,28 +24,7 @@ export const Header = () => {
           </li>
         </ul>
       </Nav>
-      <SocialLinks>
-        <a href="https://github.com/v-prt">
-          <Icon>
-            <FaGithub />
-          </Icon>
-        </a>
-        <a href="https://www.linkedin.com/in/victoria-peart/">
-          <Icon>
-            <FaLinkedin />
-          </Icon>
-        </a>
-        <a href="https://www.twitter.com/vikki_peart">
-          <Icon>
-            <FaTwitter />
-          </Icon>
-        </a>
-        <a href="mailto:v-peart@outlook.com">
-          <Icon>
-            <GrMail />
-          </Icon>
-        </a>
-      </SocialLinks>
+      <SocialLinks />
     </Wrapper>
   );
 };
@@ -61,12 +39,13 @@ const Wrapper = styled.header`
   background: rgba(252, 247, 243, 0.6);
   box-shadow: 0px 10px 15px -15px #999;
   backdrop-filter: blur(8px);
-  width: 100%;
+  width: calc(100% - 40px); // accounts for padding
   position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  padding: 10px 20px;
+  z-index: 3; // accounts for higher index of a:before
   @media screen and (prefers-reduced-motion: reduce) {
     animation: none;
   }
@@ -86,26 +65,27 @@ const Nav = styled.nav`
     }
     ul {
       background: ${COLORS.lightest};
+      box-shadow: 0px 10px 20px -15px #333;
+      flex-direction: column;
       position: absolute;
       top: 45px;
-      flex-direction: column;
-      visibility: hidden;
-      opacity: 0;
-      // FIXME: menu shows briefly when sizing down the window
-      transition: 0.2s ease-in-out;
-      transition-delay: 0.3s;
+      right: 0px; // accounts for header's padding
+      overflow: hidden;
+      z-index: 1;
       li {
+        opacity: 0;
+        height: 0;
         width: 100vw;
         display: flex;
         align-items: center;
-        text-align: center;
+        transition: 0.3s ease-in-out;
+        transition-delay: 0.3s;
       }
     }
     &:hover {
-      ul {
-        visibility: visible;
-        opacity: 100%;
-        box-shadow: 0px 10px 20px -15px #333;
+      li {
+        opacity: 1;
+        height: 43px;
       }
     }
   }
@@ -135,11 +115,6 @@ const Link = styled(NavLink)`
     border-bottom: 2px solid ${COLORS.lightest};
     padding: 15px;
   }
-`;
-
-const SocialLinks = styled.div`
-  margin: 10px 20px;
-  display: flex;
 `;
 
 const Icon = styled.div`

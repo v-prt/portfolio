@@ -83,6 +83,7 @@ const fadeIn = keyframes`
 const Banner = styled.div`
   animation: ${fadeIn} 2s ease-in-out;
   background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
   color: #c0c9ae;
   text-align: center;
   height: 300px;
