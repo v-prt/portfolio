@@ -6,7 +6,9 @@ export const Story = () => {
   return (
     <Wrapper>
       <Question>
-        <BsFillChatSquareQuoteFill />
+        <div>
+          <BsFillChatSquareQuoteFill />
+        </div>
         <p>
           <em>Who do you want to be when you grow up?</em>
         </p>
@@ -56,14 +58,23 @@ const Wrapper = styled.section`
 `;
 
 const Question = styled.div`
+  background: #fff;
   color: #000;
+  position: relative;
   text-align: center;
-  background: white;
   margin: 20px;
-  padding: 20px;
   border-radius: 10px;
-  font-size: 1.5rem;
+  padding: 25px 20px 20px 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  font-size: 2rem;
   font-weight: 500;
+  div {
+    background: #fff;
+    border-radius: 4px;
+    position: absolute;
+    top: -17px;
+    left: calc(50% - 10px);
+  }
   p {
     font-size: 1.1rem;
   }
@@ -85,11 +96,11 @@ const CareerOptions = styled.div`
   position: relative;
   margin-bottom: 80px;
   p {
-    font-size: 1.3rem;
     position: absolute;
     top: 0;
     opacity: 0;
     max-width: 75%;
+    font-size: 1.4rem;
     transform: translate3d(0px, -50px, 0px);
     animation: 12s ease-in-out ${rotate};
     animation-iteration-count: 1;
@@ -107,5 +118,10 @@ const CareerOptions = styled.div`
     animation: 3s ease-in-out ${rotateLast};
     animation-delay: 12s;
     animation-fill-mode: forwards;
+  }
+  @media (max-width: 500px) {
+    p {
+      font-size: 1.2rem;
+    }
   }
 `;
