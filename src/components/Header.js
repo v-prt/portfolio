@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
-import { COLORS } from "../GlobalStyles";
+import styled from "styled-components";
+import { COLORS, fadeIn } from "../GlobalStyles";
 import { BiMenu } from "react-icons/bi";
 import { SocialLinks } from "./SocialLinks";
 
@@ -28,11 +28,6 @@ export const Header = () => {
     </Wrapper>
   );
 };
-
-const fadeIn = keyframes`
-0% {opacity: 0}
-100% {opacity: 1}
-`;
 
 const Wrapper = styled.header`
   animation: ${fadeIn} 3s ease-in-out;

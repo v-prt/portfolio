@@ -3,8 +3,9 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import background from "../assets/bg-forest.jpg";
 
-import { Education } from "../components/Education.js";
+import { Story } from "../components/Story.js";
 import { Skills } from "../components/Skills.js";
+import { Education } from "../components/Education.js";
 import { Priorities } from "../components/Priorities.js";
 
 export const About = () => {
@@ -15,7 +16,8 @@ export const About = () => {
 
   return (
     <Wrapper>
-      <Background></Background>
+      <Background />
+      <Story />
       <Skills />
       <Education />
       <Priorities />

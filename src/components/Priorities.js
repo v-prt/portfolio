@@ -8,6 +8,7 @@ import style from "../assets/illustrations/style.svg";
 export const Priorities = () => {
   return (
     <Wrapper>
+      <Border />
       <Heading>
         [ <b>priorities</b> ]
       </Heading>
@@ -57,20 +58,26 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 50px 0;
   p {
     text-align: center;
     margin: 0 30px;
   }
 `;
 
+const Border = styled.div`
+  background: linear-gradient(to right, #5da26e, #b6c5fb, ${COLORS.medium});
+  height: 5px;
+  width: 100%;
+`;
+
 const Heading = styled.h2`
-  margin-bottom: 20px;
+  margin: 70px 0 20px 0;
   font-size: 2rem;
 `;
 
 const Div = styled.div`
   display: flex;
+  margin-bottom: 50px;
   @media (max-width: 1000px) {
     flex-direction: column;
   }

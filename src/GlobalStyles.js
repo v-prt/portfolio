@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, keyframes } from "styled-components";
 
 export const COLORS = {
   darkest: "#1a1a1a",
@@ -38,5 +38,52 @@ export default createGlobalStyle`
     }
     strong {
     font-weight: bold;
+  }
+`;
+
+// ANIMATIONS
+export const fadeIn = keyframes`
+0% {opacity: 0}
+100% {opacity: 1}
+`;
+
+export const rotate = keyframes`
+ 0% {
+    opacity: 0;
+    transform: translate3d(0px, -50px, 0px);
+  }
+  2% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+  25% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+  27% {
+    opacity: 0;
+    transform: translate3d(0px, 50px, 0px);
+  }
+  99% {
+    opacity: 0;
+    transform: translate3d(0px, 50px, 0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0px, -50px, 0px);
+  }
+`;
+
+export const rotateLast = keyframes`
+ 0% {
+    opacity: 0;
+    transform: translate3d(50px, 0px, 0px);
+  }
+  40% {
+      opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
   }
 `;

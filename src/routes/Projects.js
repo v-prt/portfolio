@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styled, { keyframes } from "styled-components";
-import { COLORS } from "../GlobalStyles";
+import styled from "styled-components";
+import { COLORS, fadeIn } from "../GlobalStyles";
 import { BiChevronDown } from "react-icons/bi";
 
 import eagletekHome from "../assets/eagleTek/eagletek-home.png";
@@ -278,11 +278,6 @@ const Gallery = styled.div`
   width: calc(100% - 40px);
   border-bottom: 1px dotted #ccc;
   overflow-x: scroll;
-`;
-
-const fadeIn = keyframes`
-0% {opacity: 0}
-100% {opacity: 1}
 `;
 
 const Image = styled.img`

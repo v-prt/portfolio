@@ -4,6 +4,7 @@ import { COLORS } from "../GlobalStyles";
 export const Skills = () => {
   return (
     <Wrapper>
+      <Border />
       <Heading>
         [ <b>skills</b> ]
       </Heading>
@@ -52,6 +53,7 @@ export const Skills = () => {
           </List>
         </Group>
       </Groups>
+      <Border />
     </Wrapper>
   );
 };
@@ -63,7 +65,6 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 80px 0 50px 0;
   p {
     text-align: center;
     max-width: 800px;
@@ -71,8 +72,14 @@ const Wrapper = styled.section`
   }
 `;
 
+const Border = styled.div`
+  background: linear-gradient(to right, #ffcc00, #ffd700, #ff9900);
+  height: 5px;
+  width: 100%;
+`;
+
 const Heading = styled.h2`
-  margin-bottom: 20px;
+  margin: 70px 0 20px 0;
   font-size: 2rem;
 `;
 
@@ -80,6 +87,7 @@ const Groups = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 `;
 
 const Group = styled.div`

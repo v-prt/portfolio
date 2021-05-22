@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
-import { COLORS } from "../GlobalStyles";
+import styled from "styled-components";
+import { COLORS, fadeIn, rotate } from "../GlobalStyles";
 import avatar from "../assets/victoria.JPG";
 import background from "../assets/bg-forest1.jpg";
 import { FeaturedProject } from "../components/FeaturedProject";
@@ -24,7 +24,7 @@ export const Homepage = () => {
             <p>mongodb / express / react / redux / node</p>
             <p>gamer, nature enthusiast, wannabe minimalist</p>
             <p>
-              will do <b>pro bono work</b> to help animals
+              will do <b>pro bono work</b> for animal welfare
             </p>
           </Skills>
         </Banner>
@@ -33,16 +33,18 @@ export const Homepage = () => {
         <Image src={avatar} alt="" />
         <Text>
           <p>
-            Hey! I'm Victoria. I just graduated from Concordia University's
-            Full-Stack Web Dev bootcamp and I'm seeking my first official role
-            as a web dev.
+            Hey! I'm Victoria. I'm a full-stack web developer, living and
+            breathing in beautiful British Columbia, Canada.
           </p>
           <p>
             As a deaf woman, I prioritize
             <strong> visual appeal, accessibility, and thoughtful UX</strong>. I
             enjoy working in environments that allow me creative freedom as well
-            as the opportunity to learn from more experienced developers and
-            improve my skills.
+            as the opportunity to improve and learn new skills.
+          </p>
+          <p>
+            When I'm not coding, I'm usually playing video games or immersing
+            myself in nature on a hike through the woods.
           </p>
           <AboutLink to="/about">Learn more about me</AboutLink>
         </Text>
@@ -73,11 +75,6 @@ const Heading = styled.section`
   align-items: flex-end;
   height: 100vh;
   width: 100%;
-`;
-
-const fadeIn = keyframes`
-0% {opacity: 0}
-100% {opacity: 1}
 `;
 
 const Banner = styled.div`
@@ -114,33 +111,6 @@ const Job = styled.p`
   }
 `;
 
-const rotation = keyframes`
- 0% {
-    opacity: 0;
-    transform: translate3d(0px, -50px, 0px);
-  }
-  2.5% {
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-  }
-  25% {
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-  }
-  27.5% {
-    opacity: 0;
-    transform: translate3d(0px, 50px, 0px);
-  }
-  99.9999% {
-    opacity: 0;
-    transform: translate3d(0px, 50px, 0px);
-  }
-  100% {
-    opacity: 0;
-    transform: translate3d(0px, -50px, 0px);
-  }
-`;
-
 const Skills = styled.div`
   display: flex;
   flex-direction: column;
@@ -150,11 +120,11 @@ const Skills = styled.div`
   p {
     font-size: 1.2rem;
     position: absolute;
-    top: 0px;
+    top: 0;
     opacity: 0;
     max-width: 75%;
     transform: translate3d(0px, -50px, 0px);
-    animation: 12s ease-in-out infinite ${rotation};
+    animation: 12s ease-in-out infinite ${rotate};
   }
   p:nth-child(2) {
     animation-delay: 3s;
@@ -191,7 +161,7 @@ const Text = styled.div`
   flex-direction: column;
   width: 500px;
   p {
-    margin: 20px;
+    margin: 10px 20px;
   }
 `;
 
