@@ -82,10 +82,10 @@ const Question = styled.div`
 
 const Answer = styled.div`
   max-width: 800px;
-  margin-bottom: 50px;
+  margin: 0 20px 50px 20px;
   p {
     text-align: center;
-    margin: 20px;
+    margin: 20px 0;
   }
 `;
 
@@ -96,11 +96,11 @@ const CareerOptions = styled.div`
   position: relative;
   margin-bottom: 80px;
   p {
+    font-size: 1.4rem;
     position: absolute;
     top: 0;
     opacity: 0;
     max-width: 75%;
-    font-size: 1.4rem;
     transform: translate3d(0px, -50px, 0px);
     animation: 12s ease-in-out ${rotate};
     animation-iteration-count: 1;
@@ -121,7 +121,7 @@ const CareerOptions = styled.div`
   }
   @media (max-width: 500px) {
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
 `;
