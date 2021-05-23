@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { COLORS, fadeIn } from "../GlobalStyles";
+import { COLORS, fadeIn, UnderlinedLink } from "../GlobalStyles";
 import { BiChevronDown } from "react-icons/bi";
 
 import eagletekHome from "../assets/eagleTek/eagletek-home.png";
@@ -49,14 +49,14 @@ export const Projects = () => {
                 setEagleTek(!eagleTek);
               }}
             >
-              read about this project{" "}
-              <div>
+              <Icon direction={eagleTek}>
                 <BiChevronDown />
-              </div>
+              </Icon>
+              project details
             </button>
           </Title>
           <Details visible={eagleTek}>
-            <p>
+            <div>
               <em>Collaborators : </em>
               <p>
                 <b>Myself</b> (Team Lead, Frontend)
@@ -81,7 +81,7 @@ export const Projects = () => {
                 </a>{" "}
                 (Frontend)
               </p>
-            </p>
+            </div>
             <p>
               This group project was completed over the course of one week as
               part of our coding bootcamp, in which we developed an e-commerce
@@ -95,15 +95,13 @@ export const Projects = () => {
               was truly rewarding to see all our pieces come together!
             </p>
             <p>
-              To see the app in action, you may{" "}
-              <a
+              <UnderlinedLink
                 href="https://www.youtube.com/watch?v=a9O7pC1S2KI"
                 target="_blank"
                 rel="noreferrer"
               >
-                watch a short demo
-              </a>{" "}
-              on YouTube!
+                Watch a short demo on YouTube
+              </UnderlinedLink>{" "}
             </p>
           </Details>
         </Description>
@@ -130,10 +128,10 @@ export const Projects = () => {
                 setMeowspace(!meowspace);
               }}
             >
-              read about this project{" "}
-              <div>
+              <Icon direction={meowspace}>
                 <BiChevronDown />
-              </div>
+              </Icon>
+              project details
             </button>
           </Title>
           <Details visible={meowspace}>
@@ -167,10 +165,10 @@ export const Projects = () => {
                 setCookieHeaven(!cookieHeaven);
               }}
             >
-              read about this project{" "}
-              <div>
+              <Icon direction={cookieHeaven}>
                 <BiChevronDown />
-              </div>
+              </Icon>
+              project details
             </button>
           </Title>
           <Details visible={cookieHeaven}>
@@ -237,11 +235,11 @@ const Title = styled.div`
   button {
     background: #e6e6e6;
     display: flex;
-    justify-content: space-between;
-    width: 200px;
+    align-items: center;
+    justify-content: space-around;
     margin: 10px;
     border-radius: 5px;
-    padding: 7px 5px 3px 5px;
+    padding: 5px 10px 3px 10px;
     transition: 0.2s ease-in-out;
     &:hover {
       cursor: pointer;
@@ -256,10 +254,24 @@ const Title = styled.div`
   }
 `;
 
+const Icon = styled.div`
+  transform: ${(props) => (props.direction ? "" : "rotate(-90deg)")};
+  font-size: 1.3rem;
+  margin-right: 5px;
+  transition: 0.1s ease-in-out;
+`;
+
 const Details = styled.div`
   opacity: ${(props) => (props.visible ? "1" : "0")};
   max-height: ${(props) => (props.visible ? "1000px" : "0")};
+  text-align: center;
   transition: 0.5s ease-in-out;
+  div {
+    margin-top: 20px;
+    p {
+      margin: 10px;
+    }
+  }
   p {
     max-width: 800px;
     margin: 20px;

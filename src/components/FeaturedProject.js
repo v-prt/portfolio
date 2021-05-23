@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import styled from "styled-components";
-import { COLORS } from "../GlobalStyles";
+import { COLORS, UnderlinedLink } from "../GlobalStyles";
 
 import plantgeekHome1 from "../assets/plantgeek/plantgeek-homepage1.png";
 import plantgeekHome2 from "../assets/plantgeek/plantgeek-homepage2.png";
@@ -38,22 +38,22 @@ export const FeaturedProject = () => {
           as an upgrade to my spreadsheet, which could also serve as a hub for
           houseplant lovers to connect with each other and share useful tips.
           <p>
-            <a
+            <UnderlinedLink
               href="https://github.com/v-prt/plantgeek"
               target="_blank"
               rel="noreferrer"
             >
               Check out my repo on GitHub
-            </a>
+            </UnderlinedLink>
           </p>
           <p>
-            <a
+            <UnderlinedLink
               href="https://youtu.be/_LXWqhxIMrQ"
               target="_blank"
               rel="noreferrer"
             >
               Watch a short demo on YouTube
-            </a>
+            </UnderlinedLink>
           </p>
         </p>
       </Description>
@@ -103,30 +103,6 @@ const Description = styled.div`
     max-width: 800px;
     margin: 20px;
   }
-  a {
-    color: ${COLORS.medium};
-    font-weight: bold;
-    position: relative;
-    z-index: 1;
-    &:after {
-      background: ${COLORS.light};
-      content: "";
-      height: 5px;
-      width: 100%;
-      position: absolute;
-      bottom: 1px;
-      right: -1px;
-      z-index: -1;
-      transform: skew(-30deg) rotate(-1deg) scale(1.05);
-      transition: 0.2s ease-in-out;
-    }
-    &:hover {
-      color: #333;
-      &:after {
-        transform: skew(30deg) rotate(1deg) scale(1.1);
-      }
-    }
-  }
 `;
 
 const Gallery = styled.div`
@@ -142,7 +118,7 @@ const Image = styled.img`
   height: 500px;
   margin: 20px;
   border-radius: 15px;
-  box-shadow: 0px 0px 8px #b3b3b3;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
   @media (max-width: 1000px) {
     height: 300px;
   }

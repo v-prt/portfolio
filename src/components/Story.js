@@ -65,7 +65,7 @@ const Question = styled.div`
   margin: 20px;
   border-radius: 10px;
   padding: 25px 20px 20px 20px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 5px;
   font-size: 2rem;
   font-weight: 500;
   div {

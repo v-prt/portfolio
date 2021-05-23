@@ -1,4 +1,4 @@
-import { createGlobalStyle, keyframes } from "styled-components";
+import styled, { createGlobalStyle, keyframes } from "styled-components";
 
 export const COLORS = {
   darkest: "#1a1a1a",
@@ -38,6 +38,32 @@ export default createGlobalStyle`
     }
     strong {
     font-weight: bold;
+  }
+`;
+
+// STYLED COMPONENTS
+export const UnderlinedLink = styled.a`
+  color: ${COLORS.medium};
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  &:after {
+    background: ${COLORS.light};
+    content: "";
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: 1px;
+    right: -1px;
+    z-index: -1;
+    transform: skew(-30deg) rotate(-1deg) scale(1.05);
+    transition: 0.2s ease-in-out;
+  }
+  &:hover {
+    color: #333;
+    &:after {
+      transform: skew(30deg) rotate(1deg) scale(1.1);
+    }
   }
 `;
 

@@ -32,7 +32,7 @@ export const Header = () => {
 const Wrapper = styled.header`
   animation: ${fadeIn} 3s ease-in-out;
   background: rgba(252, 247, 243, 0.6);
-  box-shadow: 0px 10px 15px -15px #999;
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 5px 0px;
   backdrop-filter: blur(8px);
   width: calc(100% - 40px); // accounts for padding
   position: fixed;
@@ -59,8 +59,8 @@ const Nav = styled.nav`
       display: block;
     }
     ul {
-      background: ${COLORS.lightest};
-      box-shadow: 0px 10px 20px -15px #333;
+      background: rgba(252, 247, 243, 0.6);
+      box-shadow: rgb(0 0 0 / 15%) 0px 4px 5px 0px;
       flex-direction: column;
       position: absolute;
       top: 45px;
