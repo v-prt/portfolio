@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { COLORS, fadeIn, UnderlinedLink } from "../GlobalStyles";
+import {
+  COLORS,
+  UnderlinedLink,
+  ProjectGallery,
+  ProjectImage,
+} from "../GlobalStyles";
 import { BiChevronDown } from "react-icons/bi";
 
 import eagletekHome from "../assets/eagleTek/eagletek-home.png";
@@ -32,9 +37,9 @@ export const Projects = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [eagleTek, setEagleTek] = useState(false);
-  const [meowspace, setMeowspace] = useState(false);
-  const [cookieHeaven, setCookieHeaven] = useState(false);
+  const [eagleTek, setEagleTek] = useState(undefined);
+  const [meowspace, setMeowspace] = useState(undefined);
+  const [cookieHeaven, setCookieHeaven] = useState(undefined);
 
   return (
     <Wrapper>
@@ -49,7 +54,7 @@ export const Projects = () => {
                 setEagleTek(!eagleTek);
               }}
             >
-              <Icon direction={eagleTek}>
+              <Icon $rotate={eagleTek}>
                 <BiChevronDown />
               </Icon>
               project details
@@ -105,17 +110,26 @@ export const Projects = () => {
             </p>
           </Details>
         </Description>
-        <Gallery>
-          <Image src={eagletekHome} alt="eagletek homepage" />
-          <Image src={eagletekPagination} alt="eagletek pagination" />
-          <Image src={eagletekCategories} alt="eagletek categories page" />
-          <Image src={eagletekLogin} alt="eagletek login page" />
-          <Image src={eagletekEmptyCart} alt="eagletek empty cart" />
-          <Image src={eagletekCart} alt="eagletek cart with items" />
-          <Image src={eagletekDesktopDropdown} alt="eagletek desktop menu" />
-          <Image src={eagletekMobileDropdown} alt="eagletek mobile menu" />
-          <Image src={eagletekAbout} alt="eagletek about page" />
-        </Gallery>
+        <ProjectGallery>
+          <ProjectImage src={eagletekHome} alt="eagletek homepage" />
+          <ProjectImage src={eagletekPagination} alt="eagletek pagination" />
+          <ProjectImage
+            src={eagletekCategories}
+            alt="eagletek categories page"
+          />
+          <ProjectImage src={eagletekLogin} alt="eagletek login page" />
+          <ProjectImage src={eagletekEmptyCart} alt="eagletek empty cart" />
+          <ProjectImage src={eagletekCart} alt="eagletek cart with items" />
+          <ProjectImage
+            src={eagletekDesktopDropdown}
+            alt="eagletek desktop menu"
+          />
+          <ProjectImage
+            src={eagletekMobileDropdown}
+            alt="eagletek mobile menu"
+          />
+          <ProjectImage src={eagletekAbout} alt="eagletek about page" />
+        </ProjectGallery>
       </Project>
       <Project>
         <Description>
@@ -128,7 +142,7 @@ export const Projects = () => {
                 setMeowspace(!meowspace);
               }}
             >
-              <Icon direction={meowspace}>
+              <Icon $rotate={meowspace}>
                 <BiChevronDown />
               </Icon>
               project details
@@ -145,14 +159,14 @@ export const Projects = () => {
             </p>
           </Details>
         </Description>
-        <Gallery>
-          <Image src={meowspaceHome1} alt="" />
-          <Image src={meowspaceLogin} alt="" />
-          <Image src={meowspaceHome2} alt="" />
-          <Image src={meowspaceProfile1} alt="" />
-          <Image src={meowspaceProfile2} alt="" />
-          <Image src={facespace} alt="" />
-        </Gallery>
+        <ProjectGallery>
+          <ProjectImage src={meowspaceHome1} alt="" />
+          <ProjectImage src={meowspaceLogin} alt="" />
+          <ProjectImage src={meowspaceHome2} alt="" />
+          <ProjectImage src={meowspaceProfile1} alt="" />
+          <ProjectImage src={meowspaceProfile2} alt="" />
+          <ProjectImage src={facespace} alt="" />
+        </ProjectGallery>
       </Project>
       <Project>
         <Description>
@@ -165,7 +179,7 @@ export const Projects = () => {
                 setCookieHeaven(!cookieHeaven);
               }}
             >
-              <Icon direction={cookieHeaven}>
+              <Icon $rotate={cookieHeaven}>
                 <BiChevronDown />
               </Icon>
               project details
@@ -183,13 +197,13 @@ export const Projects = () => {
             </p>
           </Details>
         </Description>
-        <Gallery>
-          <Image src={cookieHeavenHome} alt="" />
-          <Image src={cookieHeavenGame1} alt="" />
-          <Image src={cookieHeavenGame2} alt="" />
-          <Image src={cookieHeavenGame3} alt="" />
-          <Image src={cookieClicker} alt="" />
-        </Gallery>
+        <ProjectGallery>
+          <ProjectImage src={cookieHeavenHome} alt="" />
+          <ProjectImage src={cookieHeavenGame1} alt="" />
+          <ProjectImage src={cookieHeavenGame2} alt="" />
+          <ProjectImage src={cookieHeavenGame3} alt="" />
+          <ProjectImage src={cookieClicker} alt="" />
+        </ProjectGallery>
       </Project>
     </Wrapper>
   );
@@ -241,7 +255,8 @@ const Title = styled.div`
     border-radius: 5px;
     padding: 5px 10px 3px 10px;
     transition: 0.2s ease-in-out;
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
       background: #ccc;
     }
@@ -255,7 +270,8 @@ const Title = styled.div`
 `;
 
 const Icon = styled.div`
-  transform: ${(props) => (props.direction ? "" : "rotate(-90deg)")};
+  // $rotate is a transient prop, needed to remove error
+  transform: ${(props) => (props.$rotate ? "" : "rotate(-90deg)")};
   font-size: 1.3rem;
   margin-right: 5px;
   transition: 0.1s ease-in-out;
@@ -279,32 +295,9 @@ const Details = styled.div`
   a {
     color: ${COLORS.medium};
     font-weight: bold;
-    &:hover {
+    &:hover,
+    &:focus {
       color: #333;
     }
-  }
-`;
-
-const Gallery = styled.div`
-  display: flex;
-  width: calc(100% - 40px);
-  border-bottom: 1px dotted #ccc;
-  overflow-x: scroll;
-`;
-
-const Image = styled.img`
-  animation: ${fadeIn} 2s ease-in-out;
-  height: 500px;
-  margin: 20px 10px;
-  border-radius: 10px;
-  position: relative; // removes glitch where page stops scrolling vertically when hovering on gallery
-  // TODO: slide stacking?
-  /* position: sticky;
-  left: 20px; */
-  &:first-child {
-    margin-left: 0;
-  }
-  @media (max-width: 1000px) {
-    height: 300px;
   }
 `;

@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import styled from "styled-components";
-import { COLORS, UnderlinedLink } from "../GlobalStyles";
+import { UnderlinedLink, ProjectGallery, ProjectImage } from "../GlobalStyles";
 
 import plantgeekHome1 from "../assets/plantgeek/plantgeek-homepage1.png";
 import plantgeekHome2 from "../assets/plantgeek/plantgeek-homepage2.png";
@@ -15,8 +14,6 @@ import plantgeekUserProfile from "../assets/plantgeek/plantgeek-userprofile.png"
 import plantgeekCollection from "../assets/plantgeek/plantgeek-collection.png";
 import plantgeekFriends from "../assets/plantgeek/plantgeek-friends.png";
 import plantgeekSettings from "../assets/plantgeek/plantgeek-settings.png";
-
-import developer from "../assets/illustrations/developer.svg";
 
 export const FeaturedProject = () => {
   return (
@@ -31,12 +28,15 @@ export const FeaturedProject = () => {
           a spreadsheet with information on each plant, such as the level of
           light, water, temperature, and humidity they each required.
         </p>
-        <Image src={plantgeekPlantProfile} alt="" />
-        <p>
-          As my final project for bootcamp, I thought it would be fun to create
-          <strong> plantgeek </strong>
-          as an upgrade to my spreadsheet, which could also serve as a hub for
-          houseplant lovers to connect with each other and share useful tips.
+        <ProjectImage src={plantgeekPlantProfile} alt="" />
+        <div>
+          <p>
+            As my final project for bootcamp, I thought it would be fun to
+            create
+            <strong> plantgeek </strong>
+            as an upgrade to my spreadsheet, which could also serve as a hub for
+            houseplant lovers to connect with each other and share useful tips.
+          </p>
           <p>
             <UnderlinedLink
               href="https://github.com/v-prt/plantgeek"
@@ -55,32 +55,26 @@ export const FeaturedProject = () => {
               Watch a short demo on YouTube
             </UnderlinedLink>
           </p>
-        </p>
-      </Description>
-      <Gallery>
-        <Image src={plantgeekHome1} alt="" />
-        <Image src={plantgeekHome2} alt="" />
-        <Image src={plantgeekHome3} alt="" />
-        <Image src={plantgeekBrowse1} alt="" />
-        <Image src={plantgeekBrowse2} alt="" />
-        <Image src={plantgeekBrowse3} alt="" />
-        <Image src={plantgeekUserProfile} alt="" />
-        <Image src={plantgeekCollection} alt="" />
-        <Image src={plantgeekFriends} alt="" />
-        <Image src={plantgeekSettings} alt="" />
-      </Gallery>
-      <ViewProjects>
-        <img src={developer} alt="" />
-        <div>
-          <p>Interested in seeing other things I've worked on?</p>
-          <ProjectsLink to="/projects">View more projects</ProjectsLink>
         </div>
-      </ViewProjects>
+      </Description>
+      <ProjectGallery>
+        <ProjectImage src={plantgeekHome1} alt="" />
+        <ProjectImage src={plantgeekHome2} alt="" />
+        <ProjectImage src={plantgeekHome3} alt="" />
+        <ProjectImage src={plantgeekBrowse1} alt="" />
+        <ProjectImage src={plantgeekBrowse2} alt="" />
+        <ProjectImage src={plantgeekBrowse3} alt="" />
+        <ProjectImage src={plantgeekUserProfile} alt="" />
+        <ProjectImage src={plantgeekCollection} alt="" />
+        <ProjectImage src={plantgeekFriends} alt="" />
+        <ProjectImage src={plantgeekSettings} alt="" />
+      </ProjectGallery>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
+  background: #fff;
   color: #333;
   display: flex;
   flex-direction: column;
@@ -89,7 +83,6 @@ const Wrapper = styled.section`
 `;
 
 const Description = styled.div`
-  background: #f2f2f2;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -102,62 +95,5 @@ const Description = styled.div`
     text-align: center;
     max-width: 800px;
     margin: 20px;
-  }
-`;
-
-const Gallery = styled.div`
-  background: #f2f2f2;
-  width: 100%;
-  display: flex;
-  padding-bottom: 50px;
-  overflow: hidden;
-  overflow-x: scroll;
-`;
-
-const Image = styled.img`
-  height: 500px;
-  margin: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-  @media (max-width: 1000px) {
-    height: 300px;
-  }
-`;
-
-const ViewProjects = styled.div`
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
-  backdrop-filter: blur(3px);
-  color: ${COLORS.light};
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 0;
-  img {
-    height: 150px;
-    margin: 20px;
-  }
-  div {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    margin: 20px;
-    p {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-  }
-`;
-
-const ProjectsLink = styled(Link)`
-  background: ${COLORS.medium};
-  color: ${COLORS.lightest};
-  font-weight: bold;
-  text-align: center;
-  border-radius: 10px;
-  padding: 10px;
-  &:hover {
-    background: ${COLORS.dark};
   }
 `;

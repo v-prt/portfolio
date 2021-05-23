@@ -5,7 +5,7 @@ import { COLORS } from "../GlobalStyles";
 
 export const SocialLinks = () => {
   return (
-    <div>
+    <Wrapper>
       <a href="https://github.com/v-prt" target="_blank" rel="noreferrer">
         <Icon>
           <FaGithub />
@@ -34,17 +34,29 @@ export const SocialLinks = () => {
           <GrMail />
         </Icon>
       </a>
-    </div>
+    </Wrapper>
   );
 };
 
+const Wrapper = styled.div`
+  display: flex;
+  a {
+    &:hover,
+    &:focus {
+      div {
+        background: ${COLORS.lightest};
+        color: ${COLORS.medium};
+      }
+    }
+  }
+`;
+
 const Icon = styled.div`
-  display: inline;
+  display: flex;
   color: #333;
   margin: 0 10px;
+  padding: 5px;
+  border-radius: 50%;
   font-size: 1.3rem;
   transition: 0.2s ease-in-out;
-  &:hover {
-    color: ${COLORS.medium};
-  }
 `;

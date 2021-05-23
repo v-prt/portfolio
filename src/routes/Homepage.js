@@ -5,6 +5,7 @@ import { COLORS, fadeIn, rotate } from "../GlobalStyles";
 import avatar from "../assets/victoria.JPG";
 import background from "../assets/bg-forest1.jpg";
 import { FeaturedProject } from "../components/FeaturedProject";
+import { ViewProjects } from "../components/ViewProjects";
 
 export const Homepage = () => {
   // makes window scroll to top between renders
@@ -50,13 +51,12 @@ export const Homepage = () => {
         </Text>
       </Intro>
       <FeaturedProject />
+      <ViewProjects />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.main`
-  /* this causes problems on mobile browsers */
-  /* background-attachment: fixed; */
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -173,7 +173,8 @@ const AboutLink = styled(Link)`
   border-radius: 10px;
   padding: 10px;
   font-weight: bold;
-  &:hover {
+  &:hover,
+  &:focus {
     background: ${COLORS.dark};
     color: ${COLORS.light};
   }

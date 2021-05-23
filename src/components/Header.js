@@ -6,8 +6,25 @@ import { BiMenu } from "react-icons/bi";
 import { SocialLinks } from "./SocialLinks";
 
 export const Header = () => {
+  window.onscroll = () => {
+    updateProgressBar();
+  };
+
+  const updateProgressBar = () => {
+    let winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    let height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+  };
+
   return (
     <Wrapper>
+      <ProgressContainer>
+        <ProgressBar id="progressBar" />
+      </ProgressContainer>
       <Nav>
         <Icon>
           <BiMenu />
@@ -45,6 +62,20 @@ const Wrapper = styled.header`
   }
 `;
 
+const ProgressContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100vw;
+`;
+
+const ProgressBar = styled.div`
+  background: linear-gradient(to right, ${COLORS.light}, ${COLORS.medium});
+  height: 5px;
+  width: 0%;
+`;
+
 // FIXME: make menu disappear after click (on mobile, must tap outside of menu)
 const Nav = styled.nav`
   div {
@@ -58,7 +89,7 @@ const Nav = styled.nav`
       display: block;
     }
     ul {
-      background: ${COLORS.light};
+      background: ${COLORS.lightest};
       box-shadow: rgb(0 0 0 / 15%) 0px 4px 5px 0px;
       flex-direction: column;
       position: absolute;
@@ -91,8 +122,9 @@ const Link = styled(NavLink)`
   margin: 0 10px;
   border-radius: 10px;
   padding: 12px 10px 10px 10px;
-  &:hover {
-    background: ${COLORS.medium};
+  &:hover,
+  &:focus {
+    background: ${COLORS.light};
     color: #fff;
   }
   &.active {
@@ -116,7 +148,8 @@ const Icon = styled.div`
   margin: 0 10px;
   font-size: 1.3rem;
   transition: 0.2s ease-in-out;
-  &:hover {
+  &:hover,
+  &:focus {
     color: ${COLORS.medium};
   }
 `;

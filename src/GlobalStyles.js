@@ -42,6 +42,28 @@ export default createGlobalStyle`
 `;
 
 // STYLED COMPONENTS
+export const ProjectGallery = styled.div`
+  display: flex;
+  width: calc(100% - 40px);
+  border-bottom: 1px dotted #ccc;
+  overflow-x: scroll;
+`;
+
+export const ProjectImage = styled.img`
+  position: relative; // allows window to keep scrolling when hovering on gallery
+  height: 500px;
+  margin: 20px 10px;
+  border-radius: 10px;
+  // FIXME: (box-shadow gets cut off at left and right of gallery div)
+  /* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); */
+  &:first-child {
+    margin-left: 0;
+  }
+  @media (max-width: 1000px) {
+    height: 300px;
+  }
+`;
+
 export const UnderlinedLink = styled.a`
   color: ${COLORS.medium};
   font-weight: bold;
@@ -59,7 +81,8 @@ export const UnderlinedLink = styled.a`
     transform: skew(-30deg) rotate(-1deg) scale(1.05);
     transition: 0.2s ease-in-out;
   }
-  &:hover {
+  &:hover,
+  &:focus {
     color: #333;
     &:after {
       transform: skew(30deg) rotate(1deg) scale(1.1);

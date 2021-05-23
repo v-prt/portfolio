@@ -38,9 +38,9 @@ export const Story = () => {
           or programmer.
         </p>
         <p>
-          Ultimately, my winding path led to me to pursue career in{" "}
-          <b>web development</b> but who I am carries forward aspects of all the
-          whos I wanted to be.
+          Ultimately, my winding path and growing interest in technology led to
+          me to pursue career in <b>web development</b> but who I am carries
+          forward aspects of all the whos I wanted to be.
         </p>
       </Answer>
     </Wrapper>
