@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { COLORS, fadeIn } from "../GlobalStyles";
+import { COLORS } from "../GlobalStyles";
 import { BiMenu } from "react-icons/bi";
 import { SocialLinks } from "./SocialLinks";
 
@@ -30,7 +30,6 @@ export const Header = () => {
 };
 
 const Wrapper = styled.header`
-  animation: ${fadeIn} 3s ease-in-out;
   background: rgba(252, 247, 243, 0.6);
   box-shadow: rgb(0 0 0 / 15%) 0px 4px 5px 0px;
   backdrop-filter: blur(8px);
@@ -59,7 +58,7 @@ const Nav = styled.nav`
       display: block;
     }
     ul {
-      background: rgba(252, 247, 243, 0.6);
+      background: ${COLORS.light};
       box-shadow: rgb(0 0 0 / 15%) 0px 4px 5px 0px;
       flex-direction: column;
       position: absolute;

@@ -53,6 +53,8 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
   padding: 80px 0 0 0;
   font-weight: 300;
 `;
@@ -106,17 +108,17 @@ const CareerOptions = styled.div`
     animation-iteration-count: 1;
   }
   p:nth-child(1) {
-    animation-delay: 3s;
+    animation-delay: 1s;
   }
   p:nth-child(2) {
-    animation-delay: 6s;
+    animation-delay: 4s;
   }
   p:nth-child(3) {
-    animation-delay: 9s;
+    animation-delay: 7s;
   }
   p:nth-child(4) {
     animation: 3s ease-in-out ${rotateLast};
-    animation-delay: 12s;
+    animation-delay: 10s;
     animation-fill-mode: forwards;
   }
   @media (max-width: 500px) {
