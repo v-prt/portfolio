@@ -1,48 +1,70 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import {
-  COLORS,
-  UnderlinedLink,
-  ProjectGallery,
-  ProjectImage,
-} from "../GlobalStyles";
-import { BiChevronDown } from "react-icons/bi";
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
+import { COLORS, UnderlinedLink, ProjectGallery, ProjectImage } from '../GlobalStyles'
+import { BiChevronDown } from 'react-icons/bi'
 
-import eagletekHome from "../assets/eagleTek/eagletek-home.png";
-import eagletekPagination from "../assets/eagleTek/eagletek-pagination.png";
-import eagletekCategories from "../assets/eagleTek/eagletek-categories.png";
-import eagletekLogin from "../assets/eagleTek/eagletek-login.png";
-import eagletekEmptyCart from "../assets/eagleTek/eagletek-emptycart.png";
-import eagletekCart from "../assets/eagleTek/eagletek-cart.png";
-import eagletekDesktopDropdown from "../assets/eagleTek/eagletek-desktop-dropdown.png";
-import eagletekMobileDropdown from "../assets/eagleTek/eagletek-mobile-dropdown.png";
-import eagletekAbout from "../assets/eagleTek/eagletek-about.png";
+import creatorHome from '../assets/creator/creator-home.png'
 
-import meowspaceHome1 from "../assets/meowspace/meowspace-homepage.png";
-import meowspaceHome2 from "../assets/meowspace/meowspace-homepage2.png";
-import meowspaceLogin from "../assets/meowspace/meowspace-login.png";
-import meowspaceProfile1 from "../assets/meowspace/meowspace-profile.png";
-import meowspaceProfile2 from "../assets/meowspace/meowspace-profile2.png";
-import facespace from "../assets/meowspace/facespace.png";
+import eagletekHome from '../assets/eagleTek/eagletek-home.png'
+import eagletekPagination from '../assets/eagleTek/eagletek-pagination.png'
+import eagletekCategories from '../assets/eagleTek/eagletek-categories.png'
+import eagletekLogin from '../assets/eagleTek/eagletek-login.png'
+import eagletekEmptyCart from '../assets/eagleTek/eagletek-emptycart.png'
+import eagletekCart from '../assets/eagleTek/eagletek-cart.png'
+import eagletekDesktopDropdown from '../assets/eagleTek/eagletek-desktop-dropdown.png'
+import eagletekMobileDropdown from '../assets/eagleTek/eagletek-mobile-dropdown.png'
+import eagletekAbout from '../assets/eagleTek/eagletek-about.png'
 
-import cookieHeavenHome from "../assets/cookie-heaven/cookie-heaven-home.png";
-import cookieHeavenGame1 from "../assets/cookie-heaven/cookie-heaven-game1.png";
-import cookieHeavenGame2 from "../assets/cookie-heaven/cookie-heaven-game2.png";
-import cookieHeavenGame3 from "../assets/cookie-heaven/cookie-heaven-game3.png";
-import cookieClicker from "../assets/cookie-heaven/cookie-clicker.png";
+import meowspaceHome1 from '../assets/meowspace/meowspace-homepage.png'
+import meowspaceHome2 from '../assets/meowspace/meowspace-homepage2.png'
+import meowspaceLogin from '../assets/meowspace/meowspace-login.png'
+import meowspaceProfile1 from '../assets/meowspace/meowspace-profile.png'
+import meowspaceProfile2 from '../assets/meowspace/meowspace-profile2.png'
+import facespace from '../assets/meowspace/facespace.png'
+
+import cookieHeavenHome from '../assets/cookie-heaven/cookie-heaven-home.png'
+import cookieHeavenGame1 from '../assets/cookie-heaven/cookie-heaven-game1.png'
+import cookieHeavenGame2 from '../assets/cookie-heaven/cookie-heaven-game2.png'
+import cookieHeavenGame3 from '../assets/cookie-heaven/cookie-heaven-game3.png'
+import cookieClicker from '../assets/cookie-heaven/cookie-clicker.png'
 
 export const Projects = () => {
   // makes window scroll to top between renders
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
-  const [eagleTek, setEagleTek] = useState(undefined);
-  const [meowspace, setMeowspace] = useState(undefined);
-  const [cookieHeaven, setCookieHeaven] = useState(undefined);
+  const [creator, setCreator] = useState(undefined)
+  const [eagleTek, setEagleTek] = useState(undefined)
+  const [meowspace, setMeowspace] = useState(undefined)
+  const [cookieHeaven, setCookieHeaven] = useState(undefined)
 
   return (
     <Wrapper>
+      <Project>
+        <Description>
+          <Title>
+            <h2>
+              [ <b>creator.co</b> ]
+            </h2>
+            <button
+              onClick={() => {
+                setCreator(!creator)
+              }}>
+              <Icon $rotate={creator}>
+                <BiChevronDown />
+              </Icon>
+              project details
+            </button>
+          </Title>
+          <Details visible={creator}>
+            <p>More screenshots and details coming soon!</p>
+          </Details>
+        </Description>
+        <ProjectGallery>
+          <ProjectImage src={creatorHome} alt='' />
+        </ProjectGallery>
+      </Project>
       <Project>
         <Description>
           <Title>
@@ -51,9 +73,8 @@ export const Projects = () => {
             </h2>
             <button
               onClick={() => {
-                setEagleTek(!eagleTek);
-              }}
-            >
+                setEagleTek(!eagleTek)
+              }}>
               <Icon $rotate={eagleTek}>
                 <BiChevronDown />
               </Icon>
@@ -68,67 +89,50 @@ export const Projects = () => {
               </p>
               <p>
                 <a
-                  href="https://www.linkedin.com/in/andrew-fenrich/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                  href='https://www.linkedin.com/in/andrew-fenrich/'
+                  target='_blank'
+                  rel='noreferrer'>
                   Andrew Fenrich
-                </a>{" "}
+                </a>{' '}
                 (Backend)
               </p>
               <p>
-                <a
-                  href="https://mariiesmall.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href='https://mariiesmall.com/' target='_blank' rel='noreferrer'>
                   Marie Petit
-                </a>{" "}
+                </a>{' '}
                 (Frontend)
               </p>
             </div>
             <p>
-              This group project was completed over the course of one week as
-              part of our coding bootcamp, in which we developed an e-commerce
-              web app for wearable tech and designed the front as well as
-              back-end.
+              This group project was completed over the course of one week as part of our coding
+              bootcamp, in which we developed an e-commerce web app for wearable tech and designed
+              the front as well as back-end.
             </p>
             <p>
-              As team lead, my focus was on dividing our tasks fairly while
-              keeping the app design cohesive and responsive. The most difficult
-              part of this project was working around other people's code but it
-              was truly rewarding to see all our pieces come together!
+              As team lead, my focus was on dividing our tasks fairly while keeping the app design
+              cohesive and responsive. The most difficult part of this project was working around
+              other people's code but it was truly rewarding to see all our pieces come together!
             </p>
             <p>
               <UnderlinedLink
-                href="https://www.youtube.com/watch?v=a9O7pC1S2KI"
-                target="_blank"
-                rel="noreferrer"
-              >
+                href='https://www.youtube.com/watch?v=a9O7pC1S2KI'
+                target='_blank'
+                rel='noreferrer'>
                 Watch a short demo on YouTube
-              </UnderlinedLink>{" "}
+              </UnderlinedLink>{' '}
             </p>
           </Details>
         </Description>
         <ProjectGallery>
-          <ProjectImage src={eagletekHome} alt="eagletek homepage" />
-          <ProjectImage src={eagletekPagination} alt="eagletek pagination" />
-          <ProjectImage
-            src={eagletekCategories}
-            alt="eagletek categories page"
-          />
-          <ProjectImage src={eagletekLogin} alt="eagletek login page" />
-          <ProjectImage src={eagletekEmptyCart} alt="eagletek empty cart" />
-          <ProjectImage src={eagletekCart} alt="eagletek cart with items" />
-          <ProjectImage
-            src={eagletekDesktopDropdown}
-            alt="eagletek desktop menu"
-          />
-          <ProjectImage
-            src={eagletekMobileDropdown}
-            alt="eagletek mobile menu"
-          />
-          <ProjectImage src={eagletekAbout} alt="eagletek about page" />
+          <ProjectImage src={eagletekHome} alt='eagletek homepage' />
+          <ProjectImage src={eagletekPagination} alt='eagletek pagination' />
+          <ProjectImage src={eagletekCategories} alt='eagletek categories page' />
+          <ProjectImage src={eagletekLogin} alt='eagletek login page' />
+          <ProjectImage src={eagletekEmptyCart} alt='eagletek empty cart' />
+          <ProjectImage src={eagletekCart} alt='eagletek cart with items' />
+          <ProjectImage src={eagletekDesktopDropdown} alt='eagletek desktop menu' />
+          <ProjectImage src={eagletekMobileDropdown} alt='eagletek mobile menu' />
+          <ProjectImage src={eagletekAbout} alt='eagletek about page' />
         </ProjectGallery>
       </Project>
       <Project>
@@ -139,9 +143,8 @@ export const Projects = () => {
             </h2>
             <button
               onClick={() => {
-                setMeowspace(!meowspace);
-              }}
-            >
+                setMeowspace(!meowspace)
+              }}>
               <Icon $rotate={meowspace}>
                 <BiChevronDown />
               </Icon>
@@ -150,22 +153,21 @@ export const Projects = () => {
           </Title>
           <Details visible={meowspace}>
             <p>
-              This was a super fun 3-day project in which I had to recreate
-              "Facespace" from a provided mock-up. The original used an ugly
-              orange theme and super creepy computer-generated images. I took
-              extra time after completing the MVP requirements to upgrade the
-              look of the app by replacing the humans with cats and changing the
-              banners as well as the color scheme, name, and layout.
+              This was a super fun 3-day project in which I had to recreate "Facespace" from a
+              provided mock-up. The original used an ugly orange theme and super creepy
+              computer-generated images. I took extra time after completing the MVP requirements to
+              upgrade the look of the app by replacing the humans with cats and changing the banners
+              as well as the color scheme, name, and layout.
             </p>
           </Details>
         </Description>
         <ProjectGallery>
-          <ProjectImage src={meowspaceHome1} alt="" />
-          <ProjectImage src={meowspaceLogin} alt="" />
-          <ProjectImage src={meowspaceHome2} alt="" />
-          <ProjectImage src={meowspaceProfile1} alt="" />
-          <ProjectImage src={meowspaceProfile2} alt="" />
-          <ProjectImage src={facespace} alt="" />
+          <ProjectImage src={meowspaceHome1} alt='' />
+          <ProjectImage src={meowspaceLogin} alt='' />
+          <ProjectImage src={meowspaceHome2} alt='' />
+          <ProjectImage src={meowspaceProfile1} alt='' />
+          <ProjectImage src={meowspaceProfile2} alt='' />
+          <ProjectImage src={facespace} alt='' />
         </ProjectGallery>
       </Project>
       <Project>
@@ -176,9 +178,8 @@ export const Projects = () => {
             </h2>
             <button
               onClick={() => {
-                setCookieHeaven(!cookieHeaven);
-              }}
-            >
+                setCookieHeaven(!cookieHeaven)
+              }}>
               <Icon $rotate={cookieHeaven}>
                 <BiChevronDown />
               </Icon>
@@ -187,27 +188,25 @@ export const Projects = () => {
           </Title>
           <Details visible={cookieHeaven}>
             <p>
-              I really enjoyed making this simple version of the classic "Cookie
-              Clicker" idle game! This is another one of my workshops I took the
-              opportunity to improve upon. On top of updating the style, I added
-              further functionalities such as showing a temporary points alert
-              when you click on the cookie, shortening the display number at
-              certain thresholds, adding a reset button, and visual indication
-              for unavailable upgrades.
+              I really enjoyed making this simple version of the classic "Cookie Clicker" idle game!
+              This is another one of my workshops I took the opportunity to improve upon. On top of
+              updating the style, I added further functionalities such as showing a temporary points
+              alert when you click on the cookie, shortening the display number at certain
+              thresholds, adding a reset button, and visual indication for unavailable upgrades.
             </p>
           </Details>
         </Description>
         <ProjectGallery>
-          <ProjectImage src={cookieHeavenHome} alt="" />
-          <ProjectImage src={cookieHeavenGame1} alt="" />
-          <ProjectImage src={cookieHeavenGame2} alt="" />
-          <ProjectImage src={cookieHeavenGame3} alt="" />
-          <ProjectImage src={cookieClicker} alt="" />
+          <ProjectImage src={cookieHeavenHome} alt='' />
+          <ProjectImage src={cookieHeavenGame1} alt='' />
+          <ProjectImage src={cookieHeavenGame2} alt='' />
+          <ProjectImage src={cookieHeavenGame3} alt='' />
+          <ProjectImage src={cookieClicker} alt='' />
         </ProjectGallery>
       </Project>
     </Wrapper>
-  );
-};
+  )
+}
 
 const Wrapper = styled.main`
   color: #333;
@@ -216,7 +215,7 @@ const Wrapper = styled.main`
   align-items: center;
   width: 100vw;
   padding-top: 50px;
-`;
+`
 
 const Project = styled.section`
   display: flex;
@@ -224,7 +223,7 @@ const Project = styled.section`
   align-items: center;
   width: 100%;
   margin: 40px 0;
-`;
+`
 
 const Description = styled.div`
   display: flex;
@@ -236,7 +235,7 @@ const Description = styled.div`
     margin-bottom: 0;
     border-radius: 0;
   }
-`;
+`
 
 const Title = styled.div`
   display: flex;
@@ -267,19 +266,19 @@ const Title = styled.div`
       font-size: 2rem;
     }
   }
-`;
+`
 
 const Icon = styled.div`
   // $rotate is a transient prop, needed to remove error
-  transform: ${(props) => (props.$rotate ? "" : "rotate(-90deg)")};
+  transform: ${(props) => (props.$rotate ? '' : 'rotate(-90deg)')};
   font-size: 1.3rem;
   margin-right: 5px;
   transition: 0.1s ease-in-out;
-`;
+`
 
 const Details = styled.div`
-  opacity: ${(props) => (props.visible ? "1" : "0")};
-  max-height: ${(props) => (props.visible ? "1000px" : "0")};
+  opacity: ${(props) => (props.visible ? '1' : '0')};
+  max-height: ${(props) => (props.visible ? '1000px' : '0')};
   text-align: center;
   transition: 0.5s ease-in-out;
   div {
@@ -300,4 +299,4 @@ const Details = styled.div`
       color: #333;
     }
   }
-`;
+`

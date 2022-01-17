@@ -1,17 +1,16 @@
-import styled, { createGlobalStyle, keyframes } from "styled-components";
+import styled, { createGlobalStyle, keyframes } from 'styled-components'
 
 export const COLORS = {
-  darkest: "#1a1a1a",
-  dark: "#333333",
-  medium: "#4c846f",
-  light: "#c0c9ae",
-  lightest: "#fcf7f3",
-};
+  darkest: '#1a1a1a',
+  dark: '#333333',
+  medium: '#4c846f',
+  light: '#c0c9ae',
+  lightest: '#fcf7f3',
+}
 
 export default createGlobalStyle`
     * {
         font-family: 'Spartan', sans-serif;
-        font-weight: 300px;
         line-height: 1;
         margin: 0;
         padding: 0;
@@ -21,10 +20,6 @@ export default createGlobalStyle`
         overflow-x: hidden;
         overscroll-behavior-y: none;
         overscroll-behavior-x: none;
-    }
-    h1, h2, h3 {
-        font-family: "Arima Madurai", cursive;
-        font-weight: 100;
     }
     p {
         line-height: 1.75;
@@ -39,7 +34,7 @@ export default createGlobalStyle`
     strong {
     font-weight: bold;
   }
-`;
+`
 
 // STYLED COMPONENTS
 export const ProjectGallery = styled.div`
@@ -47,22 +42,20 @@ export const ProjectGallery = styled.div`
   width: calc(100% - 40px);
   border-bottom: 1px dotted #ccc;
   overflow-x: scroll;
-`;
+`
 
 export const ProjectImage = styled.img`
   position: relative; // allows window to keep scrolling when hovering on gallery
   height: 500px;
   margin: 20px 10px;
   border-radius: 10px;
-  // FIXME: (box-shadow gets cut off at left and right of gallery div)
-  /* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); */
   &:first-child {
     margin-left: 0;
   }
   @media (max-width: 1000px) {
     height: 300px;
   }
-`;
+`
 
 export const UnderlinedLink = styled.a`
   color: ${COLORS.medium};
@@ -71,7 +64,7 @@ export const UnderlinedLink = styled.a`
   z-index: 1;
   &:after {
     background: ${COLORS.light};
-    content: "";
+    content: '';
     height: 5px;
     width: 100%;
     position: absolute;
@@ -88,13 +81,13 @@ export const UnderlinedLink = styled.a`
       transform: skew(30deg) rotate(1deg) scale(1.1);
     }
   }
-`;
+`
 
 // ANIMATIONS
 export const fadeIn = keyframes`
 0% {opacity: 0}
 100% {opacity: 1}
-`;
+`
 
 export const rotate = keyframes`
  0% {
@@ -121,7 +114,7 @@ export const rotate = keyframes`
     opacity: 0;
     transform: translate3d(0px, -50px, 0px);
   }
-`;
+`
 
 export const rotateLast = keyframes`
  0% {
@@ -135,4 +128,4 @@ export const rotateLast = keyframes`
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
   }
-`;
+`

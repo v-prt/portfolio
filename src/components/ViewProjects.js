@@ -1,20 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { COLORS } from "../GlobalStyles";
-import developer from "../assets/illustrations/developer.svg";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import { COLORS } from '../GlobalStyles'
+import developer from '../assets/illustrations/developer.svg'
 
 export const ViewProjects = () => {
   return (
     <Wrapper>
-      <img src={developer} alt="" />
+      <img src={developer} alt='' />
       <div>
         <p>Interested in seeing other things I've worked on?</p>
-        <ProjectsLink to="/projects">View more projects</ProjectsLink>
+        <ProjectsLink to='/projects'>View my projects</ProjectsLink>
       </div>
     </Wrapper>
-  );
-};
+  )
+}
 
 const Wrapper = styled.section`
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
@@ -37,10 +37,10 @@ const Wrapper = styled.section`
     margin: 20px;
     p {
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
   }
-`;
+`
 
 const ProjectsLink = styled(Link)`
   background: ${COLORS.medium};
@@ -48,9 +48,10 @@ const ProjectsLink = styled(Link)`
   font-weight: bold;
   text-align: center;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 20px;
   &:hover,
   &:focus {
-    background: ${COLORS.dark};
+    background: ${COLORS.light};
+    color: ${COLORS.dark};
   }
-`;
+`

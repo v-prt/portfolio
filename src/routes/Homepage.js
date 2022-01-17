@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { COLORS, fadeIn, rotate } from "../GlobalStyles";
-import avatar from "../assets/victoria.JPG";
-import background from "../assets/bg-forest1.jpg";
-import { FeaturedProject } from "../components/FeaturedProject";
-import { ViewProjects } from "../components/ViewProjects";
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import { COLORS, fadeIn, rotate } from '../GlobalStyles'
+import avatar from '../assets/victoria.JPG'
+import background from '../assets/bg-forest1.jpg'
+import { FeaturedProject } from '../components/FeaturedProject'
+import { ViewProjects } from '../components/ViewProjects'
 
 export const Homepage = () => {
   // makes window scroll to top between renders
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <Wrapper>
@@ -19,11 +19,11 @@ export const Homepage = () => {
       <Heading>
         <Banner>
           <Name>Victoria Peart</Name>
-          <Job>Full-Stack Web Dev</Job>
+          <Job>Full-Stack Web Developer</Job>
           <Skills>
-            <p>html / css / javascript</p>
+            <p>html / css / javascript / php</p>
             <p>mongodb / express / react / redux / node</p>
-            <p>gamer, nature enthusiast, wannabe minimalist</p>
+            <p>gamer, nature lover, foodie</p>
             <p>
               will do <b>pro bono work</b> for animal welfare
             </p>
@@ -31,36 +31,36 @@ export const Homepage = () => {
         </Banner>
       </Heading>
       <Intro>
-        <Image src={avatar} alt="" />
+        <Image src={avatar} alt='' />
         <Text>
           <p>
-            Hey! I'm Victoria. I'm a full-stack web developer, living and
-            breathing in beautiful British Columbia, Canada.
+            Hi! I'm Victoria. I'm a full-stack Web Developer, currently living in beautiful British
+            Columbia, Canada.
           </p>
           <p>
             As a deaf woman, I prioritize
-            <strong> visual appeal, accessibility, and thoughtful UX</strong>. I
-            enjoy working in environments that allow me creative freedom as well
-            as the opportunity to improve and learn new skills.
+            <strong> visual appeal, accessibility, and thoughtful UX</strong>. I enjoy working in
+            environments that allow me creative freedom as well as the opportunity to improve and
+            learn new skills.
           </p>
           <p>
-            When I'm not coding, I'm usually playing video games or immersing
-            myself in nature on a hike through the woods.
+            When I'm not coding, I'm usually playing board games or NetFlix & chilling with my best
+            friend (my husband).
           </p>
-          <AboutLink to="/about">Learn more about me</AboutLink>
+          <AboutLink to='/about'>Learn more about me</AboutLink>
         </Text>
       </Intro>
       <FeaturedProject />
       <ViewProjects />
     </Wrapper>
-  );
-};
+  )
+}
 
 const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   height: 100%;
-`;
+`
 
 const Background = styled.div`
   background: url(${background}) center center / cover;
@@ -68,14 +68,14 @@ const Background = styled.div`
   width: 100vw;
   position: fixed;
   z-index: -1;
-`;
+`
 
 const Heading = styled.section`
   display: flex;
   align-items: flex-end;
   height: 100vh;
   width: 100%;
-`;
+`
 
 const Banner = styled.div`
   animation: ${fadeIn} 2s ease-in-out;
@@ -89,7 +89,7 @@ const Banner = styled.div`
   @media screen and (prefers-reduced-motion: reduce) {
     animation: none;
   }
-`;
+`
 
 const Name = styled.h1`
   text-align: center;
@@ -99,17 +99,16 @@ const Name = styled.h1`
   @media (max-width: 1000px) {
     font-size: 3rem;
   }
-`;
+`
 
 const Job = styled.p`
-  font-style: italic;
   margin: 20px 0;
   font-size: 2rem;
   font-weight: 200;
   @media (max-width: 1000px) {
     font-size: 1.3rem;
   }
-`;
+`
 
 const Skills = styled.div`
   display: flex;
@@ -135,7 +134,7 @@ const Skills = styled.div`
   p:nth-child(4) {
     animation-delay: 9s;
   }
-`;
+`
 
 const Intro = styled.section`
   background: linear-gradient(#202c31, ${COLORS.medium});
@@ -146,7 +145,7 @@ const Intro = styled.section`
   align-items: center;
   width: 100%;
   padding: 30px 0;
-`;
+`
 
 const Image = styled.img`
   filter: grayscale(100%);
@@ -154,16 +153,16 @@ const Image = styled.img`
   max-width: 300px;
   margin: 30px;
   border-radius: 50%;
-`;
+`
 
 const Text = styled.div`
   display: flex;
   flex-direction: column;
   width: 500px;
   p {
-    margin: 10px 20px;
+    margin: 10px 30px;
   }
-`;
+`
 
 const AboutLink = styled(Link)`
   background: ${COLORS.light};
@@ -171,11 +170,11 @@ const AboutLink = styled(Link)`
   text-align: center;
   margin: 20px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 20px;
   font-weight: bold;
   &:hover,
   &:focus {
     background: ${COLORS.dark};
     color: ${COLORS.light};
   }
-`;
+`

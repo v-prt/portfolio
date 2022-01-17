@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { BsFillChatSquareQuoteFill } from "react-icons/bs";
-import { rotate, rotateLast } from "../GlobalStyles";
+import styled from 'styled-components'
+import { BsFillChatSquareQuoteFill } from 'react-icons/bs'
+import { rotate, rotateLast } from '../GlobalStyles'
 
 export const Story = () => {
   return (
@@ -22,30 +22,23 @@ export const Story = () => {
             <strong>The Web Developer ✓</strong>
           </p>
         </CareerOptions>
+        <p>This is the question we've all been asked as if there's only one answer.</p>
         <p>
-          This is the question we've all been asked as if there's only one
-          answer.
+          I've always loved <b>animals</b> and wanted to take care of them so I considered being a
+          veterinarian. On second thought, <b>art</b> was one of my favorite subjects in school and
+          I wanted to use my creative talents. Then again, I spent most of my free time{' '}
+          <b>reading</b> and loved making up stories of my own. I truly wanted to write the next
+          Harry Potter. And as a teenager, I was really into <b>video games</b> and wanted to become
+          a game designer or programmer.
         </p>
         <p>
-          I've always loved <b>animals</b> and wanted to take care of them so I
-          considered being a veterinarian. On second thought, <b>art</b> was one
-          of my favorite subjects in school and I wanted to use my creative
-          talents. Then again, I spent most of my free time <b>reading</b> (I
-          remember one day in elementary school I became so absorbed in a book I
-          didn't even notice when class ended) and loved making up stories of my
-          own. I truly wanted to write the next Harry Potter. And at some point,
-          I got really into <b>video games</b> and wanted to be a game designer
-          or programmer.
-        </p>
-        <p>
-          Ultimately, my winding path and growing interest in technology led to
-          me to pursue career in <b>web development</b> but who I am carries
-          forward aspects of all the whos I wanted to be.
+          Ultimately, my winding path and growing interest in technology as well as art led me to{' '}
+          <b>web development</b>.
         </p>
       </Answer>
     </Wrapper>
-  );
-};
+  )
+}
 
 const Wrapper = styled.section`
   background: rgba(0, 0, 0, 0.5);
@@ -57,7 +50,7 @@ const Wrapper = styled.section`
   min-height: calc(100vh - 80px);
   padding: 80px 0 0 0;
   font-weight: 300;
-`;
+`
 
 const Question = styled.div`
   background: #fff;
@@ -67,7 +60,7 @@ const Question = styled.div`
   margin: 20px;
   border-radius: 10px;
   padding: 25px 20px 20px 20px;
-  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 5px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
   font-size: 2rem;
   font-weight: 500;
   div {
@@ -80,16 +73,16 @@ const Question = styled.div`
   p {
     font-size: 1.1rem;
   }
-`;
+`
 
 const Answer = styled.div`
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 20px 50px 20px;
   p {
     text-align: center;
     margin: 20px 0;
   }
-`;
+`
 
 const CareerOptions = styled.div`
   display: flex;
@@ -126,4 +119,4 @@ const CareerOptions = styled.div`
       font-size: 1.1rem;
     }
   }
-`;
+`

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { COLORS } from "../GlobalStyles";
+import styled from 'styled-components'
+import { COLORS } from '../GlobalStyles'
 
 export const Skills = () => {
   return (
@@ -9,10 +9,9 @@ export const Skills = () => {
         [ <b>skills</b> ]
       </Heading>
       <p>
-        My strengths lie mostly in the front-end where my natural design skills
-        can come into play - I could spend all day just messing around with CSS
-        (and I often do)! I'm not as good at the math or logic side of coding,
-        so I practice as much as I can to round out my abilities.
+        My strengths lie mostly in the front-end where my natural design skills can come into play -
+        I could spend all day just messing around with CSS (and I often do)! I'm not as good at the
+        math or logic side of coding, so I practice as much as I can to round out my abilities.
       </p>
       <Groups>
         <Group>
@@ -55,11 +54,11 @@ export const Skills = () => {
       </Groups>
       <Border />
     </Wrapper>
-  );
-};
+  )
+}
 
 const Wrapper = styled.section`
-  background: ${COLORS.light};
+  background: #f2f2f2;
   color: ${COLORS.dark};
   display: flex;
   flex-direction: column;
@@ -70,25 +69,25 @@ const Wrapper = styled.section`
     max-width: 800px;
     margin: 0 30px;
   }
-`;
+`
 
 const Border = styled.div`
   background: linear-gradient(to right, #ffcc00, #ffd700, #ff9900);
   height: 5px;
   width: 100%;
-`;
+`
 
 const Heading = styled.h2`
   margin: 70px 0 20px 0;
   font-size: 2rem;
-`;
+`
 
 const Groups = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 50px;
-`;
+`
 
 const Group = styled.div`
   background: ${COLORS.dark};
@@ -98,17 +97,17 @@ const Group = styled.div`
   margin: 20px;
   border-radius: 20px;
   overflow: hidden;
-`;
+`
 
 const Title = styled.h3`
   background: ${COLORS.darkest};
   padding: 10px;
   font-size: 1.5rem;
-`;
+`
 
 const List = styled.ul`
   padding: 20px 0;
   li {
     line-height: 1.75;
   }
-`;
+`

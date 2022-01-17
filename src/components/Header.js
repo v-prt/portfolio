@@ -1,29 +1,26 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
-import { COLORS } from "../GlobalStyles";
-import { BiMenu } from "react-icons/bi";
-import { SocialLinks } from "./SocialLinks";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import styled from 'styled-components'
+import { COLORS } from '../GlobalStyles'
+import { BiMenu } from 'react-icons/bi'
+import { SocialLinks } from './SocialLinks'
 
 export const Header = () => {
   window.onscroll = () => {
-    updateProgressBar();
-  };
+    updateProgressBar()
+  }
 
   const updateProgressBar = () => {
-    let winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-    let height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    let scrolled = (winScroll / height) * 100;
-    document.getElementById("progressBar").style.width = scrolled + "%";
-  };
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+    let scrolled = (winScroll / height) * 100
+    document.getElementById('progressBar').style.width = scrolled + '%'
+  }
 
   return (
     <Wrapper>
       <ProgressContainer>
-        <ProgressBar id="progressBar" />
+        <ProgressBar id='progressBar' />
       </ProgressContainer>
       <Nav>
         <Icon>
@@ -31,23 +28,23 @@ export const Header = () => {
         </Icon>
         <ul>
           <li>
-            <Link to="/home">HOME</Link>
+            <Link to='/home'>HOME</Link>
           </li>
           <li>
-            <Link to="/about">ABOUT</Link>
+            <Link to='/about'>ABOUT</Link>
           </li>
           <li>
-            <Link to="/projects">PROJECTS</Link>
+            <Link to='/projects'>PROJECTS</Link>
           </li>
         </ul>
       </Nav>
       <SocialLinks />
     </Wrapper>
-  );
-};
+  )
+}
 
 const Wrapper = styled.header`
-  background: rgba(252, 247, 243, 0.6);
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: rgb(0 0 0 / 15%) 0px 4px 5px 0px;
   backdrop-filter: blur(8px);
   width: calc(100% - 40px); // accounts for padding
@@ -60,7 +57,7 @@ const Wrapper = styled.header`
   @media screen and (prefers-reduced-motion: reduce) {
     animation: none;
   }
-`;
+`
 
 const ProgressContainer = styled.div`
   position: absolute;
@@ -68,13 +65,13 @@ const ProgressContainer = styled.div`
   left: 0;
   height: 5px;
   width: 100vw;
-`;
+`
 
 const ProgressBar = styled.div`
   background: linear-gradient(to right, ${COLORS.light}, ${COLORS.medium});
   height: 5px;
   width: 0%;
-`;
+`
 
 // FIXME: make menu disappear after click (on mobile, must tap outside of menu)
 const Nav = styled.nav`
@@ -114,10 +111,10 @@ const Nav = styled.nav`
       }
     }
   }
-`;
+`
 
 const Link = styled(NavLink)`
-  color: #333;
+  color: ${COLORS.dark};
   font-size: 0.7rem;
   margin: 0 10px;
   border-radius: 10px;
@@ -125,7 +122,6 @@ const Link = styled(NavLink)`
   &:hover,
   &:focus {
     background: ${COLORS.light};
-    color: #fff;
   }
   &.active {
     background: ${COLORS.medium};
@@ -141,10 +137,10 @@ const Link = styled(NavLink)`
     border-bottom: 2px solid ${COLORS.lightest};
     padding: 15px;
   }
-`;
+`
 
 const Icon = styled.div`
-  color: #333;
+  color: ${COLORS.dark};
   margin: 0 10px;
   font-size: 1.3rem;
   transition: 0.2s ease-in-out;
@@ -152,4 +148,4 @@ const Icon = styled.div`
   &:focus {
     color: ${COLORS.medium};
   }
-`;
+`

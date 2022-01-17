@@ -1,26 +1,21 @@
-import styled from "styled-components";
-import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
-import { GrMail } from "react-icons/gr";
-import { COLORS } from "../GlobalStyles";
+import styled from 'styled-components'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { COLORS } from '../GlobalStyles'
 
 export const SocialLinks = () => {
   return (
     <Wrapper>
-      <a href="https://github.com/v-prt" target="_blank" rel="noreferrer">
+      <a href='https://github.com/v-prt' target='_blank' rel='noreferrer'>
         <Icon>
           <FaGithub />
         </Icon>
       </a>
-      <a
-        href="https://www.linkedin.com/in/victoria-peart/"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href='https://www.linkedin.com/in/victoria-peart/' target='_blank' rel='noreferrer'>
         <Icon>
           <FaLinkedin />
         </Icon>
       </a>
-      <a
+      {/* <a
         href="https://www.twitter.com/vikki_peart"
         target="_blank"
         rel="noreferrer"
@@ -33,10 +28,10 @@ export const SocialLinks = () => {
         <Icon>
           <GrMail />
         </Icon>
-      </a>
+      </a> */}
     </Wrapper>
-  );
-};
+  )
+}
 
 const Wrapper = styled.div`
   display: flex;
@@ -49,7 +44,7 @@ const Wrapper = styled.div`
       }
     }
   }
-`;
+`
 
 const Icon = styled.div`
   display: flex;
@@ -59,4 +54,4 @@ const Icon = styled.div`
   border-radius: 50%;
   font-size: 1.3rem;
   transition: 0.2s ease-in-out;
-`;
+`

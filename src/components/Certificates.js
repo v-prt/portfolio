@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { COLORS } from "../GlobalStyles";
-import freeCodeCampCert from "../assets/certs/fcc-responsive-web.png";
-import testDomeCert from "../assets/certs/test-dome-js.png";
-import mimoCert from "../assets/certs/mimo-web-dev.jpg";
+import styled from 'styled-components'
+import { COLORS } from '../GlobalStyles'
+import freeCodeCampCert from '../assets/certs/fcc-responsive-web.png'
+import testDomeCert from '../assets/certs/test-dome-js.png'
+import mimoCert from '../assets/certs/mimo-web-dev.jpg'
 
 export const Certificates = () => {
   return (
@@ -12,62 +12,55 @@ export const Certificates = () => {
       </Heading>
       <Text>
         <p>
-          On top of my diploma, I'm also proud to have earned these little
-          certificates by completing various online courses and tests.
+          On top of my professional diploma, I'm also proud to have earned these certificates by
+          completing various online courses and tests.
         </p>
       </Text>
       <Certs>
         <Cert>
           <a
-            href="https://www.freecodecamp.org/certification/v-prt/responsive-web-design"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={freeCodeCampCert}
-              alt="freeCodeCamp Responsive Web Design Certificate"
-            />
+            href='https://www.freecodecamp.org/certification/v-prt/responsive-web-design'
+            target='_blank'
+            rel='noreferrer'>
+            <img src={freeCodeCampCert} alt='freeCodeCamp Responsive Web Design Certificate' />
           </a>
         </Cert>
         <Cert>
           <a
-            href="https://victoriapeart.com/static/media/mimo-web-dev.0eede498.jpg"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={mimoCert} alt="Mimo Web Dev Certificate" />
+            href='https://victoriapeart.com/static/media/mimo-web-dev.0eede498.jpg'
+            target='_blank'
+            rel='noreferrer'>
+            <img src={mimoCert} alt='Mimo Web Dev Certificate' />
           </a>
         </Cert>
         <Cert>
           <a
-            href="https://app.testdome.com/cert/9f0776ba5d8a4eba98526521a3e8ab6a"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={testDomeCert} alt="Test Dome Certificate" />
+            href='https://app.testdome.com/cert/9f0776ba5d8a4eba98526521a3e8ab6a'
+            target='_blank'
+            rel='noreferrer'>
+            <img src={testDomeCert} alt='Test Dome Certificate' />
           </a>
         </Cert>
       </Certs>
-      <Text>
+      {/* <Text>
         <p>
-          I'm currently studying{" "}
+          I'm currently studying{' '}
           <a
-            href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/"
-            target="_blank"
-            rel="noreferrer"
-          >
+            href='https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/'
+            target='_blank'
+            rel='noreferrer'>
             JavaScript Algorithms and Data Structures
-          </a>{" "}
-          and taking the{" "}
-          <a href="https://javascript30.com/" target="_blank" rel="noreferrer">
+          </a>{' '}
+          and taking the{' '}
+          <a href='https://javascript30.com/' target='_blank' rel='noreferrer'>
             JavaScript30 challenge
           </a>
           .
         </p>
-      </Text>
+      </Text> */}
     </Wrapper>
-  );
-};
+  )
+}
 
 const Wrapper = styled.section`
   background: #f2f2f2;
@@ -75,14 +68,15 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 20px;
+  margin: 20px 0;
   border-radius: 20px;
   padding: 30px 0;
-`;
+`
 
 const Heading = styled.h3`
+  color: ${COLORS.medium};
   font-size: 1.5rem;
-`;
+`
 
 const Text = styled.div`
   max-width: 600px;
@@ -95,14 +89,14 @@ const Text = styled.div`
       color: ${COLORS.darkest};
     }
   }
-`;
+`
 
 const Certs = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Cert = styled.li`
   img {
@@ -114,4 +108,4 @@ const Cert = styled.li`
       transform: scale(1.1);
     }
   }
-`;
+`
