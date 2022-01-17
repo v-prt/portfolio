@@ -33,7 +33,7 @@ export const Employment = () => {
             subscription plan).
           </p>
           <p>
-            <b>Tech stack:</b> WordPress, PHP, SCSS, JavaScript, TypeScript, React, Express, Node,
+            <b>Tech stack :</b> WordPress, PHP, SCSS, JavaScript, TypeScript, React, Express, Node,
             MySQL
           </p>
         </Description>
@@ -43,7 +43,6 @@ export const Employment = () => {
 }
 
 const Wrapper = styled.section`
-  color: ${COLORS.dark};
   margin: auto;
   width: fit-content;
   padding: 50px 0;
@@ -58,7 +57,6 @@ const Card = styled.div`
 `
 
 const Heading = styled.h2`
-  color: ${COLORS.medium};
   margin-bottom: 30px;
   font-size: 2rem;
 `
@@ -78,10 +76,10 @@ const Description = styled.div`
     line-height: 1.75;
   }
   a {
-    color: ${COLORS.dark};
+    color: ${COLORS.medium};
     font-weight: bold;
     &:hover {
-      color: ${COLORS.medium};
+      color: ${COLORS.accent};
     }
   }
 `

@@ -6,22 +6,8 @@ import { BiMenu } from 'react-icons/bi'
 import { SocialLinks } from './SocialLinks'
 
 export const Header = () => {
-  window.onscroll = () => {
-    updateProgressBar()
-  }
-
-  const updateProgressBar = () => {
-    let winScroll = document.body.scrollTop || document.documentElement.scrollTop
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
-    let scrolled = (winScroll / height) * 100
-    document.getElementById('progressBar').style.width = scrolled + '%'
-  }
-
   return (
     <Wrapper>
-      <ProgressContainer>
-        <ProgressBar id='progressBar' />
-      </ProgressContainer>
       <Nav>
         <Icon>
           <BiMenu />
@@ -61,20 +47,6 @@ const Wrapper = styled.header`
   }
 `
 
-const ProgressContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 5px;
-  width: 100vw;
-`
-
-const ProgressBar = styled.div`
-  background: linear-gradient(to right, ${COLORS.light}, ${COLORS.medium});
-  height: 5px;
-  width: 0%;
-`
-
 // FIXME: make menu disappear after click (on mobile, must tap outside of menu)
 const Nav = styled.nav`
   div {
@@ -88,7 +60,7 @@ const Nav = styled.nav`
       display: block;
     }
     ul {
-      background: ${COLORS.lightest};
+      background: #fff;
       box-shadow: rgb(0 0 0 / 15%) 0px 4px 5px 0px;
       flex-direction: column;
       position: absolute;
@@ -116,18 +88,20 @@ const Nav = styled.nav`
 `
 
 const Link = styled(NavLink)`
-  color: ${COLORS.dark};
+  color: ${COLORS.medium};
   font-size: 0.7rem;
   margin: 0 10px;
   border-radius: 10px;
   padding: 12px 10px 10px 10px;
   &:hover,
   &:focus {
-    background: ${COLORS.light};
+    background: ${COLORS.accent};
+    color: #fff;
   }
   &.active {
-    background: ${COLORS.medium};
+    background: ${COLORS.light};
     color: #fff;
+    font-weight: bold;
   }
   @media (max-width: 600px) {
     width: 100%;
@@ -136,18 +110,18 @@ const Link = styled(NavLink)`
     justify-content: center;
     margin: 0;
     border-radius: 0;
-    border-bottom: 2px solid ${COLORS.lightest};
+    border-bottom: 2px solid #fff;
     padding: 15px;
   }
 `
 
 const Icon = styled.div`
-  color: ${COLORS.dark};
+  color: ${COLORS.light};
   margin: 0 10px;
   font-size: 1.3rem;
   transition: 0.2s ease-in-out;
   &:hover,
   &:focus {
-    color: ${COLORS.medium};
+    color: ${COLORS.accent};
   }
 `

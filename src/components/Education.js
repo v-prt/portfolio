@@ -29,7 +29,6 @@ export const Education = () => {
 }
 
 const Wrapper = styled.section`
-  color: ${COLORS.dark};
   margin: auto;
   width: fit-content;
   padding: 50px 0;

@@ -4,7 +4,6 @@ import { COLORS } from '../GlobalStyles'
 export const Skills = () => {
   return (
     <Wrapper>
-      <Border />
       <Heading>
         [ <b>skills</b> ]
       </Heading>
@@ -17,12 +16,13 @@ export const Skills = () => {
         <Group>
           <Title>Frontend</Title>
           <List>
-            <li>HTML ✨</li>
-            <li>CSS ✨</li>
-            <li>JavaScript</li>
-            <li>Styled Components ✨</li>
-            <li>React ✨</li>
-            <li>Redux</li>
+            <li>HTML</li>
+            <li>CSS / SCSS</li>
+            <li>Styled Components</li>
+            <li>JavaScript / TypeScript</li>
+            <li>PHP</li>
+            <li>React</li>
+            <li>WordPress</li>
           </List>
         </Group>
         <Group>
@@ -32,49 +32,45 @@ export const Skills = () => {
             <li>Express</li>
             <li>Node</li>
             <li>RESTful APIs</li>
-            <li>CRUD ✨</li>
+            <li>CRUD</li>
+            <li>MySQL</li>
           </List>
         </Group>
         <Group>
           <Title>Tools</Title>
           <List>
-            <li>VS Code ✨</li>
+            <li>VS Code</li>
             <li>Git</li>
-            <li>GitHub ✨</li>
+            <li>GitHub</li>
+            <li>Figma</li>
           </List>
         </Group>
         <Group>
           <Title>Languages</Title>
           <List>
-            <li>English ✨</li>
-            <li>American Sign Language ✨</li>
+            <li>English</li>
+            <li>American Sign Language</li>
             <li>Hungarian</li>
           </List>
         </Group>
       </Groups>
-      <Border />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
   background: #f2f2f2;
-  color: ${COLORS.dark};
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  border-top: 5px solid ${COLORS.accent};
+  border-bottom: 5px solid ${COLORS.accent};
   p {
     text-align: center;
     max-width: 800px;
-    margin: 0 30px;
+    margin: 30px;
   }
-`
-
-const Border = styled.div`
-  background: linear-gradient(to right, #ffcc00, #ffd700, #ff9900);
-  height: 5px;
-  width: 100%;
 `
 
 const Heading = styled.h2`
@@ -90,17 +86,19 @@ const Groups = styled.div`
 `
 
 const Group = styled.div`
-  background: ${COLORS.dark};
-  color: ${COLORS.lightest};
+  background: #fff;
+  color: #1a1a1a;
   text-align: center;
   width: 300px;
   margin: 20px;
-  border-radius: 20px;
+  border-radius: 15px;
+  border: 1px solid ${COLORS.light};
   overflow: hidden;
 `
 
 const Title = styled.h3`
-  background: ${COLORS.darkest};
+  background: ${COLORS.light};
+  color: #fff;
   padding: 10px;
   font-size: 1.5rem;
 `

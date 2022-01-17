@@ -86,7 +86,7 @@ const Text = styled.div`
     font-weight: bold;
     &:hover,
     &:focus {
-      color: ${COLORS.darkest};
+      color: ${COLORS.dark};
     }
   }
 `

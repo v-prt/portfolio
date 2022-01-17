@@ -15,20 +15,6 @@ export const SocialLinks = () => {
           <FaLinkedin />
         </Icon>
       </a>
-      {/* <a
-        href="https://www.twitter.com/vikki_peart"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Icon>
-          <FaTwitter />
-        </Icon>
-      </a>
-      <a href="mailto:v-peart@outlook.com">
-        <Icon>
-          <GrMail />
-        </Icon>
-      </a> */}
     </Wrapper>
   )
 }
@@ -36,11 +22,14 @@ export const SocialLinks = () => {
 const Wrapper = styled.div`
   display: flex;
   a {
+    div {
+      color: ${COLORS.light};
+    }
     &:hover,
     &:focus {
       div {
-        background: ${COLORS.lightest};
-        color: ${COLORS.medium};
+        background: #fff;
+        color: ${COLORS.accent};
       }
     }
   }
@@ -48,7 +37,6 @@ const Wrapper = styled.div`
 
 const Icon = styled.div`
   display: flex;
-  color: #333;
   margin: 0 10px;
   padding: 5px;
   border-radius: 50%;

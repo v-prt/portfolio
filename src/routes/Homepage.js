@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { COLORS, fadeIn, rotate } from '../GlobalStyles'
 import avatar from '../assets/victoria.JPG'
-import background from '../assets/bg-forest1.jpg'
 import { FeaturedProject } from '../components/FeaturedProject'
 import { ViewProjects } from '../components/ViewProjects'
 
@@ -63,7 +62,7 @@ const Wrapper = styled.main`
 `
 
 const Background = styled.div`
-  background: url(${background}) center center / cover;
+  background: linear-gradient(${COLORS.light}, ${COLORS.accent});
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -79,9 +78,7 @@ const Heading = styled.section`
 
 const Banner = styled.div`
   animation: ${fadeIn} 2s ease-in-out;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  color: #c0c9ae;
+  color: #fff;
   text-align: center;
   height: 300px;
   width: 100%;
@@ -140,8 +137,8 @@ const Skills = styled.div`
 `
 
 const Intro = styled.section`
-  background: linear-gradient(#202c31, ${COLORS.medium});
-  color: ${COLORS.lightest};
+  background: ${COLORS.dark};
+  color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -169,7 +166,7 @@ const Text = styled.div`
 
 const AboutLink = styled(Link)`
   background: ${COLORS.light};
-  color: ${COLORS.dark};
+  color: #fff;
   text-align: center;
   margin: 20px;
   border-radius: 10px;
@@ -177,7 +174,7 @@ const AboutLink = styled(Link)`
   font-weight: bold;
   &:hover,
   &:focus {
-    background: ${COLORS.dark};
-    color: ${COLORS.light};
+    background: ${COLORS.accent};
+    color: #fff;
   }
 `

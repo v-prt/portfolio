@@ -54,7 +54,7 @@ const Wrapper = styled.section`
 
 const Question = styled.div`
   background: #fff;
-  color: #000;
+  color: #1a1a1a;
   position: relative;
   text-align: center;
   margin: 20px;

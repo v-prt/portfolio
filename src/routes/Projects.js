@@ -89,6 +89,7 @@ export const Projects = () => {
               </p>
               <p>
                 <a
+                  className='collaborator'
                   href='https://www.linkedin.com/in/andrew-fenrich/'
                   target='_blank'
                   rel='noreferrer'>
@@ -97,7 +98,11 @@ export const Projects = () => {
                 (Backend)
               </p>
               <p>
-                <a href='https://mariiesmall.com/' target='_blank' rel='noreferrer'>
+                <a
+                  className='collaborator'
+                  href='https://mariiesmall.com/'
+                  target='_blank'
+                  rel='noreferrer'>
                   Marie Petit
                 </a>{' '}
                 (Frontend)
@@ -291,12 +296,12 @@ const Details = styled.div`
     max-width: 800px;
     margin: 20px;
   }
-  a {
+  .collaborator {
     color: ${COLORS.medium};
     font-weight: bold;
     &:hover,
     &:focus {
-      color: #333;
+      color: ${COLORS.accent};
     }
   }
 `

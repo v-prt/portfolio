@@ -1,11 +1,10 @@
 import styled, { createGlobalStyle, keyframes } from 'styled-components'
 
 export const COLORS = {
-  darkest: '#1a1a1a',
-  dark: '#333333',
-  medium: '#4c846f',
-  light: '#c0c9ae',
-  lightest: '#fcf7f3',
+  dark: '#292b57',
+  medium: '#57437c',
+  light: '#ae8eb4',
+  accent: '#ff8533',
 }
 
 export default createGlobalStyle`
@@ -17,6 +16,7 @@ export default createGlobalStyle`
         border: 0;
     }
     html, body {
+      color: #1a1a1a;
         overflow-x: hidden;
         overscroll-behavior-y: none;
         overscroll-behavior-x: none;
@@ -76,8 +76,9 @@ export const UnderlinedLink = styled.a`
   }
   &:hover,
   &:focus {
-    color: #333;
+    color: ${COLORS.medium};
     &:after {
+      background: ${COLORS.accent};
       transform: skew(30deg) rotate(1deg) scale(1.1);
     }
   }

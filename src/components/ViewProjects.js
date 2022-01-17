@@ -17,9 +17,8 @@ export const ViewProjects = () => {
 }
 
 const Wrapper = styled.section`
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
-  backdrop-filter: blur(3px);
-  color: ${COLORS.light};
+  background: ${COLORS.dark};
+  color: #fff;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -43,15 +42,15 @@ const Wrapper = styled.section`
 `
 
 const ProjectsLink = styled(Link)`
-  background: ${COLORS.medium};
-  color: ${COLORS.lightest};
+  background: ${COLORS.light};
+  color: #fff;
   font-weight: bold;
   text-align: center;
   border-radius: 10px;
   padding: 10px 20px;
   &:hover,
   &:focus {
-    background: ${COLORS.light};
-    color: ${COLORS.dark};
+    background: ${COLORS.accent};
+    color: #fff;
   }
 `
