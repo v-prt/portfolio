@@ -28,7 +28,7 @@ export const Header = () => {
         </Icon>
         <ul>
           <li>
-            <Link to='/home'>HOME</Link>
+            <Link to='/'>HOME</Link>
           </li>
           <li>
             <Link to='/about'>ABOUT</Link>
