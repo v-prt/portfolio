@@ -97,7 +97,7 @@ const Name = styled.h1`
   margin: 50px 0 20px 0;
   font-size: 6rem;
   @media (max-width: 1000px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `
 
@@ -106,7 +106,7 @@ const Job = styled.p`
   font-size: 2rem;
   font-weight: 200;
   @media (max-width: 1000px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 `
 
@@ -124,6 +124,9 @@ const Skills = styled.div`
     max-width: 75%;
     transform: translate3d(0px, -50px, 0px);
     animation: 12s ease-in-out infinite ${rotate};
+    @media (max-width: 1000px) {
+      font-size: 1rem;
+    }
   }
   p:nth-child(2) {
     animation-delay: 3s;

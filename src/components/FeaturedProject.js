@@ -75,6 +75,9 @@ const Description = styled.div`
   h2 {
     font-size: 2.5rem;
     margin: 50px 20px 20px 20px;
+    @media (max-width: 1000px) {
+      font-size: 2rem;
+    }
   }
   p {
     text-align: center;
