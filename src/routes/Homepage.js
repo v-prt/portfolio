@@ -5,6 +5,7 @@ import { COLORS, fadeIn, rotate } from '../GlobalStyles'
 import avatar from '../assets/victoria.JPG'
 import { FeaturedProject } from '../components/FeaturedProject'
 import { ViewProjects } from '../components/ViewProjects'
+import pattern from '../assets/code.svg'
 
 export const Homepage = () => {
   // makes window scroll to top between renders
@@ -16,26 +17,21 @@ export const Homepage = () => {
     <Wrapper>
       <Background></Background>
       <Heading>
+        <div className='overlay'></div>
         <Banner>
           <Name>Victoria Peart</Name>
           <Job>Full-Stack Web Developer</Job>
           <Skills>
-            <p>html / css / javascript / php</p>
-            <p>mongodb / express / react / redux / node</p>
-            <p>gamer, nature lover, foodie</p>
-            <p>
-              will do <b>pro bono work</b> for animal welfare
-            </p>
+            <p>html / css / javascript / typescript / php</p>
+            <p>mongodb / express / react / redux / node / mysql</p>
+            <p>gamer, animal lover, foodie</p>
           </Skills>
         </Banner>
       </Heading>
       <Intro>
         <Image src={avatar} alt='' />
         <Text>
-          <p>
-            Hi! I'm Victoria. I'm a full-stack Web Developer, currently living in beautiful British
-            Columbia, Canada.
-          </p>
+          <p>Hi! I'm Victoria. I'm a full-stack Web Developer based in West Kelowna, BC.</p>
           <p>
             As a deaf woman, I prioritize
             <strong> visual appeal, accessibility, and thoughtful UX</strong>. I enjoy working in
@@ -74,15 +70,25 @@ const Heading = styled.section`
   align-items: flex-end;
   height: 100vh;
   width: 100%;
+  position: relative;
+  .overlay {
+    background-image: url(${pattern});
+    background-size: 800px;
+    opacity: 0.2;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 `
 
 const Banner = styled.div`
   animation: ${fadeIn} 2s ease-in-out;
-  color: #fff;
+  color: #000;
   text-align: center;
   height: 300px;
   width: 100%;
-  padding: 30px 0 50px 0;
+  padding: 30px 0 100px 0;
+  z-index: 1;
   @media screen and (prefers-reduced-motion: reduce) {
     animation: none;
   }
@@ -101,7 +107,6 @@ const Name = styled.h1`
 const Job = styled.p`
   margin: 20px 0;
   font-size: 2rem;
-  font-weight: 200;
   @media (max-width: 1000px) {
     font-size: 1.2rem;
   }
@@ -120,7 +125,7 @@ const Skills = styled.div`
     opacity: 0;
     max-width: 75%;
     transform: translate3d(0px, -50px, 0px);
-    animation: 12s ease-in-out infinite ${rotate};
+    animation: 9s ease-in-out infinite ${rotate};
     @media (max-width: 1000px) {
       font-size: 1rem;
     }
@@ -130,9 +135,6 @@ const Skills = styled.div`
   }
   p:nth-child(3) {
     animation-delay: 6s;
-  }
-  p:nth-child(4) {
-    animation-delay: 9s;
   }
 `
 

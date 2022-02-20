@@ -92,7 +92,6 @@ const Group = styled.div`
   width: 300px;
   margin: 20px;
   border-radius: 15px;
-  border: 1px solid ${COLORS.light};
   overflow: hidden;
 `
 

@@ -25,11 +25,7 @@ export const Employment = () => {
               rel='noopenner noreferrer'>
               Collaboration Hub
             </a>{' '}
-            and{' '}
-            <a href='https://creator.co/marketplace' target='_blank' rel='noopenner noreferrer'>
-              Marketplace+
-            </a>
-            , as well as Creator Search and Campaign Builder (only accessible to brands under a
+            as well as Creator Search and Campaign Builder (only accessible to brands under a
             subscription plan).
           </p>
           <p>
