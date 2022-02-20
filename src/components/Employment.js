@@ -59,6 +59,7 @@ const Card = styled.div`
 const Heading = styled.h2`
   margin-bottom: 30px;
   font-size: 2rem;
+  color: ${COLORS.medium};
 `
 
 const Company = styled.h3`

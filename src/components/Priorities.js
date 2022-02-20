@@ -30,7 +30,7 @@ export const Priorities = () => {
           <img src={accessibility} alt='assessibility' />
           <p>
             More people are using the internet now more than ever. They come in all shapes and
-            sizes, and so should technology in order to address their needs.
+            sizes, and so should technology in order to meet their needs.
           </p>
         </Priority>
 
