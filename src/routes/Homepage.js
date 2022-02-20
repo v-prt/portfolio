@@ -23,8 +23,8 @@ export const Homepage = () => {
           <Job>Full-Stack Web Developer</Job>
           <Skills>
             <p>html / css / javascript / typescript / php</p>
-            <p>mongodb / express / react / redux / node / mysql</p>
-            <p>gamer, animal lover, foodie</p>
+            <p>mongodb / express / react / node / mysql</p>
+            <p>loves: animals, food, video & board games, travel</p>
           </Skills>
         </Banner>
       </Heading>
@@ -77,13 +77,14 @@ const Heading = styled.section`
     opacity: 0.2;
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: fixed;
+    z-index: -1;
   }
 `
 
 const Banner = styled.div`
   animation: ${fadeIn} 2s ease-in-out;
-  color: #000;
+  color: #fff;
   text-align: center;
   height: 300px;
   width: 100%;
