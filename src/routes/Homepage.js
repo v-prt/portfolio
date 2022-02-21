@@ -24,7 +24,8 @@ export const Homepage = () => {
           <Skills>
             <p>html / css / javascript / typescript / php</p>
             <p>mongodb / express / react / node / mysql</p>
-            <p>loves: animals, food, video & board games, travel</p>
+            <p>concordia university bootcamp alumna</p>
+            <p>currently working at creator.co</p>
           </Skills>
         </Banner>
       </Heading>
@@ -58,7 +59,7 @@ const Wrapper = styled.main`
 `
 
 const Background = styled.div`
-  background: linear-gradient(${COLORS.light}, ${COLORS.accent});
+  background: linear-gradient(${COLORS.light}, ${COLORS.medium});
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -67,18 +68,21 @@ const Background = styled.div`
 
 const Heading = styled.section`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   height: 100vh;
   width: 100%;
   position: relative;
   .overlay {
     background-image: url(${pattern});
-    background-size: 800px;
+    background-size: 500px;
     opacity: 0.2;
     height: 100%;
     width: 100%;
     position: fixed;
     z-index: -1;
+    @media only screen and (min-width: 500px) {
+      background-size: 800px;
+    }
   }
 `
 
@@ -87,8 +91,8 @@ const Banner = styled.div`
   color: #fff;
   text-align: center;
   height: 300px;
-  width: 100%;
-  padding: 30px 0 100px 0;
+  padding: 30px;
+  margin: auto;
   z-index: 1;
   @media screen and (prefers-reduced-motion: reduce) {
     animation: none;
@@ -108,17 +112,26 @@ const Name = styled.h1`
 const Job = styled.p`
   margin: 20px 0;
   font-size: 2rem;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
   @media (max-width: 1000px) {
     font-size: 1.2rem;
   }
 `
 
 const Skills = styled.div`
+  background: ${COLORS.medium};
+  border-radius: 0 0 15px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin: 50px 0;
+  margin: 20px 0;
+  overflow: hidden;
+  height: 75px;
+  @media only screen and (min-width: 1000px) {
+    height: 50px;
+  }
   p {
     font-size: 1.2rem;
     position: absolute;
@@ -126,7 +139,8 @@ const Skills = styled.div`
     opacity: 0;
     max-width: 75%;
     transform: translate3d(0px, -50px, 0px);
-    animation: 9s ease-in-out infinite ${rotate};
+    animation: 12s ease-in-out infinite ${rotate};
+    margin-top: 10px;
     @media (max-width: 1000px) {
       font-size: 1rem;
     }
@@ -136,6 +150,9 @@ const Skills = styled.div`
   }
   p:nth-child(3) {
     animation-delay: 6s;
+  }
+  p:nth-child(4) {
+    animation-delay: 9s;
   }
 `
 
