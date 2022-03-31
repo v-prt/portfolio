@@ -23,11 +23,10 @@ import meowspaceProfile1 from '../assets/meowspace/meowspace-profile.png'
 import meowspaceProfile2 from '../assets/meowspace/meowspace-profile2.png'
 import facespace from '../assets/meowspace/facespace.png'
 
-import cookieHeavenHome from '../assets/cookie-heaven/cookie-heaven-home.png'
-import cookieHeavenGame1 from '../assets/cookie-heaven/cookie-heaven-game1.png'
-import cookieHeavenGame2 from '../assets/cookie-heaven/cookie-heaven-game2.png'
 import cookieHeavenGame3 from '../assets/cookie-heaven/cookie-heaven-game3.png'
 import cookieClicker from '../assets/cookie-heaven/cookie-clicker.png'
+import sushiHeavenHome from '../assets/cookie-heaven/sushi-heaven-home.png'
+import sushiHeavenGame from '../assets/cookie-heaven/sushi-heaven-game.png'
 
 export const Projects = () => {
   // makes window scroll to top between renders
@@ -64,6 +63,50 @@ export const Projects = () => {
         </Description>
         <ProjectGallery>
           <ImageLoader src={creatorHome} alt={''} />
+        </ProjectGallery>
+      </Project>
+      <Project>
+        <Description>
+          <Title>
+            <h2>
+              [ <b>Sushi Heaven</b> ]
+            </h2>
+            <button
+              onClick={() => {
+                setCookieHeaven(!cookieHeaven)
+              }}>
+              <Icon $rotate={cookieHeaven}>
+                <BiChevronDown />
+              </Icon>
+              project details
+            </button>
+          </Title>
+          <Details visible={cookieHeaven}>
+            <p>
+              A spin on the classic "Cookie Clicker" browser game which started as a school project
+              and has evolved over time as I kept tinkering and improving the aesthetics and
+              gameplay.
+            </p>
+            <p>
+              The goal is to make as much sushi as you can, buy upgrades and restaurants, and work
+              your way up to owning a franchise. The game also automatically saves your progress so
+              you can come back to it later.
+            </p>
+            <p>
+              <UnderlinedLink
+                href='https://sushi-heaven.netlify.app/'
+                target='_blank'
+                rel='noreferrer'>
+                Play Game
+              </UnderlinedLink>
+            </p>
+          </Details>
+        </Description>
+        <ProjectGallery>
+          <ImageLoader src={sushiHeavenHome} alt='' />
+          <ImageLoader src={sushiHeavenGame} alt='' />
+          <ImageLoader src={cookieHeavenGame3} alt='' />
+          <ImageLoader src={cookieClicker} alt='' />
         </ProjectGallery>
       </Project>
       <Project>
@@ -111,7 +154,7 @@ export const Projects = () => {
             </div>
             <p>
               This group project was completed over the course of one week as part of our coding
-              bootcamp, in which we developed an e-commerce web app for wearable tech and designed
+              bootcamp, in which we developed an e-commerce website for wearable tech and designed
               the front as well as back-end.
             </p>
             <p>
@@ -124,8 +167,8 @@ export const Projects = () => {
                 href='https://www.youtube.com/watch?v=a9O7pC1S2KI'
                 target='_blank'
                 rel='noreferrer'>
-                View demo
-              </UnderlinedLink>{' '}
+                View Demo
+              </UnderlinedLink>
             </p>
           </Details>
         </Description>
@@ -159,11 +202,11 @@ export const Projects = () => {
           </Title>
           <Details visible={meowspace}>
             <p>
-              This was a super fun 3-day project in which I had to recreate "Facespace" from a
-              provided mock-up. The original used an ugly orange theme and super creepy
-              computer-generated images. I took extra time after completing the MVP requirements to
-              upgrade the look of the app by replacing the humans with cats and changing the banners
-              as well as the color scheme, name, and layout.
+              This was a fun little 3-day project in which I had to recreate "Facespace" from a
+              provided mock-up. The original used an ugly orange theme and creepy computer-generated
+              images. Once I'd completed the MVP requirements, I took some extra time to upgrade the
+              look of the app by replacing the "humans" with cats and changing the color scheme,
+              name, and layout.
             </p>
           </Details>
         </Description>
@@ -176,40 +219,6 @@ export const Projects = () => {
           <ImageLoader src={facespace} alt='' />
         </ProjectGallery>
       </Project>
-      <Project>
-        <Description>
-          <Title>
-            <h2>
-              [ <b>Cookie Heaven</b> ]
-            </h2>
-            <button
-              onClick={() => {
-                setCookieHeaven(!cookieHeaven)
-              }}>
-              <Icon $rotate={cookieHeaven}>
-                <BiChevronDown />
-              </Icon>
-              project details
-            </button>
-          </Title>
-          <Details visible={cookieHeaven}>
-            <p>
-              I really enjoyed making this simple version of the classic "Cookie Clicker" idle game!
-              This is another one of my workshops I took the opportunity to improve upon. On top of
-              updating the style, I added further functionalities such as showing a temporary points
-              alert when you click on the cookie, shortening the display number at certain
-              thresholds, adding a reset button, and visual indication for unavailable upgrades.
-            </p>
-          </Details>
-        </Description>
-        <ProjectGallery>
-          <ImageLoader src={cookieHeavenHome} alt='' />
-          <ImageLoader src={cookieHeavenGame1} alt='' />
-          <ImageLoader src={cookieHeavenGame2} alt='' />
-          <ImageLoader src={cookieHeavenGame3} alt='' />
-          <ImageLoader src={cookieClicker} alt='' />
-        </ProjectGallery>
-      </Project>
     </Wrapper>
   )
 }
@@ -220,7 +229,7 @@ const Wrapper = styled.main`
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  padding-top: 50px;
+  margin-top: 50px;
 `
 
 const Project = styled.section`

@@ -30,14 +30,30 @@ export const FeaturedProject = () => {
         </p>
         <ImageLoader src={plantgeekPlantProfile} alt='' />
         <p>
-          As my final project for bootcamp, I thought it would be fun to create
+          As my final project for bootcamp, I thought it would be fun to build
           <strong> plantgeek </strong>
           as an upgrade to my spreadsheet, which could also serve as a hub for houseplant lovers to
           connect with each other and share useful tips.
         </p>
-        <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel='noreferrer'>
-          View demo
-        </UnderlinedLink>
+        <p>
+          Note: this app started as a school project in 2021 and has since undergone major changes
+          and improvements, particularly in the backend. It is currently an ongoing side project I
+          work on in my free time.
+        </p>
+        <p>
+          <UnderlinedLink href='https://www.plantgeek.co' target='_blank' rel='noreferrer'>
+            plantgeek.co
+          </UnderlinedLink>
+          <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel='noreferrer'>
+            View Demo
+          </UnderlinedLink>
+          <UnderlinedLink
+            href='https://github.com/v-prt/plantgeek'
+            target='_blank'
+            rel='noreferrer'>
+            GitHub Repo
+          </UnderlinedLink>
+        </p>
       </Description>
       <ProjectGallery>
         <ImageLoader src={plantgeekHome1} alt='' />
@@ -82,5 +98,6 @@ const Description = styled.div`
   }
   a {
     text-align: center;
+    margin: 0 20px;
   }
 `

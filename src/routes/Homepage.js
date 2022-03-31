@@ -26,7 +26,7 @@ export const Homepage = () => {
           </Name>
           <Job>FULL-STACK WEB DEVELOPER</Job>
           <Skills>
-            HTML. CSS. SCSS. JAVASCRIPT. TYPESCRIPT. PHP. REACT. REDUX. EXPRESS. NODE. GITHUB.
+            HTML. CSS. SCSS. JAVASCRIPT. TYPESCRIPT. REACT. REDUX. EXPRESS. NODE. MONGODB. GITHUB.
           </Skills>
         </Banner>
       </Heading>
@@ -57,6 +57,7 @@ const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin-top: 50px;
 `
 
 const Background = styled.div`
@@ -90,7 +91,7 @@ const Banner = styled.div`
   color: #fff;
   text-align: right;
   padding: 30px;
-  margin: auto 20px auto auto;
+  margin: auto;
   z-index: 1;
   @media screen and (prefers-reduced-motion: reduce) {
     animation: none;

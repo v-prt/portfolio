@@ -4,7 +4,8 @@ export const COLORS = {
   dark: '#1a1a1a',
   medium: '#333',
   light: '#ae8eb4',
-  accent: '#ff8533',
+  // accent: '#ff8533',
+  accent: '#9966ff',
 }
 
 export default createGlobalStyle`

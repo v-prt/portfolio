@@ -37,6 +37,7 @@ const Wrapper = styled.header`
   backdrop-filter: blur(8px);
   width: calc(100% - 40px); // accounts for padding
   position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
