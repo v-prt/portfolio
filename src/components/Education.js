@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Certificates } from './Certificates'
 import { COLORS } from '../GlobalStyles'
 
@@ -9,8 +9,8 @@ export const Education = () => {
         <Heading>
           [ <b>education</b> ]
         </Heading>
-        <School>Concordia University, 2021</School>
-        <Degree>Diploma, Full-Stack Web Development</Degree>
+        <School>Concordia University</School>
+        <Degree>Full-Stack Web Development Diploma - 2021</Degree>
         <Description>
           <p>
             This intense 12-week coding bootcamp taught me the fundamentals of programming and gave
@@ -29,9 +29,9 @@ export const Education = () => {
 }
 
 const Wrapper = styled.section`
-  margin: auto;
+  /* margin: auto;
   width: fit-content;
-  padding: 50px 0;
+  padding: 50px 0; */
 `
 
 const Card = styled.div`
@@ -39,7 +39,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 80px 20px 40px 20px;
 `
 
 const Heading = styled.h2`

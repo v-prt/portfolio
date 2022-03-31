@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { COLORS } from '../GlobalStyles'
 
 export const Employment = () => {
@@ -8,12 +8,12 @@ export const Employment = () => {
         <Heading>
           [ <b>employment</b> ]
         </Heading>
-        <Company>creator.co</Company>
+        <Company>Creator</Company>
         <JobTitle>Web Developer - June 2021 to present</JobTitle>
         <Description>
           <p>
-            I'm currently working as a Web Developer at <a href='https://creator.co'>creator.co</a>,
-            where we aim to be the #1 platform for social media influencers to connect and
+            I'm currently working as a Web Developer at <a href='https://creator.co'>Creator</a>,
+            where we aim to be the top platform for social media influencers to connect and
             collaborate with brands. We run 2 websites as a whole - one for creators, and one for
             brands.
           </p>
@@ -39,9 +39,9 @@ export const Employment = () => {
 }
 
 const Wrapper = styled.section`
-  margin: auto;
+  /* margin: auto;
   width: fit-content;
-  padding: 50px 0;
+  padding: 50px 0; */
 `
 
 const Card = styled.div`
@@ -49,7 +49,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 80px 20px 40px 20px;
 `
 
 const Heading = styled.h2`

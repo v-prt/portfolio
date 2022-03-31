@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { COLORS } from '../GlobalStyles'
 import developer from '../assets/illustrations/developer.svg'
 
@@ -10,7 +10,7 @@ export const ViewProjects = () => {
       <img src={developer} alt='' />
       <div>
         <p>Interested in seeing other things I've worked on?</p>
-        <ProjectsLink to='/projects'>View my projects</ProjectsLink>
+        <ProjectsLink to='/projects'>See projects</ProjectsLink>
       </div>
     </Wrapper>
   )
@@ -42,15 +42,20 @@ const Wrapper = styled.section`
 `
 
 const ProjectsLink = styled(Link)`
-  background: ${COLORS.light};
   color: #fff;
+  border: 1px solid #fff;
   font-weight: bold;
   text-align: center;
   border-radius: 10px;
+  width: fit-content;
+  margin: auto;
   padding: 10px 20px;
   &:hover,
   &:focus {
-    background: ${COLORS.accent};
-    color: #fff;
+    background: #fff;
+    color: #000;
+  }
+  @media only screen and (min-width: 700px) {
+    margin: 0;
   }
 `

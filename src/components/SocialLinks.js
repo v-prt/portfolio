@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { COLORS } from '../GlobalStyles'
 
@@ -23,13 +23,12 @@ const Wrapper = styled.div`
   display: flex;
   a {
     div {
-      color: ${COLORS.light};
+      color: ${COLORS.dark};
     }
     &:hover,
     &:focus {
       div {
         background: #fff;
-        color: ${COLORS.accent};
       }
     }
   }

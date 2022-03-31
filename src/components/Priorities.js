@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { COLORS } from '../GlobalStyles'
 
 import responsiveness from '../assets/illustrations/responsiveness.svg'
@@ -17,26 +17,24 @@ export const Priorities = () => {
       </p>
       <Div>
         <Priority>
-          <h3>Responsiveness</h3>
           <img src={responsiveness} alt='responsiveness' />
+          <h3>Responsiveness</h3>
           <p>
             You never know what kind of device your clients are using, so it's important to be sure
             your app works well across a myriad of screen sizes and browsers.
           </p>
         </Priority>
-
         <Priority>
-          <h3>Accessibility</h3>
           <img src={accessibility} alt='assessibility' />
+          <h3>Accessibility</h3>
           <p>
             More people are using the internet now more than ever. They come in all shapes and
             sizes, and so should technology in order to meet their needs.
           </p>
         </Priority>
-
         <Priority>
-          <h3>Style</h3>
           <img src={style} alt='style' />
+          <h3>Style</h3>
           <p>
             They say you shouldn't judge a book by its cover, but let's be real - most people do.
             There's nothing wrong with using a bit of flair to set your app apart.
@@ -48,22 +46,22 @@ export const Priorities = () => {
 }
 
 const Wrapper = styled.section`
-  background: ${COLORS.dark};
-  border-top: 5px solid ${COLORS.light};
+  background: ${COLORS.medium};
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   p {
-    text-align: center;
-    margin: 30px;
+    margin: 20px;
+    max-width: 600px;
   }
 `
 
 const Heading = styled.h2`
   margin: 70px 0 20px 0;
   font-size: 2rem;
+  text-align: center;
 `
 
 const Div = styled.div`
@@ -77,23 +75,25 @@ const Div = styled.div`
 const Priority = styled.div`
   background: #fff;
   color: #1a1a1a;
-  text-align: center;
-  max-width: 500px;
-  margin: 20px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  padding: 30px;
   border-radius: 15px;
   overflow: hidden;
+  img {
+    height: 100px;
+    margin: 20px;
+  }
   h3 {
-    background: ${COLORS.light};
-    color: #fff;
-    padding: 10px;
+    text-align: center;
     font-size: 1.5rem;
   }
-  p {
-    max-width: 600px;
-    padding: 20px;
-  }
-  img {
-    height: 150px;
-    margin: 30px;
+  @media only screen and (min-width: 600px) {
+    img {
+      height: 150px;
+    }
   }
 `

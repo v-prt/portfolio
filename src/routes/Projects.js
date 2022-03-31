@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
-import { COLORS, UnderlinedLink, ProjectGallery, ProjectImage } from '../GlobalStyles'
+import styled from 'styled-components/macro'
+import { COLORS, UnderlinedLink, ProjectGallery } from '../GlobalStyles'
 import { BiChevronDown } from 'react-icons/bi'
+import { ImageLoader } from '../components/ImageLoader'
 
 import creatorHome from '../assets/creator/creator-home.png'
 
@@ -62,7 +63,7 @@ export const Projects = () => {
           </Details>
         </Description>
         <ProjectGallery>
-          <ProjectImage src={creatorHome} alt='' />
+          <ImageLoader src={creatorHome} alt={''} />
         </ProjectGallery>
       </Project>
       <Project>
@@ -123,21 +124,21 @@ export const Projects = () => {
                 href='https://www.youtube.com/watch?v=a9O7pC1S2KI'
                 target='_blank'
                 rel='noreferrer'>
-                Watch a short demo on YouTube
+                View demo
               </UnderlinedLink>{' '}
             </p>
           </Details>
         </Description>
         <ProjectGallery>
-          <ProjectImage src={eagletekHome} alt='eagletek homepage' />
-          <ProjectImage src={eagletekPagination} alt='eagletek pagination' />
-          <ProjectImage src={eagletekCategories} alt='eagletek categories page' />
-          <ProjectImage src={eagletekLogin} alt='eagletek login page' />
-          <ProjectImage src={eagletekEmptyCart} alt='eagletek empty cart' />
-          <ProjectImage src={eagletekCart} alt='eagletek cart with items' />
-          <ProjectImage src={eagletekDesktopDropdown} alt='eagletek desktop menu' />
-          <ProjectImage src={eagletekMobileDropdown} alt='eagletek mobile menu' />
-          <ProjectImage src={eagletekAbout} alt='eagletek about page' />
+          <ImageLoader src={eagletekHome} alt='' />
+          <ImageLoader src={eagletekPagination} alt='' />
+          <ImageLoader src={eagletekCategories} alt='' />
+          <ImageLoader src={eagletekLogin} alt='' />
+          <ImageLoader src={eagletekEmptyCart} alt='' />
+          <ImageLoader src={eagletekCart} alt='' />
+          <ImageLoader src={eagletekDesktopDropdown} alt='' />
+          <ImageLoader src={eagletekMobileDropdown} alt='' />
+          <ImageLoader src={eagletekAbout} alt='' />
         </ProjectGallery>
       </Project>
       <Project>
@@ -167,12 +168,12 @@ export const Projects = () => {
           </Details>
         </Description>
         <ProjectGallery>
-          <ProjectImage src={meowspaceHome1} alt='' />
-          <ProjectImage src={meowspaceLogin} alt='' />
-          <ProjectImage src={meowspaceHome2} alt='' />
-          <ProjectImage src={meowspaceProfile1} alt='' />
-          <ProjectImage src={meowspaceProfile2} alt='' />
-          <ProjectImage src={facespace} alt='' />
+          <ImageLoader src={meowspaceHome1} alt='' />
+          <ImageLoader src={meowspaceLogin} alt='' />
+          <ImageLoader src={meowspaceHome2} alt='' />
+          <ImageLoader src={meowspaceProfile1} alt='' />
+          <ImageLoader src={meowspaceProfile2} alt='' />
+          <ImageLoader src={facespace} alt='' />
         </ProjectGallery>
       </Project>
       <Project>
@@ -202,11 +203,11 @@ export const Projects = () => {
           </Details>
         </Description>
         <ProjectGallery>
-          <ProjectImage src={cookieHeavenHome} alt='' />
-          <ProjectImage src={cookieHeavenGame1} alt='' />
-          <ProjectImage src={cookieHeavenGame2} alt='' />
-          <ProjectImage src={cookieHeavenGame3} alt='' />
-          <ProjectImage src={cookieClicker} alt='' />
+          <ImageLoader src={cookieHeavenHome} alt='' />
+          <ImageLoader src={cookieHeavenGame1} alt='' />
+          <ImageLoader src={cookieHeavenGame2} alt='' />
+          <ImageLoader src={cookieHeavenGame3} alt='' />
+          <ImageLoader src={cookieClicker} alt='' />
         </ProjectGallery>
       </Project>
     </Wrapper>
@@ -275,15 +276,15 @@ const Title = styled.div`
 
 const Icon = styled.div`
   // $rotate is a transient prop, needed to remove error
-  transform: ${(props) => (props.$rotate ? '' : 'rotate(-90deg)')};
+  transform: ${props => (props.$rotate ? '' : 'rotate(-90deg)')};
   font-size: 1.3rem;
   margin-right: 5px;
   transition: 0.1s ease-in-out;
 `
 
 const Details = styled.div`
-  opacity: ${(props) => (props.visible ? '1' : '0')};
-  max-height: ${(props) => (props.visible ? '1000px' : '0')};
+  opacity: ${props => (props.visible ? '1' : '0')};
+  max-height: ${props => (props.visible ? '1000px' : '0')};
   text-align: center;
   transition: 0.5s ease-in-out;
   div {

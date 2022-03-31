@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import background from '../assets/bg-forest.jpg'
 
 import { Story } from '../components/Story.js'

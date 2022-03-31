@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { BsFillChatSquareQuoteFill } from 'react-icons/bs'
-import { rotate, rotateLast } from '../GlobalStyles'
+import { fadeIn, rotate, rotateLast } from '../GlobalStyles'
 
 export const Story = () => {
   return (
@@ -53,6 +53,7 @@ const Wrapper = styled.section`
 `
 
 const Question = styled.div`
+  animation: ${fadeIn} 1s ease-in-out;
   background: #fff;
   color: #1a1a1a;
   position: relative;
@@ -76,10 +77,10 @@ const Question = styled.div`
 `
 
 const Answer = styled.div`
+  animation: ${fadeIn} 1s ease-in-out;
   max-width: 700px;
   margin: 0 20px 50px 20px;
   p {
-    text-align: center;
     margin: 20px 0;
   }
 `

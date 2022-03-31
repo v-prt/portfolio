@@ -1,8 +1,8 @@
-import styled, { createGlobalStyle, keyframes } from 'styled-components'
+import styled, { createGlobalStyle, keyframes } from 'styled-components/macro'
 
 export const COLORS = {
-  dark: '#292b57',
-  medium: '#57437c',
+  dark: '#1a1a1a',
+  medium: '#333',
   light: '#ae8eb4',
   accent: '#ff8533',
 }
@@ -39,31 +39,32 @@ export default createGlobalStyle`
 // STYLED COMPONENTS
 export const ProjectGallery = styled.div`
   display: flex;
+  grid-gap: 20px;
   width: calc(100% - 40px);
-  border-bottom: 1px dotted #ccc;
   overflow-x: scroll;
-`
-
-export const ProjectImage = styled.img`
-  position: relative; // allows window to keep scrolling when hovering on gallery
-  height: 500px;
-  margin: 20px 10px;
-  border-radius: 10px;
-  &:first-child {
-    margin-left: 0;
+  margin: 20px 0;
+  padding-bottom: 20px;
+  ::-webkit-scrollbar {
+    height: 10px;
   }
-  @media (max-width: 1000px) {
-    height: 300px;
+  ::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
   }
 `
 
 export const UnderlinedLink = styled.a`
-  color: ${COLORS.medium};
+  color: #000;
   font-weight: bold;
   position: relative;
   z-index: 1;
   &:after {
-    background: ${COLORS.light};
+    background: #ccc;
     content: '';
     height: 5px;
     width: 100%;
@@ -76,7 +77,6 @@ export const UnderlinedLink = styled.a`
   }
   &:hover,
   &:focus {
-    color: ${COLORS.medium};
     &:after {
       background: ${COLORS.accent};
       transform: skew(30deg) rotate(1deg) scale(1.1);

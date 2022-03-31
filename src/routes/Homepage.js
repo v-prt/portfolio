@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { COLORS, fadeIn, rotate } from '../GlobalStyles'
+import styled from 'styled-components/macro'
+import { COLORS, fadeIn } from '../GlobalStyles'
 import avatar from '../assets/victoria.JPG'
 import { FeaturedProject } from '../components/FeaturedProject'
 import { ViewProjects } from '../components/ViewProjects'
@@ -19,13 +19,14 @@ export const Homepage = () => {
       <Heading>
         <div className='overlay'></div>
         <Banner>
-          <Name>Victoria Peart</Name>
-          <Job>Full-Stack Web Developer</Job>
+          <Name>
+            Victoria
+            <br />
+            Peart
+          </Name>
+          <Job>FULL-STACK WEB DEVELOPER</Job>
           <Skills>
-            <p>html / css / javascript / typescript / php</p>
-            <p>mongodb / express / react / node / mysql</p>
-            <p>concordia university bootcamp alumna</p>
-            <p>currently working at creator.co</p>
+            HTML. CSS. SCSS. JAVASCRIPT. TYPESCRIPT. PHP. REACT. REDUX. EXPRESS. NODE. GITHUB.
           </Skills>
         </Banner>
       </Heading>
@@ -43,7 +44,7 @@ export const Homepage = () => {
             When I'm not coding, I'm usually playing board games or NetFlix & chilling with my best
             friend (my husband).
           </p>
-          <AboutLink to='/about'>Learn more about me</AboutLink>
+          <AboutLink to='/about'>Learn more</AboutLink>
         </Text>
       </Intro>
       <FeaturedProject />
@@ -59,40 +60,37 @@ const Wrapper = styled.main`
 `
 
 const Background = styled.div`
-  background: linear-gradient(${COLORS.light}, ${COLORS.medium});
-  height: 100vh;
-  width: 100vw;
+  background: #222;
+  min-height: 100vh;
+  min-width: 100vw;
   position: fixed;
   z-index: -1;
 `
 
 const Heading = styled.section`
   display: flex;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
   position: relative;
   .overlay {
     background-image: url(${pattern});
-    background-size: 500px;
-    opacity: 0.2;
+    background-size: 200px;
+    opacity: 0.1;
     height: 100%;
     width: 100%;
     position: fixed;
     z-index: -1;
     @media only screen and (min-width: 500px) {
-      background-size: 800px;
+      background-size: 300px;
     }
   }
 `
 
 const Banner = styled.div`
-  animation: ${fadeIn} 2s ease-in-out;
+  animation: ${fadeIn} 1s ease-in-out;
   color: #fff;
-  text-align: center;
-  height: 300px;
+  text-align: right;
   padding: 30px;
-  margin: auto;
+  margin: auto 20px auto auto;
   z-index: 1;
   @media screen and (prefers-reduced-motion: reduce) {
     animation: none;
@@ -100,61 +98,67 @@ const Banner = styled.div`
 `
 
 const Name = styled.h1`
-  text-align: center;
   width: 100%;
-  margin: 50px 0 20px 0;
   font-size: 6rem;
   @media (max-width: 1000px) {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 `
 
 const Job = styled.p`
   margin: 20px 0;
-  font-size: 2rem;
-  border-bottom: 2px solid #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
   padding-bottom: 10px;
   @media (max-width: 1000px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `
 
-const Skills = styled.div`
-  background: ${COLORS.medium};
-  border-radius: 0 0 15px 15px;
+const Skills = styled.p`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  margin: 20px 0;
-  overflow: hidden;
-  height: 75px;
-  @media only screen and (min-width: 1000px) {
-    height: 50px;
-  }
-  p {
-    font-size: 1.2rem;
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    max-width: 75%;
-    transform: translate3d(0px, -50px, 0px);
-    animation: 12s ease-in-out infinite ${rotate};
-    margin-top: 10px;
-    @media (max-width: 1000px) {
-      font-size: 1rem;
-    }
-  }
-  p:nth-child(2) {
-    animation-delay: 3s;
-  }
-  p:nth-child(3) {
-    animation-delay: 6s;
-  }
-  p:nth-child(4) {
-    animation-delay: 9s;
-  }
+  flex-wrap: wrap;
+  font-size: 2rem;
+  font-weight: 100;
+  max-width: 500px;
 `
+
+// const Skills = styled.div`
+//   background: ${COLORS.medium};
+//   border-radius: 10px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   position: relative;
+//   margin: 20px 0;
+//   overflow: hidden;
+//   height: 75px;
+//   @media only screen and (min-width: 1000px) {
+//     height: 50px;
+//   }
+//   p {
+//     font-size: 1.2rem;
+//     position: absolute;
+//     top: 0;
+//     opacity: 0;
+//     max-width: 75%;
+//     transform: translate3d(0px, -50px, 0px);
+//     animation: 12s ease-in-out infinite ${rotate};
+//     margin-top: 10px;
+//     @media (max-width: 1000px) {
+//       font-size: 1rem;
+//     }
+//   }
+//   p:nth-child(2) {
+//     animation-delay: 3s;
+//   }
+//   p:nth-child(3) {
+//     animation-delay: 6s;
+//   }
+//   p:nth-child(4) {
+//     animation-delay: 9s;
+//   }
+// `
 
 const Intro = styled.section`
   background: ${COLORS.dark};
@@ -185,16 +189,20 @@ const Text = styled.div`
 `
 
 const AboutLink = styled(Link)`
-  background: ${COLORS.light};
   color: #fff;
-  text-align: center;
-  margin: 20px;
-  border-radius: 10px;
-  padding: 10px 20px;
+  border: 1px solid #fff;
   font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 20px;
   &:hover,
   &:focus {
-    background: ${COLORS.accent};
-    color: #fff;
+    background: #fff;
+    color: #000;
+  }
+  @media only screen and (min-width: 700px) {
+    margin: 20px;
   }
 `

@@ -1,7 +1,8 @@
 import React from 'react'
 
-import styled from 'styled-components'
-import { UnderlinedLink, ProjectGallery, ProjectImage } from '../GlobalStyles'
+import styled from 'styled-components/macro'
+import { UnderlinedLink, ProjectGallery } from '../GlobalStyles'
+import { ImageLoader } from '../components/ImageLoader'
 
 import plantgeekHome1 from '../assets/plantgeek/plantgeek-homepage1.png'
 import plantgeekHome2 from '../assets/plantgeek/plantgeek-homepage2.png'
@@ -27,32 +28,28 @@ export const FeaturedProject = () => {
           various needs. My solution had been to keep a spreadsheet with information on each plant,
           such as the level of light, water, temperature, and humidity they each required.
         </p>
-        <ProjectImage src={plantgeekPlantProfile} alt='' />
-        <div>
-          <p>
-            As my final project for bootcamp, I thought it would be fun to create
-            <strong> plantgeek </strong>
-            as an upgrade to my spreadsheet, which could also serve as a hub for houseplant lovers
-            to connect with each other and share useful tips.
-          </p>
-          <p>
-            <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel='noreferrer'>
-              Watch a short demo on YouTube
-            </UnderlinedLink>
-          </p>
-        </div>
+        <ImageLoader src={plantgeekPlantProfile} alt='' />
+        <p>
+          As my final project for bootcamp, I thought it would be fun to create
+          <strong> plantgeek </strong>
+          as an upgrade to my spreadsheet, which could also serve as a hub for houseplant lovers to
+          connect with each other and share useful tips.
+        </p>
+        <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel='noreferrer'>
+          View demo
+        </UnderlinedLink>
       </Description>
       <ProjectGallery>
-        <ProjectImage src={plantgeekHome1} alt='' />
-        <ProjectImage src={plantgeekHome2} alt='' />
-        <ProjectImage src={plantgeekHome3} alt='' />
-        <ProjectImage src={plantgeekBrowse1} alt='' />
-        <ProjectImage src={plantgeekBrowse2} alt='' />
-        <ProjectImage src={plantgeekBrowse3} alt='' />
-        <ProjectImage src={plantgeekUserProfile} alt='' />
-        <ProjectImage src={plantgeekCollection} alt='' />
-        <ProjectImage src={plantgeekFriends} alt='' />
-        <ProjectImage src={plantgeekSettings} alt='' />
+        <ImageLoader src={plantgeekHome1} alt='' />
+        <ImageLoader src={plantgeekHome2} alt='' />
+        <ImageLoader src={plantgeekHome3} alt='' />
+        <ImageLoader src={plantgeekBrowse1} alt='' />
+        <ImageLoader src={plantgeekBrowse2} alt='' />
+        <ImageLoader src={plantgeekBrowse3} alt='' />
+        <ImageLoader src={plantgeekUserProfile} alt='' />
+        <ImageLoader src={plantgeekCollection} alt='' />
+        <ImageLoader src={plantgeekFriends} alt='' />
+        <ImageLoader src={plantgeekSettings} alt='' />
       </ProjectGallery>
     </Wrapper>
   )
@@ -80,8 +77,10 @@ const Description = styled.div`
     }
   }
   p {
-    text-align: center;
     max-width: 800px;
     margin: 20px;
+  }
+  a {
+    text-align: center;
   }
 `

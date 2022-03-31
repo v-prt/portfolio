@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { COLORS } from '../GlobalStyles'
 import { BiMenu } from 'react-icons/bi'
 import { SocialLinks } from './SocialLinks'
@@ -88,18 +88,18 @@ const Nav = styled.nav`
 `
 
 const Link = styled(NavLink)`
-  color: ${COLORS.medium};
+  color: #000;
   font-size: 0.7rem;
   margin: 0 10px;
   border-radius: 10px;
+  border: 1px solid transparent;
   padding: 12px 10px 10px 10px;
   &:hover,
   &:focus {
-    background: ${COLORS.accent};
-    color: #fff;
+    border: 1px solid #000;
   }
   &.active {
-    background: ${COLORS.light};
+    background: ${COLORS.dark};
     color: #fff;
     font-weight: bold;
   }
@@ -110,18 +110,17 @@ const Link = styled(NavLink)`
     justify-content: center;
     margin: 0;
     border-radius: 0;
-    border-bottom: 2px solid #fff;
+    border: 0;
     padding: 15px;
+    &:hover,
+    &:focus {
+      border: 0;
+    }
   }
 `
 
 const Icon = styled.div`
-  color: ${COLORS.light};
+  color: ${COLORS.dark};
   margin: 0 10px;
   font-size: 1.3rem;
-  transition: 0.2s ease-in-out;
-  &:hover,
-  &:focus {
-    color: ${COLORS.accent};
-  }
 `

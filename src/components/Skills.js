@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { COLORS } from '../GlobalStyles'
 
 export const Skills = () => {
@@ -8,9 +8,14 @@ export const Skills = () => {
         [ <b>skills</b> ]
       </Heading>
       <p>
-        My strengths lie mostly in the front-end where my natural design skills can come into play -
-        I could spend all day just messing around with CSS (and I often do)! I'm not as good at the
-        math or logic side of coding, so I practice as much as I can to round out my abilities.
+        My strengths lie mostly in front-end and UX/UI related development where my artistic
+        abilities and eye for design can come into play. Psst... I built this portfolio from scratch
+        with React - no tutorials or styling/component libraries used (aside from Styled
+        Components).
+      </p>
+      <p>
+        I'm not as good at the mathematics or logic side of coding, but my excellent organization
+        and communicational skills ensure my teammates always understand my code.
       </p>
       <Groups>
         <Group>
@@ -20,8 +25,8 @@ export const Skills = () => {
             <li>CSS / SCSS</li>
             <li>Styled Components</li>
             <li>JavaScript / TypeScript</li>
-            <li>PHP</li>
             <li>React</li>
+            <li>PHP</li>
             <li>WordPress</li>
           </List>
         </Group>
@@ -34,6 +39,7 @@ export const Skills = () => {
             <li>RESTful APIs</li>
             <li>CRUD</li>
             <li>MySQL</li>
+            <li>Prisma</li>
           </List>
         </Group>
         <Group>
@@ -43,6 +49,7 @@ export const Skills = () => {
             <li>Git</li>
             <li>GitHub</li>
             <li>Figma</li>
+            <li>Canva</li>
           </List>
         </Group>
         <Group>
@@ -64,16 +71,14 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  border-top: 5px solid ${COLORS.accent};
-  border-bottom: 5px solid ${COLORS.accent};
   p {
-    text-align: center;
     max-width: 800px;
-    margin: 30px;
+    margin: 20px;
   }
 `
 
 const Heading = styled.h2`
+  color: ${COLORS.medium};
   margin: 70px 0 20px 0;
   font-size: 2rem;
 `
@@ -88,22 +93,19 @@ const Groups = styled.div`
 const Group = styled.div`
   background: #fff;
   color: #1a1a1a;
-  text-align: center;
-  width: 300px;
+  width: 250px;
   margin: 20px;
+  padding: 20px;
   border-radius: 15px;
   overflow: hidden;
 `
 
 const Title = styled.h3`
-  background: ${COLORS.light};
-  color: #fff;
-  padding: 10px;
+  margin-bottom: 10px;
   font-size: 1.5rem;
 `
 
 const List = styled.ul`
-  padding: 20px 0;
   li {
     line-height: 1.75;
   }

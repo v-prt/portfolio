@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { COLORS } from '../GlobalStyles'
 import freeCodeCampCert from '../assets/certs/fcc-responsive-web.png'
 import testDomeCert from '../assets/certs/test-dome-js.png'
