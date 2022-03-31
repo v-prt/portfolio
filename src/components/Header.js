@@ -78,6 +78,7 @@ const Nav = styled.nav`
         transition-delay: 0.3s;
       }
     }
+    /* FIXME: use toggle to expand menu */
     &:hover {
       li {
         opacity: 1;

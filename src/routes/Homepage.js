@@ -118,7 +118,7 @@ const Job = styled.p`
 const Skills = styled.p`
   display: flex;
   flex-wrap: wrap;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 100;
   max-width: 500px;
 `
