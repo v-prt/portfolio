@@ -40,9 +40,9 @@ export const FeaturedProject = () => {
           and improvements, particularly in the backend. It is currently an ongoing side project I
           work on in my free time.
         </p>
-        <p>
+        <div className='links'>
           <UnderlinedLink href='https://www.plantgeek.co' target='_blank' rel='noreferrer'>
-            plantgeek.co
+            View Live App
           </UnderlinedLink>
           <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel='noreferrer'>
             View Demo
@@ -53,7 +53,7 @@ export const FeaturedProject = () => {
             rel='noreferrer'>
             GitHub Repo
           </UnderlinedLink>
-        </p>
+        </div>
       </Description>
       <ProjectGallery>
         <ImageLoader src={plantgeekHome1} alt='' />
@@ -96,8 +96,17 @@ const Description = styled.div`
     max-width: 800px;
     margin: 20px;
   }
-  a {
-    text-align: center;
-    margin: 0 20px;
+  .links {
+    display: flex;
+    flex-direction: column;
+    a {
+      text-align: center;
+      margin: 10px 20px;
+    }
+  }
+  @media only screen and (min-width: 500px) {
+    .links {
+      flex-direction: row;
+    }
   }
 `
