@@ -1,4 +1,6 @@
 import styled, { createGlobalStyle, keyframes } from 'styled-components/macro'
+import GallaudetRegularWoff from './assets/fonts/Gallaudet-Regular/font.woff'
+import GallaudetRegularWoff2 from './assets/fonts/Gallaudet-Regular/font.woff2'
 
 export const COLORS = {
   dark: '#1a1a1a',
@@ -9,6 +11,13 @@ export const COLORS = {
 }
 
 export default createGlobalStyle`
+    @font-face {
+      font-family: 'Gallaudet-Regular';
+      src:
+        url(${GallaudetRegularWoff}) format('woff'),
+        url(${GallaudetRegularWoff2}) format('woff2');
+    }
+
     * {
         font-family: 'Spartan', sans-serif;
         line-height: 1;

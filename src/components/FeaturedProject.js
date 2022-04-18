@@ -21,7 +21,7 @@ export const FeaturedProject = () => {
     <Wrapper>
       <Description>
         <h2>
-          ft. [ <b>plantgeek</b> ]
+          <span className='feat'>featuring</span> [ <b>plantgeek</b> ]
         </h2>
         <p>
           Houseplants are a fairly new obsession of mine and sometimes I struggle to remember their
@@ -42,10 +42,10 @@ export const FeaturedProject = () => {
         </p>
         <div className='links'>
           <UnderlinedLink href='https://www.plantgeek.co' target='_blank' rel='noreferrer'>
-            View Live App
+            View Live
           </UnderlinedLink>
           <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel='noreferrer'>
-            View Demo
+            Video Demo
           </UnderlinedLink>
           <UnderlinedLink
             href='https://github.com/v-prt/plantgeek'
@@ -88,6 +88,10 @@ const Description = styled.div`
   h2 {
     font-size: 2.5rem;
     margin: 50px 20px 20px 20px;
+    .feat {
+      font-size: 1.5rem;
+      color: #999;
+    }
     @media (max-width: 1000px) {
       font-size: 2rem;
     }

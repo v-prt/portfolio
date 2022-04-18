@@ -6,6 +6,7 @@ import avatar from '../assets/victoria.JPG'
 import { FeaturedProject } from '../components/FeaturedProject'
 import { ViewProjects } from '../components/ViewProjects'
 import pattern from '../assets/code.svg'
+import wave from '../assets/wave.svg'
 
 export const Homepage = () => {
   // makes window scroll to top between renders
@@ -19,11 +20,7 @@ export const Homepage = () => {
       <Heading>
         <div className='overlay'></div>
         <Banner>
-          <Name>
-            Victoria
-            <br />
-            Peart
-          </Name>
+          <Name>Victoria</Name>
           <Job>FULL-STACK WEB DEVELOPER</Job>
           <Skills>
             HTML. CSS. SCSS. JAVASCRIPT. TYPESCRIPT. REACT. REDUX. EXPRESS. NODE. MONGODB. GITHUB.
@@ -33,20 +30,22 @@ export const Homepage = () => {
       <Intro>
         <Image src={avatar} alt='' />
         <Text>
-          <p>Hi! I'm Victoria. I'm a full-stack Web Developer based in West Kelowna, BC.</p>
+          <p>Hi! I'm Victoria Peart. I'm a full-stack Web Developer from West Kelowna, BC.</p>
           <p>
-            As a deaf woman, I prioritize
-            <strong> visual appeal, accessibility, and thoughtful UX</strong>. I enjoy working in
-            environments that allow me creative freedom as well as the opportunity to improve and
-            learn new skills.
+            As a deaf person, I prioritize
+            <strong> visual appeal, accessibility, and thoughtful UX</strong> in coding. I most
+            enjoy working on projects that allow me creative freedom as well as the opportunity to
+            improve and learn new skills, especially with CSS & animations.
           </p>
           <p>
-            When I'm not coding, I'm usually playing board games or NetFlix & chilling with my best
-            friend (my husband).
+            When I'm not coding, I'm usually playing board games or Netflix & chilling with my best
+            friend (my husband). I also try to go hiking whenever the weather is nice to enjoy the
+            beautiful, natural landscape around us here in BC!
           </p>
           <AboutLink to='/about'>Learn more</AboutLink>
         </Text>
       </Intro>
+      <img className='wave' src={wave} alt='' />
       <FeaturedProject />
       <ViewProjects />
     </Wrapper>
@@ -58,6 +57,9 @@ const Wrapper = styled.main`
   flex-direction: column;
   height: 100%;
   margin-top: 50px;
+  .wave {
+    background: ${COLORS.dark};
+  }
 `
 
 const Background = styled.div`
@@ -70,7 +72,10 @@ const Background = styled.div`
 
 const Heading = styled.section`
   display: flex;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 50px);
   position: relative;
   .overlay {
     background-image: url(${pattern});
@@ -90,19 +95,33 @@ const Banner = styled.div`
   animation: ${fadeIn} 1s ease-in-out;
   color: #fff;
   text-align: right;
-  padding: 30px;
-  margin: auto;
+  padding: 20px;
+  margin: 10px;
   z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: 0.2s ease;
   @media screen and (prefers-reduced-motion: reduce) {
     animation: none;
+  }
+  @media only screen and (min-width: 600px) {
+    transform: skew(-3deg, -3deg);
+    padding: 30px;
   }
 `
 
 const Name = styled.h1`
+  font-family: 'Gallaudet-Regular', sans-serif;
+  font-weight: 100;
   width: 100%;
   font-size: 6rem;
-  @media (max-width: 1000px) {
-    font-size: 4rem;
+  line-height: 0.8;
+  letter-spacing: 4px;
+  @media only screen and (min-width: 500px) {
+    font-size: 10rem;
+  }
+  @media only screen and (min-width: 1000px) {
+    font-size: 14rem;
   }
 `
 
@@ -122,44 +141,8 @@ const Skills = styled.p`
   font-size: 1.5rem;
   font-weight: 100;
   max-width: 500px;
+  margin: 0 0 0 auto;
 `
-
-// const Skills = styled.div`
-//   background: ${COLORS.medium};
-//   border-radius: 10px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   position: relative;
-//   margin: 20px 0;
-//   overflow: hidden;
-//   height: 75px;
-//   @media only screen and (min-width: 1000px) {
-//     height: 50px;
-//   }
-//   p {
-//     font-size: 1.2rem;
-//     position: absolute;
-//     top: 0;
-//     opacity: 0;
-//     max-width: 75%;
-//     transform: translate3d(0px, -50px, 0px);
-//     animation: 12s ease-in-out infinite ${rotate};
-//     margin-top: 10px;
-//     @media (max-width: 1000px) {
-//       font-size: 1rem;
-//     }
-//   }
-//   p:nth-child(2) {
-//     animation-delay: 3s;
-//   }
-//   p:nth-child(3) {
-//     animation-delay: 6s;
-//   }
-//   p:nth-child(4) {
-//     animation-delay: 9s;
-//   }
-// `
 
 const Intro = styled.section`
   background: ${COLORS.dark};
@@ -186,6 +169,7 @@ const Text = styled.div`
   width: 500px;
   p {
     margin: 10px 30px;
+    color: rgba(255, 255, 255, 0.8);
   }
 `
 
