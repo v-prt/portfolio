@@ -55,10 +55,11 @@ export const Homepage = () => {
 const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
-  height: 100%;
   margin-top: 50px;
   .wave {
-    background: ${COLORS.dark};
+    background: #1a1a1a;
+    width: 100vw;
+    position: relative;
   }
 `
 
@@ -152,7 +153,7 @@ const Intro = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 30px 0;
+  padding: 60px 0 30px 0;
 `
 
 const Image = styled.img`

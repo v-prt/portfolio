@@ -66,6 +66,9 @@ const Heading = styled.h2`
 
 const Div = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 50px;
   @media (max-width: 1000px) {
     flex-direction: column;

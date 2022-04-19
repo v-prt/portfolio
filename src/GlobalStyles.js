@@ -16,6 +16,7 @@ export default createGlobalStyle`
       src:
         url(${GallaudetRegularWoff}) format('woff'),
         url(${GallaudetRegularWoff2}) format('woff2');
+        font-display: block;
     }
 
     * {

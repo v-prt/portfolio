@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components/macro'
-import { UnderlinedLink, ProjectGallery } from '../GlobalStyles'
+import { COLORS, UnderlinedLink, ProjectGallery } from '../GlobalStyles'
 import { ImageLoader } from '../components/ImageLoader'
 
 import plantgeekHome1 from '../assets/plantgeek/plantgeek-homepage1.png'
@@ -21,38 +21,46 @@ export const FeaturedProject = () => {
     <Wrapper>
       <Description>
         <h2>
-          <span className='feat'>featuring</span> [ <b>plantgeek</b> ]
+          <span className='feat'>featuring</span>
+          <span className='title'>
+            [ <b>plantgeek</b> ]
+          </span>
         </h2>
         <p>
           Houseplants are a fairly new obsession of mine and sometimes I struggle to remember their
           various needs. My solution had been to keep a spreadsheet with information on each plant,
           such as the level of light, water, temperature, and humidity they each required.
         </p>
-        <ImageLoader src={plantgeekPlantProfile} alt='' />
+        <div className='primary-image'>
+          <ImageLoader src={plantgeekPlantProfile} alt='' />
+        </div>
         <p>
-          As my final project for bootcamp, I thought it would be fun to build
+          I decided to build
           <strong> plantgeek </strong>
-          as an upgrade to my spreadsheet, which could also serve as a hub for houseplant lovers to
-          connect with each other and share useful tips.
+          as an upgrade to my spreadsheet, where you can browse and view care information for
+          hundreds of plants. Users can sign up to create lists of plants they own, love, or wish to
+          have and even contribute to the database. Admins can approve or reject submissions as well
+          as delete plants.
         </p>
         <p>
-          Note: this app started as a school project in 2021 and has since undergone major changes
-          and improvements, particularly in the backend. It is currently an ongoing side project I
-          work on in my free time.
+          I started this website as a full-stack solo school project in 2021 and I have since
+          continued to improve and work on it in my spare time. For more information, check out my
+          code on GitHub or view the live website below.
         </p>
         <div className='links'>
-          <UnderlinedLink href='https://www.plantgeek.co' target='_blank' rel='noreferrer'>
-            View Live
-          </UnderlinedLink>
-          <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel='noreferrer'>
-            Video Demo
-          </UnderlinedLink>
-          <UnderlinedLink
+          <a
+            className='link-btn secondary'
             href='https://github.com/v-prt/plantgeek'
             target='_blank'
             rel='noreferrer'>
             GitHub Repo
-          </UnderlinedLink>
+          </a>
+          <a className='link-btn' href='https://www.plantgeek.co' target='_blank' rel='noreferrer'>
+            View Live
+          </a>
+          {/* <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel='noreferrer'>
+            Video Demo
+          </UnderlinedLink> */}
         </div>
       </Description>
       <ProjectGallery>
@@ -78,6 +86,10 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  .wave {
+    width: 100%;
+    transform: rotate(180deg);
+  }
 `
 
 const Description = styled.div`
@@ -88,9 +100,16 @@ const Description = styled.div`
   h2 {
     font-size: 2.5rem;
     margin: 50px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    span {
+      margin: 5px 0;
+    }
     .feat {
       font-size: 1.5rem;
       color: #999;
+      margin-right: 10px;
     }
     @media (max-width: 1000px) {
       font-size: 2rem;
@@ -98,11 +117,28 @@ const Description = styled.div`
   }
   p {
     max-width: 800px;
-    margin: 20px;
+    margin: 10px;
+  }
+  .primary-image {
+    margin: 20px 0;
   }
   .links {
     display: flex;
     flex-direction: column;
+    margin: 10px 0;
+    .link-btn {
+      background: #fff;
+      color: #000;
+      border: 1px solid #000;
+      margin: 10px;
+      border-radius: 10px;
+      padding: 12px 10px 10px 10px;
+      &:hover,
+      &:focus {
+        box-shadow: -3px -3px 0 #000;
+        transform: translate(3px, 3px);
+      }
+    }
     a {
       text-align: center;
       margin: 10px 20px;
