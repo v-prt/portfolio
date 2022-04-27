@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
-import { COLORS } from '../GlobalStyles'
+import { COLORS, LinkButton } from '../GlobalStyles'
 import developer from '../assets/illustrations/developer.svg'
 
 export const ViewProjects = () => {
@@ -10,7 +9,9 @@ export const ViewProjects = () => {
       <img src={developer} alt='' />
       <div>
         <p>Interested in seeing other things I've worked on?</p>
-        <ProjectsLink to='/projects'>See projects</ProjectsLink>
+        <LinkButton className='black' to='/projects'>
+          SEE PROJECTS
+        </LinkButton>
       </div>
     </Wrapper>
   )
@@ -32,30 +33,15 @@ const Wrapper = styled.section`
   div {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: fit-content;
     margin: 20px;
     p {
       text-align: center;
-      margin-bottom: 20px;
+      margin: 10px 0;
     }
-  }
-`
-
-const ProjectsLink = styled(Link)`
-  color: #fff;
-  border: 1px solid #fff;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 10px;
-  width: fit-content;
-  margin: auto;
-  padding: 10px 20px;
-  &:hover,
-  &:focus {
-    background: #fff;
-    color: #000;
-  }
-  @media only screen and (min-width: 700px) {
-    margin: 0;
+    @media only screen and (min-width: 500px) {
+      align-items: flex-start;
+    }
   }
 `

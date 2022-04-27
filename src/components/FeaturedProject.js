@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components/macro'
-import { COLORS, UnderlinedLink, ProjectGallery } from '../GlobalStyles'
+import { LinkButton, ProjectGallery } from '../GlobalStyles'
 import { ImageLoader } from '../components/ImageLoader'
 
 import plantgeekHome1 from '../assets/plantgeek/plantgeek-homepage1.png'
@@ -48,16 +48,20 @@ export const FeaturedProject = () => {
           code on GitHub or view the live website below.
         </p>
         <div className='links'>
-          <a
-            className='link-btn secondary'
+          <LinkButton
+            className='black'
+            href='https://www.plantgeek.co'
+            target='_blank'
+            rel='noreferrer'>
+            VIEW LIVE SITE
+          </LinkButton>
+          <LinkButton
+            className='white'
             href='https://github.com/v-prt/plantgeek'
             target='_blank'
             rel='noreferrer'>
-            GitHub Repo
-          </a>
-          <a className='link-btn' href='https://www.plantgeek.co' target='_blank' rel='noreferrer'>
-            View Live
-          </a>
+            VIEW ON GITHUB
+          </LinkButton>
           {/* <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel='noreferrer'>
             Video Demo
           </UnderlinedLink> */}
@@ -125,23 +129,10 @@ const Description = styled.div`
   .links {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 10px 0;
-    .link-btn {
-      background: #fff;
-      color: #000;
-      border: 1px solid #000;
-      margin: 10px;
-      border-radius: 10px;
-      padding: 12px 10px 10px 10px;
-      &:hover,
-      &:focus {
-        box-shadow: -3px -3px 0 #000;
-        transform: translate(3px, 3px);
-      }
-    }
     a {
-      text-align: center;
-      margin: 10px 20px;
+      margin: 10px;
     }
   }
   @media only screen and (min-width: 500px) {

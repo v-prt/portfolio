@@ -20,12 +20,12 @@ export const Employment = () => {
           <p>
             Our key features are the{' '}
             <a
-              href='https://creator.co/collaboration-hub'
+              href='https://app.creator.co/collaboration-hub'
               target='_blank'
               rel='noopenner noreferrer'>
               Collaboration Hub
             </a>{' '}
-            as well as Creator Search and Campaign Builder (only accessible to brands under a
+            as well as Campaign Builder and Creator Search (only accessible to brands under a
             subscription plan).
           </p>
           <p>
@@ -38,11 +38,7 @@ export const Employment = () => {
   )
 }
 
-const Wrapper = styled.section`
-  /* margin: auto;
-  width: fit-content;
-  padding: 50px 0; */
-`
+const Wrapper = styled.section``
 
 const Card = styled.div`
   background: rgba(250, 250, 250, 0.7);
@@ -59,11 +55,16 @@ const Heading = styled.h2`
 `
 
 const Company = styled.h3`
-  font-size: 1.5rem;
+  color: ${COLORS.accent};
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: -1px 1px #fff;
 `
 
 const JobTitle = styled.p`
-  font-style: italic;
+  font-weight: bold;
+  font-size: 0.8rem;
 `
 
 const Description = styled.div`

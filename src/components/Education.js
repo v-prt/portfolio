@@ -49,11 +49,16 @@ const Heading = styled.h2`
 `
 
 const School = styled.h3`
-  font-size: 1.5rem;
+  color: ${COLORS.accent};
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: -1px 1px #fff;
 `
 
 const Degree = styled.p`
-  font-style: italic;
+  font-weight: bold;
+  font-size: 0.8rem;
 `
 
 const Description = styled.div`

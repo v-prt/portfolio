@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
-import { COLORS, fadeIn } from '../GlobalStyles'
+import { COLORS, LinkButton, fadeIn } from '../GlobalStyles'
 import avatar from '../assets/victoria.JPG'
 import { FeaturedProject } from '../components/FeaturedProject'
 import { ViewProjects } from '../components/ViewProjects'
@@ -42,7 +41,9 @@ export const Homepage = () => {
             friend (my husband). I also try to go hiking whenever the weather is nice to enjoy the
             beautiful, natural landscape around us here in BC!
           </p>
-          <AboutLink to='/about'>Learn more</AboutLink>
+          <LinkButton className='black' to='/about'>
+            LEARN MORE
+          </LinkButton>
         </Text>
       </Intro>
       <img className='wave' src={wave} alt='' />
@@ -168,27 +169,9 @@ const Text = styled.div`
   display: flex;
   flex-direction: column;
   width: 500px;
+  margin: 0 30px;
   p {
-    margin: 10px 30px;
+    margin: 10px 0;
     color: rgba(255, 255, 255, 0.8);
-  }
-`
-
-const AboutLink = styled(Link)`
-  color: #fff;
-  border: 1px solid #fff;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 10px;
-  width: fit-content;
-  margin: 20px auto;
-  padding: 10px 20px;
-  &:hover,
-  &:focus {
-    background: #fff;
-    color: #000;
-  }
-  @media only screen and (min-width: 700px) {
-    margin: 20px;
   }
 `

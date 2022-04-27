@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled, { createGlobalStyle, keyframes } from 'styled-components/macro'
 import GallaudetRegularWoff from './assets/fonts/Gallaudet-Regular/font.woff'
 import GallaudetRegularWoff2 from './assets/fonts/Gallaudet-Regular/font.woff2'
@@ -48,13 +49,45 @@ export default createGlobalStyle`
 `
 
 // STYLED COMPONENTS
+export const LinkButton = styled(Link)`
+  background: transparent;
+  border: 1px solid;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 12px 20px 10px 20px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 10px 0;
+  &.black {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #fff;
+    &:hover,
+    &:focus {
+      box-shadow: -3px -3px 0 ${COLORS.accent};
+      transform: translate(3px, 3px);
+    }
+  }
+  &.white {
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+    &:hover,
+    &:focus {
+      box-shadow: -3px -3px 0 #1a1a1a;
+      transform: translate(3px, 3px);
+  }
+`
+
 export const ProjectGallery = styled.div`
   display: flex;
   grid-gap: 20px;
   width: calc(100% - 40px);
   overflow-x: scroll;
   margin: 20px 0;
-  padding-bottom: 20px;
+  padding: 20px 10px;
   ::-webkit-scrollbar {
     height: 10px;
   }

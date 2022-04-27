@@ -91,11 +91,13 @@ const Nav = styled.nav`
 
 const Link = styled(NavLink)`
   color: #000;
-  font-size: 0.7rem;
   margin: 0 10px;
   border-radius: 10px;
   border: 1px solid transparent;
   padding: 12px 10px 10px 10px;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   &:hover,
   &:focus {
     border: 1px solid #000;
