@@ -49,7 +49,7 @@ export default createGlobalStyle`
 `
 
 // STYLED COMPONENTS
-export const LinkButton = styled(Link)`
+export const LinkButton = styled.a`
   background: transparent;
   border: 1px solid;
   font-weight: bold;
@@ -78,6 +78,40 @@ export const LinkButton = styled(Link)`
     &:focus {
       box-shadow: -3px -3px 0 #1a1a1a;
       transform: translate(3px, 3px);
+    }
+  }
+`
+
+export const StyledLink = styled(Link)`
+  background: transparent;
+  border: 1px solid;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 12px 20px 10px 20px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 10px 0;
+  &.black {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #fff;
+    &:hover,
+    &:focus {
+      box-shadow: -3px -3px 0 ${COLORS.accent};
+      transform: translate(3px, 3px);
+    }
+  }
+  &.white {
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+    &:hover,
+    &:focus {
+      box-shadow: -3px -3px 0 #1a1a1a;
+      transform: translate(3px, 3px);
+    }
   }
 `
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components/macro'
-import { COLORS, LinkButton, fadeIn } from '../GlobalStyles'
+import { COLORS, StyledLink, fadeIn } from '../GlobalStyles'
 import avatar from '../assets/victoria.JPG'
 import { FeaturedProject } from '../components/FeaturedProject'
 import { ViewProjects } from '../components/ViewProjects'
@@ -41,9 +41,9 @@ export const Homepage = () => {
             friend (my husband). I also try to go hiking whenever the weather is nice to enjoy the
             beautiful, natural landscape around us here in BC!
           </p>
-          <LinkButton className='black' to='/about'>
+          <StyledLink className='black' to='/about'>
             LEARN MORE
-          </LinkButton>
+          </StyledLink>
         </Text>
       </Intro>
       <img className='wave' src={wave} alt='' />

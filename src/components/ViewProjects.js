@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { COLORS, LinkButton } from '../GlobalStyles'
+import { COLORS, StyledLink } from '../GlobalStyles'
 import developer from '../assets/illustrations/developer.svg'
 
 export const ViewProjects = () => {
@@ -9,9 +9,9 @@ export const ViewProjects = () => {
       <img src={developer} alt='' />
       <div>
         <p>Interested in seeing other things I've worked on?</p>
-        <LinkButton className='black' to='/projects'>
+        <StyledLink className='black' to='/projects'>
           SEE PROJECTS
-        </LinkButton>
+        </StyledLink>
       </div>
     </Wrapper>
   )
