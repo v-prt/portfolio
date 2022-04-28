@@ -65,19 +65,23 @@ export const LinkButton = styled.a`
     background: #1a1a1a;
     color: #fff;
     border-color: #fff;
-    &:hover,
-    &:focus {
-      box-shadow: -3px -3px 0 ${COLORS.accent};
-      transform: translate(3px, 3px);
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        box-shadow: -3px -3px 0 ${COLORS.accent};
+        transform: translate(3px, 3px);
+      }
     }
   }
   &.white {
     color: #1a1a1a;
     border-color: #1a1a1a;
-    &:hover,
-    &:focus {
-      box-shadow: -3px -3px 0 #1a1a1a;
-      transform: translate(3px, 3px);
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        box-shadow: -3px -3px 0 #1a1a1a;
+        transform: translate(3px, 3px);
+      }
     }
   }
 `
@@ -98,19 +102,23 @@ export const StyledLink = styled(Link)`
     background: #1a1a1a;
     color: #fff;
     border-color: #fff;
-    &:hover,
-    &:focus {
-      box-shadow: -3px -3px 0 ${COLORS.accent};
-      transform: translate(3px, 3px);
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        box-shadow: -3px -3px 0 ${COLORS.accent};
+        transform: translate(3px, 3px);
+      }
     }
   }
   &.white {
     color: #1a1a1a;
     border-color: #1a1a1a;
-    &:hover,
-    &:focus {
-      box-shadow: -3px -3px 0 #1a1a1a;
-      transform: translate(3px, 3px);
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        box-shadow: -3px -3px 0 #1a1a1a;
+        transform: translate(3px, 3px);
+      }
     }
   }
 `

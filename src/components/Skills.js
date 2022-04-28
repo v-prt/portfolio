@@ -11,11 +11,8 @@ export const Skills = () => {
         My strengths lie mostly in front-end and UX/UI related development where my artistic
         abilities and eye for design can come into play. Psst... I built this portfolio from scratch
         with React - no tutorials or styling/component libraries used (aside from Styled
-        Components).
-      </p>
-      <p>
-        I'm not as good at the mathematics or logic side of coding, but my excellent organization
-        and communicational skills ensure my teammates always understand my code.
+        Components). I also have excellent organization and communicational skills which ensure my
+        teammates can easily read and understand my code.
       </p>
       <Groups>
         <Group>
@@ -26,6 +23,8 @@ export const Skills = () => {
             <li>Styled Components</li>
             <li>JavaScript / TypeScript</li>
             <li>React</li>
+            <li>React Query</li>
+            <li>Redux</li>
             <li>PHP</li>
             <li>WordPress</li>
           </List>
@@ -73,7 +72,7 @@ const Wrapper = styled.section`
   width: 100%;
   p {
     max-width: 800px;
-    margin: 20px;
+    margin: 10px 20px;
   }
 `
 

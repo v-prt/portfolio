@@ -3,10 +3,10 @@ import styled from 'styled-components/macro'
 import { LinkButton, ProjectGallery } from '../GlobalStyles'
 import { ImageLoader } from '../components/ImageLoader'
 
-import creatorHome from '../assets/creator/creator-home.png'
-import creatorLogin from '../assets/creator/creator-login.png'
-import collabHub from '../assets/creator/collab-hub.png'
-import collabHub2 from '../assets/creator/collab-hub2.png'
+// import creatorHome from '../assets/creator/creator-home.png'
+// import creatorLogin from '../assets/creator/creator-login.png'
+// import collabHub from '../assets/creator/collab-hub.png'
+// import collabHub2 from '../assets/creator/collab-hub2.png'
 
 import cookieHeavenGame3 from '../assets/cookie-heaven/cookie-heaven-game3.png'
 import cookieClicker from '../assets/cookie-heaven/cookie-clicker.png'
@@ -21,7 +21,7 @@ export const Projects = () => {
 
   return (
     <Wrapper>
-      <Project>
+      {/* <Project>
         <Description>
           <Title>
             <h2>
@@ -58,7 +58,7 @@ export const Projects = () => {
           <ImageLoader src={collabHub} alt='Collaboration Hub' />
           <ImageLoader src={collabHub2} alt='Collab Hub (using filters)' />
         </ProjectGallery>
-      </Project>
+      </Project> */}
 
       <Project>
         <Description>

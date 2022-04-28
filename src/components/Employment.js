@@ -14,23 +14,28 @@ export const Employment = () => {
           <p>
             I'm currently working as a Web Developer at <a href='https://creator.co'>Creator</a>,
             where we aim to be the top platform for social media influencers to connect and
-            collaborate with brands. We run 2 websites as a whole - one for creators, and one for
-            brands.
+            collaborate with brands.
           </p>
           <p>
-            Our key features are the{' '}
-            <a
-              href='https://app.creator.co/collaboration-hub'
-              target='_blank'
-              rel='noopenner noreferrer'>
-              Collaboration Hub
-            </a>{' '}
-            as well as Campaign Builder and Creator Search (only accessible to brands under a
-            subscription plan).
+            My responsibilities and accomplishments include maintaining our WordPress and React
+            sites for brands and creators, making major design or feature updates, integrating new
+            APIs, bug resolution, and more.
           </p>
           <p>
-            <b>Tech stack :</b> WordPress, PHP, SCSS, JavaScript, TypeScript, React, Express, Node,
-            MySQL
+            On our platform, brands can build campaigns for social channels such as Instagram,
+            YouTube, and TikTok, recruit influencers using an advanced search system (or leverage
+            our team of Campaign Specialists), and view real-time analytics on their campaigns and
+            influencer performance.
+          </p>
+          <p>
+            Creators can connect their social accounts for multiple platforms, browse hundreds of
+            collaboration opportunities, and filter campaigns based on their social stats or other
+            personal information. Once opted in, they can view and manage their campaigns via their
+            account dashboard and even chat with the brands.
+          </p>
+          <p>
+            <b>Tech stack :</b> JavaScript, TypeScript, React, SCSS, Styled Components, Express,
+            Node, MySQL, Prisma, WordPress, PHP
           </p>
         </Description>
       </Card>
