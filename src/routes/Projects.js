@@ -83,7 +83,7 @@ export const Projects = () => {
             </p>
             <LinkButton
               className='black'
-              href='https://www.figma.com/file/aXXruSP5WHIyzSXOSDMc7S/TicketWidget?node-id=137%3A1361'
+              href='https://www.figma.com/proto/aXXruSP5WHIyzSXOSDMc7S/TicketWidget?scaling=scale-down&page-id=137%3A1361&node-id=137%3A1442&starting-point-node-id=137%3A1442'
               target='_blank'
               rel='noreferrer'>
               View Prototype

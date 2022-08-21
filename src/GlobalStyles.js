@@ -7,8 +7,13 @@ export const COLORS = {
   dark: '#1a1a1a',
   medium: '#333',
   light: '#ae8eb4',
-  // accent: '#ff8533',
+  accentOrange: '#ff8533',
   accent: '#9966ff',
+}
+
+export const BREAKPOINTS = {
+  tablet: '768px',
+  desktop: '1000px',
 }
 
 export default createGlobalStyle`
@@ -19,9 +24,8 @@ export default createGlobalStyle`
         url(${GallaudetRegularWoff2}) format('woff2');
         font-display: block;
     }
-
     * {
-        font-family: 'Spartan', sans-serif;
+        font-family: 'Spartan', 'Open Sans', sans-serif;
         line-height: 1;
         margin: 0;
         padding: 0;
@@ -86,7 +90,7 @@ export const LinkButton = styled.a`
   }
 `
 
-export const StyledLink = styled(Link)`
+export const Button = styled(Link)`
   background: transparent;
   border: 1px solid;
   font-weight: bold;
@@ -216,3 +220,25 @@ export const rotateLast = keyframes`
     transform: translate3d(0px, 0px, 0px);
   }
 `
+
+// text gradient
+export const gradientAnimation = keyframes`{
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 108% 50%;
+  }
+}`
+
+// typing effect
+export const typing = keyframes`{ 
+  from { width: 0 }
+  to { width: 100% }
+}`
+
+// typewriter cursor
+export const blinkCaret = keyframes`{ 
+  from, to { border-color: transparent }
+  50% { border-color: ${COLORS.accentOrange}; }
+}`
