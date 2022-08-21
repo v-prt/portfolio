@@ -16,6 +16,7 @@ import ticketWidget5 from '../assets/ticket-widget/ticket-widget5.png'
 import ticketWidget6 from '../assets/ticket-widget/ticket-widget6.png'
 import ticketWidget7 from '../assets/ticket-widget/ticket-widget7.png'
 import ticketWidget8 from '../assets/ticket-widget/ticket-widget8.png'
+import stickerSheet from '../assets/ticket-widget/sticker-sheet.png'
 
 import cookieHeavenGame3 from '../assets/cookie-heaven/cookie-heaven-game3.png'
 import cookieClicker from '../assets/cookie-heaven/cookie-clicker.png'
@@ -80,6 +81,7 @@ export const Projects = () => {
           </Details>
         </Description>
         <ProjectGallery>
+          <ImageLoader src={stickerSheet} alt='' />
           <ImageLoader src={ticketWidget1} alt='' />
           <ImageLoader src={ticketWidget2} alt='' />
           <ImageLoader src={ticketWidget3} alt='' />
