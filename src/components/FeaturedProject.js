@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components/macro'
-import { LinkButton, ProjectGallery } from '../GlobalStyles'
+import { BREAKPOINTS, LinkButton, ProjectGallery } from '../GlobalStyles'
 import { ImageLoader } from '../components/ImageLoader'
 
 import plantgeekHome1 from '../assets/plantgeek/plantgeek-homepage1.png'
@@ -121,7 +121,7 @@ const Description = styled.div`
   }
   p {
     max-width: 800px;
-    margin: 10px;
+    margin: 10px 20px;
   }
   .primary-image {
     margin: 20px 0;
@@ -132,10 +132,11 @@ const Description = styled.div`
     align-items: center;
     margin: 10px 0;
     a {
+      width: 100%;
       margin: 10px;
     }
   }
-  @media only screen and (min-width: 500px) {
+  @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
     .links {
       flex-direction: row;
     }

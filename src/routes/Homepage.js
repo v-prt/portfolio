@@ -2,11 +2,13 @@ import styled from 'styled-components/macro'
 import {
   COLORS,
   BREAKPOINTS,
+  LinkButton,
   Button,
   fadeIn,
   gradientAnimation,
   typing,
   blinkCaret,
+  animatedGradientBorder,
 } from '../GlobalStyles'
 import headshot from '../assets/victoria.JPG'
 import { FeaturedProject } from '../components/FeaturedProject'
@@ -39,7 +41,9 @@ export const Homepage = () => {
         </div>
       </section>
       <section className='intro'>
-        <img className='headshot' src={headshot} alt='' />
+        <div className='gradient-image-border'>
+          <img className='headshot' src={headshot} alt='' />
+        </div>
         <div className='text'>
           <p>Hi! I'm Victoria. I'm a full-stack Web Developer from West Kelowna, BC.</p>
           <p>
@@ -53,9 +57,18 @@ export const Homepage = () => {
             friend (my husband). I also try to go hiking whenever the weather is nice to enjoy the
             beautiful, natural landscape around us here in BC!
           </p>
-          <Button className='black' to='/about'>
-            LEARN MORE
-          </Button>
+          <div className='buttons'>
+            <LinkButton
+              className='white'
+              href='https://linkedin.com/victoriapeart'
+              target='_blank'
+              rel='noopener noreferrer'>
+              CONNECT
+            </LinkButton>
+            <Button className='black' to='/about'>
+              LEARN MORE
+            </Button>
+          </div>
         </div>
       </section>
       <img className='wave' src={wave} alt='' />
@@ -106,13 +119,13 @@ const Wrapper = styled.main`
     h1 {
       background: linear-gradient(
           to right,
-          ${COLORS.accentOrange},
-          ${COLORS.accent},
-          ${COLORS.accentOrange},
-          ${COLORS.accent},
-          ${COLORS.accentOrange},
-          ${COLORS.accent},
-          ${COLORS.accentOrange}
+          ${COLORS.secondaryAccent},
+          ${COLORS.primaryAccent},
+          ${COLORS.secondaryAccent},
+          ${COLORS.primaryAccent},
+          ${COLORS.secondaryAccent},
+          ${COLORS.primaryAccent},
+          ${COLORS.secondaryAccent}
         )
         repeat;
       -webkit-background-clip: text;
@@ -132,7 +145,7 @@ const Wrapper = styled.main`
     }
     .typewriter {
       overflow: hidden; // Ensures the content is not revealed until the animation
-      border-right: 2px solid ${COLORS.accentOrange}; // The typwriter cursor
+      border-right: 2px solid ${COLORS.secondaryAccent}; // The typwriter cursor
       white-space: nowrap; // Keeps the content on a single line
       margin: 20px 0 20px auto; // Gives that scrolling effect as the typing happens, auto should to be on the side you want to push from
       letter-spacing: 3px; // Adjust as needed
@@ -162,12 +175,34 @@ const Wrapper = styled.main`
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 60px 0 30px 0;
+    padding: 360px 0 30px 0;
+    position: relative;
+    .gradient-image-border {
+      height: 250px;
+      width: 250px;
+      --borderWidth: 5px;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1;
+      top: 60px;
+    }
+    .gradient-image-border:after {
+      content: '';
+      position: absolute;
+      top: calc(-1 * var(--borderWidth));
+      left: calc(-1 * var(--borderWidth));
+      height: calc(100% + var(--borderWidth) * 2);
+      width: calc(100% + var(--borderWidth) * 2);
+      background: linear-gradient(60deg, ${COLORS.secondaryAccent}, ${COLORS.primaryAccent});
+      border-radius: 50%;
+      z-index: -1;
+      animation: ${animatedGradientBorder} 3s ease alternate infinite;
+      background-size: 300% 300%;
+    }
     .headshot {
       filter: grayscale(100%);
-      max-height: 300px;
-      max-width: 300px;
-      margin: 30px;
+      max-height: 100%;
+      max-width: 100%;
       border-radius: 50%;
     }
     .text {
@@ -179,6 +214,11 @@ const Wrapper = styled.main`
         margin: 10px 0;
         color: rgba(255, 255, 255, 0.8);
       }
+    }
+    .buttons {
+      margin: 20px 0;
+      display: flex;
+      gap: 20px;
     }
   }
   .wave {
@@ -205,6 +245,14 @@ const Wrapper = styled.main`
         font-size: 1.5rem;
       }
     }
+    .intro {
+      padding: 410px 0 40px 0;
+      .gradient-image-border {
+        height: 300px;
+        width: 300px;
+        top: 70px;
+      }
+    }
   }
   @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
     .heading {
@@ -212,6 +260,14 @@ const Wrapper = styled.main`
         span {
           font-size: 14rem;
         }
+      }
+    }
+    .intro {
+      padding: 480px 0 40px 0;
+      .gradient-image-border {
+        height: 350px;
+        width: 350px;
+        top: 80px;
       }
     }
   }

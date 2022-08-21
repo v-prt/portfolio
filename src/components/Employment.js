@@ -60,7 +60,7 @@ const Heading = styled.h2`
 `
 
 const Company = styled.h3`
-  color: ${COLORS.accent};
+  color: ${COLORS.primaryAccent};
   font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -82,7 +82,7 @@ const Description = styled.div`
     color: ${COLORS.medium};
     font-weight: bold;
     &:hover {
-      color: ${COLORS.accent};
+      color: ${COLORS.primaryAccent};
     }
   }
 `

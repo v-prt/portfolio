@@ -49,7 +49,7 @@ const Heading = styled.h2`
 `
 
 const School = styled.h3`
-  color: ${COLORS.accent};
+  color: ${COLORS.primaryAccent};
   font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 1px;

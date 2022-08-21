@@ -7,8 +7,8 @@ export const COLORS = {
   dark: '#1a1a1a',
   medium: '#333',
   light: '#ae8eb4',
-  accentOrange: '#ff8533',
-  accent: '#9966ff',
+  secondaryAccent: '#ff8533',
+  primaryAccent: '#9966ff',
 }
 
 export const BREAKPOINTS = {
@@ -65,6 +65,7 @@ export const LinkButton = styled.a`
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 10px 0;
+  white-space: pre;
   &.black {
     background: #1a1a1a;
     color: #fff;
@@ -72,18 +73,19 @@ export const LinkButton = styled.a`
     @media (hover: hover) {
       &:hover,
       &:focus {
-        box-shadow: -3px -3px 0 ${COLORS.accent};
+        box-shadow: -3px -3px 0 ${COLORS.primaryAccent};
         transform: translate(3px, 3px);
       }
     }
   }
   &.white {
+    background: #fff;
     color: #1a1a1a;
     border-color: #1a1a1a;
     @media (hover: hover) {
       &:hover,
       &:focus {
-        box-shadow: -3px -3px 0 #1a1a1a;
+        box-shadow: -3px -3px 0 ${COLORS.secondaryAccent};
         transform: translate(3px, 3px);
       }
     }
@@ -102,6 +104,7 @@ export const Button = styled(Link)`
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 10px 0;
+  white-space: pre;
   &.black {
     background: #1a1a1a;
     color: #fff;
@@ -109,18 +112,19 @@ export const Button = styled(Link)`
     @media (hover: hover) {
       &:hover,
       &:focus {
-        box-shadow: -3px -3px 0 ${COLORS.accent};
+        box-shadow: -3px -3px 0 ${COLORS.primaryAccent};
         transform: translate(3px, 3px);
       }
     }
   }
   &.white {
+    background: #fff;
     color: #1a1a1a;
     border-color: #1a1a1a;
     @media (hover: hover) {
       &:hover,
       &:focus {
-        box-shadow: -3px -3px 0 #1a1a1a;
+        box-shadow: -3px -3px 0 ${COLORS.secondaryAccent};
         transform: translate(3px, 3px);
       }
     }
@@ -168,7 +172,7 @@ export const UnderlinedLink = styled.a`
   &:hover,
   &:focus {
     &:after {
-      background: ${COLORS.accent};
+      background: ${COLORS.primaryAccent};
       transform: skew(30deg) rotate(1deg) scale(1.1);
     }
   }
@@ -240,5 +244,17 @@ export const typing = keyframes`{
 // typewriter cursor
 export const blinkCaret = keyframes`{ 
   from, to { border-color: transparent }
-  50% { border-color: ${COLORS.accentOrange}; }
+  50% { border-color: ${COLORS.secondaryAccent}; }
+}`
+
+export const animatedGradientBorder = keyframes`{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }`
