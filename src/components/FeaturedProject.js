@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components/macro'
-import { BREAKPOINTS, LinkButton, ProjectGallery } from '../GlobalStyles'
+import { COLORS, BREAKPOINTS, LinkButton, ProjectGallery } from '../GlobalStyles'
 import { ImageLoader } from '../components/ImageLoader'
 
 import plantgeekHome1 from '../assets/plantgeek/plantgeek-homepage1.png'
@@ -26,6 +26,10 @@ export const FeaturedProject = () => {
             [ <b>plantgeek</b> ]
           </span>
         </h2>
+        <div className='summary'>
+          <p className='type'>Full-Stack, Desktop/Tablet/Mobile</p>
+          <p className='duration'>Solo Project, April 2021</p>
+        </div>
         <p>
           Houseplants are a fairly new obsession of mine and sometimes I struggle to remember their
           various needs. My solution had been to keep a spreadsheet with information on each plant,
@@ -47,7 +51,7 @@ export const FeaturedProject = () => {
           continued to improve and work on it in my spare time. For more information, check out my
           code on GitHub or view the live website below.
         </p>
-        <div className='links'>
+        <div className='buttons'>
           <LinkButton
             className='black'
             href='https://www.plantgeek.co'
@@ -90,10 +94,6 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  .wave {
-    width: 100%;
-    transform: rotate(180deg);
-  }
 `
 
 const Description = styled.div`
@@ -112,11 +112,21 @@ const Description = styled.div`
     }
     .feat {
       font-size: 1.5rem;
-      color: #999;
+      color: ${COLORS.primaryAccent};
       margin-right: 10px;
     }
     @media (max-width: 1000px) {
       font-size: 2rem;
+    }
+  }
+  .summary {
+    text-align: center;
+    opacity: 0.6;
+    .type {
+      font-weight: bold;
+    }
+    .duration {
+      font-size: 0.8rem;
     }
   }
   p {
@@ -124,9 +134,14 @@ const Description = styled.div`
     margin: 10px 20px;
   }
   .primary-image {
-    margin: 20px 0;
+    margin: 40px 0;
+    img {
+      height: 300px;
+      border-radius: 10px;
+      box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+    }
   }
-  .links {
+  .buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,8 +152,16 @@ const Description = styled.div`
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
-    .links {
+    .primary-image img {
+      height: 400px;
+    }
+    .buttons {
       flex-direction: row;
+    }
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
+    .primary-image img {
+      height: 500px;
     }
   }
 `

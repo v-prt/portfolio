@@ -150,6 +150,17 @@ export const ProjectGallery = styled.div`
     border-radius: 5px;
     cursor: pointer;
   }
+  img {
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+    @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
+      height: 400px;
+    }
+    @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
+      height: 500px;
+    }
+  }
 `
 
 export const UnderlinedLink = styled.a`

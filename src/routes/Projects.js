@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components/macro'
-import { LinkButton, ProjectGallery } from '../GlobalStyles'
+import { BREAKPOINTS, LinkButton, ProjectGallery } from '../GlobalStyles'
 import { ImageLoader } from '../components/ImageLoader'
 
 // import creatorHome from '../assets/creator/creator-home.png'
@@ -8,15 +8,29 @@ import { ImageLoader } from '../components/ImageLoader'
 // import collabHub from '../assets/creator/collab-hub.png'
 // import collabHub2 from '../assets/creator/collab-hub2.png'
 
-import splashPage from '../assets/ticket-widget/splash-page.png'
-import browseConcerts from '../assets/ticket-widget/browse-concerts.png'
-import concertDetails from '../assets/ticket-widget/concert-details.png'
-import purchasedTickets from '../assets/ticket-widget/purchased-tickets.png'
+import ticketWidget1 from '../assets/ticket-widget/ticket-widget1.png'
+import ticketWidget2 from '../assets/ticket-widget/ticket-widget2.png'
+import ticketWidget3 from '../assets/ticket-widget/ticket-widget3.png'
+import ticketWidget4 from '../assets/ticket-widget/ticket-widget4.png'
+import ticketWidget5 from '../assets/ticket-widget/ticket-widget5.png'
+import ticketWidget6 from '../assets/ticket-widget/ticket-widget6.png'
+import ticketWidget7 from '../assets/ticket-widget/ticket-widget7.png'
+import ticketWidget8 from '../assets/ticket-widget/ticket-widget8.png'
 
 import cookieHeavenGame3 from '../assets/cookie-heaven/cookie-heaven-game3.png'
 import cookieClicker from '../assets/cookie-heaven/cookie-clicker.png'
 import sushiHeavenHome from '../assets/cookie-heaven/sushi-heaven-home.png'
 import sushiHeavenGame from '../assets/cookie-heaven/sushi-heaven-game.png'
+
+import eagletek1 from '../assets/eagletek/eagletek1.png'
+import eagletek2 from '../assets/eagletek/eagletek2.png'
+import eagletek3 from '../assets/eagletek/eagletek3.png'
+import eagletek4 from '../assets/eagletek/eagletek4.png'
+import eagletek5 from '../assets/eagletek/eagletek5.png'
+import eagletek6 from '../assets/eagletek/eagletek6.png'
+import eagletek7 from '../assets/eagletek/eagletek7.png'
+import eagletek8 from '../assets/eagletek/eagletek8.png'
+import eagletek9 from '../assets/eagletek/eagletek9.png'
 
 export const Projects = () => {
   // makes window scroll to top between renders
@@ -26,92 +40,112 @@ export const Projects = () => {
 
   return (
     <Wrapper>
-      {/* <Project>
+      <Project style={{ backgroundColor: '#f6f6f6' }}>
         <Description>
           <Title>
             <h2>
-              [ <b>creator.co</b> ]
+              [ <b>TicketWidget</b> ]
             </h2>
           </Title>
+          <div className='summary'>
+            <p className='type'>UX Design, Mobile App</p>
+            <p className='duration'>Solo Project, May - August 2022</p>
+          </div>
           <Details>
             <p>
-              I'm currently working as a full-time Web Developer at Creator, a platform for brands
-              to effortlessly connect and collaborate with social media influencers.
-            </p>
-            <p>
-              My responsibilities and accomplishments include maintaining our WordPress and React
-              sites for brands and creators, making major design or feature updates, integrating new
-              APIs, bug resolution, and more.
-            </p>
-            <p>
-              Brands can build campaigns for platforms such as Instagram, YouTube, and TikTok,
-              recruit influencers using an advanced search system (or leverage our team of Campaign
-              Specialists), and view real-time analytics on their campaigns and influencer
-              performance.
-            </p>
-            <p>
-              Creators can connect their social accounts for multiple platforms, browse hundreds of
-              collaboration opportunities, and filter campaigns based on their social stats or other
-              personal information. Once opted in, they can view and manage their campaigns via
-              their account dashboard and even chat with the brands.
-            </p>
-          </Details>
-        </Description>
-        <ProjectGallery>
-          <ImageLoader src={creatorHome} alt='Creator Homepage' />
-          <ImageLoader src={creatorLogin} alt='Creator Login' />
-          <ImageLoader src={collabHub} alt='Collaboration Hub' />
-          <ImageLoader src={collabHub2} alt='Collab Hub (using filters)' />
-        </ProjectGallery>
-      </Project> */}
-
-      <Project>
-        <Description>
-          <Title>
-            <h2>
-              [ <b>ticket widget</b> ]
-            </h2>
-          </Title>
-          <Details>
-            <p>
-              My UX Design portfolio project completed as part of my Google UX Certification in
-              which I designed a mobile app that allows users to search and purchase concert tickets
+              My first UX Design project completed as part of my Google UX Certification in which I
+              designed a mobile app that allows users to search and purchase concert tickets
               internationally.
             </p>
             <p>
-              <i>Screenshots to come!</i>
+              Throughout the course of this project I learned all about user research, wireframing,
+              prototyping, testing, and using Figma.
             </p>
-            <LinkButton
-              className='black'
-              href='https://www.figma.com/proto/aXXruSP5WHIyzSXOSDMc7S/TicketWidget?scaling=scale-down&page-id=137%3A1361&node-id=137%3A1442&starting-point-node-id=137%3A1442'
-              target='_blank'
-              rel='noreferrer'>
-              View Prototype
-            </LinkButton>
-            <LinkButton
-              className='white'
-              href='https://docs.google.com/presentation/d/1VU-9AZ_CmoytlepkZCGBrDUe6OvLFeB40ww8Drj-rPE/edit?usp=sharing'
-              target='_blank'
-              rel='noreferrer'>
-              View Case Study
-            </LinkButton>
+            <div className='buttons'>
+              <LinkButton
+                className='black'
+                href='https://www.figma.com/proto/aXXruSP5WHIyzSXOSDMc7S/TicketWidget?scaling=scale-down&page-id=137%3A1361&node-id=137%3A1442&starting-point-node-id=137%3A1442'
+                target='_blank'
+                rel='noreferrer'>
+                View Prototype
+              </LinkButton>
+              <LinkButton
+                className='white'
+                href='https://docs.google.com/presentation/d/1VU-9AZ_CmoytlepkZCGBrDUe6OvLFeB40ww8Drj-rPE/edit?usp=sharing'
+                target='_blank'
+                rel='noreferrer'>
+                View Case Study
+              </LinkButton>
+            </div>
           </Details>
         </Description>
-        {/* <ProjectGallery>
-          <ImageLoader src={splashPage} alt='TicketWidget splash page' />
-          <ImageLoader src={browseConcerts} alt='TicketWidget browse concerts page' />
-          <ImageLoader src={concertDetails} alt='TicketWidget concert details page' />
-          <ImageLoader src={purchasedTickets} alt='TicketWidget purchased tickets page' />
-        </ProjectGallery> */}
+        <ProjectGallery>
+          <ImageLoader src={ticketWidget1} alt='' />
+          <ImageLoader src={ticketWidget2} alt='' />
+          <ImageLoader src={ticketWidget3} alt='' />
+          <ImageLoader src={ticketWidget4} alt='' />
+          <ImageLoader src={ticketWidget5} alt='' />
+          <ImageLoader src={ticketWidget6} alt='' />
+          <ImageLoader src={ticketWidget7} alt='' />
+          <ImageLoader src={ticketWidget8} alt='' />
+        </ProjectGallery>
       </Project>
 
       <Project>
         <Description>
           <Title>
             <h2>
-              [ <b>sushi heaven</b> ]
+              [ <b>eagleTek</b> ]
             </h2>
           </Title>
+          <div className='summary'>
+            <p className='type'>Full-Stack, Desktop/Tablet/Mobile</p>
+            <p className='duration'>Group Project, April 2021</p>
+          </div>
+          <Details>
+            <p>
+              A group project completed in bootcamp by myself and 2 other students in span of one
+              week.
+            </p>
+            <p>
+              As team lead for this project, it was an interesting challenge to divide our tasks
+              based on our strengths and keep the design cohesive. My teammates and I created a web
+              application which allows users to browse wearable tech and add to or remove products
+              from their cart. Built from scratch using React, Redux, Node, and Express.
+            </p>
+            <LinkButton
+              className='black'
+              href='https://www.youtube.com/watch?v=a9O7pC1S2KI'
+              target='_blank'
+              rel='noreferrer'>
+              View Demo
+            </LinkButton>
+          </Details>
+        </Description>
+        <ProjectGallery>
+          <ImageLoader src={eagletek1} alt='' />
+          <ImageLoader src={eagletek2} alt='' />
+          <ImageLoader src={eagletek3} alt='' />
+          <ImageLoader src={eagletek4} alt='' />
+          <ImageLoader src={eagletek5} alt='' />
+          <ImageLoader src={eagletek6} alt='' />
+          <ImageLoader src={eagletek7} alt='' />
+          <ImageLoader src={eagletek8} alt='' />
+          <ImageLoader src={eagletek9} alt='' />
+        </ProjectGallery>
+      </Project>
+
+      <Project style={{ backgroundColor: '#f6f6f6' }}>
+        <Description>
+          <Title>
+            <h2>
+              [ <b>Sushi Heaven</b> ]
+            </h2>
+          </Title>
+          <div className='summary'>
+            <p className='type'>Frontend, Desktop/Tablet/Mobile</p>
+            <p className='duration'>Solo Project, March 2021</p>
+          </div>
           <Details>
             <p>
               A spin on the classic "Cookie Clicker" browser game which started as a school project
@@ -124,7 +158,7 @@ export const Projects = () => {
               you can come back to it later.
             </p>
             <LinkButton
-              className='white'
+              className='black'
               href='https://sushi-heaven.netlify.app/'
               target='_blank'
               rel='noreferrer'>
@@ -133,10 +167,10 @@ export const Projects = () => {
           </Details>
         </Description>
         <ProjectGallery>
-          <ImageLoader src={sushiHeavenHome} alt='Sushi Heaven Homepage' />
-          <ImageLoader src={sushiHeavenGame} alt='Sushi Heaven Game' />
-          <ImageLoader src={cookieHeavenGame3} alt='Cookie Heaven Game (Outdated)' />
-          <ImageLoader src={cookieClicker} alt='Cookie Clicker Game (Outdated)' />
+          <ImageLoader src={sushiHeavenHome} alt='' />
+          <ImageLoader src={sushiHeavenGame} alt='' />
+          <ImageLoader src={cookieHeavenGame3} alt='' />
+          <ImageLoader src={cookieClicker} alt='' />
         </ProjectGallery>
       </Project>
     </Wrapper>
@@ -157,7 +191,33 @@ const Project = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 40px 0;
+  padding: 60px 0;
+  .summary {
+    text-align: center;
+    margin: 20px 0;
+    opacity: 0.6;
+    .type {
+      font-weight: bold;
+    }
+    .duration {
+      font-size: 0.8rem;
+    }
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    a {
+      width: 100%;
+      margin: 10px;
+    }
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
+    .buttons {
+      flex-direction: row;
+    }
+  }
 `
 
 const Description = styled.div`
