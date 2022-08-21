@@ -8,6 +8,11 @@ import { ImageLoader } from '../components/ImageLoader'
 // import collabHub from '../assets/creator/collab-hub.png'
 // import collabHub2 from '../assets/creator/collab-hub2.png'
 
+import splashPage from '../assets/ticket-widget/splash-page.png'
+import browseConcerts from '../assets/ticket-widget/browse-concerts.png'
+import concertDetails from '../assets/ticket-widget/concert-details.png'
+import purchasedTickets from '../assets/ticket-widget/purchased-tickets.png'
+
 import cookieHeavenGame3 from '../assets/cookie-heaven/cookie-heaven-game3.png'
 import cookieClicker from '../assets/cookie-heaven/cookie-clicker.png'
 import sushiHeavenHome from '../assets/cookie-heaven/sushi-heaven-home.png'
@@ -59,6 +64,46 @@ export const Projects = () => {
           <ImageLoader src={collabHub2} alt='Collab Hub (using filters)' />
         </ProjectGallery>
       </Project> */}
+
+      <Project>
+        <Description>
+          <Title>
+            <h2>
+              [ <b>ticket widget</b> ]
+            </h2>
+          </Title>
+          <Details>
+            <p>
+              My UX Design portfolio project completed as part of my Google UX Certification in
+              which I designed a mobile app that allows users to search and purchase concert tickets
+              internationally.
+            </p>
+            <p>
+              <i>Screenshots to come!</i>
+            </p>
+            <LinkButton
+              className='black'
+              href='https://www.figma.com/file/aXXruSP5WHIyzSXOSDMc7S/TicketWidget?node-id=137%3A1361'
+              target='_blank'
+              rel='noreferrer'>
+              View Prototype
+            </LinkButton>
+            <LinkButton
+              className='white'
+              href='https://docs.google.com/presentation/d/1VU-9AZ_CmoytlepkZCGBrDUe6OvLFeB40ww8Drj-rPE/edit?usp=sharing'
+              target='_blank'
+              rel='noreferrer'>
+              View Case Study
+            </LinkButton>
+          </Details>
+        </Description>
+        {/* <ProjectGallery>
+          <ImageLoader src={splashPage} alt='TicketWidget splash page' />
+          <ImageLoader src={browseConcerts} alt='TicketWidget browse concerts page' />
+          <ImageLoader src={concertDetails} alt='TicketWidget concert details page' />
+          <ImageLoader src={purchasedTickets} alt='TicketWidget purchased tickets page' />
+        </ProjectGallery> */}
+      </Project>
 
       <Project>
         <Description>
