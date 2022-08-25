@@ -27,7 +27,7 @@ export const FeaturedProject = () => {
           </span>
         </h2>
         <div className='summary'>
-          <p className='type'>Full-Stack, Desktop/Tablet/Mobile</p>
+          <p className='type'>Full-Stack, Responsive Website</p>
           <p className='duration'>Solo Project, April 2021</p>
         </div>
         <p>

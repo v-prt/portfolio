@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import styled from 'styled-components/macro'
 import {
   COLORS,
@@ -17,6 +18,11 @@ import pattern from '../assets/code.svg'
 import wave from '../assets/wave.svg'
 
 export const Homepage = () => {
+  // makes window scroll to top between renders
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Wrapper>
       <div className='background' />

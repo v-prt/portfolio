@@ -32,10 +32,19 @@ export default createGlobalStyle`
         border: 0;
     }
     html, body {
-      color: #1a1a1a;
+        color: #1a1a1a;
         overflow-x: hidden;
         overscroll-behavior-y: none;
         overscroll-behavior-x: none;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    #root {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
     p {
         line-height: 1.75;
@@ -185,6 +194,68 @@ export const UnderlinedLink = styled.a`
     &:after {
       background: ${COLORS.primaryAccent};
       transform: skew(30deg) rotate(1deg) scale(1.1);
+    }
+  }
+`
+
+export const ProjectWrapper = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 110px 0 60px 0;
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    h2 {
+      margin: 10px;
+      font-size: 2rem;
+    }
+  }
+  .summary {
+    text-align: center;
+    margin: 20px 0;
+    opacity: 0.6;
+    .type {
+      font-weight: bold;
+    }
+    .duration {
+      font-size: 0.8rem;
+    }
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px;
+    p {
+      max-width: 800px;
+      margin: 10px 0;
+    }
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    a {
+      width: 100%;
+      margin: 10px;
+    }
+  }
+  .primary-image {
+    margin: 40px 0;
+    img {
+      height: 300px;
+      border-radius: 10px;
+      box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
+    .buttons {
+      flex-direction: row;
     }
   }
 `
