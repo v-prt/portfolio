@@ -67,9 +67,9 @@ export const CreatorProfile = () => {
           <div className='buttons'>
             <LinkButton
               className='black'
-              href='https://www.figma.com/proto/aXXruSP5WHIyzSXOSDMc7S/TicketWidget?scaling=scale-down&page-id=137%3A1361&node-id=137%3A1442&starting-point-node-id=137%3A1442'
+              href='https://example.creator.co'
               target='_blank'
-              rel='noreferrer'>
+              rel='noopener noreferrer'>
               View Example Profile
             </LinkButton>
           </div>

@@ -56,17 +56,17 @@ export const FeaturedProject = () => {
             className='black'
             href='https://www.plantgeek.co'
             target='_blank'
-            rel='noreferrer'>
+            rel='noopener noreferrer'>
             VIEW LIVE SITE
           </LinkButton>
           <LinkButton
             className='white'
             href='https://github.com/v-prt/plantgeek'
             target='_blank'
-            rel='noreferrer'>
+            rel='noopener noreferrer'>
             VIEW ON GITHUB
           </LinkButton>
-          {/* <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel='noreferrer'>
+          {/* <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel="noopener noreferrer">
             Video Demo
           </UnderlinedLink> */}
         </div>

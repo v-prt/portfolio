@@ -39,7 +39,7 @@ export const SushiHeaven = () => {
             className='black'
             href='https://sushi-heaven.netlify.app/'
             target='_blank'
-            rel='noreferrer'>
+            rel='noopener noreferrer'>
             Play Game
           </LinkButton>
         </div>

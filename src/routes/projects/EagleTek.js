@@ -45,7 +45,7 @@ export const EagleTek = () => {
             className='black'
             href='https://www.youtube.com/watch?v=a9O7pC1S2KI'
             target='_blank'
-            rel='noreferrer'>
+            rel='noopener noreferrer'>
             View Demo
           </LinkButton>
         </div>

@@ -66,7 +66,7 @@ export const Homepage = () => {
           <div className='buttons'>
             <LinkButton
               className='white'
-              href='https://linkedin.com/victoriapeart'
+              href='https://linkedin.com/in/victoria-peart'
               target='_blank'
               rel='noopener noreferrer'>
               CONNECT

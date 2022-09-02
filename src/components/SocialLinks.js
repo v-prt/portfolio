@@ -5,12 +5,15 @@ import { COLORS } from '../GlobalStyles'
 export const SocialLinks = () => {
   return (
     <Wrapper>
-      <a href='https://github.com/v-prt' target='_blank' rel='noreferrer'>
+      <a href='https://github.com/v-prt' target='_blank' rel='noopener noreferrer'>
         <Icon>
           <FaGithub />
         </Icon>
       </a>
-      <a href='https://www.linkedin.com/in/victoria-peart/' target='_blank' rel='noreferrer'>
+      <a
+        href='https://www.linkedin.com/in/victoria-peart'
+        target='_blank'
+        rel='noopener noreferrer'>
         <Icon>
           <FaLinkedin />
         </Icon>

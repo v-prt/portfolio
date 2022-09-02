@@ -21,7 +21,7 @@ export const Certificates = () => {
           <a
             href='https://www.freecodecamp.org/certification/v-prt/responsive-web-design'
             target='_blank'
-            rel='noreferrer'>
+            rel='noopener noreferrer'>
             <img src={freeCodeCampCert} alt='freeCodeCamp Responsive Web Design Certificate' />
           </a>
         </Cert>
@@ -29,7 +29,7 @@ export const Certificates = () => {
           <a
             href='https://victoriapeart.com/static/media/mimo-web-dev.0eede498.jpg'
             target='_blank'
-            rel='noreferrer'>
+            rel='noopener noreferrer'>
             <img src={mimoCert} alt='Mimo Web Dev Certificate' />
           </a>
         </Cert>
@@ -37,27 +37,11 @@ export const Certificates = () => {
           <a
             href='https://app.testdome.com/cert/9f0776ba5d8a4eba98526521a3e8ab6a'
             target='_blank'
-            rel='noreferrer'>
+            rel='noopener noreferrer'>
             <img src={testDomeCert} alt='Test Dome Certificate' />
           </a>
         </Cert>
       </Certs>
-      {/* <Text>
-        <p>
-          I'm currently studying{' '}
-          <a
-            href='https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/'
-            target='_blank'
-            rel='noreferrer'>
-            JavaScript Algorithms and Data Structures
-          </a>{' '}
-          and taking the{' '}
-          <a href='https://javascript30.com/' target='_blank' rel='noreferrer'>
-            JavaScript30 challenge
-          </a>
-          .
-        </p>
-      </Text> */}
     </Wrapper>
   )
 }

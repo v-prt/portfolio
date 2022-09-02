@@ -108,8 +108,11 @@ const Wrapper = styled.main`
         }
       }
       .thumbnail {
+        background: #ddd;
         width: 100%;
+        min-height: 200px;
         max-height: 200px;
+        border-radius: 20px 20px 0 0;
         overflow: hidden;
         display: grid;
         place-content: center;
@@ -142,6 +145,9 @@ const Wrapper = styled.main`
       gap: 30px;
       .project-card {
         display: flex;
+        .thumbnail {
+          border-radius: 20px 0 0 20px;
+        }
         .thumbnail,
         .text {
           flex: 1;
@@ -165,6 +171,7 @@ const Wrapper = styled.main`
         flex: 1;
         min-width: 300px;
         .thumbnail {
+          border-radius: 20px 20px 0 0;
           min-height: 250px;
         }
       }
