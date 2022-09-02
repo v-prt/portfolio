@@ -29,7 +29,6 @@ export const About = () => {
 
 const Wrapper = styled.div`
   width: 100vw;
-  margin-top: 50px;
 `
 
 const Background = styled.div`

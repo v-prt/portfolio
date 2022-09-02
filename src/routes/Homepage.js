@@ -87,7 +87,6 @@ export const Homepage = () => {
 const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
   .background {
     background: #222;
     min-height: 100vh;
@@ -100,7 +99,7 @@ const Wrapper = styled.main`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 50px);
+    min-height: 100vh;
     position: relative;
     .overlay {
       background-image: url(${pattern});

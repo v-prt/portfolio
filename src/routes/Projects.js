@@ -63,9 +63,7 @@ export const Projects = () => {
       <div className='project-grid'>
         {projects.map((project, index) => (
           <Link key={index} className='project-card fade-in' to={`/projects/${project.path}`}>
-            <div className='thumbnail'>
-              <ImageLoader src={project.thumbnail} alt='' />
-            </div>
+            <div className='thumbnail' style={{ backgroundImage: `url(${project.thumbnail})` }} />
             <div className='text'>
               <h2 className='title'>{project.title}</h2>
               <div>
@@ -84,41 +82,32 @@ export const Projects = () => {
 const Wrapper = styled.main`
   background: #f2f2f2;
   flex: 1;
-  margin-top: 50px;
-  padding: 20px;
-  h1 {
-    color: #333;
-  }
+  display: flex;
   .project-grid {
     width: 100%;
     max-width: 1000px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: 10px auto;
+    margin: auto;
+    padding: 70px 20px 20px 20px;
     .project-card {
       background: #fff;
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.1);
       border-radius: 20px;
       overflow: hidden;
       // prevent hover effect on touch screens
       @media (hover: hover) {
         &:hover {
           transform: translate(0, -10px);
-          box-shadow: 3px 5px 30px 0px #453b501a;
+          box-shadow: 3px 5px 30px rgba(0, 0, 0, 0.2);
         }
       }
       .thumbnail {
-        background: #ddd;
+        background-size: cover;
+        background-position: center;
         width: 100%;
-        min-height: 200px;
-        max-height: 200px;
-        border-radius: 20px 20px 0 0;
-        overflow: hidden;
-        display: grid;
-        place-content: center;
-        img {
-          max-width: 100%;
-        }
+        height: 200px;
       }
       .text {
         padding: 20px;
@@ -140,14 +129,11 @@ const Wrapper = styled.main`
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
-    padding: 30px;
     .project-grid {
       gap: 30px;
+      padding: 80px 30px 30px 30px;
       .project-card {
         display: flex;
-        .thumbnail {
-          border-radius: 20px 0 0 20px;
-        }
         .thumbnail,
         .text {
           flex: 1;
@@ -161,17 +147,16 @@ const Wrapper = styled.main`
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
-    padding: 40px;
     .project-grid {
       flex-direction: row;
       flex-wrap: wrap;
       gap: 40px;
+      padding: 90px 40px 40px 40px;
       .project-card {
         flex-direction: column;
         flex: 1;
         min-width: 300px;
         .thumbnail {
-          border-radius: 20px 20px 0 0;
           min-height: 250px;
         }
       }
