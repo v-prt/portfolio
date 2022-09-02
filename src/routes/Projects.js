@@ -87,9 +87,9 @@ const Wrapper = styled.main`
     max-width: 1000px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     margin: auto;
-    padding: 70px 20px 20px 20px;
+    padding: 90px 20px 40px 20px;
     .project-card {
       background: #fff;
       box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.1);
@@ -129,8 +129,8 @@ const Wrapper = styled.main`
   }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
     .project-grid {
-      gap: 30px;
-      padding: 80px 30px 30px 30px;
+      gap: 40px;
+      padding: 100px 30px 50px 30px;
       .project-card {
         display: flex;
         .thumbnail,
@@ -149,8 +149,8 @@ const Wrapper = styled.main`
     .project-grid {
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 40px;
-      padding: 90px 40px 40px 40px;
+      gap: 50px;
+      padding: 110px 40px 60px 40px;
       .project-card {
         flex-direction: column;
         flex: 1;

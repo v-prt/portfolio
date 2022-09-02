@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import GlobalStyles from './GlobalStyles'
 import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 import { Homepage } from './routes/Homepage'
 import { About } from './routes/About'
 import { Projects } from './routes/Projects'
@@ -26,6 +27,7 @@ export const App = () => {
         <Route path='/projects/eagletek' element={<EagleTek />} />
         <Route path='/projects/sushi-heaven' element={<SushiHeaven />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

@@ -51,14 +51,35 @@ export const CreatorProfile = () => {
         <div className='summary'>
           <p className='type'>UX Design & Full-Stack Development, Responsive Website</p>
           <p className='duration'>Project Lead • July - August 2022</p>
+          <p className='collaborators'>
+            Collaborators:{' '}
+            <a
+              className='link'
+              href='https://www.linkedin.com/in/alex-i-quast/'
+              target='_blank'
+              rel='noopener noreferrer'>
+              Alex Quast
+            </a>
+            ,{' '}
+            <a
+              className='link'
+              href='https://www.linkedin.com/in/pramodsuthar/'
+              target='_blank'
+              rel='noopener noreferrer'>
+              Pramod Suthar
+            </a>
+          </p>
         </div>
         <div className='details'>
           <p>
-            This was a major project I undertook at Creator.co. As project lead, I was responsible
-            for the UX/UI design as well as full-stack development of the new Creator Profile, which
-            serves as a digital media kit and link in bio for creators (social media influencers) on
-            our platform. My teammates were responsible for securing SSLs for the custom subdomains
-            as well as crypto wallet connection for NFT verification.
+            One of the biggest projects I undertook at Creator and one I'm most proud of! As project
+            lead, I was responsible for the UX/UI design and the majority of the development for the
+            Creator Profile which serves as a digital media kit and link in bio for social media
+            influencers on the{' '}
+            <a className='link' href='https://creator.co' target='_blank' rel='noopener noreferrer'>
+              creator.co
+            </a>{' '}
+            platform.
           </p>
         </div>
         <div style={{ margin: '30px 0' }}>
@@ -66,12 +87,24 @@ export const CreatorProfile = () => {
         </div>
         <div className='details'>
           <p>
-            Features include uploading a profile image, bio and other personal information;
-            automatically updated metrics for connected social platforms; automatically populated
-            top performing content; and the option to upload recommended products, showcase an NFT
-            collection, and custom links - all of which is done through the profile editor in the
-            creator's dashboard once they've claimed their profile by verifying their Creator
-            Passport NFT ownership.
+            The goal was to provide creators a better alternative to Linktree with exclusive
+            features just for our NFT holders. Features include uploading a profile image, bio and
+            other personal information; automatically updated metrics for connected social
+            platforms; automatically populated top performing content; and the option to add rates
+            for social media services, upload recommended products, showcase an NFT collection, and
+            add custom links.
+          </p>
+          <p>
+            My teammates were responsible for securing SSLs for the custom subdomains as well as
+            setting up crypto wallet connection for verifying ownership of the{' '}
+            <a
+              className='link'
+              href='https://creator.co/passport-nft'
+              target='_blank'
+              rel='noopener noreferrer'>
+              Creator Passport NFT
+            </a>{' '}
+            to unlock premium features.
           </p>
           <div className='buttons'>
             <LinkButton

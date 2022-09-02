@@ -40,14 +40,27 @@ export const TicketWidget = () => {
             designed a mobile app that allows users to search and purchase concert tickets
             internationally.
           </p>
+          <p>
+            Users would be able to browse concerts and filter by date, location, or genre - then
+            choose tickets to add to cart and proceed through the checkout flow. Purchased tickets
+            would then be found in the user's ticket wallet, where they could be scanned at the
+            venue.
+          </p>
         </div>
         <div style={{ margin: '30px 0' }}>
           <Carousel images={projectImages} />
         </div>
         <div className='details'>
           <p>
-            Throughout the course of this project I learned all about user research, wireframing,
-            prototyping, testing, and using Figma.
+            Throughout the course of this project I learned all about empathizing with users,
+            conducting user research, wireframing, prototyping, and testing. I also learned how to
+            use Figma to create the designs and sticker sheets, which I really enjoyed! Each stage
+            of testing revealed opportunities for improvement which came to life in the final
+            iterations of my design.
+          </p>
+          <p>
+            Becoming more familiar with UX processes and the product life-cycle has helped
+            tremendously with other projects and I'm excited to learn even more!
           </p>
           <div className='buttons'>
             <LinkButton

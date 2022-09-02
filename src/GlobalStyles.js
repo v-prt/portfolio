@@ -227,22 +227,18 @@ export const ProjectWrapper = styled.main`
   .summary {
     text-align: center;
     margin: 20px 0;
-    color: #999;
     .type {
       color: #666;
       font-weight: bold;
     }
     .duration {
+      color: #666;
       font-size: 0.8rem;
     }
     .collaborators {
+      color: #999;
+      margin-top: 20px;
       font-size: 0.8rem;
-      a {
-        border-bottom: 1px solid transparent;
-        &:hover {
-          border-color: ${COLORS.primaryAccent};
-        }
-      }
     }
   }
   .details {
@@ -271,6 +267,12 @@ export const ProjectWrapper = styled.main`
       height: 300px;
       border-radius: 10px;
       box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+  .link {
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-color: ${COLORS.primaryAccent};
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {

@@ -51,7 +51,7 @@ export const Plantgeek = () => {
         <div className='details'>
           <p>
             Houseplants are a fairly new obsession of mine and sometimes I struggle to remember
-            their various needs. My solution had been to keep a spreadsheet with information on each
+            their various needs! My solution had been to keep a spreadsheet with information on each
             plant, such as the level of light, water, temperature, and humidity they each required.
           </p>
         </div>
@@ -62,15 +62,18 @@ export const Plantgeek = () => {
           <p>
             I decided to build
             <strong> plantgeek </strong>
-            as an upgrade to my spreadsheet, where you can browse and view care information for
-            hundreds of plants. Users can sign up to create lists of plants they own, love, or wish
-            to have and even contribute to the database. Admins can approve or reject submissions as
-            well as delete plants.
+            as an upgrade to my spreadsheet, where you can browse and view care information for a
+            large database of houseplants. Users can create an account, edit their profile, and
+            curate lists of plants they own, love, or wish to have. They can also contribute to the
+            database by submitting new plant images and information. Admins can approve or reject
+            submissions, as well as delete plants. Approved submissions earn users cute stickers
+            which are showcased on their profiles.
           </p>
           <p>
-            I started this website as a full-stack solo school project in 2021 and I have since
-            continued to improve and work on it in my spare time. For more information, check out my
-            code on GitHub or view the live website below.
+            I started this website as a full-stack solo school project in 2021 and I have
+            periodically continued to improve on it in my spare time. While not technically open to
+            the public, the website is live and usable to anyone who wishes to try it out - feel
+            free to look through my code on GitHub as well!
           </p>
           <div className='buttons'>
             <LinkButton

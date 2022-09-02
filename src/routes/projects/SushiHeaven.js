@@ -31,8 +31,9 @@ export const SushiHeaven = () => {
         </div>
         <div className='details'>
           <p>
-            A spin on the classic "Cookie Clicker" browser game which started as a school project
-            and has evolved over time as I kept tinkering and improving the aesthetics and gameplay.
+            A spin on the classic "Cookie Clicker" browser game which started as a small school
+            project and evolved over time as I kept tinkering and improving the aesthetics and
+            gameplay.
           </p>
         </div>
         <div style={{ margin: '30px 0' }}>
@@ -41,8 +42,8 @@ export const SushiHeaven = () => {
         <div className='details'>
           <p>
             The goal is to make as much sushi as you can, buy upgrades and restaurants, and work
-            your way up to owning a franchise. The game also automatically saves your progress so
-            you can come back to it later.
+            your way up to owning a franchise. Try it out and have fun - the game automatically
+            saves your progress so you can always come back to it later!
           </p>
           <LinkButton
             className='black'

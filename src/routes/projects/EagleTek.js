@@ -36,6 +36,7 @@ export const EagleTek = () => {
           <p className='collaborators'>
             Collaborators:{' '}
             <a
+              className='link'
               href='https://www.linkedin.com/in/mariie-petit/'
               target='_blank'
               rel='noopener noreferrer'>
@@ -43,6 +44,7 @@ export const EagleTek = () => {
             </a>
             ,{' '}
             <a
+              className='link'
               href='https://www.linkedin.com/in/andrew-fenrich/'
               target='_blank'
               rel='noopener noreferrer'>
@@ -52,8 +54,9 @@ export const EagleTek = () => {
         </div>
         <div className='details'>
           <p>
-            A group project completed in bootcamp by myself and 2 other students in span of one
-            week.
+            A group project completed in bootcamp by myself and 2 other students in span of one week
+            where my teammates and I built a web application using React, Redux, Node, and Express
+            for a fictional company we dubbed "eagleTek".
           </p>
         </div>
         <div style={{ margin: '30px 0' }}>
@@ -61,10 +64,15 @@ export const EagleTek = () => {
         </div>
         <div className='details'>
           <p>
+            Users can create an account, browse a large database of wearable tech such as smart
+            watches and fitness trackers, and interact with their cart by adding or removing
+            products and viewing their total purchase price. Products are sorted categorically as
+            well as paginated and the stock updates automatically based on items in cart.
+          </p>
+          <p>
             As team lead for this project, it was an interesting challenge to divide our tasks based
-            on our strengths and keep the design cohesive. My teammates and I created a web
-            application which allows users to browse wearable tech and add to or remove products
-            from their cart. Built from scratch using React, Redux, Node, and Express.
+            on our strengths while keeping the design cohesive! I helped us stay on track by
+            organizing our project kanban board on GitHub and arranging our daily meetings.
           </p>
           <LinkButton
             className='black'
