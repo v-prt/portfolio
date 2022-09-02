@@ -16,7 +16,7 @@ export const Header = () => {
           <NavLink to='/'>VP</NavLink>
         </div>
         <nav className='main-nav'>
-          <NavLink className='nav-link' to='/' exact={true}>
+          <NavLink className='nav-link' to='/'>
             HOME
           </NavLink>
           <NavLink className='nav-link' to='/projects'>
@@ -50,7 +50,7 @@ export const Header = () => {
               <p>Web Development and UX/UI Design</p>
             </div>
             <div className='nav-links' onClick={() => setIsExpanded(false)}>
-              <NavLink className='nav-link' to='/' exact={true}>
+              <NavLink className='nav-link' to='/'>
                 Home
               </NavLink>
               <NavLink className='nav-link' to='/projects'>
