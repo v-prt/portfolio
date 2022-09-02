@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { ProjectWrapper, LinkButton, ProjectGallery } from '../../GlobalStyles'
-import { ImageLoader } from '../../components/ImageLoader'
+import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
+import { Carousel } from '../../components/Carousel'
 
 import image1 from '../../assets/creator/creator-profile1.png'
 import image2 from '../../assets/creator/creator-profile2.png'
@@ -56,6 +56,11 @@ export const CreatorProfile = () => {
             our platform. My teammates were responsible for securing SSLs for the custom subdomains
             as well as crypto wallet connection for NFT verification.
           </p>
+        </div>
+        <div style={{ margin: '30px 0' }}>
+          <Carousel images={projectImages} />
+        </div>
+        <div className='details'>
           <p>
             Features include uploading a profile image, bio and other personal information;
             automatically updated metrics for connected social platforms; automatically populated
@@ -75,11 +80,6 @@ export const CreatorProfile = () => {
           </div>
         </div>
       </div>
-      <ProjectGallery>
-        {projectImages.map((image, index) => (
-          <ImageLoader key={index} src={image} alt='' />
-        ))}
-      </ProjectGallery>
     </ProjectWrapper>
   )
 }

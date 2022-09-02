@@ -7,7 +7,6 @@ import eagleTek from '../assets/project-thumbnail2.svg'
 import plantgeek from '../assets/project-thumbnail3.svg'
 import sushiHeaven from '../assets/project-thumbnail4.svg'
 import ticketWidget from '../assets/project-thumbnail5.svg'
-import { ImageLoader } from '../components/ImageLoader'
 
 export const Projects = () => {
   // makes window scroll to top between renders

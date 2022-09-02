@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { ProjectWrapper, LinkButton, ProjectGallery } from '../../GlobalStyles'
-import { ImageLoader } from '../../components/ImageLoader'
+import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
+import { Carousel } from '../../components/Carousel'
 
 import image1 from '../../assets/plantgeek/plantgeek-homepage1.png'
 import image2 from '../../assets/plantgeek/plantgeek-homepage2.png'
@@ -27,7 +27,7 @@ export const Plantgeek = () => {
     image4,
     image5,
     image6,
-    // image7,
+    image7,
     image8,
     image9,
     image10,
@@ -50,9 +50,11 @@ export const Plantgeek = () => {
             their various needs. My solution had been to keep a spreadsheet with information on each
             plant, such as the level of light, water, temperature, and humidity they each required.
           </p>
-          <div className='primary-image'>
-            <ImageLoader src={image7} alt='' />
-          </div>
+        </div>
+        <div style={{ margin: '30px 0' }}>
+          <Carousel images={projectImages} />
+        </div>
+        <div className='details'>
           <p>
             I decided to build
             <strong> plantgeek </strong>
@@ -87,11 +89,6 @@ export const Plantgeek = () => {
           </div>
         </div>
       </div>
-      <ProjectGallery>
-        {projectImages.map((image, index) => (
-          <ImageLoader key={index} src={image} alt='' />
-        ))}
-      </ProjectGallery>
     </ProjectWrapper>
   )
 }

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { ProjectWrapper, LinkButton, ProjectGallery } from '../../GlobalStyles'
-import { ImageLoader } from '../../components/ImageLoader'
+import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
+import { Carousel } from '../../components/Carousel'
 
 import image1 from '../../assets/ticket-widget/ticket-widget1.png'
 import image2 from '../../assets/ticket-widget/ticket-widget2.png'
@@ -36,6 +36,11 @@ export const TicketWidget = () => {
             designed a mobile app that allows users to search and purchase concert tickets
             internationally.
           </p>
+        </div>
+        <div style={{ margin: '30px 0' }}>
+          <Carousel images={projectImages} />
+        </div>
+        <div className='details'>
           <p>
             Throughout the course of this project I learned all about user research, wireframing,
             prototyping, testing, and using Figma.
@@ -58,11 +63,6 @@ export const TicketWidget = () => {
           </div>
         </div>
       </div>
-      <ProjectGallery>
-        {projectImages.map((image, index) => (
-          <ImageLoader key={index} src={image} alt='' />
-        ))}
-      </ProjectGallery>
     </ProjectWrapper>
   )
 }

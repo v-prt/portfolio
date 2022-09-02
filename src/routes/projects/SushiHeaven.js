@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { ProjectWrapper, LinkButton, ProjectGallery } from '../../GlobalStyles'
-import { ImageLoader } from '../../components/ImageLoader'
+import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
+import { Carousel } from '../../components/Carousel'
 
 import image1 from '../../assets/sushi-heaven/sushi-heaven-home.png'
 import image2 from '../../assets/sushi-heaven/sushi-heaven-game.png'
@@ -30,6 +30,11 @@ export const SushiHeaven = () => {
             A spin on the classic "Cookie Clicker" browser game which started as a school project
             and has evolved over time as I kept tinkering and improving the aesthetics and gameplay.
           </p>
+        </div>
+        <div style={{ margin: '30px 0' }}>
+          <Carousel images={projectImages} />
+        </div>
+        <div className='details'>
           <p>
             The goal is to make as much sushi as you can, buy upgrades and restaurants, and work
             your way up to owning a franchise. The game also automatically saves your progress so
@@ -44,11 +49,6 @@ export const SushiHeaven = () => {
           </LinkButton>
         </div>
       </div>
-      <ProjectGallery>
-        {projectImages.map((image, index) => (
-          <ImageLoader key={index} src={image} alt='' />
-        ))}
-      </ProjectGallery>
     </ProjectWrapper>
   )
 }

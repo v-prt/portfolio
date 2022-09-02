@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { ProjectWrapper, LinkButton, ProjectGallery } from '../../GlobalStyles'
-import { ImageLoader } from '../../components/ImageLoader'
+import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
+import { Carousel } from '../../components/Carousel'
 
 import image1 from '../../assets/eagletek/eagletek1.png'
 import image2 from '../../assets/eagletek/eagletek2.png'
@@ -35,6 +35,11 @@ export const EagleTek = () => {
             A group project completed in bootcamp by myself and 2 other students in span of one
             week.
           </p>
+        </div>
+        <div style={{ margin: '30px 0' }}>
+          <Carousel images={projectImages} />
+        </div>
+        <div className='details'>
           <p>
             As team lead for this project, it was an interesting challenge to divide our tasks based
             on our strengths and keep the design cohesive. My teammates and I created a web
@@ -50,11 +55,6 @@ export const EagleTek = () => {
           </LinkButton>
         </div>
       </div>
-      <ProjectGallery>
-        {projectImages.map((image, index) => (
-          <ImageLoader key={index} src={image} alt='' />
-        ))}
-      </ProjectGallery>
     </ProjectWrapper>
   )
 }
