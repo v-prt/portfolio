@@ -48,6 +48,7 @@ export const Skills = () => {
             <li>Git</li>
             <li>GitHub</li>
             <li>Figma</li>
+            <li>Adobe XD</li>
             <li>Canva</li>
           </List>
         </Group>

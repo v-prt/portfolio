@@ -53,6 +53,7 @@ export default createGlobalStyle`
         list-style: none;
     }
     a {
+        color: ${COLORS.primaryAccent};
         text-decoration: none;
         transition: 0.2s ease-in-out;
     }
@@ -203,7 +204,16 @@ export const ProjectWrapper = styled.main`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 110px 0 60px 0;
+  padding-bottom: 60px;
+  .banner {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    img {
+      width: 100%;
+      margin-top: auto;
+    }
+  }
   .description {
     display: flex;
     flex-direction: column;
@@ -217,12 +227,22 @@ export const ProjectWrapper = styled.main`
   .summary {
     text-align: center;
     margin: 20px 0;
-    opacity: 0.6;
+    color: #999;
     .type {
+      color: #666;
       font-weight: bold;
     }
     .duration {
       font-size: 0.8rem;
+    }
+    .collaborators {
+      font-size: 0.8rem;
+      a {
+        border-bottom: 1px solid transparent;
+        &:hover {
+          border-color: ${COLORS.primaryAccent};
+        }
+      }
     }
   }
   .details {
@@ -254,6 +274,9 @@ export const ProjectWrapper = styled.main`
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
+    .banner {
+      height: 300px;
+    }
     .buttons {
       flex-direction: row;
     }

@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
 import { Carousel } from '../../components/Carousel'
+import wave from '../../assets/white-wave.svg'
 
 import image1 from '../../assets/sushi-heaven/sushi-heaven-home.png'
 import image2 from '../../assets/sushi-heaven/sushi-heaven-game.png'
@@ -17,6 +18,9 @@ export const SushiHeaven = () => {
 
   return (
     <ProjectWrapper>
+      <div className='banner' style={{ background: 'linear-gradient(to right, #FFECB3, #FFB3D2)' }}>
+        <img src={wave} alt='' />
+      </div>
       <div className='description'>
         <h2 className='title'>
           [ <b>Sushi Heaven</b> ]

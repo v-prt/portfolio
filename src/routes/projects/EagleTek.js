@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
 import { Carousel } from '../../components/Carousel'
+import wave from '../../assets/white-wave.svg'
 
 import image1 from '../../assets/eagletek/eagletek1.png'
 import image2 from '../../assets/eagletek/eagletek2.png'
@@ -22,6 +23,9 @@ export const EagleTek = () => {
 
   return (
     <ProjectWrapper>
+      <div className='banner' style={{ background: 'linear-gradient(to right, #444, #111)' }}>
+        <img src={wave} alt='' />
+      </div>
       <div className='description'>
         <h2 className='title'>
           [ <b>eagleTek</b> ]
@@ -29,6 +33,22 @@ export const EagleTek = () => {
         <div className='summary'>
           <p className='type'>Full-Stack Development, Responsive Website</p>
           <p className='duration'>Group Project • March 2021</p>
+          <p className='collaborators'>
+            Collaborators:{' '}
+            <a
+              href='https://www.linkedin.com/in/mariie-petit/'
+              target='_blank'
+              rel='noopener noreferrer'>
+              Marie Petit
+            </a>
+            ,{' '}
+            <a
+              href='https://www.linkedin.com/in/andrew-fenrich/'
+              target='_blank'
+              rel='noopener noreferrer'>
+              Andrew Fenrich
+            </a>
+          </p>
         </div>
         <div className='details'>
           <p>

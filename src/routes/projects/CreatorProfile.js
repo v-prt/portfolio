@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
 import { Carousel } from '../../components/Carousel'
+import wave from '../../assets/white-wave.svg'
 
 import image1 from '../../assets/creator/creator-profile1.png'
 import image2 from '../../assets/creator/creator-profile2.png'
@@ -40,6 +41,9 @@ export const CreatorProfile = () => {
 
   return (
     <ProjectWrapper>
+      <div className='banner' style={{ background: 'linear-gradient(to right, #FFCCD9, #BBDCF7)' }}>
+        <img src={wave} alt='' />
+      </div>
       <div className='description'>
         <h2 className='title'>
           [ <b>Creator Profile</b> ]

@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
 import { Carousel } from '../../components/Carousel'
+import wave from '../../assets/white-wave.svg'
 
 import image1 from '../../assets/plantgeek/plantgeek-homepage1.png'
 import image2 from '../../assets/plantgeek/plantgeek-homepage2.png'
@@ -36,6 +37,9 @@ export const Plantgeek = () => {
 
   return (
     <ProjectWrapper>
+      <div className='banner' style={{ background: 'linear-gradient(to right, #92D265, #5D9E2E)' }}>
+        <img src={wave} alt='' />
+      </div>
       <div className='description'>
         <h2 className='title'>
           [ <b>plantgeek</b> ]

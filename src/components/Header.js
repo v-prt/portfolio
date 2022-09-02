@@ -17,13 +17,13 @@ export const Header = () => {
         </div>
         <nav className='main-nav'>
           <NavLink className='nav-link' to='/'>
-            HOME
+            Home
           </NavLink>
           <NavLink className='nav-link' to='/projects'>
-            PROJECTS
+            Projects
           </NavLink>
           <NavLink className='nav-link' to='/about'>
-            ABOUT
+            About
           </NavLink>
           <a
             className='social-link'
