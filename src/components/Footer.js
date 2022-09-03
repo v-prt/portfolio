@@ -43,13 +43,13 @@ const Wrapper = styled.footer`
   background: #eee;
   border-top: 1px solid #ddd;
   .footer-inner {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     display: flex;
     flex-direction: column;
     padding: 20px;
     .basic-info {
-      padding: 20px;
+      padding: 20px 0;
       border-bottom: 1px dotted #ccc;
       .name {
         font-size: 1.2rem;
@@ -68,7 +68,7 @@ const Wrapper = styled.footer`
       }
     }
     .social-links {
-      padding: 20px;
+      padding: 20px 0;
       display: flex;
       gap: 15px;
       .social-link {
@@ -88,7 +88,6 @@ const Wrapper = styled.footer`
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
     .footer-inner {
       flex-direction: row;
-      padding: 30px;
       .basic-info {
         flex: 2;
         border-bottom: 0;
@@ -98,11 +97,6 @@ const Wrapper = styled.footer`
         flex-direction: column;
         align-items: flex-end;
       }
-    }
-  }
-  @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
-    .footer-inner {
-      padding: 40px;
     }
   }
 `

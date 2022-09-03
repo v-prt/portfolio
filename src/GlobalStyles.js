@@ -141,38 +141,6 @@ export const Button = styled(Link)`
   }
 `
 
-export const ProjectGallery = styled.div`
-  display: flex;
-  grid-gap: 20px;
-  width: calc(100% - 40px);
-  overflow-x: scroll;
-  margin: 20px 0;
-  padding: 20px 10px;
-  ::-webkit-scrollbar {
-    height: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background-color: #f2f2f2;
-    border-radius: 5px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  img {
-    height: 300px;
-    border-radius: 10px;
-    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
-    @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
-      height: 400px;
-    }
-    @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
-      height: 500px;
-    }
-  }
-`
-
 export const UnderlinedLink = styled.a`
   color: #000;
   font-weight: bold;
@@ -200,6 +168,7 @@ export const UnderlinedLink = styled.a`
 `
 
 export const ProjectWrapper = styled.main`
+  background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,6 +178,8 @@ export const ProjectWrapper = styled.main`
     height: 200px;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     img {
       width: 100%;
       margin-top: auto;
@@ -245,7 +216,7 @@ export const ProjectWrapper = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 30px;
+    margin: 0 20px;
     p {
       max-width: 800px;
       margin: 10px 0;
@@ -276,11 +247,19 @@ export const ProjectWrapper = styled.main`
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
+    padding-bottom: 80px;
     .banner {
-      height: 300px;
+      height: 250px;
     }
     .buttons {
       flex-direction: row;
+    }
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
+    padding-bottom: 100px;
+    .banner {
+      height: 300px;
+      padding-top: 50px;
     }
   }
 `

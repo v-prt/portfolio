@@ -91,6 +91,8 @@ const Wrapper = styled.header`
   top: 0;
   z-index: 10;
   .header-inner {
+    max-width: 1400px;
+    margin: auto;
     padding: 5px 20px;
     display: flex;
     justify-content: space-between;

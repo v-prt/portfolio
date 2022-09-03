@@ -55,7 +55,7 @@ export const Plantgeek = () => {
             plant, such as the level of light, water, temperature, and humidity they each required.
           </p>
         </div>
-        <div style={{ margin: '30px 0' }}>
+        <div style={{ margin: '40px 0' }}>
           <Carousel images={projectImages} />
         </div>
         <div className='details'>

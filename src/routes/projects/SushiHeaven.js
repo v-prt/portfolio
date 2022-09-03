@@ -36,7 +36,7 @@ export const SushiHeaven = () => {
             gameplay.
           </p>
         </div>
-        <div style={{ margin: '30px 0' }}>
+        <div style={{ margin: '40px 0' }}>
           <Carousel images={projectImages} />
         </div>
         <div className='details'>

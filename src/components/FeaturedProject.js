@@ -1,167 +1,112 @@
-import React from 'react'
+import { ProjectWrapper, LinkButton } from '../GlobalStyles'
+import { Carousel } from '../components/Carousel'
 
-import styled from 'styled-components/macro'
-import { COLORS, BREAKPOINTS, LinkButton, ProjectGallery } from '../GlobalStyles'
-import { ImageLoader } from '../components/ImageLoader'
-
-import plantgeekHome1 from '../assets/plantgeek/plantgeek-homepage1.png'
-import plantgeekHome2 from '../assets/plantgeek/plantgeek-homepage2.png'
-import plantgeekHome3 from '../assets/plantgeek/plantgeek-homepage3.png'
-import plantgeekBrowse1 from '../assets/plantgeek/plantgeek-browse1.png'
-import plantgeekBrowse2 from '../assets/plantgeek/plantgeek-browse2.png'
-import plantgeekBrowse3 from '../assets/plantgeek/plantgeek-browse3.png'
-import plantgeekPlantProfile from '../assets/plantgeek/plantgeek-plantprofile.png'
-import plantgeekUserProfile from '../assets/plantgeek/plantgeek-userprofile.png'
-import plantgeekCollection from '../assets/plantgeek/plantgeek-collection.png'
-import plantgeekFriends from '../assets/plantgeek/plantgeek-friends.png'
-import plantgeekSettings from '../assets/plantgeek/plantgeek-settings.png'
+import image1 from '../assets/creator/creator-profile1.png'
+import image2 from '../assets/creator/creator-profile2.png'
+import image3 from '../assets/creator/creator-profile3.png'
+import image4 from '../assets/creator/creator-profile4.png'
+import image5 from '../assets/creator/creator-profile5.png'
+import image6 from '../assets/creator/profile-editor1.png'
+import image7 from '../assets/creator/profile-editor2.png'
+import image8 from '../assets/creator/profile-editor3.png'
+import image9 from '../assets/creator/profile-editor4.png'
+import image10 from '../assets/creator/profile-editor5.png'
+import image11 from '../assets/creator/profile-editor6.png'
+import image12 from '../assets/creator/profile-editor7.png'
+import image13 from '../assets/creator/profile-editor8.png'
 
 export const FeaturedProject = () => {
+  const projectImages = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
+    image10,
+    image11,
+    image12,
+    image13,
+  ]
+
   return (
-    <Wrapper>
-      <Description>
-        <h2>
-          <span className='feat'>featuring</span>
-          <span className='title'>
-            [ <b>plantgeek</b> ]
-          </span>
+    <ProjectWrapper>
+      <div className='description'>
+        <h2 className='title'>
+          [ <b>Creator Profile</b> ]
         </h2>
         <div className='summary'>
-          <p className='type'>Full-Stack, Responsive Website</p>
-          <p className='duration'>Solo Project, April 2021</p>
+          <p className='type'>UX Design & Full-Stack Development, Responsive Website</p>
+          <p className='duration'>Project Lead • July - August 2022</p>
+          <p className='collaborators'>
+            Collaborators:{' '}
+            <a
+              className='link'
+              href='https://www.linkedin.com/in/alex-i-quast/'
+              target='_blank'
+              rel='noopener noreferrer'>
+              Alex Quast
+            </a>
+            ,{' '}
+            <a
+              className='link'
+              href='https://www.linkedin.com/in/pramodsuthar/'
+              target='_blank'
+              rel='noopener noreferrer'>
+              Pramod Suthar
+            </a>
+          </p>
         </div>
-        <p>
-          Houseplants are a fairly new obsession of mine and sometimes I struggle to remember their
-          various needs. My solution had been to keep a spreadsheet with information on each plant,
-          such as the level of light, water, temperature, and humidity they each required.
-        </p>
-        <div className='primary-image'>
-          <ImageLoader src={plantgeekPlantProfile} alt='' />
+        <div className='details'>
+          <p>
+            One of the biggest projects I undertook at Creator and one I'm most proud of! As project
+            lead, I was responsible for the UX/UI design and the majority of the development for the
+            Creator Profile which serves as a digital media kit and link in bio for social media
+            influencers on the{' '}
+            <a className='link' href='https://creator.co' target='_blank' rel='noopener noreferrer'>
+              creator.co
+            </a>{' '}
+            platform.
+          </p>
         </div>
-        <p>
-          I decided to build
-          <strong> plantgeek </strong>
-          as an upgrade to my spreadsheet, where you can browse and view care information for
-          hundreds of plants. Users can sign up to create lists of plants they own, love, or wish to
-          have and even contribute to the database. Admins can approve or reject submissions as well
-          as delete plants.
-        </p>
-        <p>
-          I started this website as a full-stack solo school project in 2021 and I have since
-          continued to improve and work on it in my spare time. For more information, check out my
-          code on GitHub or view the live website below.
-        </p>
-        <div className='buttons'>
-          <LinkButton
-            className='black'
-            href='https://www.plantgeek.co'
-            target='_blank'
-            rel='noopener noreferrer'>
-            VIEW LIVE SITE
-          </LinkButton>
-          <LinkButton
-            className='white'
-            href='https://github.com/v-prt/plantgeek'
-            target='_blank'
-            rel='noopener noreferrer'>
-            VIEW ON GITHUB
-          </LinkButton>
-          {/* <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel="noopener noreferrer">
-            Video Demo
-          </UnderlinedLink> */}
+        <div style={{ margin: '30px 0' }}>
+          <Carousel images={projectImages} />
         </div>
-      </Description>
-      <ProjectGallery>
-        <ImageLoader src={plantgeekHome1} alt='' />
-        <ImageLoader src={plantgeekHome2} alt='' />
-        <ImageLoader src={plantgeekHome3} alt='' />
-        <ImageLoader src={plantgeekBrowse1} alt='' />
-        <ImageLoader src={plantgeekBrowse2} alt='' />
-        <ImageLoader src={plantgeekBrowse3} alt='' />
-        <ImageLoader src={plantgeekUserProfile} alt='' />
-        <ImageLoader src={plantgeekCollection} alt='' />
-        <ImageLoader src={plantgeekFriends} alt='' />
-        <ImageLoader src={plantgeekSettings} alt='' />
-      </ProjectGallery>
-    </Wrapper>
+        <div className='details'>
+          <p>
+            The goal was to provide creators a better alternative to Linktree with exclusive
+            features just for our NFT holders. Features include uploading a profile image, bio and
+            other personal information; automatically updated metrics for connected social
+            platforms; automatically populated top performing content; and the option to add rates
+            for social media services, upload recommended products, showcase an NFT collection, and
+            add custom links.
+          </p>
+          <p>
+            My teammates were responsible for securing SSLs for the custom subdomains as well as
+            setting up crypto wallet connection for verifying ownership of the{' '}
+            <a
+              className='link'
+              href='https://creator.co/passport-nft'
+              target='_blank'
+              rel='noopener noreferrer'>
+              Creator Passport NFT
+            </a>{' '}
+            to unlock premium features.
+          </p>
+          <div className='buttons'>
+            <LinkButton
+              className='black'
+              href='https://example.creator.co'
+              target='_blank'
+              rel='noopener noreferrer'>
+              View Example Profile
+            </LinkButton>
+          </div>
+        </div>
+      </div>
+    </ProjectWrapper>
   )
 }
-
-const Wrapper = styled.section`
-  background: #fff;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-`
-
-const Description = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h2 {
-    font-size: 2.5rem;
-    margin: 50px 20px 20px 20px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    span {
-      margin: 5px 0;
-    }
-    .feat {
-      font-size: 1.5rem;
-      color: ${COLORS.primaryAccent};
-      margin-right: 10px;
-    }
-    @media (max-width: 1000px) {
-      font-size: 2rem;
-    }
-  }
-  .summary {
-    text-align: center;
-    opacity: 0.6;
-    .type {
-      font-weight: bold;
-    }
-    .duration {
-      font-size: 0.8rem;
-    }
-  }
-  p {
-    max-width: 800px;
-    margin: 10px 20px;
-  }
-  .primary-image {
-    margin: 40px 0;
-    img {
-      height: 300px;
-      border-radius: 10px;
-      box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
-    }
-  }
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0;
-    a {
-      width: 100%;
-      margin: 10px;
-    }
-  }
-  @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
-    .primary-image img {
-      height: 400px;
-    }
-    .buttons {
-      flex-direction: row;
-    }
-  }
-  @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
-    .primary-image img {
-      height: 500px;
-    }
-  }
-`
