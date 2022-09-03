@@ -72,7 +72,7 @@ const Wrapper = styled.footer`
       display: flex;
       gap: 15px;
       .social-link {
-        color: #000;
+        color: ${COLORS.dark};
         display: grid;
         padding: 5px;
         border-radius: 50%;

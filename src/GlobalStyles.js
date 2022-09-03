@@ -32,7 +32,7 @@ export default createGlobalStyle`
         border: 0;
     }
     html, body {
-        color: #1a1a1a;
+        color: ${COLORS.dark};
         overflow-x: hidden;
         overscroll-behavior-y: none;
         overscroll-behavior-x: none;
@@ -77,7 +77,7 @@ export const LinkButton = styled.a`
   margin: 10px 0;
   white-space: pre;
   &.black {
-    background: #1a1a1a;
+    background: ${COLORS.dark};
     color: #fff;
     border-color: #fff;
     @media (hover: hover) {
@@ -90,8 +90,8 @@ export const LinkButton = styled.a`
   }
   &.white {
     background: #fff;
-    color: #1a1a1a;
-    border-color: #1a1a1a;
+    color: ${COLORS.dark};
+    border-color: ${COLORS.dark};
     @media (hover: hover) {
       &:hover,
       &:focus {
@@ -116,7 +116,7 @@ export const Button = styled(Link)`
   margin: 10px 0;
   white-space: pre;
   &.black {
-    background: #1a1a1a;
+    background: ${COLORS.dark};
     color: #fff;
     border-color: #fff;
     @media (hover: hover) {
@@ -129,8 +129,8 @@ export const Button = styled(Link)`
   }
   &.white {
     background: #fff;
-    color: #1a1a1a;
-    border-color: #1a1a1a;
+    color: ${COLORS.dark};
+    border-color: ${COLORS.dark};
     @media (hover: hover) {
       &:hover,
       &:focus {
@@ -147,7 +147,6 @@ export const ProjectWrapper = styled.main`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-bottom: 60px;
   .banner {
     height: 200px;
     width: 100%;
@@ -164,6 +163,7 @@ export const ProjectWrapper = styled.main`
     flex-direction: column;
     max-width: 800px;
     margin: 0 20px;
+    padding-bottom: 60px;
     .featuring {
       color: ${COLORS.primaryAccent};
       font-size: 2rem;
@@ -223,19 +223,23 @@ export const ProjectWrapper = styled.main`
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
-    padding-bottom: 80px;
     .banner {
       height: 250px;
+    }
+    .description {
+      padding-bottom: 80px;
     }
     .buttons {
       flex-direction: row;
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
-    padding-bottom: 100px;
     .banner {
       height: 300px;
       padding-top: 50px;
+    }
+    .description {
+      padding-bottom: 100px;
     }
   }
 `

@@ -100,7 +100,7 @@ const Wrapper = styled.header`
   }
   .logo {
     a {
-      color: #000;
+      color: ${COLORS.dark};
       font-family: 'Gallaudet-Regular', sans-serif;
       font-weight: 100;
       font-size: 2.5rem;
@@ -116,7 +116,7 @@ const Wrapper = styled.header`
     gap: 15px;
   }
   .nav-link {
-    color: #000;
+    color: ${COLORS.dark};
     border-radius: 10px;
     border: 1px solid transparent;
     padding: 12px 10px 10px 10px;
@@ -128,13 +128,13 @@ const Wrapper = styled.header`
       color: ${COLORS.primaryAccent};
     }
     &.active {
-      background: #000;
+      background: ${COLORS.dark};
       color: #fff;
       font-weight: bold;
     }
   }
   .social-link {
-    color: #000;
+    color: ${COLORS.dark};
     display: grid;
     padding: 5px;
     border-radius: 50%;

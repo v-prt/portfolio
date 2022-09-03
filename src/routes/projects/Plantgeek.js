@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
+import { ViewAllProjects } from '../../components/ViewAllProjects'
 import { Carousel } from '../../components/Carousel'
 import wave from '../../assets/white-wave.svg'
 
@@ -40,7 +41,7 @@ export const Plantgeek = () => {
       <div className='banner' style={{ background: 'linear-gradient(to right, #92D265, #5D9E2E)' }}>
         <img src={wave} alt='' />
       </div>
-      <div className='description'>
+      <section className='description'>
         <h2 className='title'>
           [ <b>plantgeek</b> ]
         </h2>
@@ -92,7 +93,8 @@ export const Plantgeek = () => {
             </LinkButton>
           </div>
         </div>
-      </div>
+      </section>
+      <ViewAllProjects />
     </ProjectWrapper>
   )
 }

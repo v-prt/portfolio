@@ -12,8 +12,8 @@ import {
   animatedGradientBorder,
 } from '../GlobalStyles'
 import headshot from '../assets/victoria.JPG'
-import illustration from '../assets/illustrations/developer.svg'
 import { FeaturedProject } from '../components/FeaturedProject'
+import { ViewAllProjects } from '../components/ViewAllProjects'
 import pattern from '../assets/code.svg'
 import wave from '../assets/wave.svg'
 
@@ -79,17 +79,7 @@ export const Homepage = () => {
       </section>
       <img className='wave' src={wave} alt='' />
       <FeaturedProject />
-      <section className='view-projects'>
-        <div className='inner'>
-          <img src={illustration} alt='' />
-          <div className='text'>
-            <p>Interested in seeing other things I've worked on?</p>
-            <Button className='black' to='/projects'>
-              SEE ALL PROJECTS
-            </Button>
-          </div>
-        </div>
-      </section>
+      <ViewAllProjects />
     </Wrapper>
   )
 }
@@ -241,32 +231,6 @@ const Wrapper = styled.main`
     width: 100vw;
     position: relative;
   }
-  .view-projects {
-    background: ${COLORS.dark};
-    color: #fff;
-    width: 100%;
-    .inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      padding: 60px 20px;
-      img {
-        height: 150px;
-      }
-      .text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: fit-content;
-        p {
-          text-align: center;
-          margin: 10px 0;
-        }
-      }
-    }
-  }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
     .banner .overlay {
       background-size: 300px;
@@ -294,16 +258,6 @@ const Wrapper = styled.main`
         top: 70px;
       }
     }
-    .view-projects {
-      .inner {
-        flex-direction: row;
-        gap: 50px;
-        padding: 70px 20px;
-        .text {
-          align-items: flex-start;
-        }
-      }
-    }
   }
   @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
     .heading {
@@ -319,15 +273,6 @@ const Wrapper = styled.main`
         height: 350px;
         width: 350px;
         top: 80px;
-      }
-    }
-    .view-projects {
-      .inner {
-        gap: 60px;
-        padding: 80px 20px;
-        img {
-          height: 250px;
-        }
       }
     }
   }

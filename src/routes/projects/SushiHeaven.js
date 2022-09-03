@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
+import { ViewAllProjects } from '../../components/ViewAllProjects'
 import { Carousel } from '../../components/Carousel'
 import wave from '../../assets/white-wave.svg'
 
@@ -21,7 +22,7 @@ export const SushiHeaven = () => {
       <div className='banner' style={{ background: 'linear-gradient(to right, #FFECB3, #FFB3D2)' }}>
         <img src={wave} alt='' />
       </div>
-      <div className='description'>
+      <section className='description'>
         <h2 className='title'>
           [ <b>Sushi Heaven</b> ]
         </h2>
@@ -53,7 +54,8 @@ export const SushiHeaven = () => {
             Play Game
           </LinkButton>
         </div>
-      </div>
+      </section>
+      <ViewAllProjects />
     </ProjectWrapper>
   )
 }
