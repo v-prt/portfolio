@@ -35,6 +35,7 @@ export const FeaturedProject = () => {
   return (
     <ProjectWrapper>
       <div className='description'>
+        <p className='featuring'>featuring</p>
         <h2 className='title'>
           [ <b>Creator Profile</b> ]
         </h2>

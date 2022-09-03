@@ -90,9 +90,6 @@ export const Plantgeek = () => {
               rel='noopener noreferrer'>
               VIEW ON GITHUB
             </LinkButton>
-            {/* <UnderlinedLink href='https://youtu.be/_LXWqhxIMrQ' target='_blank' rel='noopener noreferrer'>
-            Video Demo
-          </UnderlinedLink> */}
           </div>
         </div>
       </div>

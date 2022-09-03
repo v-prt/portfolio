@@ -141,32 +141,6 @@ export const Button = styled(Link)`
   }
 `
 
-export const UnderlinedLink = styled.a`
-  color: #000;
-  font-weight: bold;
-  position: relative;
-  z-index: 1;
-  &:after {
-    background: #ccc;
-    content: '';
-    height: 5px;
-    width: 100%;
-    position: absolute;
-    bottom: 1px;
-    right: -1px;
-    z-index: -1;
-    transform: skew(-30deg) rotate(-1deg) scale(1.05);
-    transition: 0.2s ease-in-out;
-  }
-  &:hover,
-  &:focus {
-    &:after {
-      background: ${COLORS.primaryAccent};
-      transform: skew(30deg) rotate(1deg) scale(1.1);
-    }
-  }
-`
-
 export const ProjectWrapper = styled.main`
   background: #fff;
   display: flex;
@@ -188,15 +162,19 @@ export const ProjectWrapper = styled.main`
   .description {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    max-width: 800px;
+    margin: 0 20px;
+    .featuring {
+      color: ${COLORS.primaryAccent};
+      font-size: 2rem;
+      font-weight: bold;
+    }
     h2 {
-      margin: 10px;
+      margin-bottom: 20px;
       font-size: 2rem;
     }
   }
   .summary {
-    text-align: center;
     margin: 20px 0;
     .type {
       color: #666;
@@ -216,9 +194,7 @@ export const ProjectWrapper = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 20px;
     p {
-      max-width: 800px;
       margin: 10px 0;
     }
   }
