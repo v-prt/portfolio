@@ -46,9 +46,9 @@ export const CreatorProfile = () => {
         <img src={wave} alt='' />
       </div>
       <section className='description'>
-        <h2 className='title'>
+        <h1 className='title'>
           [ <b>Creator Profile</b> ]
-        </h2>
+        </h1>
         <div className='summary'>
           <p className='type'>UX Design & Full-Stack Development, Responsive Website</p>
           <p className='duration'>Project Lead • July - August 2022</p>

@@ -25,40 +25,50 @@ export default createGlobalStyle`
         font-display: block;
     }
     * {
-        font-family: 'Spartan', 'Open Sans', sans-serif;
-        line-height: 1;
-        margin: 0;
-        padding: 0;
-        border: 0;
+      font-family: 'Spartan', sans-serif;
+      line-height: 1;
+      margin: 0;
+      padding: 0;
+      border: 0;
     }
     html, body {
-        color: ${COLORS.dark};
-        overflow-x: hidden;
-        overscroll-behavior-y: none;
-        overscroll-behavior-x: none;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-    #root {
-      flex: 1;
-      height: 100%;
+      color: ${COLORS.dark};
+      overflow-x: hidden;
+      overscroll-behavior-y: none;
+      overscroll-behavior-x: none;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
+    #root {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+    h1, h2, h3 {
+      letter-spacing: 1px;
+      font-weight: 200;
+    }
     p {
-        line-height: 1.75;
+      line-height: 1.75;
     }
     ol, ul {
-        list-style: none;
+      list-style: none;
     }
     a {
-        color: ${COLORS.primaryAccent};
-        text-decoration: none;
-        transition: 0.2s ease-in-out;
+      color: ${COLORS.primaryAccent};
+      text-decoration: none;
+      transition: 0.2s ease-in-out;
+    }
+    .link {
+      border-bottom: 1px solid transparent;
+      &:hover {
+        border-color: ${COLORS.primaryAccent};
+      }
     }
     strong {
-    font-weight: bold;
+      font-weight: bold;
   }
 `
 
@@ -162,16 +172,17 @@ export const ProjectWrapper = styled.main`
     display: flex;
     flex-direction: column;
     max-width: 800px;
-    margin: 0 20px;
+    margin: 20px;
     padding-bottom: 60px;
     .featuring {
       color: ${COLORS.primaryAccent};
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: bold;
+      margin-bottom: 10px;
     }
-    h2 {
-      margin-bottom: 20px;
+    .title {
       font-size: 2rem;
+      margin-bottom: 20px;
     }
   }
   .summary {
@@ -216,18 +227,15 @@ export const ProjectWrapper = styled.main`
       box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
     }
   }
-  .link {
-    border-bottom: 1px solid transparent;
-    &:hover {
-      border-color: ${COLORS.primaryAccent};
-    }
-  }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
     .banner {
       height: 250px;
     }
     .description {
       padding-bottom: 80px;
+      .title {
+        font-size: 2.5rem;
+      }
     }
     .buttons {
       flex-direction: row;

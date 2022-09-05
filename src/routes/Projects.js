@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
-import { BREAKPOINTS } from '../GlobalStyles'
+import { COLORS, BREAKPOINTS } from '../GlobalStyles'
 import creatorProfile from '../assets/project-thumbnail1.svg'
 import eagleTek from '../assets/project-thumbnail2.svg'
 import plantgeek from '../assets/project-thumbnail3.svg'
@@ -64,7 +64,9 @@ export const Projects = () => {
           <Link key={index} className='project-card fade-in' to={`/projects/${project.path}`}>
             <div className='thumbnail' style={{ backgroundImage: `url(${project.thumbnail})` }} />
             <div className='text'>
-              <h2 className='title'>{project.title}</h2>
+              <h2 className='title'>
+                [ <b>{project.title}</b> ]
+              </h2>
               <div>
                 <p className='type'>{project.type}</p>
                 <p className='device'>{project.device}</p>
@@ -110,14 +112,13 @@ const Wrapper = styled.main`
       }
       .text {
         padding: 20px;
-        color: #444;
+        color: #666;
         .title {
+          color: ${COLORS.dark};
           margin-bottom: 20px;
         }
         .type {
           font-weight: bold;
-        }
-        .device {
         }
         .role {
           margin-top: 20px;

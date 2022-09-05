@@ -51,7 +51,8 @@ export const Homepage = () => {
           <img className='headshot' src={headshot} alt='' />
         </div>
         <div className='text'>
-          <p>Hi! I'm Victoria. I'm a full-stack Web Developer from West Kelowna, BC.</p>
+          <h2>Hey! I'm Victoria.</h2>
+          <p>I'm a full-stack Web Developer from West Kelowna, BC.</p>
           <p>
             As a deaf person, I prioritize
             <strong> visual appeal, accessibility, and thoughtful UX</strong> in coding. I most
@@ -158,7 +159,6 @@ const Wrapper = styled.main`
     }
     .job {
       font-weight: bold;
-      line-height: 1.2;
       padding-top: 5px;
     }
     .skills {
@@ -213,8 +213,12 @@ const Wrapper = styled.main`
     .text {
       display: flex;
       flex-direction: column;
-      width: 500px;
+      max-width: 800px;
       margin: 0 20px;
+      h2 {
+        margin: 10px 0;
+        font-weight: bold;
+      }
       p {
         margin: 10px 0;
         color: rgba(255, 255, 255, 0.8);

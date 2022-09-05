@@ -28,9 +28,9 @@ export const TicketWidget = () => {
         <img src={wave} alt='' />
       </div>
       <section className='description'>
-        <h2 className='title'>
+        <h1 className='title'>
           [ <b>TicketWidget</b> ]
-        </h2>
+        </h1>
         <div className='summary'>
           <p className='type'>UX Design, Mobile App</p>
           <p className='duration'>Solo Project • May - August 2022</p>

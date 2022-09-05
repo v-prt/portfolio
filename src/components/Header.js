@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
-import { COLORS } from '../GlobalStyles'
+import { COLORS, gradientAnimation } from '../GlobalStyles'
 import { BiMenu } from 'react-icons/bi'
 import { RiCloseLine } from 'react-icons/ri'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
@@ -12,7 +12,7 @@ export const Header = () => {
   return (
     <Wrapper>
       <div className='header-inner'>
-        <div className='logo'>
+        <div className='logo' onClick={() => setIsExpanded(false)}>
           <NavLink to='/'>VP</NavLink>
         </div>
         <nav className='main-nav'>
@@ -46,7 +46,7 @@ export const Header = () => {
         <nav className={`mobile-nav ${isExpanded && 'expanded'}`}>
           <div className='mobile-nav-inner'>
             <div className='site-info'>
-              <p className='title'>Victoria Peart • Portfolio</p>
+              <h1 className='title'>Victoria Peart • Portfolio</h1>
               <p>Web Development and UX/UI Design</p>
             </div>
             <div className='nav-links' onClick={() => setIsExpanded(false)}>
@@ -150,7 +150,7 @@ const Wrapper = styled.header`
     display: grid;
   }
   .mobile-nav {
-    background: linear-gradient(to bottom right, #d9c6ff, #ffd3b5);
+    background: #f6f6f6;
     height: calc(100vh - 50px);
     width: 100vw;
     position: absolute;
@@ -161,33 +161,50 @@ const Wrapper = styled.header`
       right: 0;
     }
     .mobile-nav-inner {
-      padding: 40px 20px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 15px;
+      height: 100%;
       .site-info {
         text-align: center;
         font-size: 0.8rem;
         opacity: 0.75;
+        margin-top: 40px;
         .title {
+          background: linear-gradient(
+              to right,
+              ${COLORS.secondaryAccent},
+              ${COLORS.primaryAccent},
+              ${COLORS.secondaryAccent},
+              ${COLORS.primaryAccent},
+              ${COLORS.secondaryAccent},
+              ${COLORS.primaryAccent},
+              ${COLORS.secondaryAccent}
+            )
+            repeat;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          background-size: 1000% 1000%;
+          background-position: 105%;
+          animation: ${gradientAnimation} linear 10s infinite;
+          padding: 10px 0;
           font-weight: bold;
         }
       }
       .nav-links {
-        margin: 40px 0;
-        padding: 40px 0;
+        margin: 40px 20px;
+        padding-top: 40px;
         border-top: 1px dotted rgba(0, 0, 0, 0.4);
-        border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
         display: flex;
         flex-direction: column;
-        align-items: center;
+        text-align: center;
         gap: 15px;
       }
       .social-links {
         display: flex;
+        justify-content: center;
         gap: 15px;
-        opacity: 0.75;
+        margin: auto auto 40px auto;
       }
     }
   }

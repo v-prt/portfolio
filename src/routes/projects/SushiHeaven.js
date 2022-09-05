@@ -23,9 +23,9 @@ export const SushiHeaven = () => {
         <img src={wave} alt='' />
       </div>
       <section className='description'>
-        <h2 className='title'>
+        <h1 className='title'>
           [ <b>Sushi Heaven</b> ]
-        </h2>
+        </h1>
         <div className='summary'>
           <p className='type'>Frontend, Javascript Game</p>
           <p className='duration'>Solo Project • March 2021</p>
@@ -42,9 +42,9 @@ export const SushiHeaven = () => {
         </div>
         <div className='details'>
           <p>
-            The goal is to make as much sushi as you can, buy upgrades and restaurants, and work
-            your way up to owning a franchise. Try it out and have fun - the game automatically
-            saves your progress so you can always come back to it later!
+            The goal of this game is to make as much sushi as you can, buy upgrades and restaurants,
+            and work your way up to owning a franchise. Try it out and have fun - the game
+            automatically saves your progress so you can always come back to it later!
           </p>
           <LinkButton
             className='black'

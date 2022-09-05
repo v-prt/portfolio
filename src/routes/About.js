@@ -1,13 +1,14 @@
 import { useEffect } from 'react'
 
 import styled from 'styled-components/macro'
+import { COLORS, BREAKPOINTS } from '../GlobalStyles'
 import background from '../assets/bg-forest.jpg'
 
-import { Story } from '../components/Story.js'
-import { Skills } from '../components/Skills.js'
-import { Employment } from '../components/Employment.js'
-import { Education } from '../components/Education.js'
-import { Priorities } from '../components/Priorities.js'
+import { Story } from '../components/Story'
+import { Skills } from '../components/Skills'
+import { Employment } from '../components/Employment'
+import { Education } from '../components/Education'
+import { Values } from '../components/Values'
 
 export const About = () => {
   // makes window scroll to top between renders
@@ -22,13 +23,53 @@ export const About = () => {
       <Skills />
       <Employment />
       <Education />
-      <Priorities />
+      <Values />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   width: 100vw;
+  section {
+    width: 100%;
+    .section-inner {
+      display: flex;
+      flex-direction: column;
+      padding: 80px 20px;
+    }
+    .heading {
+      font-size: 2rem;
+      margin-bottom: 50px;
+    }
+    h3 {
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 1.6rem;
+      color: ${COLORS.primaryAccent};
+    }
+    .title {
+      color: #666;
+      font-weight: bold;
+    }
+    .date {
+      color: #999;
+      font-size: 0.8rem;
+      margin-top: 10px;
+    }
+    .text {
+      max-width: 800px;
+      p {
+        margin: 20px 0;
+      }
+    }
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
+    section {
+      .section-inner {
+        align-items: center;
+      }
+    }
+  }
 `
 
 const Background = styled.div`

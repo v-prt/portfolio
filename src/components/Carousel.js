@@ -79,6 +79,7 @@ const Wrapper = styled.div`
       height: 600px;
       img {
         max-height: 600px;
+        max-width: 800px;
       }
     }
   }

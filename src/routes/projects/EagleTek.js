@@ -28,9 +28,9 @@ export const EagleTek = () => {
         <img src={wave} alt='' />
       </div>
       <section className='description'>
-        <h2 className='title'>
+        <h1 className='title'>
           [ <b>eagleTek</b> ]
-        </h2>
+        </h1>
         <div className='summary'>
           <p className='type'>Full-Stack Development, Responsive Website</p>
           <p className='duration'>Group Project • March 2021</p>

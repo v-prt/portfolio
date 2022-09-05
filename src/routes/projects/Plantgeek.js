@@ -42,9 +42,9 @@ export const Plantgeek = () => {
         <img src={wave} alt='' />
       </div>
       <section className='description'>
-        <h2 className='title'>
+        <h1 className='title'>
           [ <b>plantgeek</b> ]
-        </h2>
+        </h1>
         <div className='summary'>
           <p className='type'>Full-Stack Development, Responsive Website</p>
           <p className='duration'>Solo Project • April 2021</p>

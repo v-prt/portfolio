@@ -36,9 +36,9 @@ export const FeaturedProject = () => {
     <ProjectWrapper>
       <div className='description'>
         <p className='featuring'>featuring</p>
-        <h2 className='title'>
+        <h1 className='title'>
           [ <b>Creator Profile</b> ]
-        </h2>
+        </h1>
         <div className='summary'>
           <p className='type'>UX Design & Full-Stack Development, Responsive Website</p>
           <p className='duration'>Project Lead • July - August 2022</p>
