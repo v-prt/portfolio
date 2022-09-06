@@ -42,7 +42,6 @@ const Wrapper = styled.div`
       margin-bottom: 50px;
     }
     h3 {
-      margin-bottom: 20px;
       font-weight: bold;
       font-size: 1.6rem;
       color: ${COLORS.primaryAccent};
@@ -54,7 +53,6 @@ const Wrapper = styled.div`
     .date {
       color: #999;
       font-size: 0.8rem;
-      margin-top: 10px;
     }
     .text {
       max-width: 800px;

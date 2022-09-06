@@ -9,8 +9,8 @@ export const Employment = () => {
           [ <b>employment</b> ]
         </h2>
         <h3>Creator</h3>
-        <div className='title'>Full-Stack Developer & Lead UX/UI Engineer</div>
-        <div className='date'>June 2021 to present • Full-time</div>
+        <p className='title'>Full-Stack Developer & Lead UX/UI Engineer</p>
+        <p className='date'>June 2021 to present • Full-time</p>
         <div className='text'>
           <p>
             I'm currently working as a full-stack web developer at{' '}
@@ -43,8 +43,8 @@ export const Employment = () => {
           </p>
         </div>
         <h3 style={{ marginTop: '60px' }}>Self-Employed</h3>
-        <div className='title'>Freelance Web Developer</div>
-        <div className='date'>Summer 2021 • Part-time</div>
+        <p className='title'>Freelance Web Developer</p>
+        <p className='date'>Summer 2021 • Part-time</p>
         <div className='text'>
           <p>
             During the summer post-bootcamp, I did freelance work for a few different clients. My

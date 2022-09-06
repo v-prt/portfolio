@@ -12,14 +12,15 @@ export const Values = () => {
         <h2 className='heading'>
           [ <b>values</b> ]
         </h2>
+        <h3>Responsiveness, Accessibility, & Style</h3>
         <div className='text'>
           <p>
-            There are so many ways to be a great developer! These are some of the things I focus on
-            when I code.
+            There are so many ways to be a great developer! These are some of the most important
+            things I focus on when I code.
           </p>
         </div>
-        <div className='priorities'>
-          <div className='priority'>
+        <div className='values'>
+          <div className='value'>
             <img src={responsiveness} alt='responsiveness' />
             <h3>Responsiveness</h3>
             <p>
@@ -27,15 +28,15 @@ export const Values = () => {
               sure your website or app works well across a myriad of screen sizes and browsers.
             </p>
           </div>
-          <div className='priority'>
+          <div className='value'>
+            <img src={accessibility} alt='assessibility' />
             <h3>Accessibility</h3>
             <p>
-              More people are using the internet now more than ever. They come in all shapes and
-              sizes, and so should technology in order to meet their needs.
+              People come in all shapes and sizes. In order to provide the best experience for
+              everyone, technology should strive to meet the needs of its users.
             </p>
-            <img src={accessibility} alt='assessibility' />
           </div>
-          <div className='priority'>
+          <div className='value'>
             <img src={style} alt='style' />
             <h3>Style</h3>
             <p>
@@ -52,14 +53,14 @@ export const Values = () => {
 const Wrapper = styled.section`
   background: #222;
   color: #f6f6f6;
-  .priorities {
+  .values {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
-    .priority {
+    .value {
       background: #fff;
       color: ${COLORS.dark};
       max-width: 300px;
@@ -82,11 +83,11 @@ const Wrapper = styled.section`
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
-    .priorities {
+    .values {
       flex-direction: row;
       flex-wrap: wrap;
       gap: 30px;
-      .priority {
+      .value {
         img {
           height: 150px;
         }
@@ -94,9 +95,9 @@ const Wrapper = styled.section`
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
-    .priorities {
+    .values {
       gap: 40px;
-      .priority {
+      .value {
         padding: 50px 30px;
       }
     }

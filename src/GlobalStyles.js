@@ -49,6 +49,7 @@ export default createGlobalStyle`
     h1, h2, h3 {
       letter-spacing: 1px;
       font-weight: 200;
+      line-height: 1.5;
     }
     p {
       line-height: 1.75;
@@ -178,7 +179,6 @@ export const ProjectWrapper = styled.main`
       color: ${COLORS.primaryAccent};
       font-size: 1.8rem;
       font-weight: bold;
-      margin-bottom: 10px;
     }
     .title {
       font-size: 2rem;

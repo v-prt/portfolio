@@ -12,8 +12,8 @@ export const Education = () => {
           [ <b>education</b> ]
         </h2>
         <h3>Concordia University</h3>
-        <div className='title'>Full-Stack Web Development Diploma</div>
-        <div className='date'>Spring 2021</div>
+        <p className='title'>Full-Stack Web Development Diploma</p>
+        <p className='date'>Spring 2021</p>
         <div className='text'>
           <p>
             This intense 12-week coding bootcamp taught me the fundamentals of programming and gave
