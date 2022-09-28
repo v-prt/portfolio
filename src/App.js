@@ -6,6 +6,7 @@ import { Footer } from './components/Footer'
 import { Homepage } from './routes/Homepage'
 import { About } from './routes/About'
 import { Projects } from './routes/Projects'
+import { Swetz } from './routes/projects/Swetz'
 import { CreatorProfile } from './routes/projects/CreatorProfile'
 import { TicketWidget } from './routes/projects/TicketWidget'
 import { Plantgeek } from './routes/projects/Plantgeek'
@@ -21,6 +22,7 @@ export const App = () => {
         <Route path='/' element={<Homepage />} />
         <Route path='/about' element={<About />} />
         <Route path='/projects' element={<Projects />} />
+        <Route path='/projects/swetz' element={<Swetz />} />
         <Route path='/projects/creator-profile' element={<CreatorProfile />} />
         <Route path='/projects/ticket-widget' element={<TicketWidget />} />
         <Route path='/projects/plantgeek' element={<Plantgeek />} />

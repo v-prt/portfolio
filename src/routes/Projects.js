@@ -2,11 +2,12 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { COLORS, BREAKPOINTS } from '../GlobalStyles'
-import creatorProfile from '../assets/project-thumbnail1.svg'
-import eagleTek from '../assets/project-thumbnail2.svg'
-import plantgeek from '../assets/project-thumbnail3.svg'
-import sushiHeaven from '../assets/project-thumbnail4.svg'
-import ticketWidget from '../assets/project-thumbnail5.svg'
+import swetz from '../assets/swetz-thumbnail.svg'
+import creatorProfile from '../assets/creator-profile-thumbnail.svg'
+import ticketWidget from '../assets/ticket-widget-thumbnail.svg'
+import plantgeek from '../assets/plantgeek-thumbnail.svg'
+import eagleTek from '../assets/eagletek-thumbnail.svg'
+import sushiHeaven from '../assets/sushi-heaven-thumbnail.svg'
 
 export const Projects = () => {
   // makes window scroll to top between renders
@@ -15,6 +16,14 @@ export const Projects = () => {
   }, [])
 
   const projects = [
+    {
+      path: 'swetz',
+      thumbnail: swetz,
+      title: 'SWETZ',
+      type: 'UX Design',
+      device: 'Responsive Website',
+      role: 'Solo Project • Aug - Sep 2022',
+    },
     {
       path: 'creator-profile',
       thumbnail: creatorProfile,
