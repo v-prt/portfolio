@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { COLORS, BREAKPOINTS } from '../GlobalStyles'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
@@ -9,7 +10,16 @@ export const Footer = () => {
     <Wrapper>
       <div className='footer-inner'>
         <div className='basic-info'>
-          <p className='name'>Victoria Peart</p>
+          <div className='logo-wrapper'>
+            <NavLink className='logo' to='/'>
+              VP
+            </NavLink>
+            <p className='name'>
+              Victoria
+              <br />
+              Peart
+            </p>
+          </div>
           <p className='services'>
             Full-Stack Web Development, UX/UI, Responsive Websites, & Mobile App Design
           </p>
@@ -51,9 +61,32 @@ const Wrapper = styled.footer`
     .basic-info {
       padding: 20px 0;
       border-bottom: 1px dotted #ccc;
-      .name {
-        font-size: 1.2rem;
-        font-weight: bold;
+      .logo-wrapper {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .logo {
+          background: ${COLORS.dark};
+          color: #fff;
+          padding: 10px;
+          font-size: 2.5rem;
+          font-family: 'Train One', cursive;
+          transition: 0.2s ease-in-out;
+          border-radius: 0 20px;
+          &:hover {
+            background: ${COLORS.primaryAccent};
+          }
+        }
+        .name {
+          color: ${COLORS.dark};
+          font-size: 1.2rem;
+          font-weight: bold;
+          line-height: 1.25;
+          margin-top: 10px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
       }
       .services {
         font-size: 0.8rem;

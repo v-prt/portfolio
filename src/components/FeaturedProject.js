@@ -42,7 +42,7 @@ export const FeaturedProject = () => {
         <div className='summary'>
           <p className='type'>UX Design & Full-Stack Development, Responsive Website</p>
           <p className='duration'>Project Lead • July - August 2022</p>
-          <p className='collaborators'>
+          {/* <p className='collaborators'>
             Collaborators:{' '}
             <a
               className='link'
@@ -59,7 +59,7 @@ export const FeaturedProject = () => {
               rel='noopener noreferrer'>
               Pramod Suthar
             </a>
-          </p>
+          </p> */}
         </div>
         <div className='details'>
           <p>
@@ -85,7 +85,7 @@ export const FeaturedProject = () => {
             for social media services, upload recommended products, showcase an NFT collection, and
             add custom links.
           </p>
-          <p>
+          {/* <p>
             My teammates were responsible for securing SSLs for the custom subdomains as well as
             setting up crypto wallet connection for verifying ownership of the{' '}
             <a
@@ -96,7 +96,7 @@ export const FeaturedProject = () => {
               Creator Passport NFT
             </a>{' '}
             to unlock premium features.
-          </p>
+          </p> */}
           <div className='buttons'>
             <LinkButton
               className='black'

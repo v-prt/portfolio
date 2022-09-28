@@ -45,10 +45,6 @@ export const Header = () => {
         </div>
         <nav className={`mobile-nav ${isExpanded && 'expanded'}`}>
           <div className='mobile-nav-inner'>
-            <div className='site-info'>
-              <h1 className='title'>Victoria Peart • Portfolio</h1>
-              <p>Web Development and UX/UI Design</p>
-            </div>
             <div className='nav-links' onClick={() => setIsExpanded(false)}>
               <NavLink className='nav-link' to='/'>
                 Home
@@ -99,15 +95,18 @@ const Wrapper = styled.header`
     align-items: center;
   }
   .logo {
+    background: ${COLORS.dark};
+    padding: 5px;
+    border-radius: 0 10px;
+    transition: 0.2s ease-in-out;
     a {
-      color: ${COLORS.dark};
-      font-family: 'Gallaudet-Regular', sans-serif;
-      font-weight: 100;
-      font-size: 2.5rem;
-      &:hover,
-      &:focus {
-        color: ${COLORS.primaryAccent};
-      }
+      color: #fff;
+      font-family: 'Train One', cursive;
+      font-size: 1.5rem;
+    }
+    &:hover,
+    &:focus {
+      background: ${COLORS.primaryAccent};
     }
   }
   .main-nav {
@@ -149,12 +148,13 @@ const Wrapper = styled.header`
     font-size: 1.4rem;
     display: grid;
   }
+
   .mobile-nav {
     background: #f6f6f6;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 45px);
     width: 100vw;
     position: absolute;
-    top: 50px;
+    top: 45px;
     right: -100%;
     transition: 0.2s ease-in-out;
     &.expanded {
@@ -164,7 +164,7 @@ const Wrapper = styled.header`
       display: flex;
       flex-direction: column;
       height: 100%;
-      .site-info {
+      /* .site-info {
         text-align: center;
         font-size: 0.8rem;
         opacity: 0.75;
@@ -190,15 +190,15 @@ const Wrapper = styled.header`
           padding: 10px 0;
           font-weight: bold;
         }
-      }
+      } */
       .nav-links {
         margin: 40px 20px;
         padding-top: 40px;
-        border-top: 1px dotted rgba(0, 0, 0, 0.4);
         display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        gap: 15px;
+        gap: 40px;
       }
       .social-links {
         display: flex;

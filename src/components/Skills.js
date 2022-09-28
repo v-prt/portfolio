@@ -8,7 +8,7 @@ export const Skills = () => {
         <h2 className='heading'>
           [ <b>skills</b> ]
         </h2>
-        <h3>Full-Stack Development & UI/UX Design</h3>
+        <h3>Full-Stack Development & UX/UI Design</h3>
         <div className='text'>
           <p>
             My strengths lie mostly in front-end and UX/UI related development where my artistic
