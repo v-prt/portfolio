@@ -46,7 +46,7 @@ export const Projects = () => {
       title: 'plantgeek',
       type: 'Full-Stack Development',
       device: 'Responsive Website',
-      role: 'Solo Project • Apr 2021',
+      role: 'Solo Project • Apr 2021 - current',
     },
     {
       path: 'eagletek',

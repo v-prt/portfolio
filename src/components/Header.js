@@ -5,6 +5,7 @@ import { COLORS, gradientAnimation } from '../GlobalStyles'
 import { BiMenu } from 'react-icons/bi'
 import { RiCloseLine } from 'react-icons/ri'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
 
 export const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -31,6 +32,9 @@ export const Header = () => {
             target='_blank'
             rel='noopener noreferrer'>
             <FaGithub />
+          </a>
+          <a className='social-link' href='mailto:v-peart@outlook.com'>
+            <MdEmail />
           </a>
           <a
             className='social-link'
@@ -63,6 +67,9 @@ export const Header = () => {
                 target='_blank'
                 rel='noopener noreferrer'>
                 <FaGithub />
+              </a>
+              <a className='social-link' href='mailto:v-peart@outlook.com'>
+                <MdEmail />
               </a>
               <a
                 className='social-link'

@@ -25,7 +25,7 @@ export const Values = () => {
             <h3>Responsiveness</h3>
             <p>
               You never know what kind of device your clients are using, so it's important to be
-              sure your website or app works well across a myriad of screen sizes and browsers.
+              sure your website or app is optimized for a myriad of screen sizes and browsers.
             </p>
           </div>
           <div className='value'>

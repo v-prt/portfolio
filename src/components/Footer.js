@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { COLORS, BREAKPOINTS } from '../GlobalStyles'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
 
 export const Footer = () => {
   const year = new Date().getFullYear()
@@ -35,6 +36,9 @@ export const Footer = () => {
             target='_blank'
             rel='noopener noreferrer'>
             <FaGithub />
+          </a>
+          <a className='social-link' href='mailto:v-peart@outlook.com'>
+            <MdEmail />
           </a>
           <a
             className='social-link'

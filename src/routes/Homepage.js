@@ -9,9 +9,8 @@ import {
   gradientAnimation,
   typing,
   blinkCaret,
-  animatedGradientBorder,
 } from '../GlobalStyles'
-import headshot from '../assets/victoria.JPG'
+import headshot from '../assets/headshot.jpg'
 import { FeaturedProject } from '../components/FeaturedProject'
 import { ViewAllProjects } from '../components/ViewAllProjects'
 import pattern from '../assets/code.svg'
@@ -47,22 +46,31 @@ export const Homepage = () => {
         </div>
       </section>
       <section className='intro'>
-        <div className='gradient-image-border'>
-          <img className='headshot' src={headshot} alt='' />
-        </div>
+        <img className='headshot' src={headshot} alt='' />
         <div className='text'>
-          <h2>Hey! I'm Victoria.</h2>
-          <p>I'm a full-stack Web Developer from West Kelowna, BC.</p>
+          <h2>Hey! I'm Victoria, that deaf dev.</h2>
           <p>
-            As a deaf person, I prioritize
-            <strong> visual appeal, accessibility, and thoughtful UX</strong> in coding. I most
-            enjoy working on projects that allow me creative freedom and ability to use my design
-            skills, and with the goal of providing a better experience for users.
+            I’m a full-stack developer with a particular knack for design. I have been coding for 2+
+            years, and I recently obtained my UX Design certification from Google.
           </p>
           <p>
-            When I'm not coding, I'm usually playing video games, board games, or Netflix & chilling
-            with my husband and our two adorable cats. I also try to go hiking whenever the weather
-            is nice to enjoy the beautiful, natural landscape around us here in BC!
+            I really enjoy projects that allow me to use my creativity to come up with cool designs
+            or to improve the user experience of a product. I’ve been working remotely for{' '}
+            <a href='https://creator.co' target='_blank' rel='noopener noreferrer'>
+              creator.co
+            </a>{' '}
+            with a small and scrappy dev team since 2021, and have many such projects under my belt.
+            My coworkers call me the UX Queen. 👑
+          </p>
+          <p>
+            When I’m not coding, I’m usually playing video games, reading, or NetFlix & chilling
+            with my hubby and two cats. I also try to go hiking whenever the weather allows to enjoy
+            the beautiful, natural landscape around us here in Kelowna!
+          </p>
+          <p>
+            If you’d like to get in touch, email me at{' '}
+            <a href='mailto:v-peart@outlook.com'>v-peart@outlook.com</a> or connect with me on
+            LinkedIn.
           </p>
           <div className='buttons'>
             <LinkButton
@@ -176,45 +184,21 @@ const Wrapper = styled.main`
     background: ${COLORS.dark};
     color: #fff;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
-    padding: 360px 0 30px 0;
-    position: relative;
-    .gradient-image-border {
-      height: 250px;
-      width: 250px;
-      --borderWidth: 5px;
-      border-radius: 50%;
-      position: absolute;
-      z-index: 1;
-      top: 60px;
-    }
-    .gradient-image-border:after {
-      content: '';
-      position: absolute;
-      top: calc(-1 * var(--borderWidth));
-      left: calc(-1 * var(--borderWidth));
-      height: calc(100% + var(--borderWidth) * 2);
-      width: calc(100% + var(--borderWidth) * 2);
-      background: linear-gradient(60deg, ${COLORS.secondaryAccent}, ${COLORS.primaryAccent});
-      border-radius: 50%;
-      z-index: -1;
-      animation: ${animatedGradientBorder} 3s ease alternate infinite;
-      background-size: 300% 300%;
-    }
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 20px;
     .headshot {
       filter: grayscale(100%);
-      max-height: 100%;
-      max-width: 100%;
-      border-radius: 50%;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
     }
     .text {
       display: flex;
       flex-direction: column;
-      max-width: 800px;
-      margin: 0 20px;
+      max-width: 600px;
       h2 {
         margin: 10px 0;
         font-weight: bold;
@@ -255,12 +239,8 @@ const Wrapper = styled.main`
       }
     }
     .intro {
-      padding: 410px 0 40px 0;
-      .gradient-image-border {
-        height: 300px;
-        width: 300px;
-        top: 70px;
-      }
+      padding: 100px 20px;
+      gap: 40px;
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
@@ -272,12 +252,9 @@ const Wrapper = styled.main`
       }
     }
     .intro {
-      padding: 480px 0 40px 0;
-      .gradient-image-border {
-        height: 350px;
-        width: 350px;
-        top: 80px;
-      }
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 50px;
     }
   }
 `

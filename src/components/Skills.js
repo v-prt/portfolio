@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import { COLORS, BREAKPOINTS } from '../GlobalStyles'
+import { BREAKPOINTS } from '../GlobalStyles'
 
 export const Skills = () => {
   return (
@@ -78,7 +78,6 @@ const Wrapper = styled.section`
     .group {
       background: #fff;
       color: #1a1a1a;
-      /* width: 250px; */
       padding: 20px;
       border-radius: 15px;
       .title {

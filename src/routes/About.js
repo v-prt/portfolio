@@ -71,7 +71,7 @@ const Wrapper = styled.div`
 `
 
 const Background = styled.div`
-  background: linear-gradient(#000, #000), url(${background}) center center / cover;
+  background: linear-gradient(#222, #444), url(${background}) center center / cover;
   background-blend-mode: saturation;
   height: 100vh;
   width: 100vw;
