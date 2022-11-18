@@ -37,7 +37,11 @@ export const Footer = () => {
             rel='noopener noreferrer'>
             <FaGithub />
           </a>
-          <a className='social-link' href='mailto:v-peart@outlook.com'>
+          <a
+            className='social-link'
+            href='mailto:victoriapeart.dev@gmail.com'
+            target='_blank'
+            rel='noopener noreferrer'>
             <MdEmail />
           </a>
           <a

@@ -69,8 +69,10 @@ export const Homepage = () => {
           </p>
           <p>
             If you’d like to get in touch, email me at{' '}
-            <a href='mailto:v-peart@outlook.com'>v-peart@outlook.com</a> or connect with me on
-            LinkedIn.
+            <a href='mailto:victoriapeart.dev@gmail.com' target='_blank' rel='noopener noreferrer'>
+              victoriapeart.dev@gmail.com
+            </a>{' '}
+            or connect with me on LinkedIn.
           </p>
           <div className='buttons'>
             <LinkButton
@@ -183,10 +185,8 @@ const Wrapper = styled.main`
   .intro {
     background: ${COLORS.dark};
     color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-content: center;
     gap: 30px;
     padding: 80px 20px;
     .headshot {
@@ -194,11 +194,11 @@ const Wrapper = styled.main`
       width: 100%;
       max-width: 400px;
       border-radius: 20px;
+      margin: auto;
     }
     .text {
       display: flex;
       flex-direction: column;
-      max-width: 600px;
       h2 {
         margin: 10px 0;
         font-weight: bold;
@@ -252,9 +252,15 @@ const Wrapper = styled.main`
       }
     }
     .intro {
-      flex-direction: row;
+      display: flex;
       align-items: flex-start;
       gap: 50px;
+      .headshot {
+        margin: 0;
+      }
+      .text {
+        max-width: 600px;
+      }
     }
   }
 `

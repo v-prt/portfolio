@@ -4,6 +4,7 @@ import { COLORS, BREAKPOINTS } from '../GlobalStyles'
 import { IoMdArrowDroprightCircle, IoMdArrowDropleftCircle } from 'react-icons/io'
 
 export const Carousel = ({ images }) => {
+  const [imagesLoaded, setImagesLoaded] = useState(false)
   const [slideIndex, setSlideIndex] = useState(0)
 
   useEffect(() => {
@@ -17,15 +18,34 @@ export const Carousel = ({ images }) => {
     dots[slideIndex].className += ' active'
 
     // automatically change to next slide every 3 seconds (starting over at end)
-    const interval = setInterval(() => {
-      setSlideIndex(slideIndex === images.length - 1 ? 0 : slideIndex + 1)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [images.length, slideIndex])
+    if (imagesLoaded) {
+      const interval = setInterval(() => {
+        setSlideIndex(slideIndex === images.length - 1 ? 0 : slideIndex + 1)
+      }, 3000)
+      return () => clearInterval(interval)
+    }
+  }, [images.length, imagesLoaded, slideIndex])
+
+  // set images loaded to true when all images have been loaded
+  useEffect(() => {
+    let imagesLoaded = 0
+    images.forEach(image => {
+      let img = new Image()
+      img.src = image
+      img.onload = () => {
+        imagesLoaded++
+        if (imagesLoaded === images.length) {
+          setImagesLoaded(true)
+        }
+      }
+    })
+  }, [images, setImagesLoaded])
 
   return (
     <Wrapper>
-      <div className='slideshow-container'>
+      {!imagesLoaded && <div className='preloader' />}
+
+      <div className={`slideshow-container ${imagesLoaded ? 'visible' : 'hidden'}`}>
         {images.map((image, index) => (
           <div key={index} className='slide fade'>
             <img src={image} alt='' />
@@ -53,11 +73,36 @@ export const Carousel = ({ images }) => {
 }
 
 const Wrapper = styled.div`
+  position: relative;
+  .preloader {
+    height: 600px;
+    width: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(90deg, #f2f2f2 0px, #fafafa 100px, #f2f2f2 300px);
+    background-size: 100vw 100%;
+    animation: shine 1.5s infinite ease-in-out;
+    position: absolute;
+  }
+  @keyframes shine {
+    0% {
+      background-position-x: -20vw;
+    }
+    100% {
+      background-position-x: 85vw;
+    }
+  }
   .slideshow-container {
     max-width: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity 0.5s;
+    &.visible {
+      opacity: 1;
+    }
+    &.hidden {
+      opacity: 0;
+    }
   }
   .slide {
     display: none;

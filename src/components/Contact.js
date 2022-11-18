@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import { COLORS, BREAKPOINTS, Button, LinkButton } from '../GlobalStyles'
+import { COLORS, BREAKPOINTS, LinkButton } from '../GlobalStyles'
 import illustration from '../assets/illustrations/contact.svg'
 
 export const Contact = () => {
@@ -9,8 +9,11 @@ export const Contact = () => {
         <div className='text'>
           <h2>Wanna get in touch?</h2>
           <p>
-            I'm available to connect on LinkedIn, or email me at{' '}
-            <a href='mailto:v-peart@outlook.com'>v-peart@outlook.com</a>.
+            Email me at{' '}
+            <a href='mailto:victoriapeart.dev@gmail.com' target='_blank' rel='noopener noreferrer'>
+              victoriapeart.dev@gmail.com
+            </a>{' '}
+            or connect with me on LinkedIn.
           </p>
           <div className='buttons'>
             <LinkButton
