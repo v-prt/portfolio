@@ -2,11 +2,12 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { COLORS, BREAKPOINTS } from '../GlobalStyles'
+import deaflink from '../assets/deaflink-thumbnail.svg'
 import swetz from '../assets/swetz-thumbnail.svg'
 import creatorProfile from '../assets/creator-profile-thumbnail.svg'
 import ticketWidget from '../assets/ticket-widget-thumbnail.svg'
 import plantgeek from '../assets/plantgeek-thumbnail.svg'
-import eagleTek from '../assets/eagletek-thumbnail.svg'
+// import eagleTek from '../assets/eagletek-thumbnail.svg'
 import sushiHeaven from '../assets/sushi-heaven-thumbnail.svg'
 
 export const Projects = () => {
@@ -16,6 +17,14 @@ export const Projects = () => {
   }, [])
 
   const projects = [
+    {
+      path: 'deaflink',
+      thumbnail: deaflink,
+      title: 'deafLINK',
+      type: 'UX Design',
+      device: 'Mobile App & Responsive Website',
+      role: 'Solo Project • Oct - Nov 2022',
+    },
     {
       path: 'swetz',
       thumbnail: swetz,
@@ -28,7 +37,7 @@ export const Projects = () => {
       path: 'creator-profile',
       thumbnail: creatorProfile,
       title: 'Creator Profile',
-      type: 'UX Design & Full-Stack Development',
+      type: 'Full-Stack Development',
       device: 'Responsive Website',
       role: 'Project Lead • Jul - Aug 2022',
     },
@@ -48,14 +57,14 @@ export const Projects = () => {
       device: 'Responsive Website',
       role: 'Solo Project • Apr 2021 - current',
     },
-    {
-      path: 'eagletek',
-      thumbnail: eagleTek,
-      title: 'eagleTek',
-      type: 'Full-Stack Development',
-      device: 'Responsive Website',
-      role: 'Group Project • Mar 2021',
-    },
+    // {
+    //   path: 'eagletek',
+    //   thumbnail: eagleTek,
+    //   title: 'eagleTek',
+    //   type: 'Full-Stack Development',
+    //   device: 'Responsive Website',
+    //   role: 'Group Project • Mar 2021',
+    // },
     {
       path: 'sushi-heaven',
       thumbnail: sushiHeaven,
@@ -164,7 +173,7 @@ const Wrapper = styled.main`
       .project-card {
         flex-direction: column;
         flex: 1;
-        min-width: 300px;
+        min-width: 400px;
         .thumbnail {
           min-height: 250px;
         }

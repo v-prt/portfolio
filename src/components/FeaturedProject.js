@@ -40,33 +40,15 @@ export const FeaturedProject = () => {
           [ <b>Creator Profile</b> ]
         </h1>
         <div className='summary'>
-          <p className='type'>UX Design & Full-Stack Development, Responsive Website</p>
+          <p className='type'>Full-Stack Development, Responsive Website</p>
           <p className='duration'>Project Lead • July - August 2022</p>
-          {/* <p className='collaborators'>
-            Collaborators:{' '}
-            <a
-              className='link'
-              href='https://www.linkedin.com/in/alex-i-quast/'
-              target='_blank'
-              rel='noopener noreferrer'>
-              Alex Quast
-            </a>
-            ,{' '}
-            <a
-              className='link'
-              href='https://www.linkedin.com/in/pramodsuthar/'
-              target='_blank'
-              rel='noopener noreferrer'>
-              Pramod Suthar
-            </a>
-          </p> */}
         </div>
         <div className='details'>
           <p>
             One of the biggest projects I undertook at Creator and one I'm most proud of! As project
             lead, I was responsible for the UX/UI design and the majority of the development for the
-            Creator Profile which serves as a digital media kit and link in bio for social media
-            influencers on the{' '}
+            Creator Profile which serves as a digital media kit or resume and link in bio for social
+            media influencers on the{' '}
             <a className='link' href='https://creator.co' target='_blank' rel='noopener noreferrer'>
               creator.co
             </a>{' '}
@@ -85,18 +67,6 @@ export const FeaturedProject = () => {
             for social media services, upload recommended products, showcase an NFT collection, and
             add custom links.
           </p>
-          {/* <p>
-            My teammates were responsible for securing SSLs for the custom subdomains as well as
-            setting up crypto wallet connection for verifying ownership of the{' '}
-            <a
-              className='link'
-              href='https://creator.co/passport-nft'
-              target='_blank'
-              rel='noopener noreferrer'>
-              Creator Passport NFT
-            </a>{' '}
-            to unlock premium features.
-          </p> */}
           <div className='buttons'>
             <LinkButton
               className='black'

@@ -6,6 +6,7 @@ import { Footer } from './components/Footer'
 import { Homepage } from './routes/Homepage'
 import { About } from './routes/About'
 import { Projects } from './routes/Projects'
+import { DeafLink } from './routes/projects/DeafLink'
 import { Swetz } from './routes/projects/Swetz'
 import { CreatorProfile } from './routes/projects/CreatorProfile'
 import { TicketWidget } from './routes/projects/TicketWidget'
@@ -22,6 +23,7 @@ export const App = () => {
         <Route path='/' element={<Homepage />} />
         <Route path='/about' element={<About />} />
         <Route path='/projects' element={<Projects />} />
+        <Route path='/projects/deaflink' element={<DeafLink />} />
         <Route path='/projects/swetz' element={<Swetz />} />
         <Route path='/projects/creator-profile' element={<CreatorProfile />} />
         <Route path='/projects/ticket-widget' element={<TicketWidget />} />

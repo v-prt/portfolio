@@ -65,7 +65,7 @@ const Wrapper = styled.div`
     height: 350px;
     img {
       max-height: 350px;
-      max-width: 90vw;
+      max-width: 100%;
       border-radius: 10px;
       box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
     }
