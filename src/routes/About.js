@@ -9,6 +9,7 @@ import { Skills } from '../components/Skills'
 import { Employment } from '../components/Employment'
 import { Education } from '../components/Education'
 import { Values } from '../components/Values'
+import { Contact } from '../components/Contact'
 
 export const About = () => {
   // makes window scroll to top between renders
@@ -24,6 +25,7 @@ export const About = () => {
       <Employment />
       <Education />
       <Values />
+      <Contact />
     </Wrapper>
   )
 }

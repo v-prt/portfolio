@@ -6,7 +6,7 @@ export const Employment = () => {
     <Wrapper>
       <div className='section-inner'>
         <h2 className='heading'>
-          [ <b>employment</b> ]
+          [ <b>experience</b> ]
         </h2>
         <h3>Creator</h3>
         <p className='title'>Full-Stack Developer & Lead UX/UI Engineer</p>
