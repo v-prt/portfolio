@@ -209,6 +209,11 @@ export const ProjectWrapper = styled.main`
       margin: 10px 0;
     }
   }
+  .mockups {
+    width: 100%;
+    margin: 40px 0;
+    border-radius: 10px;
+  }
   .buttons {
     display: flex;
     flex-direction: column;

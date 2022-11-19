@@ -13,6 +13,7 @@ import image6 from '../../assets/deaflink/deaflink6.png'
 import image7 from '../../assets/deaflink/deaflink7.png'
 import image8 from '../../assets/deaflink/deaflink8.png'
 import image9 from '../../assets/deaflink/deaflink9.png'
+import mockups from '../../assets/deaflink/deaflink-mockups.jpg'
 
 export const DeafLink = () => {
   // makes window scroll to top between renders
@@ -37,23 +38,21 @@ export const DeafLink = () => {
         </div>
         <div className='details'>
           <p>
-            My final project completed for my Google UX Design course designing a user experience
-            for social good. I chose to solve a problem faced by the <b>deaf community</b> - being
-            disconnected from each other and lacking access to resources that could enrich their
-            lives.
+            My final project completed for my Google UX Design Certification in which I designed a
+            user experience for social good. I chose to solve a problem faced by the{' '}
+            <b>deaf community</b> - being disconnected from each other and lacking access to
+            resources that could enrich their lives.
           </p>
+        </div>
+        <img className='mockups' src={mockups} alt='' />
+        <div className='details'>
           <p>
-            My solution to this real world issue is a social media mobile app focused on helping
+            My solution to this real world issue was a social media mobile app focused on helping
             deaf or hard-of-hearing people around the world meet and connect through events. I also
             created a complementary responsive website to provide deaf, hard-of-hearing and hearing
             people a central place for finding resources or services such as sign language
             interpreters, ASL guides, deaf-friendly businesses, and more.
           </p>
-        </div>
-        <div style={{ margin: '40px 0' }}>
-          <Carousel images={projectImages} />
-        </div>
-        <div className='details'>
           <p>
             In order to inform my designs, I conducted user research and did a competitive audit on
             other social media apps and websites for the deaf to discover gaps and opportunities for
@@ -67,10 +66,14 @@ export const DeafLink = () => {
             architecture and site hierarchy which would help propel the rest of the design process
             for the website.
           </p>
+          <div style={{ margin: '40px 0' }}>
+            <Carousel images={projectImages} />
+          </div>
           <p>
             Ultimately, this project taught me how to consider the use case of the product I'm
-            designing - whether it's a mobile app or website and to optimize my designs to meet
-            device specifications while keeping the users' needs front of mind.
+            designing - whether it's a mobile app or website and to optimize page layouts and
+            navigation to meet different device specifications while keeping the user's needs front
+            of mind.
           </p>
           <div className='buttons'>
             <LinkButton

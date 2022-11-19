@@ -107,7 +107,6 @@ const Wrapper = styled.main`
   }
   .banner {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -123,8 +122,14 @@ const Wrapper = styled.main`
     }
   }
   .heading {
+    height: 300px;
+    width: 100%;
+    max-width: 350px;
     animation: ${fadeIn} 1s ease-in-out;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: right;
     padding: 20px;
     margin: 20px;
@@ -224,6 +229,8 @@ const Wrapper = styled.main`
       background-size: 300px;
     }
     .heading {
+      height: 400px;
+      max-width: 600px;
       transform: skew(-3deg, -3deg);
       padding: 30px;
       h1 {
@@ -245,6 +252,8 @@ const Wrapper = styled.main`
   }
   @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
     .heading {
+      height: 500px;
+      max-width: 800px;
       h1 {
         span {
           font-size: 14rem;

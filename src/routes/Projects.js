@@ -104,7 +104,7 @@ const Wrapper = styled.main`
   display: flex;
   .project-grid {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
     gap: 30px;

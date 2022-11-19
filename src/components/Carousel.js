@@ -43,9 +43,8 @@ export const Carousel = ({ images }) => {
 
   return (
     <Wrapper>
-      {!imagesLoaded && <div className='preloader' />}
-
       <div className={`slideshow-container ${imagesLoaded ? 'visible' : 'hidden'}`}>
+        {!imagesLoaded && <div className='preloader' />}
         {images.map((image, index) => (
           <div key={index} className='slide fade'>
             <img src={image} alt='' />
@@ -73,9 +72,22 @@ export const Carousel = ({ images }) => {
 }
 
 const Wrapper = styled.div`
-  position: relative;
+  .slideshow-container {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s;
+    position: relative;
+    &.visible {
+      opacity: 1;
+    }
+    &.hidden {
+      opacity: 0;
+    }
+  }
   .preloader {
-    height: 600px;
+    height: 100%;
     width: 100%;
     border-radius: 10px;
     background-image: linear-gradient(90deg, #f2f2f2 0px, #fafafa 100px, #f2f2f2 300px);
@@ -89,19 +101,6 @@ const Wrapper = styled.div`
     }
     100% {
       background-position-x: 85vw;
-    }
-  }
-  .slideshow-container {
-    max-width: 1000px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.5s;
-    &.visible {
-      opacity: 1;
-    }
-    &.hidden {
-      opacity: 0;
     }
   }
   .slide {
