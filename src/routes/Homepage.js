@@ -15,6 +15,7 @@ import { FeaturedProject } from '../components/FeaturedProject'
 import { ViewAllProjects } from '../components/ViewAllProjects'
 import pattern from '../assets/code.svg'
 import wave from '../assets/wave.svg'
+import { ImageLoader } from '../components/ImageLoader'
 
 export const Homepage = () => {
   // makes window scroll to top between renders
@@ -46,7 +47,9 @@ export const Homepage = () => {
         </div>
       </section>
       <section className='intro'>
-        <img className='headshot' src={headshot} alt='' />
+        <div className='headshot'>
+          <ImageLoader src={headshot} alt='' borderRadius='20px' />
+        </div>
         <div className='text'>
           <h2>Hey! I'm Victoria, that deaf dev.</h2>
           <p>
@@ -198,7 +201,6 @@ const Wrapper = styled.main`
       filter: grayscale(100%);
       width: 100%;
       max-width: 400px;
-      border-radius: 20px;
       margin: auto;
     }
     .text {

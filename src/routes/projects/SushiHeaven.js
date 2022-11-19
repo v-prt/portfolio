@@ -1,21 +1,21 @@
 import { useEffect } from 'react'
 import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
 import { ViewAllProjects } from '../../components/ViewAllProjects'
-import { Carousel } from '../../components/Carousel'
+// import { Carousel } from '../../components/Carousel'
 import wave from '../../assets/white-wave.svg'
 
-import image1 from '../../assets/sushi-heaven/sushi-heaven-home.png'
-import image2 from '../../assets/sushi-heaven/sushi-heaven-game.png'
-import image3 from '../../assets/sushi-heaven/cookie-heaven-game3.png'
-import image4 from '../../assets/sushi-heaven/cookie-clicker.png'
+// import image1 from '../../assets/sushi-heaven/sushi-heaven-home.png'
+// import image2 from '../../assets/sushi-heaven/sushi-heaven-game.png'
+// import image3 from '../../assets/sushi-heaven/cookie-heaven-game3.png'
+// import image4 from '../../assets/sushi-heaven/cookie-clicker.png'
+import mockups from '../../assets/sushi-heaven/sushi-heaven-mockups.png'
+import { ImageLoader } from '../../components/ImageLoader'
 
 export const SushiHeaven = () => {
   // makes window scroll to top between renders
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
-  const projectImages = [image1, image2, image3, image4]
 
   return (
     <ProjectWrapper>
@@ -33,18 +33,17 @@ export const SushiHeaven = () => {
         <div className='details'>
           <p>
             A spin on the classic "Cookie Clicker" browser game which started as a small school
-            project and evolved over time as I kept tinkering and improving the aesthetics and
-            gameplay.
+            project and evolved over time as I continued to tinker with the aesthetics and gameplay
+            logic. It was a fun way to practice my Javascript skills and learn more about game
+            design, which is something I've always been interested in.
           </p>
-        </div>
-        <div style={{ margin: '40px 0' }}>
-          <Carousel images={projectImages} />
-        </div>
-        <div className='details'>
+          <div className='mockups'>
+            <ImageLoader src={mockups} alt='' borderRadius='10px' />
+          </div>
           <p>
-            The goal of this game is to make as much sushi as you can, buy upgrades and restaurants,
-            and work your way up to owning a franchise. Try it out and have fun - the game
-            automatically saves your progress so you can always come back to it later!
+            The goal of the game is to make as much sushi as you can, buy upgrades and restaurants,
+            and work your way up to owning a franchise. Try it out and have fun - your progress is
+            automatically saved so you can always come back to it later!
           </p>
           <LinkButton
             className='black'

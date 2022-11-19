@@ -9,6 +9,7 @@ import ticketWidget from '../assets/ticket-widget-thumbnail.svg'
 import plantgeek from '../assets/plantgeek-thumbnail.svg'
 // import eagleTek from '../assets/eagletek-thumbnail.svg'
 import sushiHeaven from '../assets/sushi-heaven-thumbnail.svg'
+import { ImageLoader } from '../components/ImageLoader'
 
 export const Projects = () => {
   // makes window scroll to top between renders
@@ -79,8 +80,10 @@ export const Projects = () => {
     <Wrapper>
       <div className='project-grid'>
         {projects.map((project, index) => (
-          <Link key={index} className='project-card fade-in' to={`/projects/${project.path}`}>
-            <div className='thumbnail' style={{ backgroundImage: `url(${project.thumbnail})` }} />
+          <Link to={`/projects/${project.path}`} className='project-card' key={index}>
+            <div className='thumbnail'>
+              <ImageLoader src={project.thumbnail} alt='' />
+            </div>
             <div className='text'>
               <h2 className='title'>
                 [ <b>{project.title}</b> ]
@@ -114,7 +117,9 @@ const Wrapper = styled.main`
       background: #fff;
       box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.1);
       border-radius: 20px;
+      cursor: pointer;
       overflow: hidden;
+      transition: 0.2s ease-in-out;
       // prevent hover effect on touch screens
       @media (hover: hover) {
         &:hover {
@@ -123,8 +128,6 @@ const Wrapper = styled.main`
         }
       }
       .thumbnail {
-        background-size: cover;
-        background-position: center;
         width: 100%;
         height: 200px;
       }
@@ -176,6 +179,10 @@ const Wrapper = styled.main`
         min-width: 400px;
         .thumbnail {
           min-height: 250px;
+          flex: auto;
+        }
+        .text {
+          flex: auto;
         }
       }
     }
