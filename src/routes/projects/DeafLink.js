@@ -3,7 +3,6 @@ import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
 import { ViewAllProjects } from '../../components/ViewAllProjects'
 import { Carousel } from '../../components/Carousel'
 import wave from '../../assets/white-wave.svg'
-import { ImageLoader } from '../../components/ImageLoader'
 
 import image1 from '../../assets/deaflink/deaflink1.png'
 import image2 from '../../assets/deaflink/deaflink2.png'
@@ -44,9 +43,7 @@ export const DeafLink = () => {
             <b>deaf community</b> - being disconnected from each other and lacking access to
             resources that could enrich their lives.
           </p>
-          <div className='mockups'>
-            <ImageLoader src={mockups} alt='' borderRadius='10px' />
-          </div>
+          <img className='mockups' src={mockups} alt='' />
           <p>
             My solution to this real world issue was a social media mobile app focused on helping
             deaf or hard-of-hearing people around the world meet and connect through events. I also

@@ -9,7 +9,6 @@ import ticketWidget from '../assets/ticket-widget-thumbnail.svg'
 import plantgeek from '../assets/plantgeek-thumbnail.svg'
 // import eagleTek from '../assets/eagletek-thumbnail.svg'
 import sushiHeaven from '../assets/sushi-heaven-thumbnail.svg'
-import { ImageLoader } from '../components/ImageLoader'
 
 export const Projects = () => {
   // makes window scroll to top between renders
@@ -82,7 +81,7 @@ export const Projects = () => {
         {projects.map((project, index) => (
           <Link to={`/projects/${project.path}`} className='project-card' key={index}>
             <div className='thumbnail'>
-              <ImageLoader src={project.thumbnail} alt='' borderRadius='20px 20px 0 0' />
+              <img src={project.thumbnail} alt='' />
             </div>
             <div className='text'>
               <h2 className='title'>
@@ -130,6 +129,14 @@ const Wrapper = styled.main`
       .thumbnail {
         width: 100%;
         height: 200px;
+        display: grid;
+        place-content: center;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
       .text {
         padding: 20px;

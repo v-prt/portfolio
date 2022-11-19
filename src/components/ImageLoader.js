@@ -1,30 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 
+// FIXME: this doesn't work on mobile
 export const ImageLoader = ({ src, alt, borderRadius }) => {
   const [imageLoaded, setImageLoaded] = useState(false)
-  const imgRef = useRef(null)
-
-  const onLoad = () => {
-    setImageLoaded(true)
-  }
-
-  useEffect(() => {
-    if (imgRef?.current?.complete) {
-      onLoad()
-    }
-  }, [])
 
   return (
     <Wrapper style={{ borderRadius }}>
       {!imageLoaded && <div className='preloader' style={{ borderRadius }} />}
       <img
-        ref-={imgRef}
         src={src}
         alt={alt}
         className={`smooth-image ${imageLoaded ? 'visible' : 'hidden'}`}
-        onLoad={onLoad}
-        decoding='async'
+        onLoad={() => setImageLoaded(true)}
       />
     </Wrapper>
   )

@@ -9,7 +9,6 @@ import wave from '../../assets/white-wave.svg'
 // import image3 from '../../assets/sushi-heaven/cookie-heaven-game3.png'
 // import image4 from '../../assets/sushi-heaven/cookie-clicker.png'
 import mockups from '../../assets/sushi-heaven/sushi-heaven-mockups.png'
-import { ImageLoader } from '../../components/ImageLoader'
 
 export const SushiHeaven = () => {
   // makes window scroll to top between renders
@@ -37,9 +36,7 @@ export const SushiHeaven = () => {
             logic. It was a fun way to practice my Javascript skills and learn more about game
             design, which is something I've always been interested in.
           </p>
-          <div className='mockups'>
-            <ImageLoader src={mockups} alt='' borderRadius='10px' />
-          </div>
+          <img className='mockups' src={mockups} alt='' />
           <p>
             The goal of the game is to make as much sushi as you can, buy upgrades and restaurants,
             and work your way up to owning a franchise. Try it out and have fun - your progress is
