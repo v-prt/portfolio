@@ -1,17 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components/macro'
 
 export const ImageLoader = ({ src, alt, borderRadius }) => {
   const [imageLoaded, setImageLoaded] = useState(false)
+  const imgRef = useRef(null)
+
+  const onLoad = () => {
+    setImageLoaded(true)
+  }
+
+  useEffect(() => {
+    if (imgRef?.current?.complete) {
+      onLoad()
+    }
+  }, [])
 
   return (
     <Wrapper style={{ borderRadius }}>
       {!imageLoaded && <div className='preloader' style={{ borderRadius }} />}
       <img
+        ref-={imgRef}
         src={src}
         alt={alt}
-        className={`smooth-image image-${imageLoaded ? 'visible' : 'hidden'}`}
-        onLoad={() => setImageLoaded(true)}
+        className={`smooth-image ${imageLoaded ? 'visible' : 'hidden'}`}
+        onLoad={onLoad}
+        decoding='async'
       />
     </Wrapper>
   )
@@ -29,12 +42,12 @@ const Wrapper = styled.div`
     max-height: 100%;
   }
   .smooth-image {
-    transition: opacity 1s;
+    transition: 1s ease-in-out;
   }
-  .image-visible {
+  .visible {
     opacity: 1;
   }
-  .image-hidden {
+  .hidden {
     opacity: 0;
   }
   .preloader {

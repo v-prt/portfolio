@@ -82,7 +82,7 @@ export const Projects = () => {
         {projects.map((project, index) => (
           <Link to={`/projects/${project.path}`} className='project-card' key={index}>
             <div className='thumbnail'>
-              <ImageLoader src={project.thumbnail} alt='' />
+              <ImageLoader src={project.thumbnail} alt='' borderRadius='20px 20px 0 0' />
             </div>
             <div className='text'>
               <h2 className='title'>
