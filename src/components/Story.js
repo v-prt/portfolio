@@ -1,12 +1,15 @@
 import styled from 'styled-components/macro'
 import { BREAKPOINTS, COLORS, fadeIn, rotate, rotateLast } from '../GlobalStyles'
+import { ImageLoader } from '../components/ImageLoader'
 import headshot from '../assets/headshot1.png'
 
 export const Story = () => {
   return (
     <Wrapper className='story'>
       <div className='inner'>
-        <img className='headshot' src={headshot} alt='' />
+        <div className='headshot'>
+          <ImageLoader src={headshot} alt='' borderRadius='20px' />
+        </div>
         <div className='text'>
           <p className='about'>about</p>
           <h1 className='title'>

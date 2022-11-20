@@ -10,11 +10,12 @@ import {
   typing,
   blinkCaret,
 } from '../GlobalStyles'
-import headshot from '../assets/headshot.jpg'
 import { FeaturedProject } from '../components/FeaturedProject'
 import { ViewAllProjects } from '../components/ViewAllProjects'
+import { ImageLoader } from '../components/ImageLoader'
 import pattern from '../assets/code.svg'
 import wave from '../assets/wave.svg'
+import headshot from '../assets/headshot.jpg'
 
 export const Homepage = () => {
   // makes window scroll to top between renders
@@ -46,7 +47,9 @@ export const Homepage = () => {
         </div>
       </section>
       <section className='intro'>
-        <img src={headshot} alt='' className='headshot' />
+        <div className='headshot'>
+          <ImageLoader src={headshot} alt='' borderRadius='20px' />
+        </div>
         <div className='text'>
           <h2>Hey there! I'm Victoria.</h2>
           <p>

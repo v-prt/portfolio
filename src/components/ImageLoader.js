@@ -1,18 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components/macro'
 
-// FIXME: this doesn't work on mobile
 export const ImageLoader = ({ src, alt, borderRadius }) => {
   const [imageLoaded, setImageLoaded] = useState(false)
 
+  useEffect(() => {
+    const image = new Image()
+    image.src = src
+    image.onload = () => setImageLoaded(true)
+  })
+
   return (
-    <Wrapper style={{ borderRadius }}>
+    <Wrapper>
       {!imageLoaded && <div className='preloader' style={{ borderRadius }} />}
       <img
         src={src}
         alt={alt}
         className={`smooth-image ${imageLoaded ? 'visible' : 'hidden'}`}
-        onLoad={() => setImageLoaded(true)}
+        style={{ borderRadius }}
       />
     </Wrapper>
   )
@@ -20,14 +25,13 @@ export const ImageLoader = ({ src, alt, borderRadius }) => {
 
 const Wrapper = styled.div`
   position: relative;
-  display: grid;
-  place-content: center;
-  overflow: hidden;
+  display: flex;
   height: 100%;
   width: 100%;
   img {
-    max-width: 100%;
-    max-height: 100%;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
   }
   .smooth-image {
     transition: 1s ease-in-out;

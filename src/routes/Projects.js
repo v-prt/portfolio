@@ -9,12 +9,32 @@ import ticketWidget from '../assets/ticket-widget-thumbnail.svg'
 import plantgeek from '../assets/plantgeek-thumbnail.svg'
 // import eagleTek from '../assets/eagletek-thumbnail.svg'
 import sushiHeaven from '../assets/sushi-heaven-thumbnail.svg'
+import { ImageLoader } from '../components/ImageLoader'
 
 export const Projects = () => {
   // makes window scroll to top between renders
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  // TODO: for each card, add functionality to tilt on mouseover
+  // useEffect(() => {
+  //   const cards = document.querySelectorAll('.project-card')
+
+  //   const cardMouseMove = e => {
+  //     const cardWidth = e.target.offsetWidth
+  //     const cardHeight = e.target.offsetHeight
+  //     const cardX = e.target.offsetLeft + cardWidth / 2
+  //     const cardY = e.target.offsetTop + cardHeight / 2
+  //     const mouseX = e.clientX - cardX
+  //     const mouseY = e.clientY - cardY
+  //     console.log(mouseX, mouseY)
+  //   }
+
+  //   cards.forEach(card => {
+  //     card.addEventListener('mousemove', cardMouseMove)
+  //   })
+  // })
 
   const projects = [
     {
@@ -81,7 +101,7 @@ export const Projects = () => {
         {projects.map((project, index) => (
           <Link to={`/projects/${project.path}`} className='project-card' key={index}>
             <div className='thumbnail'>
-              <img src={project.thumbnail} alt='' />
+              <ImageLoader src={project.thumbnail} alt='' />
             </div>
             <div className='text'>
               <h2 className='title'>
@@ -120,6 +140,8 @@ const Wrapper = styled.main`
       cursor: pointer;
       overflow: hidden;
       transition: 0.2s ease-in-out;
+      /* transform-style: preserve-3d;
+      transform: perspective(1000px); */
       // prevent hover effect on touch screens
       @media (hover: hover) {
         &:hover {
@@ -130,14 +152,7 @@ const Wrapper = styled.main`
       .thumbnail {
         width: 100%;
         height: 200px;
-        display: flex;
-        align-items: center;
         overflow: hidden;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
       }
       .text {
         padding: 20px;

@@ -14,6 +14,7 @@ import image7 from '../../assets/deaflink/deaflink7.png'
 import image8 from '../../assets/deaflink/deaflink8.png'
 import image9 from '../../assets/deaflink/deaflink9.png'
 import mockups from '../../assets/deaflink/deaflink-mockups.jpg'
+import { ImageLoader } from '../../components/ImageLoader'
 
 export const DeafLink = () => {
   // makes window scroll to top between renders
@@ -43,7 +44,9 @@ export const DeafLink = () => {
             <b>deaf community</b> - being disconnected from each other and lacking access to
             resources that could enrich their lives.
           </p>
-          <img className='mockups' src={mockups} alt='' />
+          <div className='mockups'>
+            <ImageLoader src={mockups} alt='' borderRadius='10px' />
+          </div>
           <p>
             My solution to this real world issue was a social media mobile app focused on helping
             deaf or hard-of-hearing people around the world meet and connect through events. I also

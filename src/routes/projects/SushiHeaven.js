@@ -1,13 +1,8 @@
 import { useEffect } from 'react'
 import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
 import { ViewAllProjects } from '../../components/ViewAllProjects'
-// import { Carousel } from '../../components/Carousel'
+import { ImageLoader } from '../../components/ImageLoader'
 import wave from '../../assets/white-wave.svg'
-
-// import image1 from '../../assets/sushi-heaven/sushi-heaven-home.png'
-// import image2 from '../../assets/sushi-heaven/sushi-heaven-game.png'
-// import image3 from '../../assets/sushi-heaven/cookie-heaven-game3.png'
-// import image4 from '../../assets/sushi-heaven/cookie-clicker.png'
 import mockups from '../../assets/sushi-heaven/sushi-heaven-mockups.png'
 
 export const SushiHeaven = () => {
@@ -36,7 +31,9 @@ export const SushiHeaven = () => {
             logic. It was a fun way to practice my Javascript skills and learn more about game
             design, which is something I've always been interested in.
           </p>
-          <img className='mockups' src={mockups} alt='' />
+          <div className='mockups'>
+            <ImageLoader src={mockups} alt='' borderRadius='10px' />
+          </div>
           <p>
             The goal of the game is to make as much sushi as you can, buy upgrades and restaurants,
             and work your way up to owning a franchise. Try it out and have fun - your progress is
