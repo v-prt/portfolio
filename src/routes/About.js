@@ -82,6 +82,7 @@ const Wrapper = styled.div`
         margin-bottom: 20px;
         li {
           margin: 5px 0;
+          line-height: 1.5;
         }
       }
     }

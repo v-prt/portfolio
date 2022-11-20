@@ -48,7 +48,7 @@ export const Homepage = () => {
       <section className='intro'>
         <img src={headshot} alt='' className='headshot' />
         <div className='text'>
-          <h2>Hey! I'm Victoria, that deaf dev.</h2>
+          <h2>Hey there! I'm Victoria.</h2>
           <p>
             I’m a full-stack developer with a particular knack for design. I have been coding for 2+
             years, and I recently obtained my UX Design certification from Google. I enjoy the
@@ -251,7 +251,8 @@ const Wrapper = styled.main`
     }
     .intro {
       display: flex;
-      align-items: flex-start;
+      flex-direction: row-reverse;
+      align-items: center;
       gap: 50px;
       .headshot {
         margin: 0;

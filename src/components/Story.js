@@ -47,9 +47,8 @@ const Wrapper = styled.div`
   place-content: center;
   .inner {
     animation: ${fadeIn} 1.5s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    place-content: center;
     gap: 30px;
     padding: 100px 20px 50px 20px;
   }
@@ -142,10 +141,9 @@ const Wrapper = styled.div`
   }
   @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
     .inner {
-      gap: 50px;
-      flex-direction: row;
+      display: flex;
       align-items: flex-start;
-      justify-content: center;
+      gap: 50px;
     }
   }
 `

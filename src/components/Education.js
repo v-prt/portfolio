@@ -43,14 +43,15 @@ export const Education = () => {
         <p className='date'>May to November 2022</p>
         <div className='text'>
           <p>
-            This specialization program - including 7 courses developed by Google - taught me the UX
-            design process from beginning to end, and gave me practical experience in user research
-            and designing in Figma and Adobe XD.
+            This specialization program - comprised of seven courses developed by Google - taught me
+            the UX design process from beginning to end, and gave me practical experience in user
+            research and designing in Figma and Adobe XD.
           </p>
           <p>
-            As a developer, I wanted to have a deeper understanding of the product development life
-            cycle and to supplement my technical knowledge with professional design skills in order
-            to hone my capabilities in frontend development.
+            As a developer, I wanted to gain a deeper understanding of the product development life
+            cycle and to complement my technical knowledge with professional design skills. I now
+            also have a greater appreciation for user-centered design and how to apply it to my
+            work.
           </p>
           <p style={{ fontWeight: 'bold', marginBottom: '0' }}>Curriculum :</p>
           <ul>
