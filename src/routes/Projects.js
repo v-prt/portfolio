@@ -101,7 +101,7 @@ export const Projects = () => {
         {projects.map((project, index) => (
           <Link to={`/projects/${project.path}`} className='project-card' key={index}>
             <div className='thumbnail'>
-              <ImageLoader src={project.thumbnail} alt='' />
+              <ImageLoader src={project.thumbnail} alt='' borderRadius='20px 20px 0 0' />
             </div>
             <div className='text'>
               <h2 className='title'>
@@ -138,7 +138,6 @@ const Wrapper = styled.main`
       box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.1);
       border-radius: 20px;
       cursor: pointer;
-      overflow: hidden;
       transition: 0.2s ease-in-out;
       /* transform-style: preserve-3d;
       transform: perspective(1000px); */
@@ -174,39 +173,19 @@ const Wrapper = styled.main`
   }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
     .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 40px;
       padding: 100px 30px 50px 30px;
-      .project-card {
-        display: flex;
-        .thumbnail,
-        .text {
-          flex: 1;
-        }
-        .text {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-      }
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
     .project-grid {
-      flex-direction: row;
-      flex-wrap: wrap;
+      grid-template-columns: repeat(3, 1fr);
       gap: 50px;
       padding: 110px 40px 60px 40px;
-      .project-card {
-        flex-direction: column;
-        flex: 1;
-        min-width: 400px;
-        .thumbnail {
-          min-height: 250px;
-          flex: auto;
-        }
-        .text {
-          flex: auto;
-        }
+      .project-card .thumbnail {
+        min-height: 250px;
       }
     }
   }
