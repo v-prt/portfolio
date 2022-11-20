@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import { COLORS, BREAKPOINTS } from '../GlobalStyles'
+import { COLORS, BREAKPOINTS, LinkButton } from '../GlobalStyles'
 import freeCodeCampCert from '../assets/certs/fcc-responsive-web.png'
 import testDomeCert from '../assets/certs/test-dome-js.png'
 import mimoCert from '../assets/certs/mimo-web-dev.jpg'
@@ -7,31 +7,72 @@ import mimoCert from '../assets/certs/mimo-web-dev.jpg'
 export const Education = () => {
   return (
     <Wrapper>
-      <div className='section-inner'>
+      <div className='section-inner education'>
         <h2 className='heading'>
           [ <b>education</b> ]
         </h2>
         <h3>Concordia University</h3>
         <p className='title'>Full-Stack Web Development Diploma</p>
-        <p className='date'>Spring 2021</p>
+        <p className='date'>February to April 2021</p>
         <div className='text'>
           <p>
-            This intense 12-week coding bootcamp taught me the fundamentals of programming and gave
-            me hands-on experience building complex modern web applications using the MERN stack.
+            I took an intense 3-month online coding bootcamp where I learned the fundamentals of
+            programming and had hands-on experience building complex modern web applications using
+            the MERN stack.
           </p>
-          <p>
-            <b>Curriculum :</b> Programming Fundamentals (HTML, CSS, JavaScript, Git, GitHub),
-            Server-side programming with Node (RESTful APIs, Express), Advanced Frontend (React,
-            Redux), Full-Stack Group Project, Data Persistence (MongoDB), Full-Stack Solo Project
-          </p>
+          <p style={{ fontWeight: 'bold', marginBottom: '0' }}>Curriculum :</p>
+          <ul>
+            <li>+ Programming Fundamentals (HTML, CSS, JavaScript, Git, GitHub)</li>
+            <li>+ Server-side programming with Node (RESTful APIs, Express)</li>
+            <li>+ Advanced Frontend (React, Redux)</li>
+            <li>+ Full-Stack Group Project</li>
+            <li>+ Data Persistence (MongoDB)</li>
+            <li>+ Full-Stack Solo Project</li>
+          </ul>
         </div>
-        <h3 style={{ marginTop: '60px' }}>Certifications</h3>
+        <LinkButton
+          className='black'
+          href='https://drive.google.com/file/d/1p4rNMTmKVvvZMKtNy9LmM4H2Dodi2RvJ/view?usp=sharing'
+          target='_blank'
+          rel='noopener noreferrer'>
+          View Diploma
+        </LinkButton>
+
+        <h3 style={{ marginTop: '60px' }}>Coursera, Google</h3>
+        <p className='title'>UX Design Professional Certificate</p>
+        <p className='date'>May to November 2022</p>
         <div className='text'>
           <p>
-            On top of my professional diploma from Concordia University, I'm also proud to have
-            earned these certificates by completing various online courses and tests.
+            This specialization program - including 7 courses developed by Google - taught me the UX
+            design process from beginning to end, and gave me practical experience in user research
+            and designing in Figma and Adobe XD.
           </p>
+          <p>
+            As a developer, I wanted to have a deeper understanding of the product development life
+            cycle and to supplement my technical knowledge with professional design skills in order
+            to hone my capabilities in frontend development.
+          </p>
+          <p style={{ fontWeight: 'bold', marginBottom: '0' }}>Curriculum :</p>
+          <ul>
+            <li>+ Foundations of User Experience (UX) Design</li>
+            <li>+ Start the UX Design Process: Empathize, Define, and Ideate</li>
+            <li>+ Build Wireframes and Low-Fidelity Prototypes</li>
+            <li>+ Conduct UX Research and Test Early Concepts</li>
+            <li>+ Create High-Fidelity Designs and Prototypes in Figma</li>
+            <li>+ Responsive Web Design in Adobe XD</li>
+            <li>+ Design a User Experience for Social Good</li>
+            <li>+ 3 full UX Design projects with case studies</li>
+          </ul>
         </div>
+        <LinkButton
+          className='white'
+          href='https://coursera.org/share/b081388250531d68def9910a0fc5e4ba'
+          target='_blank'
+          rel='noopener noreferrer'>
+          View Certificate
+        </LinkButton>
+
+        <h4 style={{ marginTop: '60px' }}>Other Achievements</h4>
         <div className='certificates'>
           <a
             className='cert'
@@ -64,6 +105,9 @@ const Wrapper = styled.section`
   background: #f6f6f6;
   .heading {
     color: ${COLORS.dark};
+  }
+  button {
+    margin-top: 20px;
   }
   .certificates {
     display: flex;

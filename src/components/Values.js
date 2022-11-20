@@ -8,7 +8,7 @@ import style from '../assets/illustrations/style.svg'
 export const Values = () => {
   return (
     <Wrapper>
-      <div className='section-inner'>
+      <div className='section-inner values'>
         <h2 className='heading'>
           [ <b>values</b> ]
         </h2>
@@ -19,7 +19,7 @@ export const Values = () => {
             things I focus on when I code.
           </p>
         </div>
-        <div className='values'>
+        <div className='grid'>
           <div className='value'>
             <img src={responsiveness} alt='responsiveness' />
             <h3>Responsiveness</h3>
@@ -53,7 +53,7 @@ export const Values = () => {
 const Wrapper = styled.section`
   background: #222;
   color: #f6f6f6;
-  .values {
+  .grid {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,7 +83,7 @@ const Wrapper = styled.section`
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
-    .values {
+    .grid {
       flex-direction: row;
       flex-wrap: wrap;
       gap: 30px;
@@ -95,7 +95,7 @@ const Wrapper = styled.section`
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
-    .values {
+    .grid {
       gap: 40px;
       .value {
         padding: 50px 30px;

@@ -37,7 +37,13 @@ const Wrapper = styled.div`
     .section-inner {
       display: flex;
       flex-direction: column;
+      margin: auto;
       padding: 80px 20px;
+      &.skills,
+      &.experience,
+      &.education {
+        max-width: 800px;
+      }
     }
     .heading {
       font-size: 2rem;
@@ -48,6 +54,16 @@ const Wrapper = styled.div`
       font-size: 1.6rem;
       color: ${COLORS.primaryAccent};
     }
+    h4 {
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      padding-top: 60px;
+      border-top: 1px dotted #ccc;
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+    }
     .title {
       color: #666;
       font-weight: bold;
@@ -57,16 +73,25 @@ const Wrapper = styled.div`
       font-size: 0.8rem;
     }
     .text {
-      max-width: 800px;
       p {
         margin: 20px 0;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        li {
+          margin: 5px 0;
+        }
       }
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
     section {
       .section-inner {
-        align-items: center;
+        &.values {
+          align-items: center;
+        }
       }
     }
   }

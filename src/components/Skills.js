@@ -4,7 +4,7 @@ import { BREAKPOINTS } from '../GlobalStyles'
 export const Skills = () => {
   return (
     <Wrapper>
-      <div className='section-inner'>
+      <div className='section-inner skills'>
         <h2 className='heading'>
           [ <b>skills</b> ]
         </h2>

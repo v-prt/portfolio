@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
-import { COLORS, BREAKPOINTS } from '../GlobalStyles'
+import { COLORS, BREAKPOINTS, fadeIn } from '../GlobalStyles'
 import deaflink from '../assets/deaflink-thumbnail.svg'
 import swetz from '../assets/swetz-thumbnail.svg'
 import creatorProfile from '../assets/creator-profile-thumbnail.svg'
@@ -113,6 +113,7 @@ const Wrapper = styled.main`
     margin: auto;
     padding: 90px 20px 40px 20px;
     .project-card {
+      animation: ${fadeIn} 1s ease-in-out;
       background: #fff;
       box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.1);
       border-radius: 20px;
@@ -129,8 +130,8 @@ const Wrapper = styled.main`
       .thumbnail {
         width: 100%;
         height: 200px;
-        display: grid;
-        place-content: center;
+        display: flex;
+        align-items: center;
         overflow: hidden;
         img {
           width: 100%;

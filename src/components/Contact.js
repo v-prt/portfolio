@@ -43,7 +43,7 @@ const Wrapper = styled.section`
   color: #fff;
   width: 100%;
   .section-inner {
-    max-width: 1400px;
+    max-width: 1160px;
     margin: auto;
     gap: 40px;
     img {

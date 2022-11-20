@@ -4,7 +4,7 @@ import { COLORS } from '../GlobalStyles'
 export const Employment = () => {
   return (
     <Wrapper>
-      <div className='section-inner'>
+      <div className='section-inner experience'>
         <h2 className='heading'>
           [ <b>experience</b> ]
         </h2>

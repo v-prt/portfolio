@@ -51,21 +51,9 @@ export const Homepage = () => {
           <h2>Hey! I'm Victoria, that deaf dev.</h2>
           <p>
             I’m a full-stack developer with a particular knack for design. I have been coding for 2+
-            years, and I recently obtained my UX Design certification from Google.
-          </p>
-          <p>
-            I really enjoy projects that allow me to use my creativity to come up with cool designs
-            or to improve the user experience of a product. I’ve been working remotely for{' '}
-            <a href='https://creator.co' target='_blank' rel='noopener noreferrer'>
-              creator.co
-            </a>{' '}
-            with a small and scrappy dev team since 2021, and have many such projects under my belt.
-            My coworkers call me the UX Queen. 👑
-          </p>
-          <p>
-            When I’m not coding, I’m usually playing video games, reading, or NetFlix & chilling
-            with my hubby and two cats. I also try to go hiking whenever the weather allows to enjoy
-            the beautiful, natural landscape around us here in Kelowna!
+            years, and I recently obtained my UX Design certification from Google. I enjoy the
+            constant challenge of learning new things, and the satisfaction of creating something
+            from scratch!
           </p>
           <p>
             If you’d like to get in touch, email me at{' '}
@@ -204,6 +192,7 @@ const Wrapper = styled.main`
     .text {
       display: flex;
       flex-direction: column;
+      max-width: 600px;
       h2 {
         margin: 10px 0;
         font-weight: bold;
@@ -266,9 +255,6 @@ const Wrapper = styled.main`
       gap: 50px;
       .headshot {
         margin: 0;
-      }
-      .text {
-        max-width: 600px;
       }
     }
   }
