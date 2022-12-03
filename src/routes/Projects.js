@@ -17,25 +17,6 @@ export const Projects = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  // TODO: for each card, add functionality to tilt on mouseover
-  // useEffect(() => {
-  //   const cards = document.querySelectorAll('.project-card')
-
-  //   const cardMouseMove = e => {
-  //     const cardWidth = e.target.offsetWidth
-  //     const cardHeight = e.target.offsetHeight
-  //     const cardX = e.target.offsetLeft + cardWidth / 2
-  //     const cardY = e.target.offsetTop + cardHeight / 2
-  //     const mouseX = e.clientX - cardX
-  //     const mouseY = e.clientY - cardY
-  //     console.log(mouseX, mouseY)
-  //   }
-
-  //   cards.forEach(card => {
-  //     card.addEventListener('mousemove', cardMouseMove)
-  //   })
-  // })
-
   const projects = [
     {
       path: 'deaflink',
@@ -75,7 +56,7 @@ export const Projects = () => {
       title: 'plantgeek',
       type: 'Full-Stack Development',
       device: 'Responsive Website',
-      role: 'Solo Project • Apr 2021 - current',
+      role: 'Solo Project • Apr 2021 - Present',
     },
     // {
     //   path: 'eagletek',
