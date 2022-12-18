@@ -1,5 +1,7 @@
 import styled from 'styled-components/macro'
 import { COLORS } from '../GlobalStyles'
+import { ImageLoader } from './ImageLoader'
+import mockups from '../assets/creator/creator-mockups.png'
 
 export const Employment = () => {
   return (
@@ -20,19 +22,22 @@ export const Employment = () => {
             , where we aim to be the top platform for social media influencers to connect and
             collaborate with brands.
           </p>
+          <div className='mockups'>
+            <ImageLoader src={mockups} alt='' borderRadius='10px' />
+          </div>
           <p>
-            My responsibilities and accomplishments include maintaining our WordPress and React
-            sites for brands and creators, making major feature or design updates, integrating new
-            APIs, and bug resolution.
+            My responsibilities and accomplishments include building and maintaining our React
+            dashboards, implementing new features, UX/UI design updates, API integration, and
+            resolving bugs or general technical issues.
           </p>
           <p>
-            On our platform, brands can build campaigns for social channels such as Instagram,
-            YouTube, and TikTok, recruit influencers using an advanced search system (or leverage
-            our team of Campaign Specialists), and view real-time analytics on their campaigns and
-            influencer performance.
+            On the creator.co platform, brands can build campaigns for social channels such as
+            Instagram, YouTube, and TikTok, recruit influencers using an advanced search system (or
+            leverage our team of Campaign Specialists), and view real-time analytics on their
+            campaigns and influencer performance.
           </p>
           <p>
-            Creators can connect their social accounts for multiple platforms, browse hundreds of
+            Creators can connect their social accounts for multiple platforms, browse 100+
             collaboration opportunities, and filter campaigns based on their social stats or other
             personal information. Once opted in, they can view and manage their campaigns via their
             account dashboard and even chat with the brands.
@@ -47,10 +52,10 @@ export const Employment = () => {
         <p className='date'>Summer 2021 • Part-time</p>
         <div className='text'>
           <p>
-            During the summer post-bootcamp, I did freelance work for a few different clients. My
-            freelance projects included tasks such as building out pages according to provided
-            mock-ups on Figma, linking data to frontend components, fixing responsiveness and
-            alignment issues, adding file uploads, building HTML emails, and bug fixes.
+            During the summer after completing my Web Dev bootcamp, I did freelance work for a few
+            different clients. My projects included tasks such as building out pages according to
+            provided mock-ups on Figma, linking data to frontend components, fixing responsiveness
+            and alignment issues, adding file uploads, building HTML emails, and bug fixes.
           </p>
         </div>
       </div>
@@ -62,5 +67,9 @@ const Wrapper = styled.section`
   background: #fff;
   .heading {
     color: ${COLORS.dark};
+  }
+  .mockups {
+    width: 100%;
+    margin: 40px 0;
   }
 `

@@ -55,10 +55,10 @@ export const CreatorProfile = () => {
         </div>
         <div className='details'>
           <p>
-            One of the biggest projects I undertook at Creator and one I'm most proud of! As project
-            lead, I was responsible for the UX/UI design and the majority of the development for the
-            Creator Profile which serves as a digital media kit or resume and link in bio for social
-            media influencers on the{' '}
+            One of the biggest projects I've undertaken at Creator and one I'm really proud of! As
+            project lead, I was responsible for the UX/UI design and the majority of the development
+            for the Creator Profile which serves as a digital media kit or resume and link in bio
+            for social media influencers on the{' '}
             <a className='link' href='https://creator.co' target='_blank' rel='noopener noreferrer'>
               creator.co
             </a>{' '}
@@ -70,12 +70,12 @@ export const CreatorProfile = () => {
         </div>
         <div className='details'>
           <p>
-            The goal was to provide creators a better alternative to Linktree with exclusive
-            features just for our NFT holders. Features include uploading a profile image, bio and
-            other personal information; automatically updated metrics for connected social
-            platforms; automatically populated top performing content; and the option to add rates
-            for social media services, upload recommended products, showcase an NFT collection, and
-            add custom links.
+            The goal for this project was to provide creators an easy way to curate their content
+            portfolios and showcase their stats to get more brand collaborations. Features include
+            uploading a profile image, bio and other personal information; automatically updated
+            metrics for social accounts connected to our platform; automatically populated top
+            performing content; and the option to add rates for social media services, upload
+            recommended products to earn commission, and additional custom links.
           </p>
           <div className='buttons'>
             <LinkButton
