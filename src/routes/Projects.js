@@ -105,6 +105,7 @@ const Wrapper = styled.main`
   background: #f2f2f2;
   flex: 1;
   display: flex;
+  min-height: 100vh;
   .project-grid {
     width: 100%;
     max-width: 1400px;
