@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 import { COLORS, BREAKPOINTS } from '../GlobalStyles'
 import { IoMdArrowDroprightCircle, IoMdArrowDropleftCircle } from 'react-icons/io'
 
-export const Carousel = ({ images }) => {
+export const Carousel = ({ images, captions }) => {
   const [imagesLoaded, setImagesLoaded] = useState(false)
   const [slideIndex, setSlideIndex] = useState(0)
 
@@ -14,7 +14,7 @@ export const Carousel = ({ images }) => {
       dots[i].className = dots[i].className.replace(' active', '')
       slides[i].style.display = 'none'
     }
-    slides[slideIndex].style.display = 'grid'
+    slides[slideIndex].style.display = 'flex'
     dots[slideIndex].className += ' active'
 
     // automatically change to next slide every 3 seconds (starting over at end)
@@ -47,25 +47,26 @@ export const Carousel = ({ images }) => {
         {!imagesLoaded && <div className='preloader' />}
         {images.map((image, index) => (
           <div key={index} className='slide fade'>
+            {captions && <p className='caption'>{captions[index]}</p>}
             <img src={image} alt='' />
           </div>
         ))}
       </div>
 
       <div className='dots'>
-        <button
+        {/* <button
           className='prev'
           onClick={() => setSlideIndex(slideIndex === 0 ? images.length - 1 : slideIndex - 1)}>
           <IoMdArrowDropleftCircle />
-        </button>
+        </button> */}
         {images.map((image, index) => (
           <span className='dot' onClick={() => setSlideIndex(index)}></span>
         ))}
-        <button
+        {/* <button
           className='next'
           onClick={() => setSlideIndex(slideIndex === images.length - 1 ? 0 : slideIndex + 1)}>
           <IoMdArrowDroprightCircle />
-        </button>
+        </button> */}
       </div>
     </Wrapper>
   )
@@ -104,28 +105,32 @@ const Wrapper = styled.div`
     }
   }
   .slide {
+    width: 100%;
     display: none;
-    place-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 350px;
     img {
-      max-height: 350px;
+      max-height: 100%;
       max-width: 100%;
       border-radius: 10px;
       box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
     }
     @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
       height: 450px;
-      img {
-        max-height: 450px;
-      }
     }
     @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
-      height: 600px;
-      img {
-        max-height: 600px;
-        max-width: 800px;
-      }
+      height: 650px;
     }
+  }
+  .caption {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px;
+    text-align: center;
+    font-weight: bold;
   }
   .dots {
     padding-top: 40px;
@@ -153,7 +158,7 @@ const Wrapper = styled.div`
     background: #ccc;
     height: 10px;
     width: 10px;
-    border-radius: 50%;
+    border-radius: 10px;
     transition: 0.2s ease-in-out;
     cursor: pointer;
     &:hover {
@@ -161,6 +166,7 @@ const Wrapper = styled.div`
     }
     &.active {
       background: ${COLORS.primaryAccent};
+      width: 30px;
     }
   }
 

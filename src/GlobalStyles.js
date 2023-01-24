@@ -213,6 +213,13 @@ export const ProjectWrapper = styled.main`
     width: 100%;
     margin: 40px 0;
   }
+  .video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5/3;
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+  }
   .buttons {
     display: flex;
     flex-direction: column;

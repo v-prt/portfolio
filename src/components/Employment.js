@@ -16,7 +16,7 @@ export const Employment = () => {
         <div className='text'>
           <p>
             I'm currently working as a full-stack web developer at{' '}
-            <a className='link' href='https://creator.co'>
+            <a className='link' href='https://creator.co' target='_blank' rel='noopener noreferrer'>
               creator.co
             </a>
             , where we aim to be the top platform for social media influencers to connect and
@@ -31,10 +31,14 @@ export const Employment = () => {
             resolving bugs or general technical issues.
           </p>
           <p>
-            On the creator.co platform, brands can build campaigns for social channels such as
-            Instagram, YouTube, and TikTok, recruit influencers using an advanced search system (or
-            leverage our team of Campaign Specialists), and view real-time analytics on their
-            campaigns and influencer performance.
+            On the{' '}
+            <a className='link' href='https://creator.co' target='_blank' rel='noopener noreferrer'>
+              creator.co
+            </a>{' '}
+            platform, brands can build campaigns for social channels such as Instagram, YouTube, and
+            TikTok, recruit influencers using an advanced search system (or leverage our team of
+            Campaign Specialists), and view real-time analytics on their campaigns and influencer
+            performance.
           </p>
           <p>
             Creators can connect their social accounts for multiple platforms, browse 100+

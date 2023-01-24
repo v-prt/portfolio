@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { COLORS, BREAKPOINTS, fadeIn } from '../GlobalStyles'
+import creatorco from '../assets/creatorco-thumbnail.svg'
 import deaflink from '../assets/deaflink-thumbnail.svg'
 import swetz from '../assets/swetz-thumbnail.svg'
 import creatorProfile from '../assets/creator-profile-thumbnail.svg'
@@ -18,6 +19,14 @@ export const Projects = () => {
   }, [])
 
   const projects = [
+    {
+      path: 'creatorco',
+      thumbnail: creatorco,
+      title: 'Creator.co 2.0',
+      type: 'Frontend Development',
+      device: 'Responsive Website',
+      role: 'Sole Developer • Jan 2023',
+    },
     {
       path: 'deaflink',
       thumbnail: deaflink,
