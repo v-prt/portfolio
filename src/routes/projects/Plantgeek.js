@@ -38,7 +38,7 @@ export const Plantgeek = () => {
 
   return (
     <ProjectWrapper>
-      <div className='banner' style={{ background: 'linear-gradient(to right, #92D265, #5D9E2E)' }}>
+      <div className='banner' style={{ background: 'linear-gradient(to right, #A4E17D, #95D190)' }}>
         <img src={wave} alt='' />
       </div>
       <section className='description'>
