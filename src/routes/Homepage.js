@@ -104,7 +104,7 @@ const Wrapper = styled.main`
     position: relative;
     .overlay {
       background-image: url(${pattern});
-      background-size: 200px;
+      background-size: 500px;
       opacity: 0.1;
       height: 100%;
       width: 100%;
@@ -218,7 +218,7 @@ const Wrapper = styled.main`
   }
   @media only screen and (min-width: ${BREAKPOINTS.tablet}) {
     .banner .overlay {
-      background-size: 300px;
+      background-size: 1000px;
     }
     .heading {
       height: 400px;
