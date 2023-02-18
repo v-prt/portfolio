@@ -78,8 +78,8 @@ export const Plantgeek = () => {
             on desktop, tablet, and mobile.
           </p>
           <p>
-            Tech stack: React, React Query, Ant Design, Styled Components, Node, Express, MongoDB,
-            Typescript, Heroku
+            Tech stack: React.js, React Query, Ant Design, Styled Components, Node, Express,
+            MongoDB, Typescript, Heroku
           </p>
           <div className='buttons'>
             <LinkButton

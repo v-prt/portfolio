@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { COLORS, BREAKPOINTS, fadeIn } from '../GlobalStyles'
+import plantgeekApp from '../assets/plantgeek-app-thumbnail.svg'
 import creatorco from '../assets/creatorco-thumbnail.png'
 import deaflink from '../assets/deaflink-thumbnail.svg'
 import swetz from '../assets/swetz-thumbnail.svg'
@@ -19,6 +20,14 @@ export const Projects = () => {
   }, [])
 
   const projects = [
+    {
+      path: 'plantgeek-app',
+      thumbnail: plantgeekApp,
+      title: 'plantgeek app',
+      type: 'Full-Stack Development',
+      device: 'Mobile App',
+      role: 'Solo Project • Jan - Feb 2023',
+    },
     {
       path: 'creatorco',
       thumbnail: creatorco,
