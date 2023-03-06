@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
 import { ViewAllProjects } from '../../components/ViewAllProjects'
 import { Carousel } from '../../components/Carousel'
@@ -47,7 +48,7 @@ export const Plantgeek = () => {
         </h1>
         <div className='summary'>
           <p className='type'>Full-Stack Development, Responsive Website</p>
-          <p className='duration'>Solo Project • April 2021 - Present</p>
+          <p className='duration'>Solo Project • 2021 - 2022</p>
         </div>
         <div className='details'>
           <p>
@@ -72,22 +73,30 @@ export const Plantgeek = () => {
             <Carousel images={projectImages} />
           </div>
           <p>
-            I started this website as a full-stack solo project in 2021 and I have continued to
-            maintain and improve on it in my spare time. Feel free to sign up and try out the live
-            website or look through my code on GitHub! The platform is fully responsive and usable
-            on desktop, tablet, and mobile.
+            I started this website as a full-stack solo project in 2021 and continued to maintain
+            and improve on it in my spare time through 2022. Watch the demo video (link below) or
+            look through my code on GitHub! The platform is fully responsive and usable on desktop,
+            tablet, and mobile. I also created a{' '}
+            <Link to='/projects/plantgeek-app'>mobile app version</Link> on React Native.
           </p>
           <p>
             Tech stack: React.js, React Query, Ant Design, Styled Components, Node, Express,
-            MongoDB, Typescript, Heroku
+            MongoDB, Typescript
           </p>
           <div className='buttons'>
-            <LinkButton
+            {/* <LinkButton
               className='black'
               href='https://www.plantgeek.co'
               target='_blank'
               rel='noopener noreferrer'>
               VIEW LIVE SITE
+            </LinkButton> */}
+            <LinkButton
+              className='black'
+              href='https://youtu.be/JTIm2Gd30EI'
+              target='_blank'
+              rel='noopener noreferrer'>
+              VIEW DEMO
             </LinkButton>
             <LinkButton
               className='white'

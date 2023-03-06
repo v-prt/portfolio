@@ -74,7 +74,7 @@ export const Projects = () => {
       title: 'plantgeek',
       type: 'Full-Stack Development',
       device: 'Responsive Website',
-      role: 'Solo Project • Apr 2021 - Present',
+      role: 'Solo Project • 2021 - 2022',
     },
     // {
     //   path: 'eagletek',
@@ -88,7 +88,7 @@ export const Projects = () => {
       path: 'sushi-heaven',
       thumbnail: sushiHeaven,
       title: 'Sushi Heaven',
-      type: 'Frontend',
+      type: 'Frontend Development',
       device: 'Javascript Game',
       role: 'Solo Project • Mar 2021',
     },

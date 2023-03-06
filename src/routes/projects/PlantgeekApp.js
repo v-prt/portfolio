@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
 import { ViewAllProjects } from '../../components/ViewAllProjects'
 import { Carousel } from '../../components/Carousel'
@@ -46,13 +47,10 @@ export const PlantgeekApp = () => {
         <div className='details'>
           <p>
             I built this app as a companion to my{' '}
-            <a href='https://www.plantgeek.co' target='_blank' rel='noopenner noreferrer'>
-              plantgeek
-            </a>{' '}
-            website, which I created a while back. With my newly acquired React Native skills, I put
-            my knowledge to use and developed an app with the same key user flows as the website.
-            However, I also added some cool device-specific functionality to make the app even more
-            interactive and fun.
+            <Link to='/projects/plantgeek'>plantgeek website</Link> , which I created a while back.
+            With my newly acquired React Native skills, I put my knowledge to use and developed an
+            app with the same key user flows as the website. However, I also added some cool
+            device-specific functionality to make the app even more interactive and fun.
           </p>
         </div>
         <div style={{ margin: '40px 0' }}>
@@ -67,7 +65,8 @@ export const PlantgeekApp = () => {
         <div className='details'>
           <p>
             A seemingly small but important feature I included in this app is haptic feedback, which
-            highly improves the experience for users (especially for key interactions). As a
+            highly improves the experience for users (especially for key interactions). Plus, I
+            added the ability for users to add reminders and manage their plant-care schedules. As a
             developer, I prioritized creating a smooth UX with a clean and intuitive interface,
             ensuring that users can easily navigate and manage their plant collection.
           </p>
