@@ -12,7 +12,7 @@ export const Education = () => {
           [ <b>education</b> ]
         </h2>
         <h3>Concordia University</h3>
-        <p className='title'>Full-Stack Web Development Diploma</p>
+        <p className='title'>Full Stack Web Development Diploma</p>
         <p className='date'>February to April 2021</p>
         <div className='text'>
           <p>
@@ -25,9 +25,9 @@ export const Education = () => {
             <li>+ Programming Fundamentals (HTML, CSS, JavaScript, Git, GitHub)</li>
             <li>+ Server-side programming with Node (RESTful APIs, Express)</li>
             <li>+ Advanced Frontend (React, Redux)</li>
-            <li>+ Full-Stack Group Project</li>
+            <li>+ Full Stack Group Project</li>
             <li>+ Data Persistence (MongoDB)</li>
-            <li>+ Full-Stack Solo Project</li>
+            <li>+ Full Stack Solo Project</li>
           </ul>
         </div>
         <LinkButton

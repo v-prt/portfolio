@@ -30,7 +30,7 @@ export const PlantgeekApp = () => {
           [ <b>plantgeek app</b> ]
         </h1>
         <div className='summary'>
-          <p className='type'>Full-Stack Development, Mobile App</p>
+          <p className='type'>Full Stack Development, Mobile App</p>
           <p className='duration'>Solo Project • January - February 2023</p>
         </div>
         <div className='details'>

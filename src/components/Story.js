@@ -17,9 +17,9 @@ export const Story = () => {
           </h1>
           <p>Oh, hey! Glad you're here.</p>
           <p>
-            I'm a full-stack developer based in West Kelowna, BC. I've always had a huge love for
-            art, books, animals and nature. Growing up, I was torn between wanting to be an artist
-            or author or veterinarian. Ultimately my winding path and growing interest in technology
+            I'm a full stack developer based in West Kelowna, BC. I've always had a huge love for
+            art, books, animals and nature. Growing up, I was torn between wanting to be an artist,
+            author or veterinarian. Ultimately my winding path and growing interest in technology
             and design has led to my career as a developer.
           </p>
           <p>
@@ -32,9 +32,9 @@ export const Story = () => {
             My coworkers call me the UX Queen. 👑
           </p>
           <p>
-            When I’m not coding, I’m usually playing video games, reading, or NetFlix & chilling
-            with my hubby and two cats. I also try to go hiking whenever the weather allows to enjoy
-            the beautiful, natural landscape around us here in Kelowna!
+            When I’m not coding, I’m usually playing games, reading, or NetFlix & chilling with my
+            hubby and two cats. I also try to go hiking whenever the weather allows to enjoy the
+            beautiful, natural landscape around us here in Kelowna!
           </p>
         </div>
       </div>

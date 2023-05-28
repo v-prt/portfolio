@@ -32,7 +32,7 @@ export const EagleTek = () => {
           [ <b>eagleTek</b> ]
         </h1>
         <div className='summary'>
-          <p className='type'>Full-Stack Development, Responsive Website</p>
+          <p className='type'>Full Stack Development, Responsive Website</p>
           <p className='duration'>Group Project • March 2021</p>
           <p className='collaborators'>
             Collaborators:{' '}

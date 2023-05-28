@@ -39,7 +39,7 @@ export const Homepage = () => {
             <span>I</span>
             <span>A</span>
           </h1>
-          <p className='job typewriter'>FULL-STACK DEVELOPER</p>
+          <p className='job typewriter'>FULL STACK DEVELOPER</p>
           <p className='skills'>
             HTML5. CSS3. SCSS. JAVASCRIPT. TYPESCRIPT. ES6. REACT. EXPRESS. NODE. MYSQL. MONGODB.
             GITHUB.
@@ -53,15 +53,14 @@ export const Homepage = () => {
         <div className='text'>
           <h2>Hey there! I'm Victoria.</h2>
           <p>
-            I’m a full-stack developer with a particular knack for design. I have been coding for 2+
-            years, and I recently obtained my UX Design certification from Google. I enjoy the
-            constant challenge of learning new things, and the satisfaction of creating something
-            from scratch!
+            I’m a Full Stack Developer with over 2 years of experience and a speciality in UX/UI
+            design and engineering. I enjoy the constant challenge of learning new things, and the
+            satisfaction of creating something from scratch!
           </p>
           <p>
-            If you’d like to get in touch, email me at{' '}
+            If you’d like to get in touch,{' '}
             <a href='mailto:victoriapeart.dev@gmail.com' target='_blank' rel='noopener noreferrer'>
-              victoriapeart.dev@gmail.com
+              send an email
             </a>{' '}
             or connect with me on LinkedIn.
           </p>

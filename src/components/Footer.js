@@ -22,7 +22,7 @@ export const Footer = () => {
             </p>
           </div>
           <p className='services'>
-            Full-Stack Web Development, UX/UI, Responsive Websites, & Mobile App Design
+            Full Stack Development, UX/UI Design, Responsive Websites, & Cross-Platform Mobile Apps
           </p>
           <div className='subtext'>
             <p className='copyright'>&copy; 2021 - {year}</p>

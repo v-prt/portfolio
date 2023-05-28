@@ -19,12 +19,12 @@ export const Projects = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  const projects = [
+  const devProjects = [
     {
       path: 'plantgeek-app',
       thumbnail: plantgeekApp,
       title: 'plantgeek app',
-      type: 'Full-Stack Development',
+      type: 'Full Stack Development',
       device: 'Mobile App',
       role: 'Solo Project • Jan - Feb 2023',
     },
@@ -36,6 +36,41 @@ export const Projects = () => {
       device: 'Responsive Website',
       role: 'Sole Developer • Jan 2023',
     },
+    {
+      path: 'creator-profile',
+      thumbnail: creatorProfile,
+      title: 'Creator Profile',
+      type: 'Full Stack Development',
+      device: 'Responsive Website',
+      role: 'Project Lead • Jul - Aug 2022',
+    },
+    {
+      path: 'plantgeek',
+      thumbnail: plantgeek,
+      title: 'plantgeek',
+      type: 'Full Stack Development',
+      device: 'Responsive Website',
+      role: 'Solo Project • 2021 - 2022',
+    },
+    // {
+    //   path: 'eagletek',
+    //   thumbnail: eagleTek,
+    //   title: 'eagleTek',
+    //   type: 'Full Stack Development',
+    //   device: 'Responsive Website',
+    //   role: 'Group Project • Mar 2021',
+    // },
+    {
+      path: 'sushi-heaven',
+      thumbnail: sushiHeaven,
+      title: 'Sushi Heaven',
+      type: 'Frontend Development',
+      device: 'Javascript Game',
+      role: 'Solo Project • Mar 2021',
+    },
+  ]
+
+  const designProjects = [
     {
       path: 'deaflink',
       thumbnail: deaflink,
@@ -53,14 +88,6 @@ export const Projects = () => {
       role: 'Solo Project • Aug - Sep 2022',
     },
     {
-      path: 'creator-profile',
-      thumbnail: creatorProfile,
-      title: 'Creator Profile',
-      type: 'Full-Stack Development',
-      device: 'Responsive Website',
-      role: 'Project Lead • Jul - Aug 2022',
-    },
-    {
       path: 'ticket-widget',
       thumbnail: ticketWidget,
       title: 'TicketWidget',
@@ -68,52 +95,79 @@ export const Projects = () => {
       device: 'Mobile App',
       role: 'Solo Project • May - Aug 2022',
     },
-    {
-      path: 'plantgeek',
-      thumbnail: plantgeek,
-      title: 'plantgeek',
-      type: 'Full-Stack Development',
-      device: 'Responsive Website',
-      role: 'Solo Project • 2021 - 2022',
-    },
-    // {
-    //   path: 'eagletek',
-    //   thumbnail: eagleTek,
-    //   title: 'eagleTek',
-    //   type: 'Full-Stack Development',
-    //   device: 'Responsive Website',
-    //   role: 'Group Project • Mar 2021',
-    // },
-    {
-      path: 'sushi-heaven',
-      thumbnail: sushiHeaven,
-      title: 'Sushi Heaven',
-      type: 'Frontend Development',
-      device: 'Javascript Game',
-      role: 'Solo Project • Mar 2021',
-    },
   ]
+
+  const ProjectCard = ({ project }) => {
+    return (
+      <Link to={`/projects/${project.path}`} className='project-card'>
+        <div className='thumbnail'>
+          <ImageLoader src={project.thumbnail} alt='' borderRadius='20px 20px 0 0' />
+        </div>
+        <div className='text'>
+          <h3 className='title'>
+            [ <b>{project.title}</b> ]
+          </h3>
+          <div>
+            <p className='type'>{project.type}</p>
+            <p className='device'>{project.device}</p>
+          </div>
+          <p className='role'>{project.role}</p>
+        </div>
+      </Link>
+    )
+  }
 
   return (
     <Wrapper>
-      <div className='project-grid'>
-        {projects.map((project, index) => (
-          <Link to={`/projects/${project.path}`} className='project-card' key={index}>
-            <div className='thumbnail'>
-              <ImageLoader src={project.thumbnail} alt='' borderRadius='20px 20px 0 0' />
-            </div>
-            <div className='text'>
-              <h2 className='title'>
-                [ <b>{project.title}</b> ]
-              </h2>
-              <div>
-                <p className='type'>{project.type}</p>
-                <p className='device'>{project.device}</p>
-              </div>
-              <p className='role'>{project.role}</p>
-            </div>
-          </Link>
-        ))}
+      <div className='page-inner'>
+        <h1>
+          [ <b>projects</b> ]
+        </h1>
+
+        <div className='section-header'>
+          <h2>Development</h2>
+          <p className='subtext'>
+            Explore my frontend and full stack projects, each a unique record of my journey in the
+            ever-evolving world of web development.
+          </p>
+          <div className='tags'>
+            <span className='tag'>React</span>
+            <span className='tag'>JavaScript</span>
+            <span className='tag'>TypeScript</span>
+            <span className='tag'>HTML</span>
+            <span className='tag'>CSS</span>
+            <span className='tag'>Node.js</span>
+            <span className='tag'>Express.js</span>
+            <span className='tag'>MongoDB</span>
+          </div>
+        </div>
+
+        <div className='project-grid'>
+          {devProjects.map((project, index) => (
+            <ProjectCard project={project} key={index} />
+          ))}
+        </div>
+
+        <div className='section-header'>
+          <h2>Design</h2>
+          <p className='subtext'>
+            As part of my UX specialization, I have completed a number of projects exploring user
+            experience design.
+          </p>
+          <div className='tags'>
+            <span className='tag'>UX / UI</span>
+            <span className='tag'>Figma</span>
+            <span className='tag'>Adobe XD</span>
+            <span className='tag'>Wireframes</span>
+            <span className='tag'>Prototypes</span>
+            <span className='tag'>User Journeys</span>
+          </div>
+        </div>
+        <div className='project-grid'>
+          {designProjects.map((project, index) => (
+            <ProjectCard project={project} key={index} />
+          ))}
+        </div>
       </div>
     </Wrapper>
   )
@@ -122,8 +176,45 @@ export const Projects = () => {
 const Wrapper = styled.main`
   background: #f2f2f2;
   flex: 1;
-  display: flex;
   min-height: 100vh;
+  .page-inner {
+    padding: 120px 20px 40px 20px;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #666;
+  }
+  .section-header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  .subtext {
+    margin: 20px 0;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    .tag {
+      background: ${COLORS.primaryAccent};
+      // border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 6px 10px 3px 10px;
+      font-size: 0.7rem;
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
   .project-grid {
     width: 100%;
     max-width: 1400px;
@@ -131,7 +222,7 @@ const Wrapper = styled.main`
     flex-direction: column;
     gap: 30px;
     margin: auto;
-    padding: 90px 20px 40px 20px;
+    padding-bottom: 80px;
     .project-card {
       animation: ${fadeIn} 1s ease-in-out;
       background: #fff;
@@ -176,14 +267,20 @@ const Wrapper = styled.main`
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 40px;
-      padding: 100px 30px 50px 30px;
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.desktop}) {
+    .section-header {
+      /* display: flex;
+      gap: 30px;
+      margin: 20px 0; */
+      /* h2 {
+        font-size: 2rem;
+      } */
+    }
     .project-grid {
       grid-template-columns: repeat(3, 1fr);
       gap: 50px;
-      padding: 110px 40px 60px 40px;
       .project-card .thumbnail {
         min-height: 250px;
       }

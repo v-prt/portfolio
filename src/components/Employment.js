@@ -11,11 +11,11 @@ export const Employment = () => {
           [ <b>experience</b> ]
         </h2>
         <h3>Creator</h3>
-        <p className='title'>Full-Stack Developer & Lead UX/UI Engineer</p>
+        <p className='title'>Full Stack Developer & Lead UX/UI Engineer</p>
         <p className='date'>June 2021 to present • Full-time</p>
         <div className='text'>
           <p>
-            I'm currently working as a full-stack web developer at{' '}
+            I'm currently working at{' '}
             <a className='link' href='https://creator.co' target='_blank' rel='noopener noreferrer'>
               creator.co
             </a>
@@ -27,8 +27,8 @@ export const Employment = () => {
           </div>
           <p>
             My responsibilities and accomplishments include building and maintaining our React
-            dashboards, implementing new features, UX/UI design updates, API integration, and
-            resolving bugs or general technical issues.
+            dashboards, implementing new features, UX/UI design updates, API integration, and bug
+            resolution.
           </p>
           <p>
             On the{' '}
@@ -41,10 +41,10 @@ export const Employment = () => {
             performance.
           </p>
           <p>
-            Creators can connect their social accounts for multiple platforms, browse 100+
-            collaboration opportunities, and filter campaigns based on their social stats or other
-            personal information. Once opted in, they can view and manage their campaigns via their
-            account dashboard and even chat with the brands.
+            Creators can connect their social accounts, browse 100+ collaboration opportunities, and
+            filter campaigns based on their social stats or other personal information. Once opted
+            in, they can view and manage their campaigns via their account dashboard and communicate
+            with the brands through our messaging system.
           </p>
           <p>
             <b>Tech stack :</b> JavaScript, TypeScript, React, SCSS, Styled Components, Express,

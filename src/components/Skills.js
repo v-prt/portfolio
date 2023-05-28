@@ -8,10 +8,10 @@ export const Skills = () => {
         <h2 className='heading'>
           [ <b>skills</b> ]
         </h2>
-        <h3>Full-Stack Development & UX/UI Design</h3>
+        <h3>Full Stack Development & UX/UI Design</h3>
         <div className='text'>
           <p>
-            My strengths lie mostly in front-end and UX/UI related development where my artistic
+            My strengths lie mostly in frontend and UX/UI related development where my artistic
             abilities and eye for design can come into play. I also have excellent organization and
             communicational skills which ensure my teammates can easily read and understand my code.
           </p>
@@ -57,8 +57,8 @@ export const Skills = () => {
           <div className='group'>
             <p className='title'>Languages</p>
             <ul>
-              <li>English</li>
-              <li>American Sign Language</li>
+              <li>English (native)</li>
+              <li>American Sign Language (fluent)</li>
               <li>Hungarian</li>
             </ul>
           </div>

@@ -50,7 +50,7 @@ export const CreatorProfile = () => {
           [ <b>Creator Profile</b> ]
         </h1>
         <div className='summary'>
-          <p className='type'>Full-Stack Development, Responsive Website</p>
+          <p className='type'>Full Stack Development, Responsive Website</p>
           <p className='duration'>Project Lead • July - August 2022</p>
         </div>
         <div className='details'>

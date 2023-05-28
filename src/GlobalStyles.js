@@ -311,28 +311,28 @@ export const rotateLast = keyframes`
 `
 
 // text gradient
-export const gradientAnimation = keyframes`{
-  from {
+export const gradientAnimation = keyframes`
+  0% {
     background-position: 0% 50%;
   }
-  to {
+  100% {
     background-position: 108% 50%;
   }
-}`
+`
 
 // typing effect
-export const typing = keyframes`{ 
+export const typing = keyframes`
   from { width: 0 }
   to { width: 100% }
-}`
+`
 
 // typewriter cursor
-export const blinkCaret = keyframes`{ 
+export const blinkCaret = keyframes` 
   from, to { border-color: transparent }
   50% { border-color: ${COLORS.secondaryAccent}; }
-}`
+`
 
-export const animatedGradientBorder = keyframes`{
+export const animatedGradientBorder = keyframes`
   0% {
     background-position: 0% 50%;
   }
@@ -342,4 +342,4 @@ export const animatedGradientBorder = keyframes`{
   100% {
     background-position: 0% 50%;
   }
-}`
+`

@@ -9,9 +9,8 @@ export const Contact = () => {
         <div className='text'>
           <h2>Wanna get in touch?</h2>
           <p>
-            Email me at{' '}
             <a href='mailto:victoriapeart.dev@gmail.com' target='_blank' rel='noopener noreferrer'>
-              victoriapeart.dev@gmail.com
+              Send an email
             </a>{' '}
             or connect with me on LinkedIn.
           </p>
@@ -32,6 +31,7 @@ export const Contact = () => {
             </LinkButton>
           </div>
         </div>
+        {/* FIXME: find a better illustration */}
         <img src={illustration} alt='' />
       </div>
     </Wrapper>
