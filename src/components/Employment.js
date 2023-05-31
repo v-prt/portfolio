@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 import { COLORS } from '../GlobalStyles'
 import { ImageLoader } from './ImageLoader'
-import mockups from '../assets/creator/creator-mockups.png'
+import mockups from '../assets/creator/creator-mockups2.png'
 
 export const Employment = () => {
   return (

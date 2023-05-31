@@ -1,11 +1,19 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { ProjectWrapper, LinkButton } from '../../GlobalStyles'
 import { ViewAllProjects } from '../../components/ViewAllProjects'
 import { Carousel } from '../../components/Carousel'
+import { ImageLoader } from '../../components/ImageLoader'
 import wave from '../../assets/white-wave.svg'
 
-// import image1 from '../../assets/bookish/bookish1.png'
+import mockups from '../../assets/bookish/mockups.png'
+import image1 from '../../assets/bookish/image1.png'
+import image2 from '../../assets/bookish/image2.png'
+import image3 from '../../assets/bookish/image3.png'
+import image4 from '../../assets/bookish/image4.png'
+import image5 from '../../assets/bookish/image5.png'
+import image6 from '../../assets/bookish/image6.png'
+import image7 from '../../assets/bookish/image7.png'
+import image8 from '../../assets/bookish/image8.png'
 
 export const Bookish = () => {
   // makes window scroll to top between renders
@@ -13,7 +21,7 @@ export const Bookish = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  // const projectImages = [image1, image2, image3, image4, image5, image6]
+  const projectImages = [image1, image2, image3, image4, image5, image6, image7, image8]
 
   return (
     <ProjectWrapper>
@@ -35,6 +43,9 @@ export const Bookish = () => {
             Goodreads. I used React Native to build it - this meant users would get a consistent
             experience, whether they're on an iPhone or an Android.
           </p>
+          <div className='mockups'>
+            <ImageLoader src={mockups} alt='' borderRadius='10px' />
+          </div>
           <p>
             With this app, users can easily search for books, create personalized bookshelves to
             keep track of what they're currently reading, want to read, and have read. Plus, they
@@ -42,9 +53,9 @@ export const Bookish = () => {
             an overview of their reading activity.
           </p>
         </div>
-        {/* <div style={{ margin: '40px 0' }}>
+        <div style={{ margin: '40px 0' }}>
           <Carousel images={projectImages} />
-        </div> */}
+        </div>
         <div className='details'>
           <p>
             I dove into TypeScript on the frontend for this project, which was an interesting
@@ -57,19 +68,19 @@ export const Bookish = () => {
             I also explored unit testing, though not as extensively as I originally planned. It
             turned out identifying the right pieces to test wasn't so straightforward - I created
             and tested my own validation for the search input, which is something I usually rely on
-            libraries for (like Formik and Yup). This gave me a greater appreciate for such
+            libraries for (like Formik and Yup). This gave me a greater appreciation for such
             libraries, as they save so much time.
           </p>
         </div>
-        {/* <div style={{ margin: '40px 0' }}>
+        <div style={{ margin: '40px 0' }}>
           <iframe
             className='video'
-            src='https://www.youtube.com/embed/xxx'
+            src='https://www.youtube.com/embed/oLa1Qr_J1PM'
             title='Bookish Demo'
             frameborder='0'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
             allowfullscreen></iframe>
-        </div> */}
+        </div>
         <div className='details'>
           <p>
             Bookish isn't just a pet project of mine, it's something I want to share with other
@@ -98,7 +109,14 @@ export const Bookish = () => {
           <div className='buttons'>
             <LinkButton
               className='black'
-              href='https://github.com/v-prt/plantgeek-app'
+              href='https://youtu.be/oLa1Qr_J1PM'
+              target='_blank'
+              rel='noopener noreferrer'>
+              View Demo
+            </LinkButton>
+            <LinkButton
+              className='white'
+              href='https://github.com/v-prt/bookish-frontend'
               target='_blank'
               rel='noopener noreferrer'>
               View on GitHub

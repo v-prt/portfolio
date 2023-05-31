@@ -129,16 +129,8 @@ export const Projects = () => {
   return (
     <Wrapper>
       <div className='page-inner'>
-        <h1>
-          [ <b>projects</b> ]
-        </h1>
-
         <div className='section-header'>
-          <h2>Development</h2>
-          <p className='subtext'>
-            Explore my frontend and full stack projects, each a unique record of my journey in the
-            ever-evolving world of web development.
-          </p>
+          <h2>Development Projects</h2>
           <div className='tags'>
             <span className='tag'>React</span>
             <span className='tag'>JavaScript</span>
@@ -158,11 +150,7 @@ export const Projects = () => {
         </div>
 
         <div className='section-header'>
-          <h2>Design</h2>
-          <p className='subtext'>
-            As part of my UX specialization, I have completed a number of projects exploring user
-            experience design.
-          </p>
+          <h2>Design Projects</h2>
           <div className='tags'>
             <span className='tag'>UX / UI</span>
             <span className='tag'>Figma</span>
@@ -187,41 +175,34 @@ const Wrapper = styled.main`
   flex: 1;
   min-height: 100vh;
   .page-inner {
-    padding: 120px 20px 40px 20px;
+    padding: 100px 20px 40px 20px;
     max-width: 1400px;
     margin: auto;
     display: flex;
     flex-direction: column;
   }
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 50px;
-  }
   h2 {
     font-weight: bold;
-    font-size: 1.6rem;
-    color: #666;
+    font-size: 1.4rem;
+    color: ${COLORS.primaryAccent};
   }
   .section-header {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-  }
-  .subtext {
-    margin: 20px 0;
+    margin-bottom: 40px;
   }
   .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 8px;
+    margin-top: 10px;
     .tag {
-      background: ${COLORS.primaryAccent};
-      // border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 6px 10px 3px 10px;
+      background: #ccc;
+      border-radius: 20px;
+      padding: 10px 20px 8px 20px;
       font-size: 0.7rem;
       color: #fff;
       text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
   }
   .project-grid {
