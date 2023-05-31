@@ -6,6 +6,7 @@ import { Footer } from './components/Footer'
 import { Homepage } from './routes/Homepage'
 import { About } from './routes/About'
 import { Projects } from './routes/Projects'
+import { Bookish } from './routes/projects/Bookish'
 import { PlantgeekApp } from './routes/projects/PlantgeekApp'
 import { Creatorco } from './routes/projects/Creatorco'
 import { DeafLink } from './routes/projects/DeafLink'
@@ -25,6 +26,7 @@ export const App = () => {
         <Route path='/' element={<Homepage />} />
         <Route path='/about' element={<About />} />
         <Route path='/projects' element={<Projects />} />
+        <Route path='/projects/bookish' element={<Bookish />} />
         <Route path='/projects/deaflink' element={<DeafLink />} />
         <Route path='/projects/plantgeek-app' element={<PlantgeekApp />} />
         <Route path='/projects/creatorco' element={<Creatorco />} />

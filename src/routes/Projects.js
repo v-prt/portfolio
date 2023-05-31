@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { COLORS, BREAKPOINTS, fadeIn } from '../GlobalStyles'
+import bookish from '../assets/bookish-thumbnail.svg'
 import plantgeekApp from '../assets/plantgeek-app-thumbnail.svg'
 import creatorco from '../assets/creatorco-thumbnail.png'
 import deaflink from '../assets/deaflink-thumbnail.svg'
@@ -20,6 +21,14 @@ export const Projects = () => {
   }, [])
 
   const devProjects = [
+    {
+      path: 'bookish',
+      thumbnail: bookish,
+      title: 'bookish',
+      type: 'Full Stack Development',
+      device: 'Mobile App',
+      role: 'Solo Project • Apr - May 2023',
+    },
     {
       path: 'plantgeek-app',
       thumbnail: plantgeekApp,
