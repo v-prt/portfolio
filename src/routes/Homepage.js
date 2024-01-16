@@ -23,6 +23,8 @@ export const Homepage = () => {
     window.scrollTo(0, 0)
   }, [])
 
+  const yearsOfExperience = new Date().getFullYear() - 2021
+
   return (
     <Wrapper>
       <div className='background' />
@@ -53,9 +55,9 @@ export const Homepage = () => {
         <div className='text'>
           <h2>Hey there! I'm Victoria.</h2>
           <p>
-            I’m a Full Stack Developer with over 2 years of experience and a speciality in UX/UI
-            design and engineering. I enjoy the constant challenge of learning new things, and the
-            satisfaction of creating something from scratch!
+            I’m a Full Stack Developer with over {yearsOfExperience} years of experience and a
+            speciality in UX/UI design and engineering. I enjoy the constant challenge of learning
+            new things, and the satisfaction of creating something from scratch!
           </p>
           <p>
             If you’d like to get in touch,{' '}

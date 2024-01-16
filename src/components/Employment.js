@@ -41,14 +41,17 @@ export const Employment = () => {
             performance.
           </p>
           <p>
-            Creators can connect their social accounts, browse 100+ collaboration opportunities, and
-            filter campaigns based on their social stats or other personal information. Once opted
-            in, they can view and manage their campaigns via their account dashboard and communicate
-            with the brands through our messaging system.
+            Creators can connect their social accounts, browse hundreds of collaboration
+            opportunities, and filter campaigns based on their social stats or other personal
+            information. Once opted in, they can view and manage their campaigns via their account
+            dashboard and communicate with the brands through our messaging system.
           </p>
           <p>
-            <b>Tech stack :</b> JavaScript, TypeScript, React, SCSS, Styled Components, Express,
-            Node, MySQL, Prisma, WordPress, PHP
+            <b>Tech stack :</b> JavaScript, TypeScript, React, Styled Components, Express, Node,
+            PostgreSQL, Prisma, AWS
+          </p>
+          <p>
+            <b>Deprecated :</b> WordPress, PHP, SCSS, MySQL, DigitalOcean
           </p>
         </div>
         <h3 style={{ marginTop: '60px' }}>Self-Employed</h3>

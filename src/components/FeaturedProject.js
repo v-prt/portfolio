@@ -1,99 +1,115 @@
-import { Link } from 'react-router-dom'
 import { ProjectWrapper, LinkButton } from '../GlobalStyles'
 import { Carousel } from '../components/Carousel'
 import { ImageLoader } from '../components/ImageLoader'
 
-import image1 from '../assets/plantgeek/plantgeek1.png'
-import image2 from '../assets/plantgeek/plantgeek2.png'
-import image3 from '../assets/plantgeek/plantgeek3.png'
-import image4 from '../assets/plantgeek/plantgeek4.png'
-import image5 from '../assets/plantgeek/plantgeek5.png'
-import image6 from '../assets/plantgeek/plantgeek6.png'
-import image7 from '../assets/plantgeek/plantgeek7.png'
-import image8 from '../assets/plantgeek/plantgeek8.png'
-import image9 from '../assets/plantgeek/plantgeek9.png'
-import image10 from '../assets/plantgeek/plantgeek10.png'
-import mockups from '../assets/plantgeek/plantgeek-mockups.png'
+import mockups from '../assets/bookish/mockups.png'
+import image1 from '../assets/bookish/image1.png'
+import image2 from '../assets/bookish/image2.png'
+import image3 from '../assets/bookish/image3.png'
+import image4 from '../assets/bookish/image4.png'
+import image5 from '../assets/bookish/image5.png'
+import image6 from '../assets/bookish/image6.png'
+import image7 from '../assets/bookish/image7.png'
+import image8 from '../assets/bookish/image8.png'
 
 export const FeaturedProject = () => {
-  const projectImages = [
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image9,
-    image10,
-  ]
+  const projectImages = [image1, image2, image3, image4, image5, image6, image7, image8]
 
   return (
     <ProjectWrapper>
       <div className='description'>
         <p className='featuring'>featuring</p>
         <h1 className='title'>
-          [ <b>plantgeek</b> ]
+          [ <b>bookish</b> ]
         </h1>
         <div className='summary'>
-          <p className='type'>Full Stack Development, Responsive Website</p>
-          <p className='duration'>Solo Project • 2021 - 2022</p>
+          <p className='type'>Full Stack Development, Mobile App</p>
+          <p className='duration'>Solo Project • April - May 2023</p>
         </div>
         <div className='details'>
           <p>
-            Houseplants are a fairly new obsession of mine and sometimes I struggle to remember
-            their various needs! My solution had been to keep a spreadsheet with information on each
-            plant, such as the level of light, water, temperature, and humidity they each required.
+            As a big fan of reading, I saw an opportunity to make a difference with Bookish. It's my
+            take on a book-tracking app that's just a little bit more refined and user-friendly than
+            Goodreads. I used React Native to build it - this meant users would get a consistent
+            experience, whether they're on an iPhone or an Android.
           </p>
           <div className='mockups'>
             <ImageLoader src={mockups} alt='' borderRadius='10px' />
           </div>
           <p>
-            I decided to design and build
-            <strong> plantgeek </strong>
-            as an upgrade to my spreadsheet, where you can browse and view care information for a
-            large database of houseplants. Users can create an account, edit their profile, and
-            curate lists of plants they own or wish to have. They can also contribute to the
-            platform by submitting new plant images and information. Admins can approve or reject
-            submissions, as well as edit and delete plants. Approved submissions earn users cute
-            stickers which are showcased on their profiles!
+            With this app, users can easily search for books, create personalized bookshelves to
+            keep track of what they're currently reading, want to read, and have read. Plus, they
+            can rate and review books, get recommendations based on their favorite genres, and get
+            an overview of their reading activity.
           </p>
-          <div style={{ margin: '40px 0' }}>
-            <Carousel images={projectImages} />
-          </div>
+        </div>
+        <div style={{ margin: '40px 0' }}>
+          <Carousel images={projectImages} />
+        </div>
+        <div className='details'>
           <p>
-            I started this website as a solo project in 2021 and continued to maintain and improve
-            on it in my spare time through 2022. Watch the demo video (link below) or look through
-            my code on GitHub! The platform is fully responsive and usable on desktop, tablet, and
-            mobile. I also created a <Link to='/projects/plantgeek-app'>mobile app version</Link> on
-            React Native.
+            I dove into TypeScript on the frontend for this project, which was an interesting
+            exercise! It added structure to my code but synchronizing it with the Google Books API
+            and my MongoDB database proved a challenge. I had to ensure the data from Google's
+            extensive book library lined up neatly with the custom info I was storing in my
+            database.
           </p>
           <p>
-            Tech stack: React, React Query, Ant Design, Styled Components, Node, Express, MongoDB,
-            Typescript
+            I also explored unit testing, though not as extensively as I originally planned. It
+            turned out identifying the right pieces to test wasn't so straightforward - I created
+            and tested my own validation for the search input, which is something I usually rely on
+            libraries for (like Formik and Yup). This gave me a greater appreciation for such
+            libraries, as they save so much time.
+          </p>
+        </div>
+        <div style={{ margin: '40px 0' }}>
+          <iframe
+            className='video'
+            src='https://www.youtube.com/embed/oLa1Qr_J1PM'
+            title='Bookish Demo'
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            allowfullscreen></iframe>
+        </div>
+        <div className='details'>
+          <p>
+            Bookish isn't just a pet project of mine, it's something I want to share with other
+            developers. If you're interested, feel free to check out the{' '}
+            <a
+              href='https://github.com/v-prt/bookish-frontend'
+              target='_blank'
+              rel='noopener noreferrer'>
+              frontend
+            </a>{' '}
+            and{' '}
+            <a
+              href='https://github.com/v-prt/bookish-backend'
+              target='_blank'
+              rel='noopener noreferrer'>
+              backend
+            </a>{' '}
+            on GitHub, complete with detailed READMEs to help you get set up. Bookish was another
+            fun and challenging step in my journey as a developer - I love reading and coding, so it
+            was a real pleasure to combine the two!
+          </p>
+          <p>
+            Tech stack: React Native, React Query, Expo, TypeScript, Node, Express, MongoDB,
+            Mongoose, Vitest
           </p>
           <div className='buttons'>
-            {/* <LinkButton
-              className='black'
-              href='https://www.plantgeek.co'
-              target='_blank'
-              rel='noopener noreferrer'>
-              VIEW LIVE SITE
-            </LinkButton> */}
             <LinkButton
               className='black'
-              href='https://youtu.be/JTIm2Gd30EI'
+              href='https://youtu.be/oLa1Qr_J1PM'
               target='_blank'
               rel='noopener noreferrer'>
-              VIEW DEMO
+              View Demo
             </LinkButton>
             <LinkButton
               className='white'
-              href='https://github.com/v-prt/plantgeek'
+              href='https://github.com/v-prt/bookish-frontend'
               target='_blank'
               rel='noopener noreferrer'>
-              VIEW ON GITHUB
+              View on GitHub
             </LinkButton>
           </div>
         </div>
