@@ -49,19 +49,20 @@ export const Projects = () => {
     {
       path: 'creatorco',
       thumbnail: creatorco,
-      title: 'Creator.co 2.0',
+      title: 'Creator.co',
       type: 'Frontend Development',
       device: 'Responsive Website',
       role: 'Sole Developer • Jan 2023',
     },
-    {
-      path: 'creator-profile',
-      thumbnail: creatorProfile,
-      title: 'Creator Profile',
-      type: 'Full Stack Development',
-      device: 'Responsive Website',
-      role: 'Project Lead • Jul - Aug 2022',
-    },
+    // TODO: update creator profile screenshots and details
+    // {
+    //   path: 'creator-profile',
+    //   thumbnail: creatorProfile,
+    //   title: 'Creator Profile',
+    //   type: 'Full Stack Development',
+    //   device: 'Responsive Website',
+    //   role: 'Project Lead • Jul - Aug 2022',
+    // },
     {
       path: 'plantgeek',
       thumbnail: plantgeek,

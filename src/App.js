@@ -12,7 +12,7 @@ import { PlantgeekApp } from './routes/projects/PlantgeekApp'
 import { Creatorco } from './routes/projects/Creatorco'
 import { DeafLink } from './routes/projects/DeafLink'
 import { Swetz } from './routes/projects/Swetz'
-import { CreatorProfile } from './routes/projects/CreatorProfile'
+// import { CreatorProfile } from './routes/projects/CreatorProfile'
 import { TicketWidget } from './routes/projects/TicketWidget'
 import { Plantgeek } from './routes/projects/Plantgeek'
 import { EagleTek } from './routes/projects/EagleTek'
@@ -33,7 +33,7 @@ export const App = () => {
         <Route path='/projects/plantgeek-app' element={<PlantgeekApp />} />
         <Route path='/projects/creatorco' element={<Creatorco />} />
         <Route path='/projects/swetz' element={<Swetz />} />
-        <Route path='/projects/creator-profile' element={<CreatorProfile />} />
+        {/* <Route path='/projects/creator-profile' element={<CreatorProfile />} /> */}
         <Route path='/projects/ticket-widget' element={<TicketWidget />} />
         <Route path='/projects/plantgeek' element={<Plantgeek />} />
         <Route path='/projects/eagletek' element={<EagleTek />} />
