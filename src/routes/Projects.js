@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { COLORS, BREAKPOINTS, fadeIn } from '../GlobalStyles'
+import budgie from '../assets/budgie-thumbnail.svg'
 import bookish from '../assets/bookish-thumbnail.svg'
 import plantgeekApp from '../assets/plantgeek-app-thumbnail.svg'
 import creatorco from '../assets/creatorco-thumbnail.png'
@@ -21,6 +22,14 @@ export const Projects = () => {
   }, [])
 
   const devProjects = [
+    {
+      path: 'budgie',
+      thumbnail: budgie,
+      title: 'Budgie',
+      type: 'Full Stack Development',
+      device: 'Web App',
+      role: 'Collaborative Project • 2024',
+    },
     {
       path: 'bookish',
       thumbnail: bookish,
@@ -58,7 +67,7 @@ export const Projects = () => {
       thumbnail: plantgeek,
       title: 'plantgeek',
       type: 'Full Stack Development',
-      device: 'Responsive Website',
+      device: 'Web App',
       role: 'Solo Project • 2021 - 2022',
     },
     // {

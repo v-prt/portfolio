@@ -47,7 +47,7 @@ export const Plantgeek = () => {
           [ <b>plantgeek</b> ]
         </h1>
         <div className='summary'>
-          <p className='type'>Full Stack Development, Responsive Website</p>
+          <p className='type'>Full Stack Development, Web App</p>
           <p className='duration'>Solo Project • 2021 - 2022</p>
         </div>
         <div className='details'>

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
 import { COLORS, BREAKPOINTS } from '../GlobalStyles'
-import { IoMdArrowDroprightCircle, IoMdArrowDropleftCircle } from 'react-icons/io'
 
-export const Carousel = ({ images, captions }) => {
+export const Carousel = ({ images, captions, mobile }) => {
   const [imagesLoaded, setImagesLoaded] = useState(false)
   const [slideIndex, setSlideIndex] = useState(0)
 
@@ -54,19 +53,9 @@ export const Carousel = ({ images, captions }) => {
       </div>
 
       <div className='dots'>
-        {/* <button
-          className='prev'
-          onClick={() => setSlideIndex(slideIndex === 0 ? images.length - 1 : slideIndex - 1)}>
-          <IoMdArrowDropleftCircle />
-        </button> */}
         {images.map((image, index) => (
           <span className='dot' onClick={() => setSlideIndex(index)}></span>
         ))}
-        {/* <button
-          className='next'
-          onClick={() => setSlideIndex(slideIndex === images.length - 1 ? 0 : slideIndex + 1)}>
-          <IoMdArrowDroprightCircle />
-        </button> */}
       </div>
     </Wrapper>
   )
