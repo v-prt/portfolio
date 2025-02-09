@@ -27,8 +27,6 @@ export const Skills = () => {
               <li>React</li>
               <li>React Query</li>
               <li>Redux</li>
-              <li>PHP</li>
-              <li>WordPress</li>
             </ul>
           </div>
           <div className='group'>
@@ -40,6 +38,7 @@ export const Skills = () => {
               <li>RESTful APIs</li>
               <li>CRUD</li>
               <li>MySQL</li>
+              <li>PostgreSQL</li>
               <li>Prisma</li>
             </ul>
           </div>
@@ -49,6 +48,7 @@ export const Skills = () => {
               <li>VS Code</li>
               <li>Git</li>
               <li>GitHub</li>
+              <li>Docker</li>
               <li>Figma</li>
               <li>Adobe XD</li>
               <li>Canva</li>

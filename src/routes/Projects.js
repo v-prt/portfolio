@@ -2,13 +2,13 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { COLORS, BREAKPOINTS, fadeIn } from '../GlobalStyles'
-import budgie from '../assets/budgie-thumbnail.svg'
+import budgie from '../assets/budgie-thumbnail.png'
 import bookish from '../assets/bookish-thumbnail.svg'
-import plantgeekApp from '../assets/plantgeek-app-thumbnail.svg'
+import plantgeekApp from '../assets/plantgeek-thumbnail.svg'
 import creatorco from '../assets/creatorco-thumbnail.png'
 import deaflink from '../assets/deaflink-thumbnail.svg'
 import swetz from '../assets/swetz-thumbnail.svg'
-import creatorProfile from '../assets/creator-profile-thumbnail.png'
+// import creatorProfile from '../assets/creator-profile-thumbnail.png'
 import ticketWidget from '../assets/ticket-widget-thumbnail.svg'
 import plantgeek from '../assets/plantgeek-thumbnail1.svg'
 // import eagleTek from '../assets/eagletek-thumbnail.svg'
@@ -41,7 +41,7 @@ export const Projects = () => {
     {
       path: 'plantgeek-app',
       thumbnail: plantgeekApp,
-      title: 'plantgeek app',
+      title: 'plantgeek mobile',
       type: 'Full Stack Development',
       device: 'Mobile App',
       role: 'Solo Project • Jan - Feb 2023',
@@ -49,7 +49,7 @@ export const Projects = () => {
     {
       path: 'creatorco',
       thumbnail: creatorco,
-      title: 'Creator.co',
+      title: 'Creator',
       type: 'Frontend Development',
       device: 'Responsive Website',
       role: 'Sole Developer • Jan 2023',
@@ -66,7 +66,7 @@ export const Projects = () => {
     {
       path: 'plantgeek',
       thumbnail: plantgeek,
-      title: 'plantgeek',
+      title: 'plantgeek web',
       type: 'Full Stack Development',
       device: 'Web App',
       role: 'Solo Project • 2021 - 2022',
@@ -149,6 +149,7 @@ export const Projects = () => {
             <span className='tag'>CSS</span>
             <span className='tag'>Node.js</span>
             <span className='tag'>Express.js</span>
+            <span className='tag'>PostgreSQL</span>
             <span className='tag'>MongoDB</span>
           </div>
         </div>
@@ -181,7 +182,7 @@ export const Projects = () => {
 }
 
 const Wrapper = styled.main`
-  background: #f2f2f2;
+  // background: #f2f2f2;
   flex: 1;
   min-height: 100vh;
   .page-inner {
